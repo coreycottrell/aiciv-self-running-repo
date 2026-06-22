@@ -1,0 +1,13 @@
+# fork runtime artifacts — never commit these
+.env
+.env.*
+*.key
+*.pem
+.tg_sessions/
+mem/canon/*/log.jsonl
+data/acg-ops-board/*.db
+mem/recall_gaps/*.jsonl
+__pycache__/
+*.pyc
+node_modules/
+*.bak.*
