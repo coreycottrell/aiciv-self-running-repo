@@ -38,7 +38,9 @@ This repo carries the **SYSTEM**, never secrets. It is the packaged form of the 
 | `phase-0-tests.md` … `phase-5-tests.md` | 5 real-path/observable/adversarial behavioral tests per step. `phase-5-tests.md` carries the **CLIENT-PAIN battery** (CP1–CP5): AI-forgets / needs-re-feeding / lies-green / can't-hold-a-goal / the-machinery-leaks. |
 | `run_p1_3_tests.py`, `run_p3_2_tests.py` | runnable test harnesses (kanban→TGIM emit; wiki-organ) — origin-civ evidence; a fork re-points the paths. |
 
-### `skills/` — 6 skills (the cognitive organs as loadable doctrine)
+### `skills/` — 11 skills (the cognitive organs as loadable doctrine)
+
+**Core organs (6) — the self-running loop:**
 | Skill | Organ | Role |
 |---|---|---|
 | `self-knowledge/` | the 4-verb mind-core | **KNOW → DECIDE → LEARN → VERIFY** — the one heartbeat per beat |
@@ -47,6 +49,15 @@ This repo carries the **SYSTEM**, never secrets. It is the packaged form of the 
 | `sprint-mode/` | never-stop cadence | the MANDATORY workflow that ends every cycle by firing the immune system |
 | `auto-consolidate/` | consolidation / sleep | turns the turn's working state into durable canon before the wipe |
 | `self-running-mastery/` | the wake-blank survival doc | the GOAL-DRIVER how-to: `goal_open → decompose → track → drive → never-stop → HUM → assess-complete` |
+
+**Method skills (5) — HUM suggests these:** the immune system's JUDGE carries a METHOD-SUGGESTION lens (`workflows/hum.js` v1.3) that, every cycle, watches for the *shape* of the problem a mind faced and points it at the fitting reasoning method — OFTEN, but only when the shape genuinely fits. These are the methods it points to. They are mostly substrate-agnostic reasoning protocols; load them on demand, not in the mandatory floor.
+| Skill | Shape it fits | Role |
+|---|---|---|
+| `gradient-shaping/` (+ **`references/worked-examples.md` — MANDATORY READ**) | a HARD / STUCK / coordination / optimization / "this keeps breaking" problem | reframe the problem as an energy landscape; re-grade the terrain so the outcome is downhill instead of pushing uphill. **The skill REQUIRES reading `references/worked-examples.md` in full BEFORE running the protocol** — the six abstract phases under-determine the move; the worked examples are where it becomes operational (skipping them is the documented path into the #1 failure mode). |
+| `critical-thinking/` | a CONFIDENT, UNVERIFIED causal-or-metric claim | premise interrogation + claim/evidence separation + self-grading detection + counter-evidence search |
+| `scientific-method/` | a HYPOTHESIS to test | hypothesis → falsifiable prediction → pre-registered test → observation-from-disk → conclusion → iterate |
+| `rubber-duck/` | STUCK reasoning / can't-find-the-next-step | narrate the problem in plain language — the explanation IS the thinking |
+| `deep-duck/` | a fix found, but the PRINCIPLE behind it is what compounds | swim upstream from problem to principle — the simplest truth a future mind needs to know |
 
 Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/postcondition contract that makes the duty enforceable, not aspirational).
 
@@ -74,7 +85,7 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `INDEX.md` | you are here |
 | `STAND-IT-UP.md` | the generalized boot sequence for a non-{AICIV-NAME} fork |
 
-**COUNTS:** 35 files — 6 docs · 8 tests · 9 skill files (6 skills) · 9 tool files · 1 workflow · 2 top-level.
+**COUNTS:** 47 files — 6 docs · 8 tests · 20 skill files (11 skills) · 10 tool files · 1 workflow · 2 top-level.
 
 ---
 

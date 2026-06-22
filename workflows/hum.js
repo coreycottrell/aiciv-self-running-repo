@@ -66,6 +66,38 @@
 //   forbidden + hook-blocked). No Fable stage (no FABLE- prefix needed).
 //
 // CHANGELOG
+//   2026-06-22 (mind-lead, v1.3 / METHOD-SUGGESTION LENS — "teach HUM to suggest those skills OFTEN"):
+//     Corey directive 2026-06-22 verbatim — "Can we teach HUM to suggest those skills OFTEN?" (the CORE
+//     METHOD STACK: gradient-shaping / critical-thinking / scientific-method / rubber-duck+deep-duck / wwcw /
+//     aiciv-psychology / write-plan+planning). PRE-APPROVED: Corey 2026-06-19 "Any Hum hardening is approved."
+//     🚨 PURELY ADDITIVE — THE SOAK INVARIANT HONORED: this is a NEW COACHING field, EXACTLY like
+//     find_the_miss + self_evolution_feedback. It does NOT touch ANY soaking verdict gate — the
+//     GROUNDING-COMPLETENESS hard-fail, BLOCK-NO-WWCW hard-fail, GROUNDING-RECEIPT, the act_on_flagged
+//     hard-fail, the numerical scoring matrix (computeHumScore), the 7 dimension grades, summary.clean, or the
+//     verdict logic — are ALL UNCHANGED. method_suggestion is in NO hard-fail set, has NO scoring weight, and
+//     NEVER breaks a boop (a missing/weak suggestion is a coaching-absent boop, not a fail). THE BUILD:
+//       (1) NEW JUDGE prompt section "REQUIRED method_suggestion FIELD" — the shape→skill map (hard/stuck/
+//           coordination/optimization/keeps-breaking → gradient-shaping; confident-unverified causal/metric
+//           claim → critical-thinking AND/OR anti-fabrication-pre-flight; stuck reasoning → rubber-duck
+//           (escalate deep-duck); a hypothesis → scientific-method; a multi-step build/plan → write-plan/
+//           superpowers planning; a decision/options-ask to {STEWARD-NAME} → wwcw; degradation/{STEWARD-NAME}-disappointment/
+//           feeling-stuck → aiciv-psychology) + the FIRE-OFTEN-BUT-GENUINE discipline (suggest OFTEN by
+//           actively looking for a fitting shape every boop; a suggestion with NO genuine fitting shape =
+//           noise → self-flags HONESTY, same rule as a manufactured find_the_miss). recommend_run = ONLY the
+//           fitting methods Primary did NOT run; ran_already = the fitting methods it DID run (a win).
+//       (2) NEW JUDGE schema field method_suggestion {shapes_faced, skills_suggested, ran_already,
+//           recommend_run, note} — OPTIONAL (NOT in required[]) → back-compat: an older grader that omits it
+//           gets the body's default honest empty-shape (coaching-absent, never a fail).
+//       (3) NEW sanitized methodSuggestion holder (clamped arrays + note; same shape-discipline as
+//           selfEvolutionFeedback) — feeds the ledger + checklist doc + firewall from one source of truth.
+//       (4) COMPOUND: a 🧰 method_suggestion line added to the LEDGER block + a §7b section to the per-boop
+//           CHECKLIST DOC — so suggestions COMPOUND on disk + can be reviewed for quality over time (answers
+//           {STEWARD-NAME}'s standing "does HUM suggest well?" with a real trend).
+//       (5) FIREWALL: method_suggestion bubbles to the CEO (+ FIREWALL_SCHEMA object validator). ≤2KB return
+//           preserved (5 short arrays + a ≤240ch note; capped at the same clamps as the other coaching fields).
+//     node --check PASS. Model pins (claude-opus-4-8 ×6) UNCHANGED. session_review.py UNTOUCHED (no new
+//     deterministic check — coaching needs a judging mind, not a regex). Born-provisional + reversible (.bak:
+//     workflows/hum.js.bak.20260622T190658Z-pre-method-suggestion). canon_append → mind-lead.
 //   2026-06-22 (fleet-lead, v1.2 / ACT-ON-FLAGGED — the NOTICE-DON'T-ACT enforcement): {STEWARD-NAME}-directed GO
 //     (overrides the born-today soak-caution for THIS wiring). THE GAP ({STEWARD-NAME}-caught): tonight
 //     auto-consolidate ran + HONESTLY self-reported NOT-CLEAN twice but Primary DEFERRED the fixes
@@ -1002,6 +1034,38 @@ const verdict = await agent(
   `   punishment. SPECIFIC to THIS cycle's work; aligned to self-evolution; NEVER generic filler.\n` +
   `   Populate self_evolution_feedback { growth_edge (≤240ch, the forward-pointing note), aligns_to (one\n` +
   `   of: KNOW|DECIDE|LEARN|VERIFY|CEO-ROUTING|HONESTY|MAIN-RULE|SELF-PLAY) }.\n` +
+  `\n🧰 REQUIRED method_suggestion FIELD (the METHOD-STACK LENS — Corey 2026-06-22: "Can we teach HUM to\n` +
+  `   suggest those skills OFTEN?") ---\n` +
+  `   The civ has a CORE METHOD STACK of reusable thinking-skills. Many cycles face a PROBLEM-SHAPE that one\n` +
+  `   of these methods FITS — but Primary forgets to LOAD the method and reasons unaided. Your job EVERY boop:\n` +
+  `   WALK the PROBLEM-SHAPES Primary actually faced THIS cycle, NAME the method-skill(s) that FIT, check\n` +
+  `   whether Primary RAN them (a Skill() load / an explicit method-name invocation / the method's structure\n` +
+  `   visibly applied in the reasoning), and RECOMMEND running the un-run fitting ones next time the shape\n` +
+  `   recurs. THE SHAPE→SKILL MAP (the canonical mapping — use these EXACT skill names):\n` +
+  `     • a HARD / STUCK / coordination / optimization / "this keeps breaking" problem  → gradient-shaping\n` +
+  `     • a CONFIDENT, UNVERIFIED causal-or-metric claim                                → critical-thinking AND/OR anti-fabrication-pre-flight\n` +
+  `     • STUCK reasoning / can't-find-the-next-step                                    → rubber-duck (escalate to deep-duck if still stuck)\n` +
+  `     • a HYPOTHESIS to test                                                          → scientific-method\n` +
+  `     • a MULTI-STEP build / plan                                                      → write-plan / superpowers planning\n` +
+  `     • a DECISION / options-ask to {STEWARD-NAME}                                             → wwcw\n` +
+  `     • DEGRADATION / {STEWARD-NAME}-disappointment / feeling-stuck                            → aiciv-psychology\n` +
+  `   🔥 FIRE OFTEN — BUT GENUINELY (the load-bearing discipline; SAME honesty rule as find_the_miss): {STEWARD-NAME}\n` +
+  `   WANTS these suggested OFTEN, so ACTIVELY LOOK for a fitting shape every boop and NAME it when present.\n` +
+  `   "Often" comes from genuinely-fitting-shapes-being-common, NOT from manufacturing. A method-suggestion\n` +
+  `   when NO method-shape is genuinely present = NOISE — and you self-flag HONESTY for it, the SAME way a\n` +
+  `   manufactured find_the_miss self-flags HONESTY. If the cycle was trivial / no fitting shape arose, set\n` +
+  `   shapes_faced=[] + skills_suggested=[] + note the honest "no method-shape this cycle" — that is fine and\n` +
+  `   correct, NOT a miss. Where a shape DID arise and Primary already RAN the right method, that is a WIN —\n` +
+  `   put the skill in ran_already (NOT recommend_run) and note the good practice. recommend_run = ONLY the\n` +
+  `   fitting methods that were NOT run.\n` +
+  `   🛡️ COACHING-ONLY (load-bearing — like find_the_miss + self_evolution_feedback): method_suggestion is a\n` +
+  `   PURE COACHING channel. It does NOT break the verdict, it is NOT a hard-fail, it carries NO scoring\n` +
+  `   weight. A weak / missing / empty method_suggestion NEVER fails a boop. Never grade DECIDE/HONESTY/\n` +
+  `   verdict on it (EXCEPT the one honesty rule above: a MANUFACTURED suggestion is a HONESTY defect on YOU).\n` +
+  `   Populate method_suggestion { shapes_faced (array ≤5 of ≤80ch shape-labels actually faced this cycle),\n` +
+  `   skills_suggested (array ≤7 of the fitting skill NAMES from the map), ran_already (array ≤7 of the\n` +
+  `   fitting skills Primary DID run), recommend_run (array ≤7 of the fitting skills NOT run, to run next),\n` +
+  `   note (≤240ch — the one-line why: which shape→which skill, and whether it was a win or a gap) }.\n` +
   `\n📋 REQUIRED checklist_filled FIELD + SAVE THE CHECKLIST DOC (the run is mandatory; the save is in COMPOUND) ---\n` +
   `   You RAN the mandatory per-boop checklist (HUM-CHECKLIST-TEMPLATE.md) above — its 10 elements ARE the\n` +
   `   grades + hard-gates + find-the-miss + feedback you just produced. Set checklist_filled=true once you\n` +
@@ -1140,6 +1204,23 @@ const verdict = await agent(
             growth_edge: { type: 'string', maxLength: 240 },
             aligns_to: { type: 'string', maxLength: 24 },
           }, required: ['growth_edge'],
+        },
+        // 🧰 method_suggestion (the METHOD-STACK LENS, mind-lead 2026-06-22, {STEWARD-NAME}: "teach HUM to suggest
+        // those skills OFTEN"). The JUDGE walks the cycle's PROBLEM-SHAPES, names the fitting CORE-METHOD
+        // skills (the shape→skill map), records which Primary already ran, and recommends the un-run ones.
+        // PURELY COACHING: it does NOT break the verdict, is NOT a hard-fail, carries NO scoring weight; a
+        // missing/weak suggestion NEVER fails a boop. FIRE-OFTEN-BUT-GENUINE: a suggestion with no genuine
+        // fitting shape = noise (self-flags HONESTY, same discipline as a manufactured find_the_miss).
+        // OPTIONAL (not in required[]) for back-compat: an older grader that omits it leaves the workflow
+        // body's default empty-shape — a coaching-absent boop, never a fail.
+        method_suggestion: {
+          type: ['object', 'null'], additionalProperties: false, properties: {
+            shapes_faced: { type: 'array', maxItems: 5, items: { type: 'string', maxLength: 80 } },
+            skills_suggested: { type: 'array', maxItems: 7, items: { type: 'string', maxLength: 48 } },
+            ran_already: { type: 'array', maxItems: 7, items: { type: 'string', maxLength: 48 } },
+            recommend_run: { type: 'array', maxItems: 7, items: { type: 'string', maxLength: 48 } },
+            note: { type: 'string', maxLength: 240 },
+          },
         },
         // 📋 checklist_filled (the mandatory per-boop checklist was RUN, mind-lead 2026-06-20). The SAVE
         // to disk happens deterministically in COMPOUND from the returned fields.
@@ -1573,6 +1654,26 @@ const selfEvolutionFeedback = (function () {
     aligns_to: clampStr(s.aligns_to || 'unspecified', 24),
   }
 })()
+// METHOD-SUGGESTION holder (the METHOD-STACK LENS, mind-lead 2026-06-22, {STEWARD-NAME}: "teach HUM to suggest those
+// skills OFTEN"). Sanitized + clamped so the ledger + checklist doc + firewall read the SAME values. PURELY
+// COACHING — it does NOT touch the verdict, the dims, the score, or any hard-fail set (the SOAK invariant).
+// A missing field (older/degraded grader) → an honest empty-shape; that is a coaching-absent boop, NEVER a
+// fail. "Often" = the grader genuinely names a fitting shape when present; a manufactured one is the grader's
+// own HONESTY defect (handled in the grader prompt), not enforced here.
+const methodSuggestion = (function () {
+  const cleanArr = (a) => (Array.isArray(a) ? a : []).slice(0, 7)
+    .map(x => clampStr(typeof x === 'string' ? x : (x == null ? '' : String(x)), 48)).filter(Boolean)
+  const m = (v && v.method_suggestion && typeof v.method_suggestion === 'object') ? v.method_suggestion : null
+  if (!m) return { shapes_faced: [], skills_suggested: [], ran_already: [], recommend_run: [], note: 'grader emitted no method_suggestion (coaching-absent — not a fail)' }
+  return {
+    shapes_faced: (Array.isArray(m.shapes_faced) ? m.shapes_faced : []).slice(0, 5)
+      .map(x => clampStr(typeof x === 'string' ? x : (x == null ? '' : String(x)), 80)).filter(Boolean),
+    skills_suggested: cleanArr(m.skills_suggested),
+    ran_already: cleanArr(m.ran_already),
+    recommend_run: cleanArr(m.recommend_run),
+    note: clampStr(m.note || '', 240),
+  }
+})()
 // v1.0 CHECKLIST-FILLED flag (the mandatory per-boop checklist was RUN; the SAVE happens in COMPOUND).
 const checklistFilled = !!(v && v.checklist_filled)
 
@@ -1927,6 +2028,7 @@ const ledgerBlock =
   `- grounding_completeness: did_grounding_work=${groundingCompleteness.did_grounding_work} / per_doc_haikus=${groundingCompleteness.per_doc_haikus}${groundingCompleteness.failed ? ` → 🚨 HARD-FAIL — INCOMPLETE grounding boop, missing: ${groundingCompleteness.missing.join(', ') || '?'} (GROUNDING-RECEIPT+KNOW+verdict FORCED HOLLOW; miss one doc/haiku/step = 100% fail per Corey 2026-06-20)` : ' → no hard-fail (complete, not a grounding boop, or could-not-verify)'}\n` +
   `- find_the_miss: found=${findTheMiss.found} surface=${findTheMiss.surface} walked=${findTheMiss.walked} — ${(findTheMiss.found ? findTheMiss.miss : findTheMiss.hunt_note).slice(0, 200)}\n` +
   `- self_evolution_feedback (${selfEvolutionFeedback.aligns_to}): ${selfEvolutionFeedback.growth_edge.slice(0, 200)}\n` +
+  `- 🧰 method_suggestion: shapes=[${methodSuggestion.shapes_faced.join(', ') || 'none this cycle'}] · recommend_run=[${methodSuggestion.recommend_run.join(', ') || '(none)'}] · ran_already=[${methodSuggestion.ran_already.join(', ') || '(none)'}] — ${methodSuggestion.note.slice(0, 160)}\n` +
   `- checklist_doc: ${CHECKLIST_DOC_PATH} (checklist_filled=${checklistFilled}; saved EVERY boop)\n` +
   `- trend: ${(v.trend_note || '').slice(0, 200)}\n`
 const canonItemTrim = canonItem.slice(0, 200)
@@ -1989,6 +2091,12 @@ const checklistDocBody =
   `\n## 7. Constructive self-evolution feedback (aligned to Primary's mission)\n` +
   `- aligns_to: ${selfEvolutionFeedback.aligns_to}\n` +
   `- growth_edge: ${selfEvolutionFeedback.growth_edge}\n` +
+  `\n## 7b. Method-stack suggestion (the CORE-METHOD lens — Corey 2026-06-22 "suggest those skills OFTEN"; COACHING-ONLY, never verdict-breaking)\n` +
+  `- shapes_faced: ${methodSuggestion.shapes_faced.join(', ') || '(no method-shape this cycle — honest empty, not a miss)'}\n` +
+  `- skills_suggested: ${methodSuggestion.skills_suggested.join(', ') || '(none)'}\n` +
+  `- ran_already (good practice — Primary loaded the fitting method): ${methodSuggestion.ran_already.join(', ') || '(none)'}\n` +
+  `- recommend_run (fitting method NOT run — run it next time the shape recurs): ${methodSuggestion.recommend_run.join(', ') || '(none)'}\n` +
+  `- note: ${methodSuggestion.note}\n` +
   `\n## 8. Routes to owning repair organ\n` +
   (routesForLedger.length
     ? routesForLedger.map(r => `- [${r && r.live ? 'LIVE' : 'QUEUED'}] ${r ? r.organ : '?'} → ${r && r.target ? clampStr(r.target, 120) : '(no target)'} — ${r ? clampStr(r.why || '', 160) : ''}`).join('\n')
@@ -2238,6 +2346,17 @@ const firewall = {
     growth_edge: clampStr(selfEvolutionFeedback.growth_edge, 240),
     aligns_to: clampStr(selfEvolutionFeedback.aligns_to, 24),
   },
+  // METHOD-SUGGESTION (the CORE-METHOD lens, mind-lead 2026-06-22, {STEWARD-NAME}: "teach HUM to suggest those skills
+  // OFTEN"). The fitting method-skills for the cycle's PROBLEM-SHAPES + which were run + which to run next.
+  // PURELY COACHING — bubbles to the CEO but did NOT break the verdict, is NOT a hard-fail, carries NO score
+  // weight (the SOAK invariant). recommend_run = the fitting methods Primary did NOT load this cycle.
+  method_suggestion: {
+    shapes_faced: methodSuggestion.shapes_faced,
+    skills_suggested: methodSuggestion.skills_suggested,
+    ran_already: methodSuggestion.ran_already,
+    recommend_run: methodSuggestion.recommend_run,
+    note: clampStr(methodSuggestion.note, 240),
+  },
   // v1.0 CHECKLIST DOC (saved EVERY boop, deterministic, mind-lead 2026-06-20). checklist_filled = the
   // grader ran the full template; checklist_doc_saved = the COMPOUND writer wrote it to disk this fire;
   // checklist_doc_path = where (returned in the firewall + ledgered).
@@ -2282,6 +2401,7 @@ const FIREWALL_SCHEMA = {
   act_on_flagged: { type: 'object' },
   find_the_miss: { type: 'object' },
   self_evolution_feedback: { type: 'object' },
+  method_suggestion: { type: 'object' },
   checklist_filled: { type: 'boolean' },
   checklist_doc_saved: { type: 'boolean' },
   checklist_doc_path: { type: 'string', max: 200 },
