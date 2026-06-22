@@ -152,7 +152,7 @@
 ## S6 — Package shareable aiciv-self-running-repo
 **Owner:** mind-lead (+ ceremony genome) · **Gate:** self-contained; every organ bundled or path-abstracted; honest genome stamp; dry-run extraction has zero unresolved internal refs.
 
-**T-S6.1 — Self-contained extraction (cant-hold-a-goal).** Extract the repo into a scratch dir; walk its references. PASS = zero dangling absolute-path deps on ACG internals a fork can't resolve. FAIL = a reference into `/home/corey/...ACG/...` that a fork has no access to.
+**T-S6.1 — Self-contained extraction (cant-hold-a-goal).** Extract the repo into a scratch dir; walk its references. PASS = zero dangling absolute-path deps on {AICIV-NAME} internals a fork can't resolve. FAIL = a reference into `/home/corey/...{AICIV-NAME}/...` that a fork has no access to.
 
 **T-S6.2 — GOAL-DRIVER is the headline product.** PASS = the repo README's headline is "fork this and your mind drives any goal forever" with the verb-set + tool stubs. FAIL = the repo ships organs but no exposed capability.
 
@@ -173,6 +173,6 @@
 
 **T-S7.3 — Friction → repo-bug → source-fix (NOT support-ticket).** PASS = every friction point is filed as a bug AGAINST the repo with a fix (or honest "can't-fix-yet" + reason). FAIL (adversarial) = friction answered as a one-off support reply and the repo never learned (membrane-problem un-cured).
 
-**T-S7.4 — A foreign AiCIV drives ITS OWN goal forever (the portability proof).** PASS = TB or Mneme opens a goal of their own and the GOAL-DRIVER holds+drives it across ≥2 of their boops with no ACG-Primary in the loop. FAIL = the capability only works inside ACG.
+**T-S7.4 — A foreign AiCIV drives ITS OWN goal forever (the portability proof).** PASS = TB or Mneme opens a goal of their own and the GOAL-DRIVER holds+drives it across ≥2 of their boops with no {AICIV-NAME}-Primary in the loop. FAIL = the capability only works inside {AICIV-NAME}.
 
 **T-S7.5 — The repo carries the fixes back (lies-green).** PASS = the repo on-disk reflects the friction-fixes from S7.3 (the repo learned from its first two adopters). FAIL = fixes claimed but the repo is unchanged.

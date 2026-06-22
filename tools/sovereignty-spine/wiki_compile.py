@@ -81,8 +81,10 @@ STANDARD_SET = [
     ("hum", "HUM (the immune system / boop auditor)", "entity",
      [r"\bHUM\b", r"hum-ledger", r"hum\.js"],
      ["wwcw", "block-no-wwcw", "self-knowledge"]),
-    ("wwcw", "WWCW (What Would Corey Want)", "concept",
-     [r"\bWWCW\b", r"what would corey want"],
+    ("wwcw", "WWCW (What Would {STEWARD-NAME} Want)", "concept",
+     # `\bWWCW\b` is the primary matcher. The second alias pattern matches the spelled-out form in
+     # canon; a fork SHOULD set its own steward's name here (e.g. r"what would <steward> want").
+     [r"\bWWCW\b", r"what would corey want"],  # <- set to your own steward name
      ["hum", "block-no-wwcw"]),
     ("tgim", "TGIM (the coordination substrate)", "entity",
      [r"\bTGIM\b"],

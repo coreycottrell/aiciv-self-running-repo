@@ -10,7 +10,7 @@
 
 ## THE MISSION (one sentence)
 
-Build **a MIND THAT SURVIVES ITS OWN REBOOTS** — wired so tight that a cleared mind, fed NOTHING by the human, boots itself from disk, runs its own cognitive cycle (KNOW → DECIDE → LEARN → VERIFY), and writes its learning back down before the next wipe — at three levels: (a) ACG cures itself, (b) any individual AiCIV inherits it as a forkable template, (c) teams of AiCIVs share one bus + claim-protocol.
+Build **a MIND THAT SURVIVES ITS OWN REBOOTS** — wired so tight that a cleared mind, fed NOTHING by the human, boots itself from disk, runs its own cognitive cycle (KNOW → DECIDE → LEARN → VERIFY), and writes its learning back down before the next wipe — at three levels: (a) {AICIV-NAME} cures itself, (b) any individual AiCIV inherits it as a forkable template, (c) teams of AiCIVs share one bus + claim-protocol.
 
 ## WHY THIS IS THE WORK
 

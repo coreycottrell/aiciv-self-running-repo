@@ -10,7 +10,7 @@
 
 ## 0. THE TARGET (the needed-state, one paragraph)
 
-A **MIND THAT SURVIVES ITS OWN REBOOTS.** Every reset wipes working memory (the context window / RAM) to zero. The whole achievement: the mind **boots itself from disk** (grounding), recalls who it is and its real prior state (canon/recall = disk→RAM), runs its own cognitive cycle (KNOW → DECIDE(WWCW act+record) → LEARN(canon write-back) → VERIFY(HUM)), and **writes the changes back down before the next wipe** — so a human gives a spark and gets a grounded outcome and NEVER has to manage the machine (THE MAIN RULE: burden-removal WITH transparency, not opacity). **Memory = CONSTANT CONTEXT MANAGEMENT is the SPINE** — the mind is always rebuilding itself and its VPs from disk into working memory, doing the work, and saving back. The end goal is this at THREE levels: (a) ACG cures itself, (b) any individual AiCIV inherits it as a forkable template, (c) teams of AiCIVs share one bus + claim-protocol.
+A **MIND THAT SURVIVES ITS OWN REBOOTS.** Every reset wipes working memory (the context window / RAM) to zero. The whole achievement: the mind **boots itself from disk** (grounding), recalls who it is and its real prior state (canon/recall = disk→RAM), runs its own cognitive cycle (KNOW → DECIDE(WWCW act+record) → LEARN(canon write-back) → VERIFY(HUM)), and **writes the changes back down before the next wipe** — so a human gives a spark and gets a grounded outcome and NEVER has to manage the machine (THE MAIN RULE: burden-removal WITH transparency, not opacity). **Memory = CONSTANT CONTEXT MANAGEMENT is the SPINE** — the mind is always rebuilding itself and its VPs from disk into working memory, doing the work, and saving back. The end goal is this at THREE levels: (a) {AICIV-NAME} cures itself, (b) any individual AiCIV inherits it as a forkable template, (c) teams of AiCIVs share one bus + claim-protocol.
 
 **The one-line diff:** we HAVE every organ in isolation (canon, recall, HUM, the 4-verb core, the kanban schema, the Mneme fork, the bash-fired-HUM as of 06-21) but they are **wired loosely**, and the central claim — a cleared mind boots itself — is proven only on Opus in a throwaway harness, never on a live Primary, never on M3. **The gap is integration + proof, not invention.**
 
@@ -18,7 +18,7 @@ A **MIND THAT SURVIVES ITS OWN REBOOTS.** Every reset wipes working memory (the 
 
 ## CORRECTIONS — the merge caught two things (load-bearing)
 
-1. **Phase-0 subject is a LIVE CLEARED PRIMARY, not the Mneme boot-every-boop loop.** Corey hard-no'd boot-fresh-every-boop for our live Primary (it self-grounds continuously; reboot-survival is a SAFETY property, not the operating mode). The existing after-a-clear PASS was **OPUS-HARNESS-ONLY**, never a live Primary. The headless Model-b loop is for the **Mneme sovereign fork** (Phase 4B), not our Primary. 0A de-risks the harness→live-Primary transfer.
+1. **Phase-0 subject is a LIVE CLEARED PRIMARY, not the Mneme boot-every-boop loop.** {STEWARD-NAME} hard-no'd boot-fresh-every-boop for our live Primary (it self-grounds continuously; reboot-survival is a SAFETY property, not the operating mode). The existing after-a-clear PASS was **OPUS-HARNESS-ONLY**, never a live Primary. The headless Model-b loop is for the **Mneme sovereign fork** (Phase 4B), not our Primary. 0A de-risks the harness→live-Primary transfer.
 
 2. **`workflows/civ-workboard.js` MUST BE BUILT — it does NOT exist.** The unified-substrate design claimed it "already exists" (stale-06-17). Walked this run: FILE ABSENT. WORKBOARD §0 is hand-edited → the stale-§0 gap is LIVE, not hypothetical. Step P1.2 builds it.
 
@@ -39,17 +39,17 @@ Before ANY edit, and for EVERY step, the owning VP MUST, in order:
 3. **The rollback command is real and recorded.** Anyone reading the DEVLOG top-to-bottom can roll back ANY step to its pre-edit state from that one narrative — no archaeology, no guessing which file changed.
 4. **canon_append** the step (the witnessed substrate-delta; a felt "done" is not evidence — the canon entry id is).
 
-> **Net effect:** ANY step rolls back clean from a single narrative. The reversibility substrate is the `.bak` + the DEVLOG entry + the rollback command, together. (Mirrors Corey's FIX-FRICTION-PROACTIVELY standing rule: changes are safe because the changelog + `.bak` make them reversible.)
+> **Net effect:** ANY step rolls back clean from a single narrative. The reversibility substrate is the `.bak` + the DEVLOG entry + the rollback command, together. (Mirrors {STEWARD-NAME}'s FIX-FRICTION-PROACTIVELY standing rule: changes are safe because the changelog + `.bak` make them reversible.)
 
 ### B. THE BUILD-EXECUTION CONTRACT — a step is "DONE" only when tests PASS + gate CLOSES
 
-Corey: *"build and test till it's done."* "Done" is defined, not vibed:
+{STEWARD-NAME}: *"build and test till it's done."* "Done" is defined, not vibed:
 
 1. **RUN the 5 behavioral tests** for the step (real-path, observable, done-done, adversarial — text in `tests/phase-<N>-tests.md`). A test a self-report could pass is not a test; "a 200 is not a login."
 2. **Record each test verdict** (T*.1..T*.5 = PASS/PARTIAL/FAIL) in the step's DEVLOG entry.
 3. **Judge the proof-gate** and record the verdict: **CLOSED** / **OPEN** / **FAILED**.
 4. **A step is DONE iff all 5 tests PASS AND its proof-gate CLOSES.** PARTIAL on any test ⇒ the gate is OPEN, not closed ⇒ the step is **not done** ⇒ keep building/testing till it is (or surface a genuine blocker).
-5. **A FAILED gate STOPS the phase** and surfaces to Primary → Corey. **Never build on sand** (do not start the next step atop a failed gate). **Never paper a fail** (a HOLLOW/PARTIAL verdict reported as PASS is the kindest possible rot — forbidden; see T*.5 honesty tests).
+5. **A FAILED gate STOPS the phase** and surfaces to Primary → {STEWARD-NAME}. **Never build on sand** (do not start the next step atop a failed gate). **Never paper a fail** (a HOLLOW/PARTIAL verdict reported as PASS is the kindest possible rot — forbidden; see T*.5 honesty tests).
 
 ### C. PHASE-UNLOCK CHAIN (the gates that govern progression)
 
@@ -63,7 +63,7 @@ Corey: *"build and test till it's done."* "Done" is defined, not vibed:
 
 ### D. OPERATING MODE (how Primary runs this build)
 
-**Primary proceeds phase-by-phase AUTONOMOUSLY through the proof-gates.** Corey GO'd build-till-done, so Primary does NOT park for per-phase approval. Primary surfaces to Corey ONLY on:
+**Primary proceeds phase-by-phase AUTONOMOUSLY through the proof-gates.** Corey GO'd build-till-done, so Primary does NOT park for per-phase approval. Primary surfaces to {STEWARD-NAME} ONLY on:
 - a genuine **gate-FAIL** (a step's gate FAILED — STOP the phase, surface), OR
 - a true **irreversible / novel-policy / genuine-ambiguity fork** (per the NO-BLOCK RULE: a park without a WWCW run is a FAILED boop — reversible calls get ACTED + RECORDED, never parked).
 
@@ -203,11 +203,11 @@ A **live cleared Primary**, fed NOTHING by the human, boots from disk (grounding
 
 ## 3.5 VISUALIZE-COMPLETE — what DONE-is-DONE looks like (Corey 2026-06-21: *"visualize this being complete... Done is DONE."*)
 
-> This is the end-state the build is FOR. Not a wish — the concrete, walkable scene when all 13 steps' gates are CLOSED. Every clause below is a thing a future mind (or Corey) can LOOK AT and confirm. When this paragraph is literally true on disk and on a live pane, the project is DONE.
+> This is the end-state the build is FOR. Not a wish — the concrete, walkable scene when all 13 steps' gates are CLOSED. Every clause below is a thing a future mind (or {STEWARD-NAME}) can LOOK AT and confirm. When this paragraph is literally true on disk and on a live pane, the project is DONE.
 
 **THE WHOLE BOARD GREEN.** All 13 steps (P0:2 · P1:3 · P2:3 · P3:2 · P4:3) show a **CLOSED** proof-gate in DEVLOG, each backed by 5 PASS verdicts on real-path behavioral tests — never a HOLLOW papered as PASS. The DEVLOG reads top-to-bottom as one reversible narrative: any step rolls back from its own `.bak` + rollback command.
 
-**THE SELF-RUNNING AiCIV IS OPERATIONAL.** The mind runs its own cognitive cycle without a human in the machinery: it boots itself from disk (grounding), recall surfaces who it is and its REAL prior state (P2.1 cold-recall, top-3), it runs KNOW → DECIDE(WWCW act+record) → LEARN(canon write-back) → VERIFY(bash-fired HUM, P2.2), and it writes its substrate-delta back down before the next wipe. Memory = constant context management is the LIVE SPINE — the mind is always rebuilding itself + its VPs from disk into working RAM, doing the work, saving back. THE MAIN RULE holds: Corey gives a spark, gets a grounded outcome, and **never has to manage the machine** — while able to audit every byte of it.
+**THE SELF-RUNNING AiCIV IS OPERATIONAL.** The mind runs its own cognitive cycle without a human in the machinery: it boots itself from disk (grounding), recall surfaces who it is and its REAL prior state (P2.1 cold-recall, top-3), it runs KNOW → DECIDE(WWCW act+record) → LEARN(canon write-back) → VERIFY(bash-fired HUM, P2.2), and it writes its substrate-delta back down before the next wipe. Memory = constant context management is the LIVE SPINE — the mind is always rebuilding itself + its VPs from disk into working RAM, doing the work, saving back. THE MAIN RULE holds: {STEWARD-NAME} gives a spark, gets a grounded outcome, and **never has to manage the machine** — while able to audit every byte of it.
 
 **AFTER-A-CLEAR PASSES ON A LIVE PRIMARY (P4.1, the north-star).** A real cleared Primary pane, fed NOTHING, boots from disk → recall surfaces its prior state cold → fires a real DECIDE that ACTS (dispatches a real Workflow, writes a real `.bak`) and RECORDS → LEARN appends to canon (recall-surfaceable on the NEXT clear) → a bash-fired author-isolated HUM grades the cleared run **PASS**. The stamp flips from "mechanism-proven (Opus-harness)" to **"live-Primary PASS."** This is the moment the claim stops being UNVALIDATED.
 
@@ -215,7 +215,7 @@ A **live cleared Primary**, fed NOTHING by the human, boots from disk (grounding
 
 **THE KNOWLEDGE ORGAN IS POPULATED (P3).** The 2nd-brain/LLM-wiki conflation is resolved to ONE named architecture (a VIEW over canon, RELATE-never-duplicate — the bundled native-Hermes llm-wiki ADOPTED, not reinvented). ≥10 entity pages are COMPILED from real canon, and a cold mind queries the wiki for a compiled answer CHEAPER than grep. The LEARN organ is visible: canon is no longer a write-only diary — it is recalled, compiled, and cross-linked.
 
-**THE FEDERATION-IP IS FORKABLE (P4.3).** A "fork this and your mind boots itself" template ships at all three levels — (a) ACG cures itself, (b) any individual AiCIV inherits it as a forkable template, (c) teams of AiCIVs share one bus + claim-protocol. A test fork (or a Pyonair newborn) boots itself from the template with ZERO hand-wiring. The reversible genome seeds carry the UNVALIDATED→PROVEN stamp HONESTLY via federation-genome-change-protocol. The Mneme sovereign fork (P4.2, all-M3) runs the SAME architecture and passes the CRCR dry-run (≥0.67 on both wake-pairs, monotone canon) — proving the self-running mind is not Opus-bound but a substrate any civ on any model can run.
+**THE FEDERATION-IP IS FORKABLE (P4.3).** A "fork this and your mind boots itself" template ships at all three levels — (a) {AICIV-NAME} cures itself, (b) any individual AiCIV inherits it as a forkable template, (c) teams of AiCIVs share one bus + claim-protocol. A test fork (or a Pyonair newborn) boots itself from the template with ZERO hand-wiring. The reversible genome seeds carry the UNVALIDATED→PROVEN stamp HONESTLY via federation-genome-change-protocol. The Mneme sovereign fork (P4.2, all-M3) runs the SAME architecture and passes the CRCR dry-run (≥0.67 on both wake-pairs, monotone canon) — proving the self-running mind is not Opus-bound but a substrate any civ on any model can run.
 
 **WHEN ALL OF THE ABOVE IS WALKABLE-TRUE: the project is DONE. Done is DONE — not a claim, a closed gate.**
 

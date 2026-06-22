@@ -2,6 +2,20 @@
 """
 session_review.py — Stage-1 of the HUM grader (deterministic layer).
 
+  🌱 FORK CONFIG — {AICIV-NAME} / {STEWARD-NAME} (READ BEFORE YOU RELY ON THE BLOCK/WWCW GATES):
+    Several LOAD-BEARING regexes below embed the ORIGIN steward's name as a literal token —
+    "corey" — because they detect block-language ("HELD-FOR-COREY", "parked for corey",
+    "awaiting corey", "needs corey") and WWCW-run evidence ("what would corey want",
+    "simulate corey", "given his rules"). These literals are INTENTIONALLY left as the origin
+    value so the tool RUNS without edits — but for YOUR fork they will silently MISS your own
+    blocks/WWCW-runs (e.g. "HELD-FOR-SAM", "what would Sam want") until you replace the steward-name
+    token. DO NOT naively sed "corey" → "{STEWARD-NAME}" (that creates a literal that matches the
+    characters "{STEWARD-NAME}", breaking the gate). INSTEAD: search this file for the lowercase
+    token `corey` inside `re.compile(...)` patterns (BLOCK_RE, BLOCK_CAPS_FLAG_RE, WWCW_TEXT_RE,
+    WWCW_EVIDENCE_RE, WWCW_SIMULATE_RE, GENUINE_ASK_RE, DEFER_TO_HUMAN_RE) and substitute YOUR
+    steward's name. The narrative changelog/docstring uses of "Corey" below are origin-civ dated
+    lineage — they are harmless and need no change.
+
 WHAT THIS IS
   A pure, deterministic, stdlib-only reviewer of a Claude-Code session JSONL
   transcript. It parses the session, walks turns in order, and runs each of
@@ -1560,7 +1574,14 @@ REMEMBER_MARKER_RE = re.compile(
     r"every\s+(morning|day|time|night)\b|"
     r"want\s+me\s+to\s+remember|"
     r"don'?t\s+(lose|forget)\s+(this|that)|"
-    r"you\s+should\s+(always\s+be\s+able\s+to|know\s+how\s+to)"
+    r"you\s+should\s+(always\s+be\s+able\s+to|know\s+how\s+to)|"
+    # STEWARD-approved widening #1 (2026-06-22): "the steward caught a missing skill" shapes.
+    # The prior patterns matched save/reuse but NOT "there should be a git SKILL".
+    # Append-only — these ADD coverage, they never alter the patterns above.
+    r"there\s+should\s+be\s+an?\s+.{1,60}?\s*(skill|workflow|agent)\b|"
+    r"we\s+should\s+have\s+a\s+skill\s+for\b|"
+    r"make\s+.{1,60}?\s+a\s+skill\b|"
+    r"turn(ed)?\s+.{1,60}?\s+into\s+an?\s+(skill|agent|lead)\b"
     r")",
     re.IGNORECASE,
 )

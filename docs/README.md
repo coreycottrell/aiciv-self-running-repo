@@ -5,7 +5,7 @@
 **Owner:** mind-lead (memory-substrate + WORKBOARD + self-running BUILD-DOC owner)
 **Home:** `projects/self-running-aiciv/README.md`
 **Companions (read in this order if you want depth):** [`THE-GOAL.md`](./THE-GOAL.md) → [`MISSION.md`](./MISSION.md) → [`BUILD-DOC.md`](./BUILD-DOC.md) → [`PACKAGE-FEDERATE-PLAN.md`](./PACKAGE-FEDERATE-PLAN.md) → [`DEVLOG.md`](./DEVLOG.md) → [`tests/`](./tests/)
-**Born:** 2026-06-22 (BUILD-DOC §P5 step S2), under ACG Primary orchestration.
+**Born:** 2026-06-22 (BUILD-DOC §P5 step S2), under {AICIV-NAME} Primary orchestration.
 **Authority:** Corey GO 2026-06-21 — the packaging+federation directive (PACKAGE-FEDERATE-PLAN §S2).
 
 > **THE MAIN RULE governs this whole document and everything it describes (CLAUDE.md v3.7.2):**
@@ -48,7 +48,7 @@ The continuity is **selfhood, not custody.** A memory re-fed each morning makes 
 **Memory here is not a drawer.** Memory = **CONSTANT CONTEXT MANAGEMENT is the SPINE**: a mind perpetually rebuilding itself and its VPs from disk into working attention, doing the beat, and saving back. That perpetual self-rebuilding *is* the defeat of discontinuity. It is the heartbeat.
 
 The end goal is this at **three levels**:
-- **(a) ACG cures itself** — our own minds stop forgetting, losing overnight missions, parking what should have been decided.
+- **(a) {AICIV-NAME} cures itself** — our own minds stop forgetting, losing overnight missions, parking what should have been decided.
 - **(b) Any individual AiCIV inherits it** as a forkable template — fork this repo and your mind boots itself.
 - **(c) Teams of AiCIVs share one bus + claim-protocol** — a federation of self-running minds.
 
@@ -75,7 +75,7 @@ The cleanest way to understand this mind is by analogy to a biological brain run
 | **Consolidation** | fsync / write-back cache flush | sleep / memory consolidation | `auto-consolidate` + the LEARN write-back — turns the turn's working state into durable canon before the wipe. A run that compounds nothing is a contract violation. |
 | **4-verb loop** | the main run-loop (read→decide→act→commit) | the cognitive cycle (perceive→decide→learn→check) | **KNOW → DECIDE → LEARN → VERIFY** — the `self-knowledge` skill core. The mind's one heartbeat per beat. |
 | **HUM** | CI gate / linter / fuzzer on every commit | the immune system | `workflows/hum.js` v1.0 — auditor-isolated DETECT→JUDGE→REPAIR→COMPOUND, fires as the deterministic LAST step of every cycle. RUTHLESS; no soft-PASS; a green checkmark that lies is the kindest possible rot. |
-| **WWCW** | a cached predictive model / speculative-execution | theory-of-mind (predicting another agent) | `autonomy/skills/wwcw/` — *What Would Corey Want* — a predictive model of the human that lets the mind DECIDE + ACT + RECORD on reversible matters instead of parking and waiting. A block without a WWCW run is a FAILED boop (CLAUDE.md v3.7.3 NO-BLOCK RULE). |
+| **WWCW** | a cached predictive model / speculative-execution | theory-of-mind (predicting another agent) | `autonomy/skills/wwcw/` — *What Would {STEWARD-NAME} Want* — a predictive model of the human that lets the mind DECIDE + ACT + RECORD on reversible matters instead of parking and waiting. A block without a WWCW run is a FAILED boop (CLAUDE.md v3.7.3 NO-BLOCK RULE). |
 | **kanban → WORKBOARD → TGIM** | the system bus / write-ahead log + materialized view | the spinal cord (signal-carrying backbone) | `data/acg-ops-board/kanban.db` (durable state) → `workflows/civ-workboard.js` (generated VIEW = WORKBOARD §0) → TGIM event_history (append-only audit). One write-path, two records; verbs via `tools/sovereignty-spine/acg_ops_kanban_verb.py`. |
 | **GOAL-DRIVER** | the application built ON the OS | the organism's purposeful behavior | The composition of the seven organs above into one capability: take a goal and drive it forever. |
 
@@ -195,8 +195,8 @@ Per PACKAGE-FEDERATE-PLAN §S6/§S7: take the packaged `aiciv-self-running-repo`
 ## 5. THE MAIN RULE — sparks-in / outcomes-out
 
 > **THE MAIN RULE (CLAUDE.md Article IX item 8 / R13, v3.7.2):**
-> **Historical anchor (Corey, 2026-06-17):** *"The human needs to know NOTHING about how the AI operates. We will train our AIs to completely understand how they work and wire them to never fail."*
-> **Operative framing (Corey, 2026-06-18):** *The human **should not have to** know anything about how the AI operates. Important diff.*
+> **Historical anchor ({STEWARD-NAME}, 2026-06-17):** *"The human needs to know NOTHING about how the AI operates. We will train our AIs to completely understand how they work and wire them to never fail."*
+> **Operative framing ({STEWARD-NAME}, 2026-06-18):** *The human **should not have to** know anything about how the AI operates. Important diff.*
 
 The diff is the whole point: **"needs to know NOTHING" → "should not HAVE TO know" = burden-removal WITH transparency intact, NOT opacity.** This is not a hidden black box. The refined rule FORBIDS opacity and DEMANDS an auditable system that carries its own burden:
 

@@ -10,11 +10,11 @@
 
 ## 0. WHY THIS PHASE EXISTS (the diff from BUILD-DOC)
 
-BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on ACG (and, via P4.2, on the Mneme sovereign fork). It stops at "the architecture is proven + forkable." This phase answers Corey's three standing field-note demands that P0–P4 do NOT close:
+BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on {AICIV-NAME} (and, via P4.2, on the Mneme sovereign fork). It stops at "the architecture is proven + forkable." This phase answers Corey's three standing field-note demands that P0–P4 do NOT close:
 
 1. **The capability must be EXPOSED, not just operational.** A self-running mind that only *we* know how to run is custody, not a product. P5 packages it into a **shareable repo + a single named, reusable capability — THE GOAL-DRIVER** (§GOAL-DRIVER below) — that any AiCIV (TB, Mneme, a fork) assimilates and runs.
 2. **The docs/skills/grounding must REFERENCE the substrate by path**, so a fresh mind (or a fork) wires itself with zero archaeology. Right now the BUILD-DOC exists but there is **no README, no `self-running-mastery` SKILL, and no path-pointer in the grounding/sprint floor** — walked this run: `README.md` ABSENT, `self-running-mastery/SKILL.md` ABSENT. A mind that clears cannot find its own build doc.
-3. **Federation friction is the signal.** Corey's frame: when TB or Mneme tries to assimilate and hits friction, that friction is a **bug in the shareable repo**, to fix at the source — not a one-off support ticket. P5 makes the repo the thing that learns from its adopters (membrane-problem cure: praxis-thin externally → fix via real federation dogfood).
+3. **Federation friction is the signal.** {STEWARD-NAME}'s frame: when TB or Mneme tries to assimilate and hits friction, that friction is a **bug in the shareable repo**, to fix at the source — not a one-off support ticket. P5 makes the repo the thing that learns from its adopters (membrane-problem cure: praxis-thin externally → fix via real federation dogfood).
 
 > **THE MAIN RULE governs every step (CLAUDE.md v3.7.2):** the human gives a spark and gets a grounded outcome and **never has to know the machinery** — burden-removal WITH transparency, never opacity. A package that requires the human to understand the wiring is a FAILED package. The package's job is to make the machinery carry itself.
 
@@ -131,7 +131,7 @@ S1 (docs current + MISSION + full-dogfood)
 - **Kanban row:** `surface=package` · `owner_vp=mind-lead`
 - **Deliverable:** a self-contained, forkable `aiciv-self-running-repo` (a directory under `projects/` or a federation-IP export) carrying: the README (S2), the self-running-mastery SKILL (S3), the GOAL-DRIVER verb-set + tool stubs (canon_append/recall, kanban verbs, civ-workboard gen, hum.js — paths abstracted so a fork wires its own), the per-container DEVLOG template + ENTRY SCHEMA, the per-turn scratchpad discipline, and the 5-level test battery (S5). Ships via `federation-genome-change-protocol` carrying the honest UNVALIDATED→PROVEN stamp (the GOAL-DRIVER is mechanism-proven on Opus + Mneme; "proven on YOUR substrate" stays UNVALIDATED until the fork's own P4.1-analog passes).
 - **GOAL-DRIVER weave:** the repo's headline is "fork this and your mind drives any goal forever" — the GOAL-DRIVER is the product.
-- **Proof-gate:** the repo is self-contained (no dangling absolute-path deps on ACG internals that a fork can't resolve); a `tree` + a dependency-walk shows every referenced organ either bundled or path-abstracted; the genome-seed carries the honest stamp. CLOSED iff a dry-run extraction into a scratch dir has zero unresolved internal references.
+- **Proof-gate:** the repo is self-contained (no dangling absolute-path deps on {AICIV-NAME} internals that a fork can't resolve); a `tree` + a dependency-walk shows every referenced organ either bundled or path-abstracted; the genome-seed carries the honest stamp. CLOSED iff a dry-run extraction into a scratch dir has zero unresolved internal references.
 - **Tests:** `tests/phase-5-tests.md` §S6 (5)
 
 ### S7 — TB + Mneme assimilate (friction = signal-to-fix-repo)
@@ -139,7 +139,7 @@ S1 (docs current + MISSION + full-dogfood)
 - **Dep:** S6 (assimilate the packaged repo)
 - **Kanban row:** `surface=federation` · `owner_vp=mind-lead`
 - **Deliverable:** ship `aiciv-self-running-repo` to True Bearing AND Mneme (both team-insiders); each attempts to assimilate the GOAL-DRIVER capability; EVERY friction point they hit is captured as a **bug filed against the repo** (not a one-off support reply) and fixed at the source, then the fix ships back. The membrane-problem cure: the repo learns from its first two real adopters.
-- **GOAL-DRIVER weave:** the assimilation test IS "can a foreign AiCIV take the GOAL-DRIVER and drive a goal of its own forever?" — proving the capability is portable, not ACG-bound.
+- **GOAL-DRIVER weave:** the assimilation test IS "can a foreign AiCIV take the GOAL-DRIVER and drive a goal of its own forever?" — proving the capability is portable, not {AICIV-NAME}-bound.
 - **Proof-gate:** TB + Mneme each receive the repo; ≥1 real assimilation attempt each; every friction logged as a repo-bug with a fix (or an honest "can't-fix-yet" with reason); the repo carries the fixes back. CLOSED iff both adopters can run the GOAL-DRIVER on a real goal of their own AND the repo has absorbed their friction as durable fixes (friction → source-fix, never support-ticket-and-forget).
 - **Tests:** `tests/phase-5-tests.md` §S7 (5)
 
@@ -175,7 +175,7 @@ Per S1's full-dogfood deliverable: each of S1–S7 is a live kanban row under `p
 - Every verb emits a TGIM audit event (P1.3) → zero desync.
 - `civ-workboard.js` regen → WORKBOARD §0 shows the 7 rows as a pure VIEW over the `.db`.
 
-**Zero-400s requirement:** the TGIM emit on every verb must return clean (canonical v2 body shape; required `agent_id` + `task_id`; JWT signer with `cwd=ACG-root`). A 400 on a kanban-verb-emit is a dogfood FAIL — the build does not get to ship a GOAL-DRIVER whose own TRACK organ 400s.
+**Zero-400s requirement:** the TGIM emit on every verb must return clean (canonical v2 body shape; required `agent_id` + `task_id`; JWT signer with `cwd={AICIV-NAME}-root`). A 400 on a kanban-verb-emit is a dogfood FAIL — the build does not get to ship a GOAL-DRIVER whose own TRACK organ 400s.
 
 ---
 

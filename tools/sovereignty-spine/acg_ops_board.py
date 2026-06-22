@@ -83,7 +83,9 @@ def _resolve_owner(line: str, section_owner: str) -> str:
         # Take the first named lead token (mind+fleet+tgim -> mind-lead family).
         first = re.split(r"[+/,]", raw)[0].strip().lower()
         # Normalize "mind" -> "mind-lead" only if it isn't already "-lead"/known.
-        if first in ("corey",):
+        # {STEWARD-NAME}: "corey" here is a real OWNER-ID token (the origin steward can own kanban rows).
+        # A fork should set this to its OWN steward-id so steward-owned rows resolve correctly.
+        if first in ("corey",):  # <- set to your own steward-id
             return "corey"
         if first.endswith("-lead"):
             return first

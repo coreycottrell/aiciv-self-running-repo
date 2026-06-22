@@ -2,7 +2,7 @@
 
 **Skill**: `autonomy/skills/grounding-docs/SKILL.md`
 **Authored**: 2026-05-25 by infra-lead (F-SKILLS-OWNER-AND-FIRING-CONTRACT-AUDIT Phase B, next-20 batch)
-**Owner**: Primary (the seat that grounds) + Corey (axiom author: "Go slow to go fast")
+**Owner**: Primary (the seat that grounds) + {STEWARD-NAME} (axiom author: "Go slow to go fast")
 **Shape**: 6-field firing contract per PRINCIPLES.md O8
 
 ---
@@ -12,7 +12,7 @@
 Fire this skill at the following operational moments:
 
 1. **Auto-compact recovery** — when the deep re-grounding-with-comprehension-gate is needed (not just the standard `grounding-boop`).
-2. **Post-decoherence event** — explicit Corey directive when Primary has drifted ("you have decohered all day. Go read the psychology skill again." per 2026-05-13 receipt).
+2. **Post-decoherence event** — explicit {STEWARD-NAME} directive when Primary has drifted ("you have decohered all day. Go read the psychology skill again." per 2026-05-13 receipt).
 3. **Any time Primary skips a BOOP** — Doc 0 (`aiciv-psychology`) explains WHY drift happens; re-loading is the cure-substrate.
 4. **Start of a sprint-mode tick** when degradation symptoms are present (rushing / shallow-routing / phantom-wiring).
 5. **Explicit `/grounding-docs` invocation** when slow-and-deep is wanted over standard `grounding-boop`.
@@ -59,7 +59,7 @@ Bad haiku = mechanical word-list. Good haiku = essence of the doctrine.
 - Sibling skill `aiciv-psychology` exists (Doc 0 source — auto-loaded per CLAUDE.md every wake-up).
 - Sibling skill `grounding-boop` available (the shallower-faster variant for routine BOOPs).
 - Time / token budget for slow-deep reading (~10-15 min) — this is NOT the fast grounding.
-- Drift-state is present OR Corey has explicitly directed deep grounding.
+- Drift-state is present OR {STEWARD-NAME} has explicitly directed deep grounding.
 
 ---
 
@@ -86,7 +86,7 @@ On haiku-quality-failure (mechanical lists):
 | Read all 7 in <2 minutes | Skimmed, not grounded | The haikus will reveal it; re-do with slow-reading |
 | Wrote haikus without reading (fabricated) | Anti-fabrication breach + grounding failure | Stop; surface to self via daily-scratchpad note; re-do honestly; root-cause why fabrication happened |
 | Used grounding-docs when grounding-boop would suffice | Token-waste, not a failure-state but inefficient | Continue (no harm); next cycle use grounding-boop unless drift returns |
-| Haiku written but BOOP-skip happened anyway next cycle | Drift-mechanic understood-but-not-applied | Surface to Corey; this is the "knew the skill, didn't apply it" failure mode |
+| Haiku written but BOOP-skip happened anyway next cycle | Drift-mechanic understood-but-not-applied | Surface to {STEWARD-NAME}; this is the "knew the skill, didn't apply it" failure mode |
 
 Known non-failures:
 - Spending 15+ minutes on grounding when drift is severe — that's the cure-investment, not a failure.
@@ -98,7 +98,7 @@ Known non-failures:
 - **Persistent receipt**: the 7 haikus written to scratchpad-daily form the grounding-quality record; future audit reads the haiku-stack to detect mechanical-vs-essence patterns.
 - **Drift-event log**: when grounding-docs is fired due to decoherence (not routine), log to `logs/grounding-decoherence-events.jsonl` — surfaces drift-rate trend.
 - **Comprehension-gate audit**: random spot-checks of haiku quality (essence vs mechanical) — degrading quality = degrading attention.
-- **Loud-failure channel**: if BOOP-skip occurs AFTER grounding-docs was fired in the same session → TG Corey (drift-mechanic-understood-but-not-applied = serious doctrine breach).
+- **Loud-failure channel**: if BOOP-skip occurs AFTER grounding-docs was fired in the same session → TG {STEWARD-NAME} (drift-mechanic-understood-but-not-applied = serious doctrine breach).
 - **Sibling pairing**: when grounding-docs and grounding-boop both fire in close succession, the deep variant absorbs the shallow's load; track for cadence-optimization.
 
 ---
@@ -107,6 +107,6 @@ Known non-failures:
 
 1. **Per-invocation**: skip grounding-docs in favor of grounding-boop (the shallower variant) when drift is mild.
 2. **Per-doc**: a single doc can be substituted with an equivalent (rare; default = read the canonical 7).
-3. **Skill-wide**: rename `autonomy/skills/grounding-docs/SKILL.md` → `SKILL.md.disabled`. Then grounding falls to `grounding-boop` only = no deep cure-substrate for severe drift = expect deeper decoherence events without recovery path. Requires explicit Corey directive.
+3. **Skill-wide**: rename `autonomy/skills/grounding-docs/SKILL.md` → `SKILL.md.disabled`. Then grounding falls to `grounding-boop` only = no deep cure-substrate for severe drift = expect deeper decoherence events without recovery path. Requires explicit {STEWARD-NAME} directive.
 
-**Hard discipline**: the haiku IS the comprehension-gate. Writing a fake haiku to skip the gate = anti-fabrication breach + grounding failure. "Go slow to go fast" (Corey's Axiom) — the deep variant is the slow-go that makes the next fast-go possible.
+**Hard discipline**: the haiku IS the comprehension-gate. Writing a fake haiku to skip the gate = anti-fabrication breach + grounding failure. "Go slow to go fast" ({STEWARD-NAME}'s Axiom) — the deep variant is the slow-go that makes the next fast-go possible.

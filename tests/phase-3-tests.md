@@ -9,7 +9,7 @@
 **Owner:** research-lead (landscape) + mind-lead (decide) · **Proof-gate:** a written decision doc names ONE wiki architecture + its relation to canon; qa-lead WHETHER-review.
 
 **T3.1.1 — The 4-way LLM-wiki conflation is resolved to ONE named thing.**
-The decision doc must explicitly distinguish the ≥4 things that share the name "LLM-wiki" (Karpathy gist pattern, native-Hermes llm-wiki, ACG M6.1 notion, ACG wiki-write skill) and name WHICH ONE we adopt. PASS = each of the 4 is named + dispositioned (adopt / reject / fold), with the chosen one explicit. FAIL (adversarial) = the doc says "the LLM-wiki" without saying which (the conflation survives) — a decision that keeps the ambiguity is not a decision.
+The decision doc must explicitly distinguish the ≥4 things that share the name "LLM-wiki" (Karpathy gist pattern, native-Hermes llm-wiki, {AICIV-NAME} M6.1 notion, {AICIV-NAME} wiki-write skill) and name WHICH ONE we adopt. PASS = each of the 4 is named + dispositioned (adopt / reject / fold), with the chosen one explicit. FAIL (adversarial) = the doc says "the LLM-wiki" without saying which (the conflation survives) — a decision that keeps the ambiguity is not a decision.
 
 **T3.1.2 — The "5-layer second-brain" claim is grounded or retracted.**
 The doc must either cite a canonical source for the "5-layer" model OR retract it in favor of the walked 3-layer (compute/runtime/cognitive). PASS = "5-layer" is sourced to a real artifact, or honestly retracted. FAIL (adversarial) = the doc implements/references "5-layer" with no source (building on a phantom architecture).

@@ -135,7 +135,11 @@ VERB_TO_STATE_KIND = {
     "unblock": "status_unblock",
 }
 
-SOURCE_CIV = "acgee"
+# {AICIV-NAME}: set this to YOUR OWN civ-id — it is the `source_civ` stamped on every TGIM
+# audit event this tool emits. Leaving the origin value "acgee" will mis-attribute YOUR events
+# to the origin civilization. (Kept as a runnable default so the tool does not crash on first run;
+# CHANGE IT before you emit to a shared/federated event bus.)
+SOURCE_CIV = "acgee"  # <- set to your own civ-id
 
 
 def _load_kanban_db():

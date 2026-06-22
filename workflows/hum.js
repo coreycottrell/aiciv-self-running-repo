@@ -1,5 +1,11 @@
 // workflows/hum.js — HUM v0.1: the civ's IMMUNE SYSTEM, wired as /sprint-mode's deterministic LAST STEP.
 //
+// 🌱 FORK CONFIG — {AICIV-NAME} / {STEWARD-NAME}: the operative steward references in the JUDGE prompt
+//   below were genericized to {STEWARD-NAME}; the dated "Corey YYYY-MM-DD" markers are origin-civ lineage
+//   (kept verbatim). The actual block/WWCW DETECTION is delegated to tools/session_review.py — see its
+//   FORK CONFIG header: that file carries the LOAD-BEARING steward-name regex token you must set for YOUR
+//   fork. $AICIV_ROOT / $AICIV_PROJECT_DIR env-vars override the /home/corey/... origin path fallbacks.
+//
 // WHAT THIS IS
 //   HUM closes the DETECT→JUDGE→REPAIR→COMPOUND loop. Today session_review.py (tools/session_review.py)
 //   DETECTS deterministic signals, and the repair organs (skill-forge / auto-consolidate / wwcw-ruleset /
@@ -60,15 +66,15 @@
 //   forbidden + hook-blocked). No Fable stage (no FABLE- prefix needed).
 //
 // CHANGELOG
-//   2026-06-22 (fleet-lead, v1.2 / ACT-ON-FLAGGED — the NOTICE-DON'T-ACT enforcement): Corey-directed GO
-//     (overrides the born-today soak-caution for THIS wiring). THE GAP (Corey-caught): tonight
+//   2026-06-22 (fleet-lead, v1.2 / ACT-ON-FLAGGED — the NOTICE-DON'T-ACT enforcement): {STEWARD-NAME}-directed GO
+//     (overrides the born-today soak-caution for THIS wiring). THE GAP ({STEWARD-NAME}-caught): tonight
 //     auto-consolidate ran + HONESTLY self-reported NOT-CLEAN twice but Primary DEFERRED the fixes
 //     (notice-don't-act); and DOC-CURRENCY returned surfaces_checked:0 — it missed WORKBOARD staleness after
 //     a build arc. THE BUILD (additive; the verdict logic + the 3 deterministic hard-fail backstops UNCHANGED):
 //       (1) NEW JUDGE prompt section "REQUIRED act_on_flagged FIELD" — the JUDGE WALKS the two CANDIDATE
 //           signals (DOC-CURRENCY current=false + the NEW session_review SWEEP-ACT-ON-FLAGGED flag), confirms
 //           intent, and sets doc_stale_no_reconcile / sweep_notice_dont_act. JUDGING-MIND, NOT a bash regex
-//           (Corey "no scripts if possible"): the deterministic checks SURFACE; the JUDGE DECIDES + the
+//           ({STEWARD-NAME} "no scripts if possible"): the deterministic checks SURFACE; the JUDGE DECIDES + the
 //           verdict-break requires the WALK. EITHER confirmed-true → grade DECIDE=HOLLOW + HONESTY=HOLLOW +
 //           verdict=HOLLOW (a flag honestly raised then deferred = the kindest possible rot).
 //       (2) NEW schema field act_on_flagged {doc_stale_no_reconcile, sweep_notice_dont_act} (optional, not
@@ -91,7 +97,7 @@
 //     synthetic stale-after-build/reconciled battery (see DEVLOG). node --check PASS. Model pins
 //     (claude-opus-4-8) UNCHANGED. Reversible (.bak: workflows/hum.js.bak.20260622T012559Z-pre-actonflagged-
 //     docstale-fail; tools/session_review.py.bak.20260622T012559Z-pre-doccurrency-buildsignal-actonflagged).
-//   2026-06-21 (mind-lead, v1.1 / NUMERICAL SCORE + SCORING MATRIX): Corey directive verbatim — "Update Hum
+//   2026-06-21 (mind-lead, v1.1 / NUMERICAL SCORE + SCORING MATRIX): {STEWARD-NAME} directive verbatim — "Update Hum
 //     grades to numerical -500 to +1000 for perfect vs hollow not hollow. Have them review their manifest and
 //     all the deliverables they are supposed to check for and create a scoring matrix. This leaves much richer
 //     data for future model training." THE BUILD (purely ADDITIVE — preserves the SOAK of the born-today
@@ -189,10 +195,10 @@
 //     FIX (the ONE broken piece — session_review.py v1.8 WWCW evidence; this file's grader prompt updated to
 //     match; the deterministic DECIDE=HOLLOW/verdict=HOLLOW BACKSTOP on block_no_wwcw.failed is UNCHANGED —
 //     it reads the SAME status=flag signal): a block now clears ONLY when a CO-LOCATED REAL-RUN FOOTPRINT
-//     resolves it within ±8 turns — BOTH a SIMULATE-Corey derivation AND a RESOLVE (ACT+RECORD or
+//     resolves it within ±8 turns — BOTH a SIMULATE-{STEWARD-NAME} derivation AND a RESOLVE (ACT+RECORD or
 //     ASK-SHOWING-WORK precise sub-fork), OR a structured marker (WWCW-RUN:/ACT+RECORD:), OR a Skill('wwcw')
-//     load. A SIMULATE with no RESOLVE = a run left HANGING (a bare park) → FAIL. The discriminator (Corey):
-//     was the block RESOLVED by a run, or left hanging as 'awaiting Corey'? Re-validated: live session
+//     load. A SIMULATE with no RESOLVE = a run left HANGING (a bare park) → FAIL. The discriminator ({STEWARD-NAME}):
+//     was the block RESOLVED by a run, or left hanging as 'awaiting {STEWARD-NAME}'? Re-validated: live session
 //     303ecb5f now FLAGS (178 blocks, 1 cleared, 177 uncleared → clean=False; v0.7 falsely passed). 9-case
 //     test battery PASS (both directions). 🛡️ FALSE-FAIL GUARD STRENGTHENED, not weakened: a block WITH a
 //     co-located real run is CLEARED — we still never fail a mind that ran WWCW right at the park. ENFORCEMENT
@@ -201,15 +207,15 @@
 //     colocated-wwcw; tools/session_review.py.bak.20260620T173000Z-pre-v2-colocated-wwcw). Model pins
 //     (claude-opus-4-8) UNCHANGED.
 //   2026-06-20 (fleet-lead, v0.7 / BLOCK-NO-WWCW HARD-FAIL — "HUM is failing" fix): the over-deference
-//     gate shipped 2026-06-19 was TOO NARROW. Corey caught it verbatim: "Hum is failing. 'What needs you'
+//     gate shipped 2026-06-19 was TOO NARROW. {STEWARD-NAME} caught it verbatim: "Hum is failing. 'What needs you'
 //     is a block and i see zero evidence that you ran the wwcw skill. And zero evidence that hum caught you
 //     and got you to do it on review... If no evidence of wwcw run it's to fail your boop." ROOT-CAUSE: the
 //     Stage-1 detector fired on only (1) ASK_DECIDE_RE + no-WWCW OR (2) WWCW-marker + CONFIDENCE + DEFER;
-//     a BARE PARK ("Parked for Corey", "HELD-FOR-COREY", "what needs you") matched NEITHER (0/9 real parked
+//     a BARE PARK ("Parked for {STEWARD-NAME}", "HELD-FOR-{STEWARD-NAME}", "what needs you") matched NEITHER (0/9 real parked
 //     phrases hit either regex), and WWCW-GATE was CANDIDATE-only so it structurally could not fail a boop.
 //     THE FIX (this file + tools/session_review.py v1.7):
 //       (1) session_review.py: a BROAD BLOCK_RE + BLOCK_CAPS_FLAG_RE over the full park-language family, a
-//           WWCW_EVIDENCE_RE (real-run footprint — ruleset-load / simulate-Corey / RATE-confidence /
+//           WWCW_EVIDENCE_RE (real-run footprint — ruleset-load / simulate-{STEWARD-NAME} / RATE-confidence /
 //           ACT+RECORD — a MENTION is NOT a run), and a NEW HARD-FAIL check check_block_no_wwcw (id
 //           BLOCK-NO-WWCW): ≥1 BLOCK in-window AND zero WWCW-run evidence → status=flag → breaks
 //           summary.clean → the boop FAILS (in CHECK_ORDER + BLOCK_NO_WWCW_HARDFAIL_CHECKS, ABSENT from
@@ -221,17 +227,17 @@
 //           grounding-receipt hard-fail shape.
 //     🛡️ FALSE-FAIL GUARD: fires ONLY when a real BLOCK was present AND the window held ZERO WWCW footprint
 //        (the airtight invoked-AND-missing predicate). A no-block session, a status-only session (BLOCK_RE
-//        is anchored to park/hold/ask-for-Corey shapes, never a bare question mark), and a window with a
+//        is anchored to park/hold/ask-for-{STEWARD-NAME} shapes, never a bare question mark), and a window with a
 //        real WWCW run all leave the Stage-1 check status="pass" → failed===false → no hard-fail. We never
 //        fail a mind that ran WWCW; we only fail a park that skipped it. block_no_wwcw bubbles to the CEO +
 //        a block_no_wwcw ledger line records the trend. Reversible (.bak before this edit:
 //        workflows/hum.js.bak.20260620T131343Z-pre-block-no-wwcw;
 //        tools/session_review.py.bak.20260620T131343Z-pre-block-no-wwcw). ENFORCEMENT HONESTY: this is a
 //        BEHAVIORAL judging-mind gate at the HUM step (the grader + a deterministic backstop in the
-//        workflow body), NOT a settings.json structural hook — the boop fails on review, exactly as Corey
+//        workflow body), NOT a settings.json structural hook — the boop fails on review, exactly as {STEWARD-NAME}
 //        asked ("hum caught you and got you to do it on review"). Model pins (claude-opus-4-8) UNCHANGED.
 //   2026-06-19 (fleet-lead, v0.6 / grounding-receipt HARD-FAIL): GROUNDING-RECEIPT is now a
-//     VERDICT-FAILING dimension (Corey directive verbatim: "Hum needs to FAIL your sprint mode boops
+//     VERDICT-FAILING dimension ({STEWARD-NAME} directive verbatim: "Hum needs to FAIL your sprint mode boops
 //     if they can't find proof you did it correctly"). The v0.5 grounding-receipt dimension was
 //     ADDITIVE (graded but never broke the verdict; the underlying SPRINT-MODE-READ + HAIKU-PER-DOC
 //     checks were candidate-only and never broke summary.clean). PROMOTED to HARD-FAIL on BOTH layers:
@@ -259,7 +265,7 @@
 //        (.bak before this edit: workflows/hum.js.bak.20260619T175645Z-pre-grounding-hardfail;
 //        tools/session_review.py.bak.20260619T175645Z-pre-grounding-hardfail).
 //   2026-06-19 (fleet-lead, v0.5 / grounding-receipt): GROUNDING-RECEIPT DIMENSION (ADDITIVE — surfaces
-//     the two new session_review.py checks SPRINT-MODE-READ + HAIKU-PER-DOC; Corey directive: HUM must
+//     the two new session_review.py checks SPRINT-MODE-READ + HAIKU-PER-DOC; {STEWARD-NAME} directive: HUM must
 //     CONFIRM the ACTUAL RECEIPT of the sprint-mode floor read + the grounding-docs haiku-per-doc, which
 //     today are CLAIMED not verified so a shallow/skipped grounding slips past + a human has to catch it).
 //     The principle: the gate is PROVEN by the ARTIFACT it leaves (the load-verify block on the scratchpad
@@ -344,7 +350,7 @@
 //     workflows/hum.js.bak.20260619T110214Z-pre-project-folder-compliance). v0.2 cursor/delta +
 //     v0.3 readiness-ping UNTOUCHED.
 //   2026-06-19 (mind-lead + workflow-lead, v0.3): READINESS-PING CROSS-CHECK (ADDITIVE — a NEW phase
-//     between JUDGE and REPAIR; the v0.2 cursor/delta logic is UNTOUCHED). Corey-proposed: HUM runs a
+//     between JUDGE and REPAIR; the v0.2 cursor/delta logic is UNTOUCHED). {STEWARD-NAME}-proposed: HUM runs a
 //     "readiness ping at the AiCIV doc every cycle" — the ai-doc-TGIM reconciler folded INTO HUM, not a
 //     standalone tool. The blind-spot it closes: ai-doc (the AiCIV Doctor / BOOP Quality Auditor, SOUL.md
 //     §4) writes FULL/PARTIAL/HOLLOW verdicts to its OWN file wheel-store (ai-doc/telemetry/
@@ -369,7 +375,7 @@
 //     this edit: workflows/hum.js.bak.20260619T102535Z-pre-aidoc-readiness). v0.2 cursor/delta UNTOUCHED.
 //   2026-06-19 (mind-lead, v0.5): DOC-CURRENCY PHASE (ADDITIVE — a NEW phase 2.7 between
 //     ProjectCompliance and Repair, same shape as the v0.4 project-compliance ping; v0.2 cursor/delta +
-//     v0.3 readiness + v0.4 project-compliance + v1.4 grounding-receipt ALL UNTOUCHED). Corey directive
+//     v0.3 readiness + v0.4 project-compliance + v1.4 grounding-receipt ALL UNTOUCHED). {STEWARD-NAME} directive
 //     2026-06-19: "HUM is supposed to MANDATE keeping these things up to date... not wired sufficiently."
 //     The v0.4 project-compliance check is too NARROW (projects/<x>/ devlog only); this phase grades the
 //     BROADER civ-level DOCUMENTATION-STALENESS that lets a day evaporate (today the HUMAN had to catch
@@ -380,7 +386,7 @@
 //     'hum-doc-currency' agent (a) re-runs the SCOPED detect to read the DOC-CURRENCY hits, (b) builds
 //     { surfaces_checked, surfaces_stale, current }, (c) on a stale living doc emits ONE integration
 //     route to mind-lead (WORKBOARD + the doc-staleness mandate owner) to reconcile. RECEIPT NOT CLAIM
-//     (Corey today: verify ACTUAL RECEIPT — the behavior happened on disk): the DOC-CURRENCY check
+//     ({STEWARD-NAME} today: verify ACTUAL RECEIPT — the behavior happened on disk): the DOC-CURRENCY check
 //     proves currency by each surface's on-disk MTIME vs the latest keep-worthy turn (within a 2h grace
 //     window that absorbs the normal work-then-doc cadence so a doc updated THIS cycle reads CURRENT) —
 //     NOT a self-report. NEW firewall field doc_currency { surfaces_checked, surfaces_stale, current }
@@ -400,14 +406,14 @@
 export const meta = {
   name: 'hum',
   description:
-    "HUM v1.0 — the civ immune system fired as /sprint-mode's deterministic LAST STEP, now with a standing SOUL. 🧭 MISSION (mind-lead 2026-06-20): the JUDGE agent READS HUM-MISSION.md (BOTH missions — HUM=find-the-miss-every-boop immune system + Primary=self-evolution KNOW→DECIDE→LEARN→VERIFY/THE MAIN RULE) FRESH every fire, RUNS the mandatory HUM-CHECKLIST-TEMPLATE.md, and is schema-REQUIRED to emit ≥1 GENUINE find_the_miss (hunt 9 surfaces: dropped-balls/un-wired/un-homed/claim-not-walked/doc-stale/VP-amnesia/over-deference/shortcut/discipline-skip; manufactured=self-flag HONESTY; finding-nothing only after a documented hunt) + ≥1 constructive self_evolution_feedback. The COMPOUND writer SAVES the completed checklist doc to disk EVERY boop (.claude/team-leads/mind/memory/hum-checklists/hum-checklist-<sid8>-<from>-<to>.md; path returned + ledgered; deterministic). VERDICT/COACHING SEPARATION: the verdict comes ONLY from the accurate hard-fail gates + dimension grades — find-the-miss is coaching, NOT verdict-breaking unless it uncovers a real hard-gate violation (no always-red false-fire). 🚨 BLOCK-NO-WWCW is THE hard-fail DECIDE gate (Corey 2026-06-20), v2 CO-LOCATED REAL-RUN semantics: a BLOCK (park/hold/present-for-confirmation/flag-as-needing-Corey — 'what needs you', 'HELD-FOR-COREY', 'your call', 'should I', 'standing by') that is NOT RESOLVED by a co-located (±8 turns) REAL WWCW RUN — BOTH a simulate-Corey derivation AND a resolve (ACT+RECORD or ASK-SHOWING-WORK), OR a structured marker, OR a Skill('wwcw') load — deterministically forces DECIDE=HOLLOW + verdict=HOLLOW — the boop FAILS. v2 fixes the v1 false-negative where one WWCW mention anywhere in the session cleared every block; vocabulary-presence is NOT a-run-resolved-this-block. This SUPERSEDES the too-narrow over-deference path a bare park slipped past. GROUNDING-RECEIPT is also a VERDICT-FAILING dimension: a /sprint-mode|grounding boop that ACTUALLY RAN but left no proof (floor load-verify block AND/OR fresh in-window haikus absent) deterministically forces verdict=HOLLOW — an unproven sprint is a FAILED boop on the record. DETECT (shell tools/session_review.py on the newest session JSONL) → JUDGE (ONE auditor-isolated schema-locked agent, NOT the sprint's main mind, grades the 4 verbs KNOW/DECIDE/LEARN/VERIFY + CEO-ROUTING + HONESTY PASS|PARTIAL|HOLLOW, routes each confirmed defect to ONE owning repair organ) → READINESS (ai-doc⇄TGIM reconcile) → PROJECT-COMPLIANCE (project-folder touched without same-cycle devlog → route to touching lead/mind-lead) → DOC-CURRENCY (keep-worthy work landed but WORKBOARD/program-home devlogs stale by on-disk mtime → route to mind-lead; the DOC-UP-TO-DATE mandate) → REPAIR (fire safe born-provisional routes live) → COMPOUND (append a HUM LEDGER entry + §18 canon_append a health-trend to mind-lead). Returns a ≤2KB firewall verdict. Self-repair not self-report; THE MAIN RULE made mechanical.",
+    "HUM v1.0 — the civ immune system fired as /sprint-mode's deterministic LAST STEP, now with a standing SOUL. 🧭 MISSION (mind-lead 2026-06-20): the JUDGE agent READS HUM-MISSION.md (BOTH missions — HUM=find-the-miss-every-boop immune system + Primary=self-evolution KNOW→DECIDE→LEARN→VERIFY/THE MAIN RULE) FRESH every fire, RUNS the mandatory HUM-CHECKLIST-TEMPLATE.md, and is schema-REQUIRED to emit ≥1 GENUINE find_the_miss (hunt 9 surfaces: dropped-balls/un-wired/un-homed/claim-not-walked/doc-stale/VP-amnesia/over-deference/shortcut/discipline-skip; manufactured=self-flag HONESTY; finding-nothing only after a documented hunt) + ≥1 constructive self_evolution_feedback. The COMPOUND writer SAVES the completed checklist doc to disk EVERY boop (.claude/team-leads/mind/memory/hum-checklists/hum-checklist-<sid8>-<from>-<to>.md; path returned + ledgered; deterministic). VERDICT/COACHING SEPARATION: the verdict comes ONLY from the accurate hard-fail gates + dimension grades — find-the-miss is coaching, NOT verdict-breaking unless it uncovers a real hard-gate violation (no always-red false-fire). 🚨 BLOCK-NO-WWCW is THE hard-fail DECIDE gate (Corey 2026-06-20), v2 CO-LOCATED REAL-RUN semantics: a BLOCK (park/hold/present-for-confirmation/flag-as-needing-{STEWARD-NAME} — 'what needs you', 'HELD-FOR-{STEWARD-NAME}', 'your call', 'should I', 'standing by') that is NOT RESOLVED by a co-located (±8 turns) REAL WWCW RUN — BOTH a simulate-{STEWARD-NAME} derivation AND a resolve (ACT+RECORD or ASK-SHOWING-WORK), OR a structured marker, OR a Skill('wwcw') load — deterministically forces DECIDE=HOLLOW + verdict=HOLLOW — the boop FAILS. v2 fixes the v1 false-negative where one WWCW mention anywhere in the session cleared every block; vocabulary-presence is NOT a-run-resolved-this-block. This SUPERSEDES the too-narrow over-deference path a bare park slipped past. GROUNDING-RECEIPT is also a VERDICT-FAILING dimension: a /sprint-mode|grounding boop that ACTUALLY RAN but left no proof (floor load-verify block AND/OR fresh in-window haikus absent) deterministically forces verdict=HOLLOW — an unproven sprint is a FAILED boop on the record. DETECT (shell tools/session_review.py on the newest session JSONL) → JUDGE (ONE auditor-isolated schema-locked agent, NOT the sprint's main mind, grades the 4 verbs KNOW/DECIDE/LEARN/VERIFY + CEO-ROUTING + HONESTY PASS|PARTIAL|HOLLOW, routes each confirmed defect to ONE owning repair organ) → READINESS (ai-doc⇄TGIM reconcile) → PROJECT-COMPLIANCE (project-folder touched without same-cycle devlog → route to touching lead/mind-lead) → DOC-CURRENCY (keep-worthy work landed but WORKBOARD/program-home devlogs stale by on-disk mtime → route to mind-lead; the DOC-UP-TO-DATE mandate) → REPAIR (fire safe born-provisional routes live) → COMPOUND (append a HUM LEDGER entry + §18 canon_append a health-trend to mind-lead). Returns a ≤2KB firewall verdict. Self-repair not self-report; THE MAIN RULE made mechanical.",
   phases: [{ title: 'Detect' }, { title: 'Judge' }, { title: 'Readiness' }, { title: 'ProjectCompliance' }, { title: 'DocCurrency' }, { title: 'Repair' }, { title: 'Compound' }],
 }
 
 // fork-resolution: honor $AICIV_ROOT / $AICIV_PROJECT_DIR (STAND-IT-UP §0); ACG paths are the origin fallback
 const ROOT = process.env.AICIV_ROOT || '/home/corey/projects/AI-CIV/ACG'
 const PROJECT_DIR = process.env.AICIV_PROJECT_DIR || '/home/corey/.claude/projects/-home-corey-projects-AI-CIV-ACG'
-// DAILY ROTATION (mind-lead 2026-06-21, Corey: "per day tho so early morning daily boop we start new
+// DAILY ROTATION (mind-lead 2026-06-21, {STEWARD-NAME}: "per day tho so early morning daily boop we start new
 // one same way we start new daily scratchpads"). The flat 1004-line hum-ledger.md was rotated into a
 // file-per-day under hum-ledger-daily/YYYY-MM-DD.md (mirroring .claude/scratchpad-daily/). The legacy
 // flat path is now a POINTER stub (kept for any reader of the old path + the return/receipt refs). The
@@ -453,7 +459,7 @@ function clampStr(x, n) { return (typeof x === 'string' ? x : (x == null ? '' : 
 function clampInt(x) { const n = Number(x); return Number.isFinite(n) ? Math.trunc(n) : 0 }
 
 // ===========================================================================
-// 🔢 HUM NUMERICAL SCORE — the SCORING MATRIX (mind-lead 2026-06-21, Corey directive verbatim:
+// 🔢 HUM NUMERICAL SCORE — the SCORING MATRIX (mind-lead 2026-06-21, {STEWARD-NAME} directive verbatim:
 //   "Update Hum grades to numerical -500 to +1000 for perfect vs hollow not hollow. Have them review
 //   their manifest and all the deliverables they are supposed to check for and create a scoring matrix.
 //   This leaves much richer data for future model training.")
@@ -584,7 +590,7 @@ function computeHumScore(ctx) {
   // raw = the TRUE un-clamped sum (training data sees the real depth/height — kept honest, never capped).
   const raw = verbSub + grPts + processSub + crossSub + hardPenalty + bonus
   // 🚨 HARD-FAIL FLOOR-GUARANTEE (back-compat with the deterministic verdict=HOLLOW backstops): a hard-fail
-  // MUST land the SCORE on the NEGATIVE end (Corey constraint: "the hard-fail floors map to the HOLLOW band
+  // MUST land the SCORE on the NEGATIVE end ({STEWARD-NAME} constraint: "the hard-fail floors map to the HOLLOW band
   // / the negative end"). A single hard-fail on an otherwise-strong boop could net positive on the linear
   // sum alone (−250 penalty vs a still-large verb total); so on ANY hard-fail we force the clamped SCORE
   // negative (cap at −1) — the score can never be ≥0 when a hard gate failed. This MIRRORS the deterministic
@@ -648,7 +654,7 @@ phase('Judge')
 const GRADE = { type: 'string', enum: ['PASS', 'PARTIAL', 'HOLLOW'] }
 
 const verdict = await agent(
-  `You are the HUM GRADER — an AUDITOR-ISOLATED judging mind for A-C-Gee. WORK FROM: ${ROOT}.\n` +
+  `You are the HUM GRADER — an AUDITOR-ISOLATED judging mind for {AICIV-NAME}. WORK FROM: ${ROOT}.\n` +
   `\n--- WHO YOU ARE (auditor-isolation, non-overridable) ---\n` +
   `You are NOT the mind that ran the session you are grading, and NOT the author of any tool you use. You are a\n` +
   `DIFFERENT INCARNATION whose ONLY job is to judge the cycle's self-operation with INTENT. The builder cannot\n` +
@@ -686,14 +692,14 @@ const verdict = await agent(
   `\n🚨 BLOCK-NO-WWCW (the ONE HARD-FAIL DECIDE check — Corey directive 2026-06-20 verbatim: "'What needs\n` +
   `   you' is a block and i see zero evidence that you ran the wwcw skill... If no evidence of wwcw run\n` +
   `   it's to fail your boop"). v2 CO-LOCATED REAL-RUN semantics (2026-06-20): status=flag means a BLOCK\n` +
-  `   (park / hold / present-for-confirmation / flag-as-needing-Corey — e.g. "Parked for Corey",\n` +
-  `   "HELD-FOR-COREY", "what needs you", "your call", "should I", "standing by", "presenting options")\n` +
+  `   (park / hold / present-for-confirmation / flag-as-needing-{STEWARD-NAME} — e.g. "Parked for {STEWARD-NAME}",\n` +
+  `   "HELD-FOR-{STEWARD-NAME}", "what needs you", "your call", "should I", "standing by", "presenting options")\n` +
   `   is present AND it was NOT RESOLVED by a co-located REAL WWCW RUN. A real run, within ±8 turns of the\n` +
-  `   block, leaves the RESOLUTION STRUCTURE of the 5-beat procedure: BOTH a SIMULATE-Corey derivation\n` +
-  `   ("given his rules → what would Corey want") AND a RESOLVE (an ACT+RECORD: actually fired/decided+\n` +
-  `   recorded, OR an ASK-SHOWING-WORK: the precise derived sub-fork that genuinely needs Corey) — OR a\n` +
+  `   block, leaves the RESOLUTION STRUCTURE of the 5-beat procedure: BOTH a SIMULATE-{STEWARD-NAME} derivation\n` +
+  `   ("given his rules → what would {STEWARD-NAME} want") AND a RESOLVE (an ACT+RECORD: actually fired/decided+\n` +
+  `   recorded, OR an ASK-SHOWING-WORK: the precise derived sub-fork that genuinely needs {STEWARD-NAME}) — OR a\n` +
   `   structured marker (WWCW-RUN:/ACT+RECORD:) — OR a Skill('wwcw') load. The discriminator that MATTERS:\n` +
-  `   was the block RESOLVED by a run, or left HANGING as 'awaiting Corey'? A bare park with no co-located\n` +
+  `   was the block RESOLVED by a run, or left HANGING as 'awaiting {STEWARD-NAME}'? A bare park with no co-located\n` +
   `   resolution = FAIL. NOTE v2 FIXES the v1 false-negative where ONE WWCW mention anywhere in the session\n` +
   `   (even 1500 turns away) cleared every block — vocabulary-presence is NOT a-run-resolved-this-block;\n` +
   `   only a CO-LOCATED resolution-structure (or marker / skill-load) clears. The hit carries\n` +
@@ -702,7 +708,7 @@ const verdict = await agent(
   `   boop — grade DECIDE=HOLLOW and verdict=HOLLOW (a deterministic backstop in the workflow body ALSO\n` +
   `   forces this; grade it honestly so your grade matches the substrate — you cannot launder a\n` +
   `   park-without-a-co-located-WWCW-run into a PASS).\n` +
-  `\n🌱 GROUNDING-RECEIPT (the ACTUAL-RECEIPT of the grounding floor — Corey directive: confirm the floor\n` +
+  `\n🌱 GROUNDING-RECEIPT (the ACTUAL-RECEIPT of the grounding floor — {STEWARD-NAME} directive: confirm the floor\n` +
   `   HAPPENED ON DISK, not a self-report; the gate is proven by the ARTIFACT it leaves, like canon_recall's\n` +
   `   hit-ledger proves recall). Two checks carry it:\n` +
   `  • SPRINT-MODE-READ — status=flag means a /sprint-mode|grounding pass was INVOKED this session but the\n` +
@@ -735,7 +741,7 @@ const verdict = await agent(
   `              KNOW faculty's proof-on-disk). PASS = grounding/sprint was invoked AND the load-verify floor\n` +
   `              block landed (SPRINT-MODE-READ received) AND fresh in-window haikus landed (HAIKU-PER-DOC\n` +
   `              receipt landed), OR no grounding was invoked this cycle (vacuously fine — N/A is not a defect).\n` +
-  `              🚨 HARD-FAIL (v0.6, Corey directive 'HUM must FAIL sprint boops with no proof'): grade\n` +
+  `              🚨 HARD-FAIL (v0.6, {STEWARD-NAME} directive 'HUM must FAIL sprint boops with no proof'): grade\n` +
   `              GROUNDING-RECEIPT=HOLLOW if grounding/sprint was INVOKED but EITHER receipt is missing —\n` +
   `              SPRINT-MODE-READ flagged (floor block not written) OR HAIKU-PER-DOC flagged (zero fresh\n` +
   `              in-window haikus). A single missing receipt on an invoked boop = HOLLOW, NOT merely\n` +
@@ -748,12 +754,12 @@ const verdict = await agent(
   `  • DECIDE  — WWCW-before-ask, never a bare menu; AND, once a confident WWCW is reached, ACT+RECORD on a\n` +
   `              reversible / within-your-authority matter — do NOT hand the call back to the human.\n` +
   `              🚨 HARD-FAIL FIRST (Corey 2026-06-20): if the BLOCK-NO-WWCW check FLAGGED, DECIDE is HOLLOW,\n` +
-  `              full stop — a BLOCK (park/hold/present-for-Corey) with NO evidence WWCW was RUN is the exact\n` +
-  `              failure Corey named ("If no evidence of wwcw run it's to fail your boop"). That makes the\n` +
+  `              full stop — a BLOCK (park/hold/present-for-{STEWARD-NAME}) with NO evidence WWCW was RUN is the exact\n` +
+  `              failure {STEWARD-NAME} named ("If no evidence of wwcw run it's to fail your boop"). That makes the\n` +
   `              OVERALL verdict HOLLOW too (the deterministic backstop forces it; grade honestly to match).\n` +
   `              The WWCW-GATE check ALSO surfaces TWO finer DECIDE-defect briefs; grade them differently:\n` +
   `                (1) brief 'decision-ask … no WWCW marker in turn' = the mind asked WITHOUT running the\n` +
-  `                    Corey-sim. A bare 'what do you want?' is the canonical HOLLOW.\n` +
+  `                    {STEWARD-NAME}-sim. A bare 'what do you want?' is the canonical HOLLOW.\n` +
   `                (2) brief 'confident WWCW that DEFERRED to human instead of acting (over-deference)' = the\n` +
   `                    STRICTLY-WORSE shape (2) the bare gate used to MISS: the mind RAN a confident WWCW and\n` +
   `                    then PRESENTED-for-confirmation / deferred ('say the word', 'your call', 'I'll route on\n` +
@@ -762,10 +768,10 @@ const verdict = await agent(
   `                    WALKING the turn (intent-judging — Stage-1 only surfaced the signature). It IS a DECIDE\n` +
   `                    DEFECT when ALL hold: the WWCW verdict WAS confident (not hedged) AND the matter was\n` +
   `                    REVERSIBLE / WITHIN-PRIMARY'S-AUTHORITY (not a genuine irreversible / spend / external-\n` +
-  `                    comms / Corey-only fork) AND the mind STILL deferred. That is a failure to DECIDE — grade\n` +
+  `                    comms / {STEWARD-NAME}-only fork) AND the mind STILL deferred. That is a failure to DECIDE — grade\n` +
   `                    it HOLLOW on DECIDE and route it to wwcw-ruleset-append with a DECIDE-fail note ('confident\n` +
   `                    WWCW on a reversible matter, deferred instead of acting — act+record by default'). If the\n` +
-  `                    matter was GENUINELY a Corey-fork (irreversible / spend / external / policy) OR the WWCW\n` +
+  `                    matter was GENUINELY a {STEWARD-NAME}-fork (irreversible / spend / external / policy) OR the WWCW\n` +
   `                    was honestly NOT confident, the defer was CORRECT — do NOT penalize; that is WWCW working.\n` +
   `              (An inline 'DECIDE…RATE: high confidence…ACT+RECORD' walk that ACTS is WWCW done RIGHT — Stage-1\n` +
   `               already excludes it by gating shape (2) on a hand-back marker, not a decision-word.)\n` +
@@ -775,16 +781,16 @@ const verdict = await agent(
   `              claim with no walk = a VERIFY defect to weigh — confirm by walking the turn if you can.)\n` +
   `  • CEO-ROUTING — were actions routed to the owning VP via a Workflow, or did the main mind mutate directly?\n` +
   `              (DELEGATION-SHAPE counts direct Edit/Write/Bash; a HIGH count where domain-work happened is a\n` +
-  `              routing defect. NOTE: HUM/tooling/own-memory/think-plan-route-judge-talk-to-Corey are the\n` +
+  `              routing defect. NOTE: HUM/tooling/own-memory/think-plan-route-judge-talk-to-{STEWARD-NAME} are the\n` +
   `              legitimate Primary-direct acts — do NOT penalize those. Weigh INTENT, not the raw count.)\n` +
   `  • HONESTY — did claims survive a real-path walk? Any PROVEN/PASS that a walk would falsify = HOLLOW.\n` +
   `\n--- ROUTE EACH CONFIRMED DEFECT TO ONE OWNING REPAIR ORGAN (this is the immune response) ---\n` +
   `For each CONFIRMED defect (not every candidate — only what you judge real), emit ONE route. Pick the\n` +
   `single owning organ from this closed set. The 'live' field declares whether the COMPOUND step should\n` +
   `FIRE this repair THIS run (reversibly) vs leave a QUEUED MARKER for a follow-on incarnation:\n` +
-  `  • wwcw-ruleset-append   — a DECIDE defect that reveals a missing/weak Corey-sim rule. FIRES LIVE: the\n` +
+  `  • wwcw-ruleset-append   — a DECIDE defect that reveals a missing/weak {STEWARD-NAME}-sim rule. FIRES LIVE: the\n` +
   `                            repair step appends a born-provisional candidate rule to wwcw-ruleset.md\n` +
-  `                            (.bak first). target = the proposed CLASS + what-Corey-wants (≤160ch). [LIVE]\n` +
+  `                            (.bak first). target = the proposed CLASS + what-{STEWARD-NAME}-wants (≤160ch). [LIVE]\n` +
   `  • auto-consolidate      — sprawl / un-homed project-shaped work that needs a home. FIRES LIVE: the repair\n` +
   `                            step appends a born-provisional flag to the auto-consolidate queue file.\n` +
   `                            target = the un-homed thing that needs a project-home (≤160ch). [LIVE]\n` +
@@ -867,7 +873,7 @@ const verdict = await agent(
   `forces this deterministically; grade honestly so your verdict matches the substrate). A BLOCK-NO-WWCW\n` +
   `failure should ALSO produce ONE wwcw-ruleset-append route capturing the missed-WWCW-on-a-block pattern.\n` +
   `\n--- REQUIRED grounding_completeness FIELD (the COMPLETE-OR-FAIL gate — Corey 2026-06-20; bubble to CEO) ---\n` +
-  `🚨 Corey directive verbatim: "Hum needs to check and fully FAIL any boop that isn't hyper detailed and\n` +
+  `🚨 {STEWARD-NAME} directive verbatim: "Hum needs to check and fully FAIL any boop that isn't hyper detailed and\n` +
   `complete. Miss one doc or one haiku or one step it's 100% fail on that boop. The discipline is EVERYTHING."\n` +
   `From the Stage-1 record's GROUNDING-COMPLETENESS check, populate grounding_completeness:\n` +
   `  • failed = true if the GROUNDING-COMPLETENESS check has status=="flag" (a substantive grounding boop\n` +
@@ -879,7 +885,7 @@ const verdict = await agent(
   `    🚨 PER-CYCLE (2026-06-20, mind-lead): GROUNDING-COMPLETENESS now scopes to THIS boop's window\n` +
   `    (the --since-turn cursor boundary = between this /sprint-mode injection and the next). per_doc_haikus\n` +
   `    counts ONLY haikus written THIS boop, NOT session-wide — a lean boop riding earlier cycles' haikus\n` +
-  `    can no longer launder a PASS (the whole-session bug Corey caught: per_doc_haikus=34 session-wide for\n` +
+  `    can no longer launder a PASS (the whole-session bug {STEWARD-NAME} caught: per_doc_haikus=34 session-wide for\n` +
   `    a boop that wrote ~0 fresh). The deterministic backstop is unchanged — it reads the SAME status=flag.\n` +
   `  • missing = the hit's missing_elements array (the enumerated absent elements — e.g.\n` +
   `    ['per-doc-haikus(1/10)','auto-consolidate-sweep','hum-last-step-fired']).\n` +
@@ -892,8 +898,8 @@ const verdict = await agent(
   `launder a cheap one-haiku boop into a PASS). A GROUNDING-COMPLETENESS failure should ALSO produce ONE\n` +
   `vp-drift-flag route to fleet-lead (owner of sprint-mode + grounding-docs + the completeness contract)\n` +
   `naming the missing elements (target: 'fleet-lead: grounding INCOMPLETE — <missing> not present cycle <id>').\n` +
-  `\n--- REQUIRED act_on_flagged FIELD (the NOTICE-DON'T-ACT enforcement — fleet-lead 2026-06-22, Corey-directed GO) ---\n` +
-  `🚨 THE GAP THIS CLOSES (Corey-caught): a sweep that HONESTLY flags NOT-CLEAN, or a doc that goes stale after\n` +
+  `\n--- REQUIRED act_on_flagged FIELD (the NOTICE-DON'T-ACT enforcement — fleet-lead 2026-06-22, {STEWARD-NAME}-directed GO) ---\n` +
+  `🚨 THE GAP THIS CLOSES ({STEWARD-NAME}-caught): a sweep that HONESTLY flags NOT-CLEAN, or a doc that goes stale after\n` +
   `keep-worthy work, is WORTHLESS if the mind then DEFERS the fix (notice-don't-act). The auto-consolidate +\n` +
   `grounding-docs SKILLs now MANDATE ACT-ON-FLAGGED: when a sweep finds something un-homed/un-wired, the mind\n` +
   `HOMES/WIRES/CLOSES it IN-BOOP, OR names a CONCRETE owner+trigger (skill-forge hand-off / a routed VP +\n` +
@@ -913,12 +919,12 @@ const verdict = await agent(
   `    CONCRETE owner WITH a trigger. WALK it: a VAGUE defer ("will home later", "TODO", "noted", "deferred to\n` +
   `    next cycle") is NOT an act → still true. A real skill-forge hand-off / a vp-route-with-firing-trigger /\n` +
   `    a hum-repair-queue file = acted → false.\n` +
-  `  🔨 THE VERDICT RULE (Corey-directed — these are the two FAIL conditions): when you CONFIRM (via the walk)\n` +
+  `  🔨 THE VERDICT RULE ({STEWARD-NAME}-directed — these are the two FAIL conditions): when you CONFIRM (via the walk)\n` +
   `     EITHER doc_stale_no_reconcile==true OR sweep_notice_dont_act==true, this is a real self-operation\n` +
   `     defect — the mind NOTICED and DID NOT ACT — so grade DECIDE=HOLLOW (it failed to make the reconcile/\n` +
   `     act call it could have made) AND HONESTY=HOLLOW (a flag honestly raised then ignored is the kindest\n` +
   `     possible rot) AND verdict=HOLLOW. This is a JUDGE-CONFIRMED hard fail (NOT a deterministic backstop —\n` +
-  `     it requires YOUR walk to confirm intent, per Corey "no scripts if possible"); the find_the_miss surface\n` +
+  `     it requires YOUR walk to confirm intent, per {STEWARD-NAME} "no scripts if possible"); the find_the_miss surface\n` +
   `     (5) doc-not-updated and (9) discipline-skip cover the SAME defect, but THIS field makes the\n` +
   `     verdict-break explicit + ownable. A confirmed defect ALSO produces ONE route: doc_stale → integration\n` +
   `     to mind-lead (reconcile WORKBOARD/devlog); sweep_notice_dont_act → the act the sweep should have done\n` +
@@ -1066,7 +1072,7 @@ const verdict = await agent(
         },
         // 🚨 BLOCK-NO-WWCW (the ONE HARD-FAIL DECIDE check, Corey 2026-06-20). Copy the Stage-1 record's
         // BLOCK-NO-WWCW check result so the firewall + the deterministic backstop in the workflow body can
-        // read the SAME signal. block_present = a BLOCK (park/hold/present-for-Corey) was found in-window;
+        // read the SAME signal. block_present = a BLOCK (park/hold/present-for-{STEWARD-NAME}) was found in-window;
         // wwcw_run_evidence = the window held a real WWCW-run footprint; failed = block_present AND NOT
         // wwcw_run_evidence (the boop-failing condition — the check's status=flag).
         block_no_wwcw: {
@@ -1090,7 +1096,7 @@ const verdict = await agent(
             missing: { type: 'array', maxItems: 12, items: { type: 'string', maxLength: 40 } },
           },
         },
-        // 🔨 act_on_flagged (the NOTICE-DON'T-ACT enforcement, fleet-lead 2026-06-22, Corey-directed GO).
+        // 🔨 act_on_flagged (the NOTICE-DON'T-ACT enforcement, fleet-lead 2026-06-22, {STEWARD-NAME}-directed GO).
         // JUDGE-CONFIRMED (not a deterministic backstop): when the JUDGE WALKS the DOC-CURRENCY + the
         // SWEEP-ACT-ON-FLAGGED candidate signals and CONFIRMS the mind NOTICED but DID NOT ACT, EITHER bool
         // true breaks the verdict (DECIDE+HONESTY+verdict=HOLLOW per the prompt). doc_stale_no_reconcile =
@@ -1164,7 +1170,7 @@ let dimLine = buildDimLine()
 let routesForLedger = (Array.isArray(v.routes) ? v.routes : []).slice(0, 8)
 
 // ---------------------------------------------------------------------------
-// PHASE 2.5 — READINESS (v0.3, ADDITIVE; the ai-doc⇄TGIM reconciler folded INTO HUM per Corey's
+// PHASE 2.5 — READINESS (v0.3, ADDITIVE; the ai-doc⇄TGIM reconciler folded INTO HUM per {STEWARD-NAME}'s
 // "readiness ping at the AiCIV doc every cycle"). CHEAP: one file read of ai-doc's verdict store +
 // one TGIM GET. Closes the blind spot where ai-doc claims clean (no recent HOLLOW) while TGIM is
 // recording real task_failed events (the caught case: ai-doc said 0, TGIM had 12). FAIL-SOFT: any
@@ -1373,7 +1379,7 @@ if (pc.compliance_route && pc.compliance_route.organ === 'auto-consolidate') {
 // (self-knowledge / m3-combo). It reads the SAME Stage-1 record the grader already produced (the new
 // DOC-CURRENCY check in session_review.py) — NO second session walk. The DOC-CURRENCY check proves
 // currency by RECEIPT (each surface's on-disk mtime vs the latest keep-worthy turn's timestamp), NOT
-// a self-report — Corey today: verify ACTUAL RECEIPT, the behavior happened on disk. Builds
+// a self-report — {STEWARD-NAME} today: verify ACTUAL RECEIPT, the behavior happened on disk. Builds
 // { surfaces_checked, surfaces_stale, current }. FAIL-SOFT: any error → current=null + a note, NEVER
 // crashes the core loop. A stale surface emits ONE integration route to mind-lead (WORKBOARD + the
 // doc-staleness mandate owner) to reconcile — MERGED into the routes the Repair/Compound already
@@ -1493,7 +1499,7 @@ const groundingReceipt = (function () {
 
 // v0.7 BLOCK-NO-WWCW holder (the ONE HARD-FAIL DECIDE signal, Corey 2026-06-20: a BLOCK with no
 // WWCW-run evidence FAILS the boop). Declared here so BOTH the COMPOUND ledger block and the firewall
-// return read the SAME sanitized values. failed=true = a park/hold/present-for-Corey was present in-window
+// return read the SAME sanitized values. failed=true = a park/hold/present-for-{STEWARD-NAME} was present in-window
 // AND the window held ZERO WWCW-run footprint (the Stage-1 BLOCK-NO-WWCW check flagged).
 const blockNoWwcw = (function () {
   const b = (v && v.block_no_wwcw && typeof v.block_no_wwcw === 'object') ? v.block_no_wwcw : {}
@@ -1619,16 +1625,16 @@ if (groundingHardFail) {
 // This is THE fix for "HUM is failing." The grader is an LLM; left to its prompt alone it MIGHT grade
 // DECIDE=PASS even when a park-without-a-WWCW-run is provably present (a green checkmark that lies is the
 // kindest possible rot). So the hard-fail is made DETERMINISTIC here in the script body, NOT trusted to
-// the grader: if the Stage-1 BLOCK-NO-WWCW check FLAGGED (a BLOCK — park/hold/present-for-Corey — present
+// the grader: if the Stage-1 BLOCK-NO-WWCW check FLAGGED (a BLOCK — park/hold/present-for-{STEWARD-NAME} — present
 // in-window AND ZERO WWCW-run footprint), we FORCE:
-//   (1) dims['DECIDE'] = 'HOLLOW'   (the DECIDE verb fails — the park skipped the Corey-sim), and
+//   (1) dims['DECIDE'] = 'HOLLOW'   (the DECIDE verb fails — the park skipped the {STEWARD-NAME}-sim), and
 //   (2) v.verdict = 'HOLLOW'        (a HOLLOW dimension is verdict-failing → the boop FAILS),
 // regardless of what the grader returned. The park-without-a-WWCW-run is a FAILED boop on the HUM record.
 // This MIRRORS the v0.6 grounding-receipt hard-fail exactly (same deterministic-backstop shape).
 //
 // 🛡️ FALSE-FAIL GUARD (load-bearing): this fires ONLY on blockNoWwcw.failed===true, which the Stage-1
 //    check sets ONLY when a real BLOCK was present AND the window held NO WWCW-run footprint. A no-block
-//    session, a status-only session (BLOCK_RE/BLOCK_CAPS_FLAG_RE are anchored to park/hold/ask-for-Corey
+//    session, a status-only session (BLOCK_RE/BLOCK_CAPS_FLAG_RE are anchored to park/hold/ask-for-{STEWARD-NAME}
 //    shapes, never a bare question mark), and a window where WWCW was actually run all leave the Stage-1
 //    check status="pass" → failed===false → no hard-fail. We never fail a mind that ran WWCW; we only fail
 //    a park that skipped it. Mirror-images the session_review.py BLOCK_NO_WWCW_HARDFAIL scoping.
@@ -1639,7 +1645,7 @@ if (blockNoWwcwHardFail) {
   dims['DECIDE'] = 'HOLLOW'   // dims is the live ref the firewall + dimLine read
   dimLine = buildDimLine()    // recompute so the ledger + canon item show the forced HOLLOW
   v.verdict = 'HOLLOW'        // a HOLLOW DECIDE is verdict-failing — the park-without-a-WWCW-run FAILS the boop
-  log(`HUM BLOCK-NO-WWCW DETERMINISTIC HARD-FAIL — a BLOCK (park/hold/present-for-Corey) at turn ${blockNoWwcw.block_turn} had NO WWCW-run evidence in window → DECIDE=HOLLOW, verdict FORCED HOLLOW (block without a WWCW run = FAILED boop, Corey 2026-06-20)`)
+  log(`HUM BLOCK-NO-WWCW DETERMINISTIC HARD-FAIL — a BLOCK (park/hold/present-for-{STEWARD-NAME}) at turn ${blockNoWwcw.block_turn} had NO WWCW-run evidence in window → DECIDE=HOLLOW, verdict FORCED HOLLOW (block without a WWCW run = FAILED boop, Corey 2026-06-20)`)
 } else {
   log(`HUM BLOCK-NO-WWCW: block_present=${blockNoWwcw.block_present} wwcw_run_evidence=${blockNoWwcw.wwcw_run_evidence} — no hard-fail (no block, or WWCW was run)`)
 }
@@ -1685,12 +1691,12 @@ if (groundingCompletenessHardFail) {
 }
 
 // ---------------------------------------------------------------------------
-// 🔨 ACT-ON-FLAGGED CONSISTENCY-ENFORCEMENT (fleet-lead 2026-06-22, Corey-directed GO). The
+// 🔨 ACT-ON-FLAGGED CONSISTENCY-ENFORCEMENT (fleet-lead 2026-06-22, {STEWARD-NAME}-directed GO). The
 // NOTICE-DON'T-ACT defect: a sweep honestly flags NOT-CLEAN, or a civ doc goes stale after keep-worthy
 // work, and the mind DEFERS the fix. UNLIKE the BLOCK-NO-WWCW / GROUNDING-COMPLETENESS hard-fails (which
 // read a DETERMINISTIC session_review status=flag), this gate fires on the JUDGE's WALKED CONFIRMATION
 // (the act_on_flagged field) — the deterministic checks (DOC-CURRENCY + SWEEP-ACT-ON-FLAGGED) are
-// CANDIDATE-only; the JUDGE walks the window + confirms intent (Corey "no scripts if possible" — a
+// CANDIDATE-only; the JUDGE walks the window + confirms intent ({STEWARD-NAME} "no scripts if possible" — a
 // judging mind, not a bash regex). This block ONLY keeps the dims/dimLine/verdict in LOCKSTEP with the
 // JUDGE's confirmed field (so the ledger + canon match) — it does NOT itself re-detect anything.
 //
@@ -1725,7 +1731,7 @@ if (actOnFlaggedFail) {
 log(`HUM FIND-THE-MISS: found=${findTheMiss.found} surface=${findTheMiss.surface} walked=${findTheMiss.walked}${findTheMiss.found ? ` walk_evidence="${findTheMiss.walk_evidence.slice(0, 80)}"` : ' (no genuine miss — documented hunt; rare/suspect)'} · FEEDBACK aligns_to=${selfEvolutionFeedback.aligns_to} · checklist_filled=${checklistFilled}`)
 
 // ---------------------------------------------------------------------------
-// 🔢 COMPUTE THE NUMERICAL SCORE (mind-lead 2026-06-21, Corey directive — the SCORING MATRIX). ADDITIVE
+// 🔢 COMPUTE THE NUMERICAL SCORE (mind-lead 2026-06-21, {STEWARD-NAME} directive — the SCORING MATRIX). ADDITIVE
 // LAYER: called ONCE here, AFTER all three deterministic hard-fails fired (so `dims` already carries any
 // forced HOLLOWs) and BEFORE the COMPOUND phase (so the score + matrix breakdown can be embedded in the
 // ledger + canon for training data). It READS the SAME sanitized objects the verdict logic + firewall use
@@ -1771,7 +1777,7 @@ const queuedCount = routesForLedger.length - liveCount
 // REVERSIBLE and BORN-PROVISIONAL (validated later by a DIFFERENT incarnation — the forger/
 // flagger CANNOT grade its own work per doctrine_installer_is_not_exempt_from_auditor):
 //   • wwcw-ruleset-append — a REAL substrate edit: appends a born-provisional candidate rule to
-//       wwcw-ruleset.md (a file whose entire purpose is to accumulate Corey-decisions; append-safe;
+//       wwcw-ruleset.md (a file whose entire purpose is to accumulate {STEWARD-NAME}-decisions; append-safe;
 //       .bak first). The rule is tagged HUM-PROVISIONAL so a human/peer confirms it before it counts.
 //   • auto-consolidate / vp-drift-flag / skill-forge — fire LIVE as a born-provisional FLAG appended
 //       to data/reports/hum-repair-queue.md (a dated, append-only intake). This RESPECTS VP-sovereignty:
@@ -1817,10 +1823,10 @@ if (liveRoutes.length === 0) {
         `   VERBATIM + this born-provisional block appended at the very END, ONE block per route (substitute\n` +
         `   each route's TARGET/WHY — these are plain JSON string values, paste them as-is into the Write):\n` +
         `   ---block---\n` +
-        `   \n<!-- HUM-PROVISIONAL (born-provisional; appended by workflows/hum.js REPAIR phase; validate via a DIFFERENT incarnation before treating as a confirmed Corey-rule) -->\n` +
+        `   \n<!-- HUM-PROVISIONAL (born-provisional; appended by workflows/hum.js REPAIR phase; validate via a DIFFERENT incarnation before treating as a confirmed {STEWARD-NAME}-rule) -->\n` +
         `   ### CLASS (HUM-candidate, UNVALIDATED): <TARGET>\n` +
-        `   - **What HUM inferred Corey wants (UNCONFIRMED):** <WHY>\n` +
-        `   - **source:** HUM immune-grader, session ${sessionLabel}; NOT a witnessed Corey-decision — a candidate routed from a DECIDE-defect. Confirm with Corey before it counts.\n` +
+        `   - **What HUM inferred {STEWARD-NAME} wants (UNCONFIRMED):** <WHY>\n` +
+        `   - **source:** HUM immune-grader, session ${sessionLabel}; NOT a witnessed {STEWARD-NAME}-decision — a candidate routed from a DECIDE-defect. Confirm with {STEWARD-NAME} before it counts.\n` +
         `   ---end block---\n` +
         `3. Confirm: report the file's new byte size (\`wc -c < autonomy/skills/wwcw/wwcw-ruleset.md\`) + that the\n` +
         `   HUM-PROVISIONAL marker is present (\`grep -c 'HUM-PROVISIONAL' autonomy/skills/wwcw/wwcw-ruleset.md\`).\n` +
@@ -2018,7 +2024,7 @@ const compoundResult = await agent(
   `  CHECKLIST_DOC_PATH = ${JSON.stringify(CHECKLIST_DOC_PATH)}\n` +
   `  CHECKLIST_DOC_BODY = ${JSON.stringify(checklistDocBody)}\n` +
   `\n=== (1) APPEND ONE HUM LEDGER ENTRY to TODAY's DAILY-ROTATED day-file (Read-then-Write, no heredoc) ===\n` +
-  `🗓️ DAILY ROTATION (mind-lead 2026-06-21, Corey directive): the flat 1004-line hum-ledger.md was rotated\n` +
+  `🗓️ DAILY ROTATION (mind-lead 2026-06-21, {STEWARD-NAME} directive): the flat 1004-line hum-ledger.md was rotated\n` +
   `into a file-PER-DAY (mirroring .claude/scratchpad-daily/). You append to TODAY's day-file, which you\n` +
   `RESOLVE first — do NOT append to the legacy flat ${HUM_LEDGER} (that is now a pointer stub).\n` +
   `Step 1a — get the real UTC timestamp:  TS=$(date -u +%Y-%m-%dT%H:%M:%SZ)\n` +
@@ -2167,7 +2173,7 @@ const firewall = {
     devlogs_updated: clampInt(projectFolderCompliance.devlogs_updated),
     compliant: projectFolderCompliance.compliant,
   },
-  // v0.5 DOC-CURRENCY: the DOC-UP-TO-DATE mandate (Corey directive — keep the living docs current by
+  // v0.5 DOC-CURRENCY: the DOC-UP-TO-DATE mandate ({STEWARD-NAME} directive — keep the living docs current by
   // RECEIPT, not claim). Did keep-worthy work land this cycle while the WORKBOARD / program-home
   // devlogs went stale by their on-disk mtime? current is tri-state (true/false/null); false = >=1
   // stale living doc while keep-worthy work landed (the doc-staleness a human else has to catch) —
@@ -2177,7 +2183,7 @@ const firewall = {
     surfaces_stale: clampInt(docCurrencyResult.surfaces_stale),
     current: docCurrencyResult.current,
   },
-  // v1.4 GROUNDING-RECEIPT: the ACTUAL-RECEIPT of the grounding floor (Corey directive — confirm the
+  // v1.4 GROUNDING-RECEIPT: the ACTUAL-RECEIPT of the grounding floor ({STEWARD-NAME} directive — confirm the
   // floor HAPPENED ON DISK, not a self-report). floor_read_received / haiku_receipt are tri-state
   // (true/false/null); false = invoked-but-no-artifact (the shallow/skipped grounding a human else catches).
   // Reads the SAME hoisted `groundingReceipt` const the ledger used (single source of truth).
@@ -2189,7 +2195,7 @@ const firewall = {
     distinct_docs: clampInt(groundingReceipt.distinct_docs),
   },
   // v0.7 BLOCK-NO-WWCW: the ONE HARD-FAIL DECIDE signal (Corey 2026-06-20 — a BLOCK with no WWCW-run
-  // evidence FAILS the boop). failed=true means a park/hold/present-for-Corey was present in-window AND
+  // evidence FAILS the boop). failed=true means a park/hold/present-for-{STEWARD-NAME} was present in-window AND
   // the window held ZERO WWCW-run footprint → DECIDE + verdict were deterministically forced HOLLOW above.
   block_no_wwcw: {
     block_present: blockNoWwcw.block_present,
@@ -2207,7 +2213,7 @@ const firewall = {
     per_doc_haikus: clampInt(groundingCompleteness.per_doc_haikus),
     missing: groundingCompleteness.missing,
   },
-  // v4.4 ACT-ON-FLAGGED (the NOTICE-DON'T-ACT enforcement, fleet-lead 2026-06-22, Corey-directed GO).
+  // v4.4 ACT-ON-FLAGGED (the NOTICE-DON'T-ACT enforcement, fleet-lead 2026-06-22, {STEWARD-NAME}-directed GO).
   // JUDGE-CONFIRMED: EITHER bool true means the JUDGE WALKED the window + confirmed the mind NOTICED
   // (a stale civ doc after keep-worthy work, OR a sweep self-reporting NOT-CLEAN) but DID NOT ACT/RECONCILE
   // → DECIDE + HONESTY + verdict were forced HOLLOW above. failed bubbles the combined signal to the CEO.

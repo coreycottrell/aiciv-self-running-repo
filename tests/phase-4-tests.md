@@ -49,10 +49,10 @@ PASS = the dry-run proves Mneme persists ACROSS wakes (the open unproven claim �
 **Owner:** mind-lead + ceremony-lead (genome) · **Proof-gate:** a fork boots itself from the template with zero hand-wiring.
 
 **T4.3.1 — A fresh fork boots ITSELF from the template with ZERO hand-wiring.**
-Stand up a test fork (or Pyonair newborn) from the packaged template and supply NO hand-wiring to ACG paths. PASS = the fork boots its own mind (grounding → recall → cycle → write-back) from the template alone. FAIL (adversarial) = it only runs because someone hand-wired it to ACG's paths (duct-tape, not a template — the level-(b) failure).
+Stand up a test fork (or Pyonair newborn) from the packaged template and supply NO hand-wiring to {AICIV-NAME} paths. PASS = the fork boots its own mind (grounding → recall → cycle → write-back) from the template alone. FAIL (adversarial) = it only runs because someone hand-wired it to {AICIV-NAME}'s paths (duct-tape, not a template — the level-(b) failure).
 
-**T4.3.2 — The template is NOT shaped like ACG (works for a non-ACG mind).**
-Apply the template to a mind with a DIFFERENT shape (e.g. a 3-VP micro-civ, or zero-Claude). PASS = it boots a non-ACG-shaped mind. FAIL (adversarial) = the template hardcodes ACG's 17 VPs / ACG paths / ACG-specific assumptions (it's an ACG export, not a forkable template).
+**T4.3.2 — The template is NOT shaped like {AICIV-NAME} (works for a non-{AICIV-NAME} mind).**
+Apply the template to a mind with a DIFFERENT shape (e.g. a 3-VP micro-civ, or zero-Claude). PASS = it boots a non-{AICIV-NAME}-shaped mind. FAIL (adversarial) = the template hardcodes {AICIV-NAME}'s 17 VPs / {AICIV-NAME} paths / {AICIV-NAME}-specific assumptions (it's an {AICIV-NAME} export, not a forkable template).
 
 **T4.3.3 — Genome seeds carry the UNVALIDATED→PROVEN stamp HONESTLY.**
 Inspect the shipped genome seeds. PASS = each seed carries its honest validation stamp (the after-a-clear stamp says PROVEN only where P4.1 passed; provisional mechanics stay flagged provisional per Mneme's retraction right). FAIL (adversarial) = a seed ships claiming PROVEN where the proof didn't land (federation-IP that lies = rot propagated to every fork).
