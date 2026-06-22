@@ -94,7 +94,8 @@ import time
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-ROOT = Path("/home/corey/projects/AI-CIV/ACG")
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
 BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
 SPINE_DIR = ROOT / "tools/sovereignty-spine"
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"

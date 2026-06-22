@@ -1099,7 +1099,7 @@ def _project_of_path(fp):
     if not isinstance(fp, str) or not fp:
         return None
     rel = fp
-    for root in ("/home/corey/projects/AI-CIV/ACG/",):
+    for root in ((os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG") + "/"),):
         if rel.startswith(root):
             rel = rel[len(root):]
     m = PROJECT_PATH_RE.match(rel)
@@ -1153,7 +1153,7 @@ DOC_CURRENCY_SURFACES = [
     ("self-knowledge-devlog", "projects/self-knowledge/DEVLOG.md"),
     ("m3-combo-devlog", "projects/AI-CIV/m3-combo/DEVLOG.md"),
 ]
-DOC_CURRENCY_ROOT = "/home/corey/projects/AI-CIV/ACG"
+DOC_CURRENCY_ROOT = os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG")
 
 # GRACE WINDOW (seconds). The staleness test is NOT "doc mtime must be after the VERY LAST keep-worthy
 # turn" — that is too strict: during active work you canon_append, update the doc, then canon_append
@@ -2953,7 +2953,7 @@ def check_haiku_per_doc(turns, full_turns=None):
     lo = (first_ts - pad) if (first_ts is not None and pad is not None) else first_ts
     hi = (last_ts + pad) if (last_ts is not None and pad is not None) else last_ts
 
-    archive_path = os.path.join("/home/corey/projects/AI-CIV/ACG", HAIKU_ARCHIVE_PATH)
+    archive_path = os.path.join(os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"), HAIKU_ARCHIVE_PATH)
     fresh = 0
     fresh_docs = set()
     archive_read_ok = True
@@ -3062,7 +3062,7 @@ def _count_fresh_haiku_docs(scan, window=None, no_backward_pad=False):
     hi = (last_ts + pad) if (last_ts is not None and pad is not None) else last_ts
     if first_ts is None and last_ts is None:
         return 0, False  # no session window -> cannot attribute any haiku -> not verifiable
-    archive_path = os.path.join("/home/corey/projects/AI-CIV/ACG", HAIKU_ARCHIVE_PATH)
+    archive_path = os.path.join(os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"), HAIKU_ARCHIVE_PATH)
     if not os.path.isfile(archive_path):
         return 0, False
     fresh_docs = set()
@@ -3767,7 +3767,7 @@ def check_freeze_edit(turns, freeze_cfg):
                 continue
             # normalize: match against both abs and repo-relative forms
             rel = fp
-            for root in ("/home/corey/projects/AI-CIV/ACG/",):
+            for root in ((os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG") + "/"),):
                 if rel.startswith(root):
                     rel = rel[len(root):]
             matched = any(fnmatch.fnmatch(fp, g) or fnmatch.fnmatch(rel, g) for g in globs)
@@ -4022,7 +4022,7 @@ def main():
     # gate read its config by DEFAULT for EVERY invocation — direct calls AND HUM's DETECT shell —
     # so FREEZE-CONFIG-MISSING stops firing once the config is present. Reversible: delete this
     # block + the constant to revert to flag-only behavior (.bak.20260619T210001Z-pre-freeze-default).
-    DEFAULT_FREEZE_CONFIG = "/home/corey/projects/AI-CIV/ACG/config/freeze-config.json"
+    DEFAULT_FREEZE_CONFIG = (os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG") + "/config/freeze-config.json")
     freeze_config_path = args.freeze_config
     if not freeze_config_path and os.path.isfile(DEFAULT_FREEZE_CONFIG):
         freeze_config_path = DEFAULT_FREEZE_CONFIG

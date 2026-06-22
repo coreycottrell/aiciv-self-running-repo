@@ -37,7 +37,8 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path("/home/corey/projects/AI-CIV/ACG")
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
 WORKBOARD = ROOT / "WORKBOARD.md"

@@ -404,8 +404,9 @@ export const meta = {
   phases: [{ title: 'Detect' }, { title: 'Judge' }, { title: 'Readiness' }, { title: 'ProjectCompliance' }, { title: 'DocCurrency' }, { title: 'Repair' }, { title: 'Compound' }],
 }
 
-const ROOT = '/home/corey/projects/AI-CIV/ACG'
-const PROJECT_DIR = '/home/corey/.claude/projects/-home-corey-projects-AI-CIV-ACG'
+// fork-resolution: honor $AICIV_ROOT / $AICIV_PROJECT_DIR (STAND-IT-UP §0); ACG paths are the origin fallback
+const ROOT = process.env.AICIV_ROOT || '/home/corey/projects/AI-CIV/ACG'
+const PROJECT_DIR = process.env.AICIV_PROJECT_DIR || '/home/corey/.claude/projects/-home-corey-projects-AI-CIV-ACG'
 // DAILY ROTATION (mind-lead 2026-06-21, Corey: "per day tho so early morning daily boop we start new
 // one same way we start new daily scratchpads"). The flat 1004-line hum-ledger.md was rotated into a
 // file-per-day under hum-ledger-daily/YYYY-MM-DD.md (mirroring .claude/scratchpad-daily/). The legacy
