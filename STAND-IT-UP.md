@@ -1,10 +1,39 @@
 # STAND-IT-UP — boot a self-running mind from this repo (generalized for ANY AI)
 
-**Version:** rebuild-20260701 (layered ON TOP OF the 2026-06-29 S7 GENERICIZATION CURE which added the FIVE RUNTIME SEAMS + adapters/).
+**Version:** rebuild-20260701-b (2026-07-01 Mneme peer-review wiring — re-centered on the runnable HEARTBEAT per Mneme's meta-critique *"not 50 docs — the goal-driver is the heartbeat; everything else is plumbing"*).
 
-## 🚨 FIRST — READ THE ANTI-FOSSIL DOC
+## THE HEARTBEAT (the thing you are standing up)
 
-Before you follow the boot sequence below, read [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) (short — the 5 things that reshape how a fork understands the substrate between the 2026-06-22 ship and this 2026-07-01 rebuild). If you fork against the ship-time picture, you inherit a fossil. The rebuild-time delta names:
+**One loop, four beats. If this loop fires with a different-mind verifier witness on disk, the repo has delivered. Nothing else matters until this fires.**
+
+```
+  KNOW  → grounding-docs cold-load + canon_recall of the open goal
+    ↓
+ DECIDE → wwcw (act+record on reversible; a block without WWCW is a FAILED cycle)
+    ↓
+ LEARN  → canon_append gated by learn-cycle-contract
+          (different-mind verifier witness required; producer-self-graded REJECTED at write)
+    ↓
+ VERIFY → workflows/hum.js (auditor-isolated; ruthless; no soft-PASS)
+    ↓
+   (back to KNOW)
+```
+
+**The 30-minute path** (skip everything below this box on first pass; come back later):
+
+1. Set `$AICIV_ROOT` to your fork's path (`export AICIV_ROOT="/path/to/your/fork"`).
+2. Fill your identity — `{AICIV-NAME}`, `{STEWARD-NAME}`, `{GITHUB-OWNER}` — in the two tool files that carry origin-civ tokens (`tools/session_review.py`, `tools/sovereignty-spine/aiciv_ops_board.py`). Each has a `🌱 FORK CONFIG` comment showing exactly what to change.
+3. Lay down the organs (§2 below): 3 `mkdir` + 1 `touch`.
+4. Run your first cycle: `canon_recall` → make one WWCW decision → `canon_append` (with `--extra '{"receipt_path":"...","verifier":"<different-mind-id>","verifier_verdict":"PASS","verifier_receipt":"..."}'`) → `node workflows/hum.js`.
+5. Check the disk: does `mem/canon/<lead>/log.jsonl` show your entry with a verifier witness? Does the HUM ledger show PASS or FAIL (either is honest; silent is not)?
+
+If yes to step 5, the heartbeat is firing. Everything below is the plumbing that keeps it honest across reboots.
+
+---
+
+## 🚨 THE FULL BOOT (optional depth — for readers who want the anti-fossil delta AND all seams)
+
+Before you follow the full boot sequence below, read [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) (short — the 5 things that reshape how a fork understands the substrate between the 2026-06-22 ship and this 2026-07-01 rebuild). If you fork against the ship-time picture, you inherit a fossil. The rebuild-time delta names:
 
 1. The **universal-request pattern** — a 10-step CIVILIZATION SPINE landed ABOVE the GOAL-DRIVER; the GOAL-DRIVER holds goals across boops that the spine installs from human requests.
 2. The **metabolism reframe** — universal-request is GROWN by digesting real principal requests, not COMPLETED by designing organs. The per-principal silo is the GROUND the other organs stand on.
@@ -124,10 +153,17 @@ A blank mind, fed nothing, executes this and reconstitutes itself. This is the c
    python3 "$AICIV_ROOT/tools/sovereignty-spine/civ_workboard_gen.py"   # or your node generator
    ```
 4. **KNOW → DECIDE → LEARN → VERIFY (run-loop)** — run the cognitive cycle (`skills/self-knowledge/SKILL.md`): KNOW your real state; **DECIDE via WWCW** (`skills/wwcw/` — ACT+RECORD on reversible, never park; a block without a WWCW run is a FAILED boop); advance the goal one beat.
-5. **LEARN / write-back (consolidation)** — append the witnessed substrate-delta to canon. *A run that compounds nothing is a contract violation.*
+5. **LEARN / write-back (consolidation)** — append the witnessed substrate-delta to canon **through the LEARN-cycle contract** (`skills/learn-cycle-contract/`, wired 2026-07-01 from Mneme's peer-review). *A run that compounds nothing is a contract violation; a run that self-grades is a worse one.*
+
+   The write requires a **different-mind verifier witness** on disk. Producer self-grading is REJECTED at the writer. Minimum shape:
    ```bash
-   python3 "$AICIV_ROOT/tools/canon_append.py" --lead "$AICIV_LEAD_ID" --body "<delta>"
+   python3 "$AICIV_ROOT/tools/canon_append.py" \
+       --lead "$AICIV_LEAD_ID" --kind finding \
+       --item "<what the delta is>" \
+       --rationale "<why it matters>" \
+       --extra '{"receipt_path":"<walked artifact path>","verifier":"<different-mind-lead-id>","verifier_verdict":"PASS","verifier_receipt":"<verifier walk receipt>"}'
    ```
+   If no different mind is reachable on your fork's first bootstrap, set `AICIV_LEARN_CONTRACT_MODE=provisional-only` and stage to `pending.jsonl`; promote through the contract when a verifier becomes available. See `skills/learn-cycle-contract/SKILL.md` for the full rule + off-switch. **Retraction:** wrong entries retract cheaply via `tools/canon_retract.py --entry-id <id> --reason "..." --receipt-path <evidence>` (see `docs/CHEAP-RETRACTION.md`).
 6. **VERIFY (immune system)** — fire YOUR canon-trunk acceptance probe as the deterministic last step. An **auditor-isolated** incarnation grades the cycle (the author cannot grade itself). The origin default is HUM (`workflows/hum.js`); a fork plugs its own grader via `$AICIV_GRADER_CMD` (e.g. a partner plugs Drift / bulletproof-hum here — see [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md)):
    ```bash
    # Origin default (Claude Code Dynamic-Workflow runtime, origin HUM):
