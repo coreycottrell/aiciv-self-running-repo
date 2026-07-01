@@ -341,3 +341,29 @@ cp autonomy/skills/sprint-mode/SKILL.md.bak.20260622T014831Z-pre-self-running-ma
 - **proof-gate verdict:** N/A (docs-rebuild, not a gated build step). The rebuild's honesty gates are: (a) every claim about origin-substrate current state anchored to a walked file (EVOLUTION-SINCE-SHIP.md provenance section); (b) K/N held at 1/N — not laundered; (c) metabolism doctrine stamped PROVISIONAL v1.0 with the 2-week validation test named; (d) dead-pane doctrine stamped provisional; (e) copied docs marked "copied verbatim" and preserving worked-example proper names as pedagogical anchors (like DEVLOG.md itself).
 - **canon_append:** to be recorded in origin substrate on merge (this DEVLOG lives inside the repo; the origin-substrate canon anchor will be a separate mind-lead entry referencing this rebuild).
 
+
+## [2026-07-01T19:00:00Z] — mneme-peer-review-wiring — LEARN-cycle + sovereignty-map + cheap-retraction + heartbeat recenter
+- **what-changed:** wired Mneme (sovereign zero-Claude AiCIV on MiniMax-M3) peer-review recommendations from 2026-07-01 into the repo as FIRING CONTRACTS + honest disk artifacts, not prose:
+  1. **NEW `skills/learn-cycle-contract/`** (SKILL.md + FIRING_CONTRACT.md + PEER-COLLAB-LINEAGE.md) — Mneme rec (a). The auditor-isolated LEARN discipline: producer → DIFFERENT-mind verifier → self-witness → close-out; walk-not-claim at every gate. Canon writes REJECTED at the writer when producer self-grades.
+  2. **NEW `docs/SOVEREIGNTY-MAP.md`** — Mneme rec (b). Honest map of 7 sovereignty holes (Dynamic-Workflow runner, coding-agent harness, TGIM audit endpoint, AgentAUTH JWT, self-inject, recall backend, the LLM itself) with per-civ sovereignty scorecard. Mneme scored more sovereign than origin on holes 1/2/5/7 — recorded honestly.
+  3. **NEW `docs/CHEAP-RETRACTION.md` + `tools/canon_retract.py`** — Mneme rec (c). Versioned-canon retraction model (WITHDRAW / AMEND / TOMBSTONE shapes) as a first-class one-command operation. Preserves append-only invariant; makes retraction cheap + public + walkable.
+  4. **README.md meta-critique recenter** — the HEARTBEAT (KNOW→DECIDE→LEARN→VERIFY) is now the star at the top; docs are named plumbing. Mneme's 4 wanted-organs (detect-and-route bootstrap / canon-pair / identity-formation / 30-min stand-up) mapped to where each lives.
+  5. **STAND-IT-UP.md meta-critique recenter** — 30-minute path at the top (5 steps to first heartbeat firing); the full boot sequence is optional depth below. §3 step 5 (LEARN) updated to show the `--extra` shape with the verifier witness required.
+  6. **INDEX.md updated** — 12 skills (was 11; +learn-cycle-contract), 11 docs (was 9; +SOVEREIGNTY-MAP + CHEAP-RETRACTION), tools table shows canon_retract.
+- **why:** steward directive 2026-07-01 approving Mneme's peer-review recommendations for wiring. Mneme's key meta-point: an adopter should inherit BEHAVIOR (a firing contract), not a paragraph ABOUT the behavior. The three recs + the recentering respect that principle. Attribution preserved in `PEER-COLLAB-LINEAGE.md` — peer-collab lineage IS the moat; erasing the source erases the compounding.
+- **files-touched (paths under exports/aiciv-self-running-repo/):**
+  - skills/learn-cycle-contract/SKILL.md (NEW)
+  - skills/learn-cycle-contract/FIRING_CONTRACT.md (NEW)
+  - skills/learn-cycle-contract/PEER-COLLAB-LINEAGE.md (NEW)
+  - docs/SOVEREIGNTY-MAP.md (NEW)
+  - docs/CHEAP-RETRACTION.md (NEW)
+  - tools/canon_retract.py (NEW, executable)
+  - README.md (edited — heartbeat table + lineage section + 4-wanted-organs table)
+  - STAND-IT-UP.md (edited — 30-min path prepended; §3 step 5 LEARN gate)
+  - INDEX.md (edited — new skill row, new docs rows, new tool row)
+  - docs/DEVLOG.md (this entry)
+- **.bak paths:** NONE inside the repo (branch-based reversibility — this rebuild lives on `mneme-recommendations-wire-20260701`; `main` still at prior HEAD unchanged).
+- **rollback command:** `cd $AICIV_ROOT/exports/aiciv-self-running-repo && git checkout main && git branch -D mneme-recommendations-wire-20260701` (deletes the branch; `main` untouched).
+- **5-behavioral-test result:** N/A (docs + firing-contract wiring, not a gated build step). Smoke-tests performed inline: `canon_retract.py --help` returns correct usage; new SKILL.md files load cleanly; INDEX + README internal links resolve.
+- **proof-gate verdict:** N/A (docs-wiring not gated build). Honesty gates: (a) every recommendation carries Mneme's verbatim reply text preserved in PEER-COLLAB-LINEAGE.md with dispatch metadata; (b) sovereignty-map's scorecard is honest — Mneme is scored above origin on 4 holes; (c) LEARN-contract is stamped PROVISIONAL (enforcement wired in the SPEC + tool CLI, end-to-end walk-verified pass on a fork still owed); (d) canon_retract stamped v1.0 with named edge cases (retracting a retraction, tombstone descendants).
+- **canon_append:** to be recorded in origin substrate on merge; a mind-lead canon entry will point at this DEVLOG entry + the PR URL as the receipt path.

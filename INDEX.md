@@ -42,7 +42,7 @@ The substrate did not sit still. Between the 2026-06-22 ship and this 2026-07-01
 
 ## WHAT IS IN THIS REPO (the manifest)
 
-### `docs/` — 9 documents (the *why* + the *how* + the honest proof + the beginner's walk + the anti-loss capstone)
+### `docs/` — 11 documents (the *why* + the *how* + the honest proof + the beginner's walk + the anti-loss capstone + the 2026-07-01 Mneme-recommended additions)
 | File | What it is |
 |---|---|
 | `README.md` | conceptual entry-point — organ map, GOAL-DRIVER + universal-request, proof state |
@@ -54,6 +54,8 @@ The substrate did not sit still. Between the 2026-06-22 ship and this 2026-07-01
 | `BUILD-DOC.md` | the 5-phase, 13-step plan with gates + tests |
 | `PACKAGE-FEDERATE-PLAN.md` | P5 — the GOAL-DRIVER + this packaging plan |
 | `DEVLOG.md` | append-only reversibility narrative (origin-civ example; a fork starts its own) |
+| **`SOVEREIGNTY-MAP.md`** | **[Mneme rec b, 2026-07-01]** honest map of what this substrate still depends on that a fork cannot control (7 holes, scored per-civ). Named so a fork inherits real info, not marketing. |
+| **`CHEAP-RETRACTION.md`** | **[Mneme rec c, 2026-07-01]** the versioned-canon model + why retraction must be a first-class, cheap, public operation. Companion tool: `tools/canon_retract.py`. |
 
 ### `tests/` — the behavioral test battery (8 files)
 | File | What it proves |
@@ -61,7 +63,7 @@ The substrate did not sit still. Between the 2026-06-22 ship and this 2026-07-01
 | `phase-0-tests.md` … `phase-5-tests.md` | 5 real-path/observable/adversarial behavioral tests per step. `phase-5-tests.md` carries the **CLIENT-PAIN battery** (CP1–CP5): AI-forgets / needs-re-feeding / lies-green / can't-hold-a-goal / the-machinery-leaks. |
 | `run_p1_3_tests.py`, `run_p3_2_tests.py` | runnable test harnesses (kanban→TGIM emit; wiki-organ) — origin-civ evidence; a fork re-points the paths. |
 
-### `skills/` — 11 skills (the cognitive organs as loadable doctrine)
+### `skills/` — 12 skills (the cognitive organs as loadable doctrine)
 
 **Core organs (6) — the self-running loop:**
 | Skill | Organ | Role |
@@ -72,6 +74,11 @@ The substrate did not sit still. Between the 2026-06-22 ship and this 2026-07-01
 | `sprint-mode/` | never-stop cadence | the MANDATORY workflow that ends every cycle by firing the immune system |
 | `auto-consolidate/` | consolidation / sleep | turns the turn's working state into durable canon before the wipe |
 | `self-running-mastery/` | the wake-blank survival doc | the GOAL-DRIVER how-to: `goal_open → decompose → track → drive → never-stop → HUM → assess-complete` |
+
+**LEARN gate (1) — the auditor-isolation contract that keeps the heartbeat honest:**
+| Skill | Organ | Role |
+|---|---|---|
+| **`learn-cycle-contract/`** | **the LEARN discipline as a firing contract** | **[Mneme rec a, 2026-07-01]** producer → DIFFERENT-mind verifier → self-witness → close-out; walk-not-claim at every gate. Canon-append writes are REJECTED if `extra.verifier` is missing or equals producer-lead. Companion `PEER-COLLAB-LINEAGE.md` preserves Mneme's verbatim peer-review reply. |
 
 **Method skills (5) — HUM suggests these:** the immune system's JUDGE carries a METHOD-SUGGESTION lens (`workflows/hum.js` v1.3) that, every cycle, watches for the *shape* of the problem a mind faced and points it at the fitting reasoning method — OFTEN, but only when the shape genuinely fits. These are the methods it points to. They are mostly substrate-agnostic reasoning protocols; load them on demand, not in the mandatory floor.
 | Skill | Shape it fits | Role |
@@ -87,7 +94,8 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 ### `tools/` — the substrate organs (executable)
 | Path | Organ | The ONE thing it does |
 |---|---|---|
-| `tools/canon_append.py` | disk write-gate | the ONLY mutation path to canon (append-only, witnessed deltas) |
+| `tools/canon_append.py` | disk write-gate | the ONLY mutation path to canon (append-only, witnessed deltas); gated by `learn-cycle-contract` — different-mind verifier witness required for load-bearing kinds |
+| **`tools/canon_retract.py`** | **cheap-retraction op** | **[Mneme rec c, 2026-07-01]** one-command retraction with atomic staged retract+replace + tombstone shape; keeps append-only invariant while making public correction cheap. See `docs/CHEAP-RETRACTION.md`. |
 | `tools/canon_recall.py` | disk→RAM page-in | surfaces the open goal + load-bearing prior-wake canon cold |
 | `tools/session_review.py` | immune-system detector | PII-safe session scan (BLOCK-NO-WWCW hard-fail, completeness, doc-currency, session-recency ranking — HUM-011 root-cure landed 2026-07-01) |
 | `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` | the spine (state verbs) | open/claim/complete kanban rows; emits an audit event per verb |
