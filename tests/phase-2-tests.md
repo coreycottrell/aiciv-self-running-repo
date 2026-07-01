@@ -32,13 +32,13 @@ Run the same probes WITHOUT lead-scoping. PASS = top-3 cold still holds (lead-sc
 Simulate a boop where Primary drifts / never reaches `Workflow(hum.js)`. PASS = the detached bash-fire (`claude -p`) produces a HUM ledger entry for that session anyway. FAIL (adversarial) = a drifted boop gets NO grade (the overnight-drift hole reopened). This is the proven property — guard it.
 
 **T2.2.2 — The recursion guard NO-OPs (no infinite HUM-spawns-HUM).**
-With `ACG_HUM_SPAWN=1` set (the guard env), confirm the Stop-hook does NOT spawn another HUM. PASS = guard present → instant exit 0, no child spawn. FAIL (adversarial) = a HUM grade itself triggers another bash-fired HUM (runaway recursion — the exact thing the guard prevents). Walked at birth ("recursion guard NO-OPs").
+With `AICIV_HUM_SPAWN=1` set (the guard env), confirm the Stop-hook does NOT spawn another HUM. PASS = guard present → instant exit 0, no child spawn. FAIL (adversarial) = a HUM grade itself triggers another bash-fired HUM (runaway recursion — the exact thing the guard prevents). Walked at birth ("recursion guard NO-OPs").
 
 **T2.2.3 — The launch is DETACHED (30s hook budget does not truncate a long grade).**
 Fire the bash-HUM and confirm the launcher returns ~0.0s while the grade runs to completion in the background (the walked grade ran 767.8s). PASS = detached launch returns immediately AND the full grade completes + writes the ledger. FAIL (adversarial) = the grade is killed at the 30s Stop-hook budget (truncated verdict). Detached-via-Popen-start_new_session must hold.
 
 **T2.2.4 — The child env is clean (no API key leak, guard set).**
-Inspect the spawned child's env. PASS = child has `ACG_HUM_SPAWN=1` and NO `ANTHROPIC_API_KEY` (web-account auth path). FAIL (adversarial) = the child inherits an API key (billing/auth-path drift) or lacks the guard (recursion risk). Walked at birth ("child env confirmed").
+Inspect the spawned child's env. PASS = child has `AICIV_HUM_SPAWN=1` and NO `ANTHROPIC_API_KEY` (web-account auth path). FAIL (adversarial) = the child inherits an API key (billing/auth-path drift) or lacks the guard (recursion risk). Walked at birth ("child env confirmed").
 
 **T2.2.5 — It fires SELECTIVELY (only on hum_missed), not on every Stop.**
 Run a boop where Primary DID fire HUM normally. PASS = the bash backstop does NOT double-fire (no second redundant grade). Run a boop where HUM was missed → it DOES fire. FAIL (adversarial) = the backstop fires on every Stop (double-grading every boop = waste + ledger noise). Per-boop selective on the pending-flag is the contract.

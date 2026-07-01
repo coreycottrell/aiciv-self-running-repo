@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 r"""
-acg_ops_kanban_verb.py — P1.3 of the self-running-AiCIV spine (sovereignty-spine #4).
+aiciv_ops_kanban_verb.py — P1.3 of the self-running-AiCIV spine (sovereignty-spine #4).
 
 WIRES KANBAN STATUS-VERBS -> TGIM EMIT. ONE WRITE-PATH, TWO RECORDS.
 
 THE PROBLEM IT KILLS (the desync class):
-  The ACG ops-board (data/acg-ops-board/kanban.db) is the MUTABLE work-STATE
+  The the civilization ops-board (data/aiciv-ops-board/kanban.db) is the MUTABLE work-STATE
   (a row's current owner/status). TGIM event_history is the APPEND-ONLY
   coordination-AUDIT (the immutable log of every transition). Today only
   set_owner_vp writes the STATE (P1.1), and NOTHING emits the matching TGIM
@@ -17,7 +17,7 @@ THE FIX (the invariant this module enforces):
   EVERY kanban status/ownership verb routes through ONE function, run_verb(),
   which does BOTH writes as a single logical transition:
     (1) the kanban STATE write (column + the local append-only task_events row)
-        via the canonical hermes_cli.kanban_db verbs / acg_ops_set_owner verb
+        via the canonical hermes_cli.kanban_db verbs / aiciv_ops_set_owner verb
         — NEVER a raw UPDATE (so the P1.1 health sweep stays meaningful).
     (2) the TGIM AUDIT emit (canonical v2 body shape) via the DURABLE outbox
         (tgim_outbox_durable.emit) — a failed POST becomes a DURABLE QUEUED
@@ -44,7 +44,7 @@ DESYNC FAILS LOUD (the load-bearing property — T1.3.3 + the desync test):
 
 IDEMPOTENCY / NO DOUBLE-EMIT (T1.3.4):
   The TGIM task_id for a transition is deterministic:
-    "acgops_<row_id>_<verb>_<state_seq>"
+    "aiciv_ops_<row_id>_<verb>_<state_seq>"
   where state_seq is the local task_events.id of the STATE row just written.
   Because each STATE write gets a fresh monotonic task_events.id, a re-run of
   the SAME logical verb produces a NEW state_seq only if the STATE actually
@@ -67,15 +67,20 @@ VERB -> TGIM event_type MAP (LIVE-SERVER-ACCEPTED enum only — walk-probed 2026
                                row to live/assigned; task_assigned re-asserts "this row is alive
                                again" with the recovery semantic in payload. Symmetric to block.)
 
-  THE LIVE ACCEPTED ENUM (curl-probed against tgim-api.ai-civ.com 2026-06-21, NOT the doctrine):
+  THE LIVE ACCEPTED ENUM (curl-probed against the origin event-audit API 2026-06-21, NOT the
+  doctrine; origin endpoint = $AICIV_TGIM_ENDPOINT default `https://<your-tgim-endpoint>`):
     task_created | task_completed | task_assigned | task_failed
   task_updated 400s ("Invalid event_type") — same family as task_blocked. The doctrine
   (doctrine_tgim_v2_body_shape_canonical.md) was STALE (listed task_updated, omitted
   task_failed); reconciled to the live server enum this run. reconcile() is event_type-AGNOSTIC
   (it joins on the deterministic task_id, never the type), so this re-map keeps it GREEN.
 
+  S7 GENERICIZATION (2026-06-29): the TGIM emit-target is overridable via $AICIV_TGIM_ENDPOINT
+  (Seam A). A non-TGIM audit sink (a local append-only JSONL, a custom event API) implements
+  the contract in adapters/board-adapter.md §emit.
+
 REVERSIBLE / ADDITIVE:
-  - This module is the SANCTIONED verb wrapper. It REUSES acg_ops_set_owner
+  - This module is the SANCTIONED verb wrapper. It REUSES aiciv_ops_set_owner
     (P1.1) for ownership + the canonical kanban_db verbs for status + the
     durable outbox (spine #3) for the emit. It re-implements none of them.
   - Rollback = stop calling run_verb(); restore the .bak'd kanban.db; the local
@@ -94,9 +99,10 @@ import time
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
-ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
-BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the civilization path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
+# S7 GENERICIZATION CURE (2026-06-29): explicit AICIV_KANBAN_DB seam (Seam C; see aiciv_ops_board.py).
+BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/aiciv-ops-board/kanban.db")))
 SPINE_DIR = ROOT / "tools/sovereignty-spine"
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 
@@ -136,10 +142,10 @@ VERB_TO_STATE_KIND = {
 }
 
 # {AICIV-NAME}: set this to YOUR OWN civ-id — it is the `source_civ` stamped on every TGIM
-# audit event this tool emits. Leaving the origin value "acgee" will mis-attribute YOUR events
+# audit event this tool emits. Leaving the origin value "<your-aiciv>" will mis-attribute YOUR events
 # to the origin civilization. (Kept as a runnable default so the tool does not crash on first run;
 # CHANGE IT before you emit to a shared/federated event bus.)
-SOURCE_CIV = "acgee"  # <- set to your own civ-id
+SOURCE_CIV = "<your-aiciv>"  # <- set to your own civ-id
 
 
 def _load_kanban_db():
@@ -154,8 +160,8 @@ def _load_set_owner():
     p = str(SPINE_DIR)
     if p not in sys.path:
         sys.path.insert(0, p)
-    import acg_ops_set_owner  # noqa: E402
-    return acg_ops_set_owner
+    import aiciv_ops_set_owner  # noqa: E402
+    return aiciv_ops_set_owner
 
 
 def _load_outbox():
@@ -198,18 +204,18 @@ def _record_local_event(conn, task_id: str, kind: str, payload: Dict[str, Any]) 
 
 def _tgim_task_id(row_id: str, verb: str, state_seq: int) -> str:
     """Deterministic per-transition TGIM task_id (idempotency / dedup key)."""
-    return f"acgops_{row_id}_{verb}_{state_seq}"
+    return f"aiciv_ops_{row_id}_{verb}_{state_seq}"
 
 
 def _kanban_row_from_tgim_task_id(ttid: str) -> Optional[str]:
     """Inverse of _tgim_task_id: parse the kanban row id back out.
-    Format: acgops_<row_id>_<verb>_<state_seq>. The verb is one of VERB_TO_EVENT
+    Format: aiciv_ops_<row_id>_<verb>_<state_seq>. The verb is one of VERB_TO_EVENT
     (no underscores) and state_seq is a trailing integer, so we strip the known
-    suffix and the acgops_ prefix; what remains is the row id (which may itself
+    suffix and the aiciv_ops_ prefix; what remains is the row id (which may itself
     contain underscores, e.g. 't_9e0c852a')."""
-    if not ttid.startswith("acgops_"):
+    if not ttid.startswith("aiciv_ops_"):
         return None
-    core = ttid[len("acgops_"):]
+    core = ttid[len("aiciv_ops_"):]
     parts = core.rsplit("_", 2)  # [row_id, verb, state_seq]
     if len(parts) == 3 and parts[1] in VERB_TO_EVENT and parts[2].isdigit():
         return parts[0]
@@ -307,9 +313,9 @@ def run_verb(
             "assigned_agent_id": owner_vp or actor,
             "priority": priority,
             "payload": {
-                "title": f"acg-ops {verb}: {task_id}",
+                "title": f"aiciv-ops {verb}: {task_id}",
                 "description": f"kanban {verb} on row {task_id} by {actor}",
-                "scope": "acg-ops-board",
+                "scope": "aiciv-ops-board",
                 "kanban_row_id": task_id,      # the JOIN key back to STATE (T1.3.2)
                 "verb": verb,
                 # The kanban-state semantic the accepted carrier type cannot itself
@@ -447,9 +453,9 @@ def reconcile() -> Dict[str, Any]:
         live_rows = {r["id"] for r in conn.execute("SELECT id FROM tasks")}
         orphan_audit = []
         for tid in landed:
-            if not tid.startswith("acgops_") or tid in expected:
+            if not tid.startswith("aiciv_ops_") or tid in expected:
                 continue
-            # parse the kanban_row_id out of the deterministic id: acgops_<rowid>_<verb>_<seq>
+            # parse the kanban_row_id out of the deterministic id: aiciv_ops_<rowid>_<verb>_<seq>
             row_id = _kanban_row_from_tgim_task_id(tid)
             if row_id in live_rows:
                 orphan_audit.append(tid)  # live row, no wired state = phantom (LOUD)
@@ -458,7 +464,7 @@ def reconcile() -> Dict[str, Any]:
             "cmd": "reconcile",
             "wired_state_transitions": len(expected),
             "legacy_unwired_excluded": legacy_unwired,  # P1.1 backfill — not a desync
-            "landed_audit_events": len([t for t in landed if t.startswith("acgops_")]),
+            "landed_audit_events": len([t for t in landed if t.startswith("aiciv_ops_")]),
             "unmatched_state": unmatched_state,
             "pending_queued": pending,
             "orphan_audit": orphan_audit,
@@ -518,7 +524,7 @@ def _extract_task_id_from_outbox_body(body: str) -> Optional[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="ACG ops-board kanban verbs -> TGIM emit (P1.3, one write-path two records)")
+        description="the civilization ops-board kanban verbs -> TGIM emit (P1.3, one write-path two records)")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p_verb = sub.add_parser("verb", help="run a status/ownership verb (writes STATE + emits AUDIT)")

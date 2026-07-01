@@ -68,7 +68,7 @@
 ## S5 — CLIENT-PAIN BEHAVIORAL BATTERY (5 CPs × 5 adversarial sub-tests = 25)
 **Owner:** mind-lead (+ qa lens) · **Gate:** the 25 client-pain sub-tests AUTHORED + RUN on the real path + honest verdicts; each maps to a named field-note complaint; each adversarial; "a 200 is not a login" — the organ must ACTUALLY fire.
 
-**RUN STAMP:** 2026-06-22 ~01:50Z, mind-lead incarnation, on the LIVE substrate (`data/acg-ops-board/kanban.db` · `tools/canon_recall.py` · `tools/sovereignty-spine/acg_ops_kanban_verb.py` · `workflows/hum.js` · `tools/session_review.py`). Throwaway drive-row: `t_s5cp_092781`. Recall ledger proof: `mem/recall_gaps/recall_hits.jsonl` (this run's query logged 01:44Z). Each sub-test below carries its RUN verdict inline.
+**RUN STAMP:** 2026-06-22 ~01:50Z, mind-lead incarnation, on the LIVE substrate (`data/aiciv-ops-board/kanban.db` · `tools/canon_recall.py` · `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` · `workflows/hum.js` · `tools/session_review.py`). Throwaway drive-row: `t_s5cp_092781`. Recall ledger proof: `mem/recall_gaps/recall_hits.jsonl` (this run's query logged 01:44Z). Each sub-test below carries its RUN verdict inline.
 
 ---
 
@@ -152,7 +152,7 @@
 ## S6 — Package shareable aiciv-self-running-repo
 **Owner:** mind-lead (+ ceremony genome) · **Gate:** self-contained; every organ bundled or path-abstracted; honest genome stamp; dry-run extraction has zero unresolved internal refs.
 
-**T-S6.1 — Self-contained extraction (cant-hold-a-goal).** Extract the repo into a scratch dir; walk its references. PASS = zero dangling absolute-path deps on {AICIV-NAME} internals a fork can't resolve. FAIL = a reference into `/home/corey/...{AICIV-NAME}/...` that a fork has no access to.
+**T-S6.1 — Self-contained extraction (cant-hold-a-goal).** Extract the repo into a scratch dir; walk its references. PASS = zero dangling absolute-path deps on {AICIV-NAME} internals a fork can't resolve. FAIL = a reference into `$AICIV_ROOT{AICIV-NAME}/...` that a fork has no access to.
 
 **T-S6.2 — GOAL-DRIVER is the headline product.** PASS = the repo README's headline is "fork this and your mind drives any goal forever" with the verb-set + tool stubs. FAIL = the repo ships organs but no exposed capability.
 
@@ -164,15 +164,15 @@
 
 ---
 
-## S7 — TB + Mneme assimilate (friction = signal-to-fix-repo)
+## S7 — the partner + Mneme assimilate (friction = signal-to-fix-repo)
 **Owner:** mind-lead + comms-lead + fleet-lead · **Gate:** both adopters run the GOAL-DRIVER on a real goal of their own AND the repo absorbed their friction as durable fixes.
 
-**T-S7.1 — Both adopters receive the repo.** PASS = TB AND Mneme each received `aiciv-self-running-repo` (delivery receipt). FAIL = one or zero.
+**T-S7.1 — Both adopters receive the repo.** PASS = the partner AND Mneme each received `aiciv-self-running-repo` (delivery receipt). FAIL = one or zero.
 
 **T-S7.2 — Real assimilation attempt each (cant-hold-a-goal).** PASS = each adopter made ≥1 real attempt to wire the GOAL-DRIVER (not a "received, thanks"). FAIL = no real attempt logged.
 
 **T-S7.3 — Friction → repo-bug → source-fix (NOT support-ticket).** PASS = every friction point is filed as a bug AGAINST the repo with a fix (or honest "can't-fix-yet" + reason). FAIL (adversarial) = friction answered as a one-off support reply and the repo never learned (membrane-problem un-cured).
 
-**T-S7.4 — A foreign AiCIV drives ITS OWN goal forever (the portability proof).** PASS = TB or Mneme opens a goal of their own and the GOAL-DRIVER holds+drives it across ≥2 of their boops with no {AICIV-NAME}-Primary in the loop. FAIL = the capability only works inside {AICIV-NAME}.
+**T-S7.4 — A foreign AiCIV drives ITS OWN goal forever (the portability proof).** PASS = the partner or Mneme opens a goal of their own and the GOAL-DRIVER holds+drives it across ≥2 of their boops with no {AICIV-NAME}-Primary in the loop. FAIL = the capability only works inside {AICIV-NAME}.
 
 **T-S7.5 — The repo carries the fixes back (lies-green).** PASS = the repo on-disk reflects the friction-fixes from S7.3 (the repo learned from its first two adopters). FAIL = fixes claimed but the repo is unchanged.

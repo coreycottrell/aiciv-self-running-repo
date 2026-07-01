@@ -35,7 +35,7 @@ CHANGELOG:
     BACKUP: tools/canon_append.py.bak.20260619T151737Z
     ROLLBACK: cp tools/canon_append.py.bak.20260619T151737Z tools/canon_append.py
   2026-06-19 (mind-lead, M19.6 FLOOD-CURE CAP-RAISE — gate #3 default 3 -> 8.
-              Reversible. Corey-approved M19.6 with HARD condition: reversible +
+              Reversible. steward-approved M19.6 with HARD condition: reversible +
               changelog.):
     WHAT changed: MAX_PER_RUN default 3 -> 8 (one constant). Nothing else.
       gate #1 content-gate, gate #2 rate-limit, W5 finding-receipt, the window
@@ -897,7 +897,7 @@ def _check_circuit_breakers(
             if looks_like_path:
                 rp_path = Path(rp_str)
                 if not rp_path.is_absolute():
-                    # Resolve relative to repo root (ACG dir = parent of tools/)
+                    # Resolve relative to repo root (the civilization dir = parent of tools/)
                     rp_path = (Path(__file__).resolve().parent.parent / rp_path)
                 if not rp_path.exists():
                     raise CircuitBreakerError(

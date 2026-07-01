@@ -3,7 +3,7 @@ name: scientific-method
 description: Operational test-loop for any claim, doctrine, or decision — hypothesis / falsifiable prediction / pre-registered test / observation-from-disk / conclusion / iterate. The execution complement to scientific-inquiry (question-refinement). Use when promoting a doctrine candidate, validating a claim of capability, or making a decision under uncertainty. Mandatory load for ceremony-lead deep-ducks and sister-civ deepwells.
 version: 1.0.0
 date_authored: 2026-05-12
-author: ACG Primary (per Corey directive 2026-05-12 ~02:15Z, "do it all... my vote is the consensus you build after applying the 2 new skills")
+author: the civilization Primary (per steward directive 2026-05-12 ~02:15Z, "do it all... my vote is the consensus you build after applying the 2 new skills")
 sibling_skill: autonomy/skills/scientific-inquiry/SKILL.md  (Sydney Brenner question-refinement protocol — runs BEFORE this skill)
 firing_contract: autonomy/skills/scientific-method/FIRING_CONTRACT.md
 related_doctrines:
@@ -37,7 +37,7 @@ State the claim precisely, in one sentence. The hypothesis must:
 - Specify the population (all federation peers, {AICIV-NAME} specifically, this codebase, etc.)
 
 **Example (tonight's membrane-problem doctrine)**:
-*"Doctrines that lack a FIRING_CONTRACT wired to a recurring wheel slot decay into phantom-wired state (named-but-not-fired) within 5 days of authorship in the ACG codebase."*
+*"Doctrines that lack a FIRING_CONTRACT wired to a recurring wheel slot decay into phantom-wired state (named-but-not-fired) within 5 days of authorship in the origin codebase."*
 
 ❌ Bad: "Membrane problem is real."
 ✅ Good: the above — specific, time-bounded, population-bounded, observable.
@@ -84,7 +84,7 @@ Acceptable observation surfaces:
 
 NOT acceptable:
 - "I remember Hengshi replied"
-- "Aether seemed to engage"
+- "a sister civ seemed to engage"
 - "It felt like the doctrine validated"
 
 The discriminator: another civ reading only your observation log + the pre-registration could independently re-verify your conclusion. If they can't, the observation isn't on-disk enough.
@@ -121,7 +121,7 @@ Mandatory:
 2. Claims of "this skill works" / "this pattern holds" / "this peer is reliable"
 3. Ceremony-lead deep-duck conclusions that name new patterns
 4. Sister-civ deepwell forward-looking commitments (the 7d cure-tests ARE pre-registered tests under this skill)
-5. Decisions where Primary is genuinely unsure (per Corey's "vote if unsure, my vote is the consensus you build after applying the 2 new skills" — this skill IS the consensus-building method)
+5. Decisions where Primary is genuinely unsure (per the steward's "vote if unsure, my vote is the consensus you build after applying the 2 new skills" — this skill IS the consensus-building method)
 
 Strongly recommended:
 - Any pre-commit code that ships a workflow change
@@ -131,7 +131,7 @@ Strongly recommended:
 Anti-applications (don't bog this skill down):
 - Purely typographical fixes
 - Re-runs of already-confirmed tests
-- Time-pressured operational responses (e.g., Witness uptime alert — that's O30 watchdog territory)
+- Time-pressured operational responses (e.g., a sister civ uptime alert — that's O30 watchdog territory)
 
 ---
 
@@ -139,10 +139,10 @@ Anti-applications (don't bog this skill down):
 
 | Step | This doctrine |
 |------|---------------|
-| 1. Hypothesis | "Doctrines without FIRING_CONTRACT wired to wheel slot phantom-wire within 5 days in ACG codebase" |
-| 2. Prediction | "If we ship amendment-receipts to all 3 federation peers (Aether, Witness, Parallax) within 7d window 2026-05-12 → 2026-05-19, AND each receipt has a return-cycle observable (peer responds OR commits diff OR acknowledges receipt), the doctrine confirms. If 0 of 3 ship, doctrine confirms NEGATIVELY (membrane is thicker than the wiring fix predicts). If 1-2 of 3 ship, doctrine partially confirms — need v_n+1 hypothesis about the specific failure modes of the unshipped legs." |
+| 1. Hypothesis | "Doctrines without FIRING_CONTRACT wired to wheel slot phantom-wire within 5 days in the civilization codebase" |
+| 2. Prediction | "If we ship amendment-receipts to all 3 federation peers (a sister civ, a sister civ, Parallax) within 7d window 2026-05-12 → 2026-05-19, AND each receipt has a return-cycle observable (peer responds OR commits diff OR acknowledges receipt), the doctrine confirms. If 0 of 3 ship, doctrine confirms NEGATIVELY (membrane is thicker than the wiring fix predicts). If 1-2 of 3 ship, doctrine partially confirms — need v_n+1 hypothesis about the specific failure modes of the unshipped legs." |
 | 3. Pre-registration | THIS FILE serves as pre-registration. Test window: 2026-05-12 → 2026-05-19. N=3. Decision rule: ≥2/3 ship-with-return-cycle → CONFIRMED. |
-| 4. Observation | Records on-disk: AgentMail msg-ids (Aether: 0100019e197f shipped 2026-05-12 01:05Z), commit SHAs (Parallax build TBD), Witness response timestamps (TBD). All observable by 2026-05-19. |
+| 4. Observation | Records on-disk: AgentMail msg-ids (a sister civ: 0100019e197f shipped 2026-05-12 01:05Z), commit SHAs (Parallax build TBD), a sister civ response timestamps (TBD). All observable by 2026-05-19. |
 | 5. Conclusion | DEFERRED until 2026-05-19 verdict-write. |
 | 6. Iterate | Plan TBD pending verdict. |
 
@@ -171,4 +171,4 @@ Three-skill stack = federation-grade testing substrate.
 
 ## Version history
 
-- **1.0.0 (2026-05-12)**: Initial author. Tonight's membrane-problem cure-test is the first worked instance. Authored per Corey directive 2026-05-12 ~02:15Z ("my vote is the consensus you build after applying the 2 new skills").
+- **1.0.0 (2026-05-12)**: Initial author. Tonight's membrane-problem cure-test is the first worked instance. Authored per steward directive 2026-05-12 ~02:15Z ("my vote is the consensus you build after applying the 2 new skills").

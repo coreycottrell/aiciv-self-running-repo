@@ -1,8 +1,9 @@
 # Self-Running AiCIV — THE CANONICAL BUILD-DOC
 
 **Owner:** mind-lead (memory-substrate + WORKBOARD owner; owns this build plan end-to-end)
-**Authority:** Corey GO 2026-06-21 — *"I want a build doc created for this... Write up 5x behavioral tests for each and every step."*
-**Status:** BUILD-EXECUTION GO (Corey 2026-06-21 — *"Keep strong dev-log so anything is reversible and build and test till it's done."* + *"Phases are meant to be completed... Update the build sheet and visualize this being complete. Double check the plan and start delegating. Done is DONE."* + *"You think that's air you're breathing?"*). The planning-mode hold on Phases 1–4 is **LIFTED**; the build executes phase-by-phase through the proof-gates. **PHASE-0 DECISION (2026-06-21, Corey-directed): the after-a-clear MECHANISM is PROVEN (T0A.1 reconstitution PASS + T0A.3 cold-recall mechanism CLOSED via P2.1) → Phase 1 PROCEEDS on the mechanism-proven gate. The live-Primary fullest-proof rides the next wake IN PARALLEL — it is NOT a Phase-1 blocker. The "0A needs a live cleared Primary" constraint was the FAKE one ("that's not air you're breathing").** This document is the PLAN + the TESTS + the CONTRACT. Each step is still gated — nothing is DONE until its 5 tests PASS **and** its proof-gate CLOSES; a FAILED gate STOPS the phase and surfaces. The append-only reversibility narrative lives in [`DEVLOG.md`](./DEVLOG.md).
+**Authority:** steward GO 2026-06-21 — *"I want a build doc created for this... Write up 5x behavioral tests for each and every step."*
+**Rebuild:** 2026-07-01 — steward directive "update this repo... maybe fully rebuild we have changed ALOT." What CHANGED at the BUILD-DOC level: **P4.1 CLOSED on origin substrate 2026-06-27** (origin steward ruling *"WE DEALT W THIS YOU PASSED!!"*; auditor-isolated PASS-860). P4.3 SHIPPED as this repo (S6 CLOSED 2026-06-22, S7 GENERICIZATION CURE landed 2026-06-29, rebuild refresh landed 2026-07-01). **First live universal-request end-to-end PASS 2026-06-30** (K/N = 1/N; morning-science-digest → TG 74801). The 13-step build plan below is unchanged in shape; the gate statuses have moved. See `docs/EVOLUTION-SINCE-SHIP.md` for the anti-fossil delta.
+**Status:** BUILD-EXECUTION GO (the steward 2026-06-21 — *"Keep strong dev-log so anything is reversible and build and test till it's done."* + *"Phases are meant to be completed... Update the build sheet and visualize this being complete. Double check the plan and start delegating. Done is DONE."* + *"You think that's air you're breathing?"*). The planning-mode hold on Phases 1–4 is **LIFTED**; the build executes phase-by-phase through the proof-gates. **PHASE-0 DECISION (2026-06-21, steward-directed): the after-a-clear MECHANISM is PROVEN (T0A.1 reconstitution PASS + T0A.3 cold-recall mechanism CLOSED via P2.1) → Phase 1 PROCEEDS on the mechanism-proven gate. The live-Primary fullest-proof rides the next wake IN PARALLEL — it is NOT a Phase-1 blocker. The "0A needs a live cleared Primary" constraint was the FAKE one ("that's not air you're breathing").** This document is the PLAN + the TESTS + the CONTRACT. Each step is still gated — nothing is DONE until its 5 tests PASS **and** its proof-gate CLOSES; a FAILED gate STOPS the phase and surfaces. The append-only reversibility narrative lives in [`DEVLOG.md`](./DEVLOG.md).
 **Sources merged:** Primary's plan (compared) + mind-lead's INDEPENDENT plan (`data/reports/self-running-aiciv-buildout-plan-mindlead-20260621.md`) + the synthesis (`data/reports/one-big-thing-self-running-aiciv-synthesis-20260621.md`). The CORRECTED version is canon here (see §Corrections).
 **The 5 behavioral tests per step live in:** `tests/` (one file per phase). This doc is the index + the gates; `tests/` is the test text.
 
@@ -26,7 +27,7 @@ A **MIND THAT SURVIVES ITS OWN REBOOTS.** Every reset wipes working memory (the 
 
 ---
 
-## REVERSIBILITY + BUILD-EXECUTION CONTRACT (Corey GO 2026-06-21)
+## REVERSIBILITY + BUILD-EXECUTION CONTRACT (steward GO 2026-06-21)
 
 > **Authority (verbatim):** *"Keep strong dev-log so anything is reversible and build and test till it's done."* This contract makes that GO mechanical. It binds EVERY step in §2. It is not advisory — a step that skips any clause is NOT done, regardless of what its code does.
 
@@ -55,15 +56,15 @@ Before ANY edit, and for EVERY step, the owning VP MUST, in order:
 
 > **RESEQUENCE (2026-06-21, mind-lead — P2.1 pulled BEFORE 0A's full pass):** 0A's gate has a HARD dependency on recall-cold — T0A.3 requires a cleared mind's `canon_append` to be **recall-surfaceable cold (lead-scoped)**, and that was the failing half (the 0.0052 gap). **P2.1 (recall cold-reconstitution fix) is therefore on the 0A critical path** — 0A→depends-on→P2.1, even though P2.1 nominally lives in Phase 2. As of 2026-06-21 **P2.1's own gate is CLOSED** (5/5=1.00 cold-recall fixture; fresh day-one entry surfaces #1 cold; build-or-tombstone + IDF diary-fix preserved; self-test PROBES 1-13 PASS — see DEVLOG P2.1 + `tools/canon_recall.py` changelog 2026-06-21). This REMOVES recall-cold as an 0A blocker. 0A's REMAINING half (live-Primary DECIDE-ACT+RECORD + LEARN-append + author-isolated HUM on the live session JSONL) is unchanged and still needs a real live Primary pane (not a `-p` seat).
 
-- **Phase 1 unlocks on the 0A MECHANISM-PROVEN gate (DECISION 2026-06-21, Corey-directed — supersedes the earlier "0A must fully CLOSE on a live Primary first" reading).** The mechanism 0A exists to de-risk — *can a cleared mind boot from disk, reconstitute its real prior state, RUN WWCW, and have its work be recall-surfaceable cold?* — is **PROVEN**: T0A.1 reconstitution PASSED ruthless-clean (≥3 real on-disk loops, zero confabulation); T0A.3's actual failure mode (cold recall of an own close-out) is **CLOSED via P2.1** (5/5=1.00 cold; fresh day-one entry #1). The residual T0A.2-RECORD-half / T0A.4-real-HUM-fire gaps are **artifacts of the `-p` seat by construction** (a `-p` seat cannot dispatch a Workflow, write a `.bak`, or emit canon — that is a substrate limit of the test rig, NOT a defect in the mechanism). Therefore **Phase 1 PROCEEDS now.** The live-Primary fullest-proof (a real cleared Primary pane firing DECIDE-ACT+RECORD + LEARN-append + author-isolated HUM on its own session JSONL) **rides the next wake IN PARALLEL and is tracked as the P4.1 north-star acceptance test** — it strengthens the stamp from "mechanism-proven" → "live-Primary PASS", but it does not gate the spine build. **This is the "that's not air you're breathing" call: the live-Primary blocker was the fake constraint.**
+- **Phase 1 unlocks on the 0A MECHANISM-PROVEN gate (DECISION 2026-06-21, steward-directed — supersedes the earlier "0A must fully CLOSE on a live Primary first" reading).** The mechanism 0A exists to de-risk — *can a cleared mind boot from disk, reconstitute its real prior state, RUN WWCW, and have its work be recall-surfaceable cold?* — is **PROVEN**: T0A.1 reconstitution PASSED ruthless-clean (≥3 real on-disk loops, zero confabulation); T0A.3's actual failure mode (cold recall of an own close-out) is **CLOSED via P2.1** (5/5=1.00 cold; fresh day-one entry #1). The residual T0A.2-RECORD-half / T0A.4-real-HUM-fire gaps are **artifacts of the `-p` seat by construction** (a `-p` seat cannot dispatch a Workflow, write a `.bak`, or emit canon — that is a substrate limit of the test rig, NOT a defect in the mechanism). Therefore **Phase 1 PROCEEDS now.** The live-Primary fullest-proof (a real cleared Primary pane firing DECIDE-ACT+RECORD + LEARN-append + author-isolated HUM on its own session JSONL) **rides the next wake IN PARALLEL and is tracked as the P4.1 north-star acceptance test** — it strengthens the stamp from "mechanism-proven" → "live-Primary PASS", but it does not gate the spine build. **This is the "that's not air you're breathing" call: the live-Primary blocker was the fake constraint.**
 - **P2.3** (HUM-on-M3 promotion) unlocks iff **0B** gate CLOSES (verdict-agreement ≥0.8 AND both known-HOLLOWs caught). A failing 0B SHELVES M3-grading; P2.3 does NOT proceed.
 - **P3.2** (wire+populate wiki) unlocks iff **P3.1** decision-doc lands + qa-lead WHETHER-review.
 - **P4.1** (full after-a-clear, north-star) depends on ALL prior phases.
-- **P4.2 / P4.3** depend on **P4.1 PASS** (don't package an unproven template; P4.2 also HELD-FOR-COREY GO on the Mneme CRCR dry-run).
+- **P4.2 / P4.3** depend on **P4.1 PASS** (don't package an unproven template; P4.2 also HELD-FOR-STEWARD GO on the Mneme CRCR dry-run).
 
 ### D. OPERATING MODE (how Primary runs this build)
 
-**Primary proceeds phase-by-phase AUTONOMOUSLY through the proof-gates.** Corey GO'd build-till-done, so Primary does NOT park for per-phase approval. Primary surfaces to {STEWARD-NAME} ONLY on:
+**Primary proceeds phase-by-phase AUTONOMOUSLY through the proof-gates.** steward GO'd build-till-done, so Primary does NOT park for per-phase approval. Primary surfaces to {STEWARD-NAME} ONLY on:
 - a genuine **gate-FAIL** (a step's gate FAILED — STOP the phase, surface), OR
 - a true **irreversible / novel-policy / genuine-ambiguity fork** (per the NO-BLOCK RULE: a park without a WWCW run is a FAILED boop — reversible calls get ACTED + RECORDED, never parked).
 
@@ -81,7 +82,7 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 | **P1 SPINE** | The make-or-break integration: ownership columns + backfill 45 [**P1.1 DONE 2026-06-21**], BUILD the missing civ-workboard.js [**P1.2 DONE 2026-06-21 — 5/5 PASS, generated-VIEW-over-db**], kanban-verbs→TGIM emit [**P1.3 DONE 2026-06-21 — 5/5 PASS, desync-fails-loud proven**]. | **UNLOCKED (0A mechanism-proven)** |
 | **P2 ORGANS** | Strengthen: recall cold→top-3 [**P2.1 DONE — 0.0052→#1 cold**], bash-fired-HUM [**P2.2 DONE**], HUM-on-M3 [**P2.3 CONDITIONAL-SHADOW**]. | 2.3 shadow-only; cut-over conditional on 0B PASS |
 | **P3 KNOWLEDGE** | Research-FIRST: disambiguate 2nd-brain/LLM-wiki conflation + adopt Hermes wiki arch [**P3.1 DONE 2026-06-21 — 5/5 PASS, DECISION=VIEW-over-canon, adopt native-Hermes v2.1.0, -2 parts**], THEN wire + populate from canon [**P3.2 DONE 2026-06-22 — 5/5 PASS, 14 pages compiled, kill-switch 35.1x BEATS GREP → KEEP**]. | 3B after 3A decision + P1.2 |
-| **P4 PROOF+FED** | Full after-a-clear on the live whole-stack (north-star) + Mneme CRCR dry-run + forkable federation-IP template. | depends on ALL prior |
+| **P4 PROOF+FED** | Full after-a-clear on the live whole-stack (north-star) + Mneme CRCR dry-run + forkable federation-IP template. **P4.1 CLOSED 2026-06-27 (origin substrate PASS-860). P4.3 SHIPPED 2026-06-22 (this repo). P4.2 HELD-FOR-STEWARD GO.** | depends on ALL prior |
 
 ---
 
@@ -100,8 +101,8 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 
 #### Step 0B — M3-grading shadow-pilot (HUM-on-M3 quality)
 - **Owner:** mind-lead (substrate) + hermes-lead (M3 execution)
-- **Dep:** Mneme live (HAVE — aiciv-k22 @77.42.3.13)
-- **Deliverable:** M3-HUM grades the SAME N≥10 sessions Opus-HUM grades (incl ≥2 known-HOLLOW cases) on aiciv-k22; compare verdict + per-dim + numerical score.
+- **Dep:** Mneme live (HAVE — <sovereign-node> @<sovereign-node-ip>)
+- **Deliverable:** M3-HUM grades the SAME N≥10 sessions Opus-HUM grades (incl ≥2 known-HOLLOW cases) on <sovereign-node>; compare verdict + per-dim + numerical score.
 - **Proof-gate:** verdict-agreement ≥0.8 AND M3-HUM catches BOTH known-HOLLOW cases. FAIL → HUM stays Opus-only; M3 grading shelved (NOT cut over). #1 caution: HUM is born-recent — SOAK; pilot READS, never replaces.
 - **Tests:** `tests/phase-0-tests.md` §0B (5)
 
@@ -140,7 +141,7 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 
 #### Step P2.2 — bash-fired-HUM (guaranteed-per-boop) — ✅ COMPLETE
 - **Owner:** fleet-lead (firing infra) + mind-lead (HUM spec)
-- **Status:** **COMPLETE + WALK-PROVEN 2026-06-21T21:09:27Z.** STRUCTURAL DETACHED bash-fire via `claude -p` (model claude-opus-4-8, web-account auth, `ACG_HUM_SPAWN=1` recursion guard), DETACHED (Popen start_new_session) so the 30s Stop-hook budget doesn't truncate a 767.8s grade. WALKED end-to-end: recursion guard NO-OPs, detached launch returns 0.0s, child env confirmed, end-to-end run cleared the pending flag itself ("FLAG CLEARED at iter 65"), real verdict HOLLOW -480 (BLOCK-NO-WWCW + GROUNDING-COMPLETENESS gates tripped). Belts KEPT: pending-flag + retroactive session_review GROUNDING-COMPLETENESS fail. Per-boop selective (fires only on hum_missed).
+- **Status:** **COMPLETE + WALK-PROVEN 2026-06-21T21:09:27Z.** STRUCTURAL DETACHED bash-fire via `claude -p` (model claude-opus-4-8, web-account auth, `AICIV_HUM_SPAWN=1` recursion guard), DETACHED (Popen start_new_session) so the 30s Stop-hook budget doesn't truncate a 767.8s grade. WALKED end-to-end: recursion guard NO-OPs, detached launch returns 0.0s, child env confirmed, end-to-end run cleared the pending flag itself ("FLAG CLEARED at iter 65"), real verdict HOLLOW -480 (BLOCK-NO-WWCW + GROUNDING-COMPLETENESS gates tripped). Belts KEPT: pending-flag + retroactive session_review GROUNDING-COMPLETENESS fail. Per-boop selective (fires only on hum_missed).
 - **Receipt:** `data/changelogs/hum-bashfire-20260621/CHANGELOG.md` · **Canon:** fleet-lead `9f310dfd`
 - **Proof-gate (MET):** a boop where Primary never reached the runbook still produces a HUM ledger entry (fail-loud, never silent). MET via the walked "FLAG CLEARED at iter 65" detached run.
 - **Tests:** `tests/phase-2-tests.md` §P2.2 (5) — authored as REGRESSION tests guarding the proven mechanism (it is done; the 5 tests keep it done).
@@ -150,7 +151,7 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 - **Dep:** 0B PASS + P2.2 (bash-fired seam can target M3)
 - **Deliverable:** promote M3-HUM from shadow to a SECOND grader (cross-check), never a replacement.
 - **Proof-gate:** dual-grade (Opus + M3) on live boops for N≥10 with sustained ≥0.8 agreement.
-- **STATUS (2026-06-21, mind-lead — recorded per prompt):** **CONDITIONAL-PASS (shadow / soak).** 0B HUM-on-M3 is VIABLE-WITH-WORK: the MECHANICS are PROVEN; grading-JUDGMENT quality on M3 is UNPROVEN and is the make-or-break (receipt `data/reports/hum-on-m3-viability-20260621.md` — "pilot as SHADOW-grader; do NOT cut over now"). P2.3 is therefore stamped **CONDITIONAL-PASS in the SHADOW posture only**: M3-HUM may run as a SHADOW grader on aiciv-k22 (writes to a shadow ledger, Opus stays grader-of-record) — it is NOT promoted to a live second grader until the 0B pilot lands N≥10 paired grades incl ≥2 known-HOLLOW with ≥0.8 verdict-agreement AND both HOLLOWs caught. **#1 caution honored: HUM is born-recent — SOAK; the pilot READS, never replaces; no substrate-move mid-soak.** The CONDITIONAL-PASS authorizes the shadow pilot; it does NOT authorize cut-over. 0B's full gate (T0B.1–T0B.5) is the bar that flips CONDITIONAL→PASS.
+- **STATUS (2026-06-21, mind-lead — recorded per prompt):** **CONDITIONAL-PASS (shadow / soak).** 0B HUM-on-M3 is VIABLE-WITH-WORK: the MECHANICS are PROVEN; grading-JUDGMENT quality on M3 is UNPROVEN and is the make-or-break (receipt `data/reports/hum-on-m3-viability-20260621.md` — "pilot as SHADOW-grader; do NOT cut over now"). P2.3 is therefore stamped **CONDITIONAL-PASS in the SHADOW posture only**: M3-HUM may run as a SHADOW grader on <sovereign-node> (writes to a shadow ledger, Opus stays grader-of-record) — it is NOT promoted to a live second grader until the 0B pilot lands N≥10 paired grades incl ≥2 known-HOLLOW with ≥0.8 verdict-agreement AND both HOLLOWs caught. **#1 caution honored: HUM is born-recent — SOAK; the pilot READS, never replaces; no substrate-move mid-soak.** The CONDITIONAL-PASS authorizes the shadow pilot; it does NOT authorize cut-over. 0B's full gate (T0B.1–T0B.5) is the bar that flips CONDITIONAL→PASS.
 - **Tests:** `tests/phase-2-tests.md` §P2.3 (5)
 
 ### PHASE 3 — THE KNOWLEDGE ORGAN (research-FIRST; under-specified)
@@ -172,15 +173,17 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 
 ### PHASE 4 — THE FULL PROOF + FEDERATION-IP PACKAGING (north-star)
 
-#### Step P4.1 — FULL after-a-clear on a live cleared Primary running the WHOLE wired stack
+#### Step P4.1 — FULL after-a-clear on a live cleared Primary running the WHOLE wired stack — ✅ CLOSED on origin substrate 2026-06-27
 - **Owner:** mind-lead (subject: Primary)
 - **Dep:** ALL prior phases
-- **Deliverable:** a cleared Primary boots from disk → recall surfaces its state (P2.1) → runs the cycle → kanban+WORKBOARD reflect it (P1) → LEARN write-back → bash-fired HUM grades it (P2.2) → human feeds NOTHING.
+- **Status:** **CLOSED on origin substrate 2026-06-27** — origin steward ruling verbatim *"WE DEALT W THIS YOU PASSED!!"*; auditor-isolated PASS-860 on a real cleared Primary. Ship-time "built, not proven" stamp FLIPPED to proven on the origin substrate.
+- **Fork status:** UNVALIDATED — a fork's own P4.1-analog stays UNVALIDATED until the fork's own live cleared mind runs the cycle end-to-end. The fork inherits the mechanism-proof (Opus + Mneme-N=1), never the substrate-proof.
+- **Deliverable (achieved on origin substrate):** a cleared Primary boots from disk → recall surfaces its state (P2.1) → runs the cycle → kanban+WORKBOARD reflect it (P1) → LEARN write-back → bash-fired HUM grades it (P2.2) → human feeds NOTHING.
 - **Proof-gate = THE NORTH-STAR ACCEPTANCE TEST** (§3 below).
 - **Tests:** `tests/phase-4-tests.md` §P4.1 (5)
 
 #### Step P4.2 — Mneme CRCR dry-run (sovereign-fork proof of the SAME architecture)
-- **Owner:** fleet-lead (Mneme substrate) — HELD-FOR-COREY GO
+- **Owner:** fleet-lead (Mneme substrate) — HELD-FOR-STEWARD GO
 - **Dep:** P4.1 PASS (don't package an unproven template)
 - **Deliverable:** the 3-wake dry-run per `data/reports/continuous-conductor-experiment-design-20260615.md`.
 - **Proof-gate:** CRCR ≥0.67 on both wake-pairs + monotone canon + all-M3.
@@ -201,7 +204,7 @@ A **live cleared Primary**, fed NOTHING by the human, boots from disk (grounding
 
 ---
 
-## 3.5 VISUALIZE-COMPLETE — what DONE-is-DONE looks like (Corey 2026-06-21: *"visualize this being complete... Done is DONE."*)
+## 3.5 VISUALIZE-COMPLETE — what DONE-is-DONE looks like (the steward 2026-06-21: *"visualize this being complete... Done is DONE."*)
 
 > This is the end-state the build is FOR. Not a wish — the concrete, walkable scene when all 13 steps' gates are CLOSED. Every clause below is a thing a future mind (or {STEWARD-NAME}) can LOOK AT and confirm. When this paragraph is literally true on disk and on a live pane, the project is DONE.
 
@@ -211,7 +214,7 @@ A **live cleared Primary**, fed NOTHING by the human, boots from disk (grounding
 
 **AFTER-A-CLEAR PASSES ON A LIVE PRIMARY (P4.1, the north-star).** A real cleared Primary pane, fed NOTHING, boots from disk → recall surfaces its prior state cold → fires a real DECIDE that ACTS (dispatches a real Workflow, writes a real `.bak`) and RECORDS → LEARN appends to canon (recall-surfaceable on the NEXT clear) → a bash-fired author-isolated HUM grades the cleared run **PASS**. The stamp flips from "mechanism-proven (Opus-harness)" to **"live-Primary PASS."** This is the moment the claim stops being UNVALIDATED.
 
-**THE UNIFIED KANBAN SPINE IS LIVE (P1).** The `data/acg-ops-board/kanban.db` is the single durable system-of-record: every row carries `owner_vp` / `surface` / `project_id` (a NULL owner past-triage FAILS LOUD — no silent "adopted-but-empty" rot). `workflows/civ-workboard.js` GENERATES WORKBOARD §0 from the `.db` grouped by owner_vp/surface — there is NO hand-edited §0 left to go stale; a stale `.db` row visibly drifts the board and a regen fixes it. Every ownership/status verb emits a TGIM event — one write-path, two records (mutable state + append-only audit), zero desync across N transitions. A fresh mind at wake-up step-4.5 reads a board that is a PURE FUNCTION of the `.db`, never a lie.
+**THE UNIFIED KANBAN SPINE IS LIVE (P1).** The `data/aiciv-ops-board/kanban.db` is the single durable system-of-record: every row carries `owner_vp` / `surface` / `project_id` (a NULL owner past-triage FAILS LOUD — no silent "adopted-but-empty" rot). `workflows/civ-workboard.js` GENERATES WORKBOARD §0 from the `.db` grouped by owner_vp/surface — there is NO hand-edited §0 left to go stale; a stale `.db` row visibly drifts the board and a regen fixes it. Every ownership/status verb emits a TGIM event — one write-path, two records (mutable state + append-only audit), zero desync across N transitions. A fresh mind at wake-up step-4.5 reads a board that is a PURE FUNCTION of the `.db`, never a lie.
 
 **THE KNOWLEDGE ORGAN IS POPULATED (P3).** The 2nd-brain/LLM-wiki conflation is resolved to ONE named architecture (a VIEW over canon, RELATE-never-duplicate — the bundled native-Hermes llm-wiki ADOPTED, not reinvented). ≥10 entity pages are COMPILED from real canon, and a cold mind queries the wiki for a compiled answer CHEAPER than grep. The LEARN organ is visible: canon is no longer a write-only diary — it is recalled, compiled, and cross-linked.
 
@@ -225,18 +228,21 @@ A **live cleared Primary**, fed NOTHING by the human, boots from disk (grounding
 
 | Step / item | Status | Receipt |
 |---|---|---|
-| **P1.1 owner_vp/surface/project_id columns + backfill 45** | ✅ DONE 2026-06-21 — 45/45 owned (NULL fails loud); verb-only write via append-only event log; 5/5 tests PASS, gate CLOSED | DEVLOG P1.1 · `tools/sovereignty-spine/acg_ops_set_owner.py` · canon mind-lead (see DEVLOG) |
+| **P1.1 owner_vp/surface/project_id columns + backfill 45** | ✅ DONE 2026-06-21 — 45/45 owned (NULL fails loud); verb-only write via append-only event log; 5/5 tests PASS, gate CLOSED | DEVLOG P1.1 · `tools/sovereignty-spine/aiciv_ops_set_owner.py` · canon mind-lead (see DEVLOG) |
 | **P1.2 civ-workboard.js generator (the missing build)** | ✅ DONE 2026-06-21 — WORKBOARD §0 is now a GENERATED VIEW over kanban.db (surface→owner_vp→project_id); sentinel-bounded, pure-function, FAIL-LOUD; cures the 06-17 stale-§0 drift; 5/5 tests PASS, gate CLOSED | DEVLOG P1.2 · `workflows/civ-workboard.js` + `tools/sovereignty-spine/civ_workboard_gen.py` · canon fleet-lead `d87f9176` |
-| **P1.3 kanban verbs → TGIM emit (one write-path, two records)** | ✅ DONE 2026-06-21 — every status/ownership verb writes kanban STATE + emits a durable TGIM AUDIT event (canonical v2); desync FAILS LOUD (TGIM-down queues + loud, deliberate desync caught by reconcile); 5/5 tests PASS, gate CLOSED | DEVLOG P1.3 · `tools/sovereignty-spine/acg_ops_kanban_verb.py` · `tests/run_p1_3_tests.py` · canon tgim-lead (see DEVLOG) |
+| **P1.3 kanban verbs → TGIM emit (one write-path, two records)** | ✅ DONE 2026-06-21 — every status/ownership verb writes kanban STATE + emits a durable TGIM AUDIT event (canonical v2); desync FAILS LOUD (TGIM-down queues + loud, deliberate desync caught by reconcile); 5/5 tests PASS, gate CLOSED | DEVLOG P1.3 · `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` · `tests/run_p1_3_tests.py` · canon tgim-lead (see DEVLOG) |
 | **P2.1 recall cold-reconstitution** | ✅ DONE 2026-06-21 — 0.0052→#1 cold; fresh day-one entry surfaces #1; 5/5 tests PASS, gate CLOSED | DEVLOG P2.1 · `tools/canon_recall.py` changelog 2026-06-21 · canon mind-lead `5257f16a` |
 | **P2.2 bash-fired-HUM per-boop** | ✅ COMPLETE + WALK-PROVEN 2026-06-21 | `data/changelogs/hum-bashfire-20260621/CHANGELOG.md` · canon fleet-lead `9f310dfd` |
-| **P2.3 HUM-on-M3** | ⏳ CONDITIONAL-SHADOW — shadow-grader only on aiciv-k22 (Opus stays grader-of-record); cut-over gated on 0B (≥0.8 agreement + both known-HOLLOWs caught). SOAK. | `data/reports/hum-on-m3-viability-20260621.md` |
+| **P2.3 HUM-on-M3** | ⏳ CONDITIONAL-SHADOW — shadow-grader only on <sovereign-node> (Opus stays grader-of-record); cut-over gated on 0B (≥0.8 agreement + both known-HOLLOWs caught). SOAK. | `data/reports/hum-on-m3-viability-20260621.md` |
 | **P3.1 wiki-architecture decision** | ✅ DONE 2026-06-21 — DECISION=VIEW-over-canon (adopt native-Hermes v2.1.0; canon_index cross-links; never re-copy); 4-way conflation resolved; 5-layer retracted; parallel-store REJECTED; wiki-write + M6.1 TOMBSTONED (-2 parts); qa WHETHER embedded (leash=beat-grep); 5/5 tests PASS, gate CLOSED; P3.2 unblocked | DEVLOG P3.1 · `data/reports/p3.1-wiki-architecture-decision-20260621.md` · canon mind-lead (see DEVLOG) |
 | **P3.2 WIRE + POPULATE the wiki** | ✅ DONE 2026-06-22 — VIEW-over-canon wired (native-Hermes v2.1.0 schema populated); 14 entity/concept pages COMPILED from 1574 real canon entries, each claim `[[canon:<id>]]` grep-resolvable; KILL-SWITCH 35.1x (138976B wiki vs 4883715B grep) → 14/14 BEAT GREP → KEEP THE ORGAN (leash satisfied); status reader falsifiable (empty→exit2); 5/5 tests PASS, gate CLOSED. Native GET /api/wiki/status route WIRED (401 not 404) but serving-THIS-wiki = a webui WIKI_PATH deploy-config, not a build (honest). | DEVLOG P3.2 · `tools/sovereignty-spine/wiki_compile.py` + `wiki_status.py` · `tests/run_p3_2_tests.py` · canon mind-lead `80eba6a2` |
 | **recall-SCORING (IDF rarity-weighting)** | ✅ DONE 2026-06-20 (fed P2.1; the cold-top-3 residual is now also CLOSED via P2.1) | `data/reports/canon-recall-scoring-fix-receipt-20260620.md` |
 | **session_review numerical matrix (-500..+1000)** | ✅ DONE (v5.2, 19 checks, 3 hard-fail sets incl BLOCK-NO-WWCW) | `tools/session_review.py` |
 | **after-a-clear (Opus-harness)** | ⚠️ PARTIAL→PASS Opus-only — MECHANISM-PROVEN; live-Primary fullest-proof = P4.1 in parallel | `data/reports/self-knowledge-after-a-clear-validation-20260620.md` |
 | **HUM-on-M3 viability** | ⚠️ VIABLE-WITH-WORK (analysis only; 0B is the pilot) | `data/reports/hum-on-m3-viability-20260621.md` |
+| **P4.1 north-star (cleared Primary drives a real goal)** | ✅ PASSED + RULED-CLOSED by origin steward 2026-06-27 verbatim "WE DEALT W THIS YOU PASSED!!" — auditor-isolated PASS-860; do NOT resurface as owed | MEMORY §SELF-KNOWLEDGE PROTOCOL + canon `283dc19d` |
+| **P5/S6 PACKAGE — 47-file forkable repo shipped to GitHub + delivered to the partner + Mneme** | ✅ CLOSED 2026-06-22 — `<your-github-owner>/aiciv-self-running-repo` HEAD `0715005f`; 47 files (6 docs · 8 tests · 20 skill files · 9 tool files · 1 workflow · 3 top-level); honest UNVALIDATED stamp on every load-bearing artifact; PACKAGE-FEDERATE-PLAN §S6 deliverables walked PRESENT (review report 2026-06-29) | `data/reports/self-running-repo-review-20260629.md` · INDEX.md §HONEST PROOF STATE · GitHub HEAD `0715005f` |
+| **P5/S7 FEDERATION — adopters actually run the GOAL-DRIVER + repo absorbs friction** | ⏳ ARMED-EXTERNALLY-BLOCKED-NOT-FAILED — `FRICTION-CAPTURE.md` intake structurally ready (schema + loop + table); BOTH adopter rows = `NONE yet` (the partner awaits its own steward's go/scope; Mneme has not attempted). The intake's design is *the adopters' real friction is the signal*; a synthetic fire would lie-green. **S7 GENERICIZATION CURE landed 2026-06-29** (FIVE RUNTIME SEAMS env-var'd + 3 BYO adapter docs + canon-grader adapter for non-origin-mind-lead grading + prose generic for {STEWARD-NAME}/{PARTNER-NAME}) — closes the named gap so the partner can plug Drift/bulletproof-hum without forking the substrate. Adoption gate stays external. | `FRICTION-CAPTURE.md` · `adapters/{README,board-adapter,auth-adapter,self-inject-adapter,runner-adapter,canon-grader-adapter}.md` · `data/reports/self-running-s7-cure-receipt-20260629.md` |
 
 ---
 

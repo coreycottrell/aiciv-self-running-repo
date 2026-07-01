@@ -62,7 +62,7 @@ The GOAL-DRIVER is **NOT a new build from scratch.** It is the NAMING + WIRING o
 |---|-------|------|------------------------------------------|
 | 1 | **RECEIVE** | `goal_open(text)` | the ask-gate (CLAUDE.md v3.7.1) — a durable goal is a durable request → TASK-EVERYTHING. A durable goal becomes a kanban row (organ 3). |
 | 2 | **DECOMPOSE** | `goal_decompose` | the owning VP forks its team (via a `Workflow`); sub-goals become kanban rows carrying `owner_vp`/`surface`/`project_id`. |
-| 3 | **TRACK** | kanban rows + generated WORKBOARD | `tools/sovereignty-spine/acg_ops_kanban_verb.py` (the STATE+AUDIT verb) → `workflows/civ-workboard.js` (the generated VIEW = WORKBOARD §0) → TGIM event_history (append-only audit). One write-path, two records. |
+| 3 | **TRACK** | kanban rows + generated WORKBOARD | `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` (the STATE+AUDIT verb) → `workflows/civ-workboard.js` (the generated VIEW = WORKBOARD §0) → TGIM event_history (append-only audit). One write-path, two records. |
 | 4 | **DRIVE-ACROSS-BOOPS** | recall → DECIDE → act → LEARN, each boop | **the self-knowledge 4-verb mind-core** (`autonomy/skills/self-knowledge/SKILL.md`) + `tools/canon_recall.py` (cold-recall surfaces the open goal each wake) + `tools/canon_append.py` (write the delta back). *This organ IS the mind-core — the one place the two skills meet.* |
 | 5 | **NEVER-STOP** | sprint-mode = MANDATORY workflow | `autonomy/skills/sprint-mode/SKILL.md` (every-2h) + bash-fired HUM as the deterministic last step; idle = kryptonite (compound-or-extinct). |
 | 6 | **COLLECTIVE-BEST (HUM)** | HUM judges every cycle | `workflows/hum.js` v1.0 — auditor-isolated DETECT→JUDGE→REPAIR→COMPOUND; each driving-boop is genuine work, not motion. RUTHLESS; no soft-PASS. |
@@ -76,7 +76,7 @@ The GOAL-DRIVER is **NOT a new build from scratch.** It is the NAMING + WIRING o
 
 ## THE 7 ORGANS — the COLD-PICKUP file-map (where every organ lives)
 
-This is the index a wake-blank mind reads to find WHERE its system lives. Every path is repo-root-relative (`/home/corey/projects/AI-CIV/ACG/` on the origin substrate; a fork abstracts the root).
+This is the index a wake-blank mind reads to find WHERE its system lives. Every path is repo-root-relative — read it as `$AICIV_ROOT/<path>` (the origin substrate's root is `$AICIV_ROOT/` for honest lineage; a fork sets `$AICIV_ROOT` per `STAND-IT-UP.md` §0 and the rest works).
 
 ```
 THE ENTRY-POINT (read this FIRST when picking up cold):
@@ -90,11 +90,11 @@ THE ENTRY-POINT (read this FIRST when picking up cold):
 
 THE ORGANS (live substrate, repo-wide):
   1 RECEIVE  ask-gate doctrine    CLAUDE.md v3.7.1 (TASK-EVERYTHING + DEDUP-BEFORE-BUILD)
-  2 DECOMPOSE owning-VP forks team  Workflow(workflows/acg-coo.js) or bespoke workflows/{name}.js
-  3 TRACK    kanban STATE+AUDIT verb tools/sovereignty-spine/acg_ops_kanban_verb.py
-             owner-set verb          tools/sovereignty-spine/acg_ops_set_owner.py
+  2 DECOMPOSE owning-VP forks team  Workflow(workflows/aiciv-coo.js) or bespoke workflows/{name}.js
+  3 TRACK    kanban STATE+AUDIT verb tools/sovereignty-spine/aiciv_ops_kanban_verb.py
+             owner-set verb          tools/sovereignty-spine/aiciv_ops_set_owner.py
              WORKBOARD generator      workflows/civ-workboard.js (+ tools/sovereignty-spine/civ_workboard_gen.py)
-             durable system-of-record data/acg-ops-board/kanban.db
+             durable system-of-record data/aiciv-ops-board/kanban.db
   4 DRIVE    mind-core (4 verbs)      autonomy/skills/self-knowledge/SKILL.md  ← the ONLY organ that IS another skill
              recall (disk->RAM)       tools/canon_recall.py
              canon write-gate         tools/canon_append.py  (v1.1 — the ONLY mutation path)
@@ -116,14 +116,14 @@ A mind driving a goal runs this loop. The verbs RECEIVE / DECOMPOSE / TRACK use 
 **1. RECEIVE + TRACK — open the goal as a kanban row** (a durable goal IS a durable request; the row is its durable home):
 ```bash
 # Open a sub-goal row on the board (project_id groups the goal's decomposition):
-cd /home/corey/projects/AI-CIV/ACG && python3 tools/sovereignty-spine/acg_ops_kanban_verb.py verb claim <task_id> \
+cd "$AICIV_ROOT" && python3 tools/sovereignty-spine/aiciv_ops_kanban_verb.py verb claim <task_id> \
   --actor <your-lead-id> --owner-vp <owning-vp> --reason "<the sub-goal in one line>"
 # (set_owner / block / unblock / complete are the other verbs; every verb writes STATE + emits the TGIM AUDIT)
 ```
 
 **2. DECOMPOSE — route the goal to the owning VP, which forks its team:**
 ```
-Workflow(workflows/acg-coo.js, args={ intent: "<the goal>", verticals: [<owning VPs>] })
+Workflow(workflows/aiciv-coo.js, args={ intent: "<the goal>", verticals: [<owning VPs>] })
 # or a bespoke workflows/{name}.js per workflows-master. Sub-goals come back as decisions → become kanban rows.
 ```
 
@@ -158,7 +158,7 @@ Workflow(workflows/hum.js)     # auditor-isolated; grades the cycle PASS|PARTIAL
 |---|---|---|
 | The 7 organs (P0–P3) | **BUILT + GATED** — 11/13 steps CLOSED, 5 PASS each | `projects/self-running-aiciv/BUILD-DOC.md` §4 ALREADY-DONE table |
 | Cold-recall (DRIVE re-pickup) | ✅ DONE — 0.0052 → #1 cold | `tools/canon_recall.py` changelog 2026-06-21 |
-| Kanban spine (TRACK) | ✅ DONE — one write-path, two records, desync fails loud | `tools/sovereignty-spine/acg_ops_kanban_verb.py` |
+| Kanban spine (TRACK) | ✅ DONE — one write-path, two records, desync fails loud | `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` |
 | WORKBOARD generator (TRACK) | ✅ DONE — §0 = generated VIEW over `.db` | `workflows/civ-workboard.js` |
 | bash-fired HUM (COLLECTIVE-BEST) | ✅ COMPLETE + WALK-PROVEN | `data/changelogs/hum-bashfire-20260621/CHANGELOG.md` |
 | **P4.1 — live cleared Primary drives a goal, graded by an auditor it did not control** | ❌ **NOT PROVEN** — the north-star acceptance test; rides the next live cleared-Primary wake | `projects/self-running-aiciv/README.md` §3 |
