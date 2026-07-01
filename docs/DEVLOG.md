@@ -308,3 +308,36 @@ cp autonomy/skills/sprint-mode/SKILL.md.bak.20260622T014831Z-pre-self-running-ma
 - **rollback command:** `cp -p /home/corey/projects/AI-CIV/ACG/projects/self-running-aiciv/tests/phase-5-tests.md.bak.20260622T014930Z-pre-cp-battery-expand /home/corey/projects/AI-CIV/ACG/projects/self-running-aiciv/tests/phase-5-tests.md` (DEVLOG = append-only, truncate this block; throwaway kanban row t_s5cp_092781 = archive via kanban_db, it is a test artifact)
 - **HONEST NOTE (named, not papered):** (1) the S5 battery ran on a fresh throwaway row, NOT the 7 S-rows the prior P5.S1 entry opened (t_3799e685 etc.) — those did not surface under `project_id=self-running-aiciv` at run time (idempotency / board-routing), so the battery used a clean dogfood row to prove the verb path rather than mutate the real S-rows. The 13 rows queried are the BUILD-DOC P0-P4 rows under that project_id. (2) self-running-mastery/SKILL.md was ABSENT at first walk (~21:48) and PRESENT (16.9KB, unregistered) at re-walk (21:50) — a concurrent S2/S3 build is in-flight; CP1.5 PARTIAL captures the true moving snapshot.
 - **proof-gate verdict:** **S5 CLOSED** — 25 client-pain sub-tests AUTHORED + RUN on the live substrate with honest verdicts; 24 PASS + 1 honest PARTIAL; each maps to a named complaint; each adversarial; a HOLLOW/PARTIAL recorded as such. The GOAL-DRIVER's acceptance battery PROVES the four+one client pains are fixed.
+
+## [2026-07-01T00:00:00Z] — REBUILD-20260701 — Full repo refresh; capstone README + curriculum included; anti-fossil delta doc landed
+- **what-changed:**
+  1. Landed the previously-uncommitted 2026-06-29 S7 GENERICIZATION CURE as its own commit at the head of the `rebuild-20260701` branch — 20 files, +620/-24 lines (adapters/ + FRICTION-CAPTURE.md + INDEX + STAND-IT-UP + skill prose sweep + acg_ops_board / acg_ops_kanban_verb / hum.js env-var alignment).
+  2. Copied `HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` (3,255 lines) + `curriculum.md` (2,301 lines) verbatim from origin `exports/architecture/` into `docs/` — Corey directive 2026-07-01 "include the readme and curriculum etc."
+  3. Wrote `docs/EVOLUTION-SINCE-SHIP.md` (~200 lines) — the anti-fossil delta doc naming the 5 things that reshape how a fork understands the substrate between 2026-06-22 ship and 2026-07-01 rebuild (universal-request spine; metabolism reframe; 1/N live PASS; dead-pane wake-inject doctrine; §23 per-workflow scratchpad + §4.2 delegate-down invariant).
+  4. Refreshed `INDEX.md` — v2 rebuild version; 55-file count; added READ THIS FIRST section pointing at EVOLUTION-SINCE-SHIP; added doc rows for 3 new docs; added dead-pane doctrine warning to Seam D row.
+  5. Refreshed `STAND-IT-UP.md` — added "READ THE ANTI-FOSSIL DOC" preamble; added dead-pane doctrine warning to Seam D; added §8 (universal-request pattern layer — the 10 steps + the 4 gates + the metabolism reframe); added §9 (workflow-substrate invariants — §23 per-workflow scratchpad + §4.2 delegate-down).
+  6. Refreshed `docs/README.md` — version bump to rebuild-20260701; added §6 (universal-request spine) + §7 (metabolism reframe) as new sections; §3 (proof state) updated to reflect P4.1 CLOSED on origin substrate 2026-06-27, K/N=1/N live PASS 2026-06-30, metabolism reframe PROVISIONAL v1.0.
+  7. Refreshed `docs/MISSION.md` — added rebuild note + updated THE PROOF section to reflect P4.1 CLOSED on origin substrate + universal-request first live PASS.
+  8. Refreshed `docs/BUILD-DOC.md` — added rebuild note in header; marked P4 phase row + P4.1 step with CLOSED status.
+  9. Refreshed `docs/THE-GOAL.md` — light-touch: added a "2026-07-01 REBUILD ADDENDUM" at the end naming the four mechanism advances without touching the canonical body.
+  10. Refreshed `docs/PACKAGE-FEDERATE-PLAN.md` — added "Status snapshot" block near the top with S1-S5 CLOSED / S6 CLOSED / S6 REFRESH / S6 REBUILD / S7 ARMED-EXTERNALLY-BLOCKED-NOT-FAILED verdicts.
+  11. This DEVLOG entry (the reversibility narrative).
+- **why:** Corey directive 2026-07-01 (verbatim): *"can we update this repo https://github.com/coreycottrell/aiciv-self-running-repo and maybe fully rebuild it we have changed ALOT. and include the readme and curriculum etc."* The origin substrate moved substantially between 2026-06-22 ship and 2026-07-01 (universal-request pattern landed above the GOAL-DRIVER, first live end-to-end PASS, metabolism reframe surfaced via deep-duck, dead-pane doctrine, workflow-substrate invariants); shipping the repo as a fossil of ship-time would fork adopters onto stale mental models.
+- **files-touched (paths under exports/aiciv-self-running-repo/):**
+  - INDEX.md
+  - STAND-IT-UP.md
+  - docs/README.md
+  - docs/MISSION.md
+  - docs/BUILD-DOC.md
+  - docs/THE-GOAL.md
+  - docs/PACKAGE-FEDERATE-PLAN.md
+  - docs/DEVLOG.md (this entry)
+  - docs/EVOLUTION-SINCE-SHIP.md (NEW)
+  - docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md (NEW — copied verbatim from `exports/architecture/`)
+  - docs/curriculum.md (NEW — copied verbatim from `exports/architecture/`)
+- **.bak paths:** NONE inside the repo (branch-based reversibility instead — the rebuild lives on `rebuild-20260701`; `main` remains at HEAD `0715005`, unchanged. To roll back: `git checkout main && git branch -D rebuild-20260701`; the PR gives Corey visual review before any merge).
+- **rollback command:** `cd /home/corey/projects/AI-CIV/ACG/exports/aiciv-self-running-repo && git checkout main && git branch -D rebuild-20260701` (deletes the branch; `main` still points at ship-time HEAD `0715005`).
+- **5-behavioral-test result:** N/A — this is a docs-rebuild step, not a gated build step. The test batteries are the P0-P5 files under `tests/`; they still gate the underlying build steps, unchanged.
+- **proof-gate verdict:** N/A (docs-rebuild, not a gated build step). The rebuild's honesty gates are: (a) every claim about origin-substrate current state anchored to a walked file (EVOLUTION-SINCE-SHIP.md provenance section); (b) K/N held at 1/N — not laundered; (c) metabolism doctrine stamped PROVISIONAL v1.0 with the 2-week validation test named; (d) dead-pane doctrine stamped provisional; (e) copied docs marked "copied verbatim" and preserving worked-example proper names as pedagogical anchors (like DEVLOG.md itself).
+- **canon_append:** to be recorded in origin substrate on merge (this DEVLOG lives inside the repo; the origin-substrate canon anchor will be a separate mind-lead entry referencing this rebuild).
+

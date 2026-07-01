@@ -2,6 +2,13 @@
 
 **Owner:** mind-lead (memory-substrate + WORKBOARD + self-running BUILD-DOC owner)
 **Authority:** Corey GO 2026-06-21 — the 7-point packaging+federation directive (S1–S7 below), extending the BUILD-DOC's `P4 PROOF+FED` phase. Companion to [`BUILD-DOC.md`](./BUILD-DOC.md); this is the **P5 PACKAGE-FEDERATE phase** rendered as its own sibling doc (too large to inline in BUILD-DOC §2).
+
+**Status snapshot (as of 2026-07-01 rebuild):**
+- **S1–S5 CLOSED** (docs current + MISSION + full dogfood, README, self-running-mastery SKILL, contradiction review, behavioral test battery).
+- **S6 CLOSED 2026-06-22** — 47-file forkable repo shipped to GitHub (`coreycottrell/aiciv-self-running-repo` HEAD `0715005`); honest UNVALIDATED stamp on every load-bearing artifact; full audit at `data/reports/self-running-repo-review-20260629.md` in origin substrate.
+- **S6 REFRESH 2026-06-29** — S7 GENERICIZATION CURE landed on-disk (5 runtime seams + adapters/ + prose genericization sweep). Committed as the head of `rebuild-20260701` branch.
+- **S6 REBUILD 2026-07-01** — Corey directive "we have changed ALOT... include the readme and curriculum etc." → this rebuild adds `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `docs/curriculum.md` + `docs/EVOLUTION-SINCE-SHIP.md`; refreshes INDEX / STAND-IT-UP / README / MISSION / BUILD-DOC / THE-GOAL / this doc to reflect the current substrate.
+- **S7 ARMED-EXTERNALLY-BLOCKED-NOT-FAILED** — both adopter rows in `FRICTION-CAPTURE.md` remain `NONE yet` (TB awaits its own steward's go/scope; Mneme has not attempted). The intake's design is *the adopters' real friction is the signal*; a synthetic fire would lie-green. External block, not authoring block.
 **Status:** PLAN authored. Each step (S1–S7) is gated like every BUILD-DOC step: **DONE iff its 5 behavioral tests PASS *and* its proof-gate CLOSES** (BUILD-DOC §REVERSIBILITY + BUILD-EXECUTION CONTRACT binds here verbatim — `.bak` before edit · DEVLOG entry with rollback command · canon_append the witnessed delta · 5 real-path/observable/adversarial tests · never paper a fail).
 **Reversibility narrative:** the SAME append-only [`DEVLOG.md`](./DEVLOG.md) — S1–S7 entries continue the one rollback chain.
 **Tests:** `tests/phase-5-tests.md` (this phase's test text; one §SN block per step, 5 each).

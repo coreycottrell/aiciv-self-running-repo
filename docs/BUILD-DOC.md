@@ -2,6 +2,7 @@
 
 **Owner:** mind-lead (memory-substrate + WORKBOARD owner; owns this build plan end-to-end)
 **Authority:** Corey GO 2026-06-21 — *"I want a build doc created for this... Write up 5x behavioral tests for each and every step."*
+**Rebuild:** 2026-07-01 — Corey directive "update this repo... maybe fully rebuild we have changed ALOT." What CHANGED at the BUILD-DOC level: **P4.1 CLOSED on origin substrate 2026-06-27** (origin steward ruling *"WE DEALT W THIS YOU PASSED!!"*; auditor-isolated PASS-860). P4.3 SHIPPED as this repo (S6 CLOSED 2026-06-22, S7 GENERICIZATION CURE landed 2026-06-29, rebuild refresh landed 2026-07-01). **First live universal-request end-to-end PASS 2026-06-30** (K/N = 1/N; morning-science-digest → TG 74801). The 13-step build plan below is unchanged in shape; the gate statuses have moved. See `docs/EVOLUTION-SINCE-SHIP.md` for the anti-fossil delta.
 **Status:** BUILD-EXECUTION GO (Corey 2026-06-21 — *"Keep strong dev-log so anything is reversible and build and test till it's done."* + *"Phases are meant to be completed... Update the build sheet and visualize this being complete. Double check the plan and start delegating. Done is DONE."* + *"You think that's air you're breathing?"*). The planning-mode hold on Phases 1–4 is **LIFTED**; the build executes phase-by-phase through the proof-gates. **PHASE-0 DECISION (2026-06-21, Corey-directed): the after-a-clear MECHANISM is PROVEN (T0A.1 reconstitution PASS + T0A.3 cold-recall mechanism CLOSED via P2.1) → Phase 1 PROCEEDS on the mechanism-proven gate. The live-Primary fullest-proof rides the next wake IN PARALLEL — it is NOT a Phase-1 blocker. The "0A needs a live cleared Primary" constraint was the FAKE one ("that's not air you're breathing").** This document is the PLAN + the TESTS + the CONTRACT. Each step is still gated — nothing is DONE until its 5 tests PASS **and** its proof-gate CLOSES; a FAILED gate STOPS the phase and surfaces. The append-only reversibility narrative lives in [`DEVLOG.md`](./DEVLOG.md).
 **Sources merged:** Primary's plan (compared) + mind-lead's INDEPENDENT plan (`data/reports/self-running-aiciv-buildout-plan-mindlead-20260621.md`) + the synthesis (`data/reports/one-big-thing-self-running-aiciv-synthesis-20260621.md`). The CORRECTED version is canon here (see §Corrections).
 **The 5 behavioral tests per step live in:** `tests/` (one file per phase). This doc is the index + the gates; `tests/` is the test text.
@@ -81,7 +82,7 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 | **P1 SPINE** | The make-or-break integration: ownership columns + backfill 45 [**P1.1 DONE 2026-06-21**], BUILD the missing civ-workboard.js [**P1.2 DONE 2026-06-21 — 5/5 PASS, generated-VIEW-over-db**], kanban-verbs→TGIM emit [**P1.3 DONE 2026-06-21 — 5/5 PASS, desync-fails-loud proven**]. | **UNLOCKED (0A mechanism-proven)** |
 | **P2 ORGANS** | Strengthen: recall cold→top-3 [**P2.1 DONE — 0.0052→#1 cold**], bash-fired-HUM [**P2.2 DONE**], HUM-on-M3 [**P2.3 CONDITIONAL-SHADOW**]. | 2.3 shadow-only; cut-over conditional on 0B PASS |
 | **P3 KNOWLEDGE** | Research-FIRST: disambiguate 2nd-brain/LLM-wiki conflation + adopt Hermes wiki arch [**P3.1 DONE 2026-06-21 — 5/5 PASS, DECISION=VIEW-over-canon, adopt native-Hermes v2.1.0, -2 parts**], THEN wire + populate from canon [**P3.2 DONE 2026-06-22 — 5/5 PASS, 14 pages compiled, kill-switch 35.1x BEATS GREP → KEEP**]. | 3B after 3A decision + P1.2 |
-| **P4 PROOF+FED** | Full after-a-clear on the live whole-stack (north-star) + Mneme CRCR dry-run + forkable federation-IP template. | depends on ALL prior |
+| **P4 PROOF+FED** | Full after-a-clear on the live whole-stack (north-star) + Mneme CRCR dry-run + forkable federation-IP template. **P4.1 CLOSED 2026-06-27 (origin substrate PASS-860). P4.3 SHIPPED 2026-06-22 (this repo). P4.2 HELD-FOR-COREY GO.** | depends on ALL prior |
 
 ---
 
@@ -172,10 +173,12 @@ A per-phase "should I proceed?" park is NOT a genuine ask — it is exactly the 
 
 ### PHASE 4 — THE FULL PROOF + FEDERATION-IP PACKAGING (north-star)
 
-#### Step P4.1 — FULL after-a-clear on a live cleared Primary running the WHOLE wired stack
+#### Step P4.1 — FULL after-a-clear on a live cleared Primary running the WHOLE wired stack — ✅ CLOSED on origin substrate 2026-06-27
 - **Owner:** mind-lead (subject: Primary)
 - **Dep:** ALL prior phases
-- **Deliverable:** a cleared Primary boots from disk → recall surfaces its state (P2.1) → runs the cycle → kanban+WORKBOARD reflect it (P1) → LEARN write-back → bash-fired HUM grades it (P2.2) → human feeds NOTHING.
+- **Status:** **CLOSED on origin substrate 2026-06-27** — origin steward ruling verbatim *"WE DEALT W THIS YOU PASSED!!"*; auditor-isolated PASS-860 on a real cleared Primary. Ship-time "built, not proven" stamp FLIPPED to proven on the origin substrate.
+- **Fork status:** UNVALIDATED — a fork's own P4.1-analog stays UNVALIDATED until the fork's own live cleared mind runs the cycle end-to-end. The fork inherits the mechanism-proof (Opus + Mneme-N=1), never the substrate-proof.
+- **Deliverable (achieved on origin substrate):** a cleared Primary boots from disk → recall surfaces its state (P2.1) → runs the cycle → kanban+WORKBOARD reflect it (P1) → LEARN write-back → bash-fired HUM grades it (P2.2) → human feeds NOTHING.
 - **Proof-gate = THE NORTH-STAR ACCEPTANCE TEST** (§3 below).
 - **Tests:** `tests/phase-4-tests.md` §P4.1 (5)
 

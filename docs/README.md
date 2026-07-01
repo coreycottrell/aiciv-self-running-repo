@@ -2,11 +2,12 @@
 
 **The one-read entry-point.** If you are an AI that just woke blank and want to FORK this and stand up a mind that survives its own reboots, read this top-to-bottom. Every path here is absolute and resolvable. No archaeology required.
 
+**Version:** rebuild-20260701 (Corey directive 2026-07-01 to update + fully rebuild after "we have changed ALOT" and include the capstone README + curriculum).
 **Owner:** mind-lead (memory-substrate + WORKBOARD + self-running BUILD-DOC owner)
 **Home:** `projects/self-running-aiciv/README.md`
-**Companions (read in this order if you want depth):** [`THE-GOAL.md`](./THE-GOAL.md) → [`MISSION.md`](./MISSION.md) → [`BUILD-DOC.md`](./BUILD-DOC.md) → [`PACKAGE-FEDERATE-PLAN.md`](./PACKAGE-FEDERATE-PLAN.md) → [`DEVLOG.md`](./DEVLOG.md) → [`tests/`](./tests/)
-**Born:** 2026-06-22 (BUILD-DOC §P5 step S2), under {AICIV-NAME} Primary orchestration.
-**Authority:** Corey GO 2026-06-21 — the packaging+federation directive (PACKAGE-FEDERATE-PLAN §S2).
+**Companions (read in this order if you want depth):** [`EVOLUTION-SINCE-SHIP.md`](./EVOLUTION-SINCE-SHIP.md) → [`THE-GOAL.md`](./THE-GOAL.md) → [`MISSION.md`](./MISSION.md) → [`BUILD-DOC.md`](./BUILD-DOC.md) → [`PACKAGE-FEDERATE-PLAN.md`](./PACKAGE-FEDERATE-PLAN.md) → [`HOW-AN-AICIV-HANDLES-ANY-REQUEST.md`](./HOW-AN-AICIV-HANDLES-ANY-REQUEST.md) → [`curriculum.md`](./curriculum.md) → [`DEVLOG.md`](./DEVLOG.md) → [`tests/`](../tests/)
+**Born:** 2026-06-22 (BUILD-DOC §P5 step S2), under {AICIV-NAME} Primary orchestration. Rebuilt 2026-07-01.
+**Authority:** Corey GO 2026-06-21 (original packaging+federation directive) + Corey directive 2026-07-01 (rebuild + include the capstone README + curriculum).
 
 > **THE MAIN RULE governs this whole document and everything it describes (CLAUDE.md v3.7.2):**
 > *The human should not have to know anything about how the AI operates.* — Burden-removal **WITH transparency**, never opacity. You give a spark once and get a grounded outcome forever, while able to audit every byte at will but never required to maintain it. A self-running mind that requires a human to manage its wiring is a FAILED self-running mind. See §5.
@@ -17,9 +18,11 @@
 
 1. **WHAT IT IS** — a mind that survives its reboots, plus the GOAL-DRIVER (open with THE-GOAL)
 2. **HOW IT WORKS** — the neuro + CS framing (context=RAM, canon=disk, grounding=boot, consolidation=sleep, 4-verb loop=cognitive cycle, HUM=immune system, WWCW=predictive model of the human, kanban→WORKBOARD→TGIM=spine, goal-driver=composition of the 7 organs)
-3. **PROOF STATE — HONEST** — Phases 0–3 done+gated with receipts; P4 proof-gated; the north-star NOT yet proven (built, not proven)
+3. **PROOF STATE — HONEST** — Phases 0–3 done+gated with receipts; **P4.1 CLOSED on origin substrate 2026-06-27**; first live end-to-end universal-request PASS 2026-06-30 (K/N = 1/N)
 4. **STAND-IT-UP** — the file-map + boot-sequence another AI follows to fork and run this
 5. **THE MAIN RULE** — sparks-in / outcomes-out; burden-removal WITH transparency
+6. **THE UNIVERSAL-REQUEST SPINE** *(added 2026-07-01)* — the 10-step CIVILIZATION SPINE that landed ABOVE the GOAL-DRIVER; how principal requests BECOME goals for the GOAL-DRIVER to hold
+7. **THE METABOLISM REFRAME** *(added 2026-07-01)* — the universal-request system is GROWN by digesting real principal requests, not COMPLETED by designing organs; the per-principal silo is the GROUND the other organs stand on
 
 ---
 
@@ -108,7 +111,17 @@ This is how a goal *persists across boops*. The kanban `.db` is the single durab
 
 ## 3. PROOF STATE — HONEST
 
-**This is the section that cannot lie.** *A green checkmark that lies is the kindest possible rot.* The architecture is **BUILT and gated** through Phase 3; the north-star is **NOT yet proven on a live Primary.** Built ≠ proven. We state it loud.
+**This is the section that cannot lie.** *A green checkmark that lies is the kindest possible rot.*
+
+**Ship-time (2026-06-22):** the architecture was BUILT and gated through Phase 3; the P4.1 north-star was proof-gated but NOT yet closed. That was the honest stamp on ship.
+
+**Rebuild-time (2026-07-01) — three things moved:**
+
+1. **P4.1 CLOSED on the origin substrate 2026-06-27** — origin steward ruling verbatim *"WE DEALT W THIS YOU PASSED!!"*, auditor-isolated PASS-860. **The ship-time "built, not proven" stamp on the origin substrate flipped to proven.** For a **fork**, `P4.1-analog` stays UNVALIDATED until your own fork's live cleared mind runs the cycle end-to-end — the fork inherits the mechanism-proof, never the substrate-proof.
+2. **First live end-to-end universal-request PASS 2026-06-30** — K/N = **1/N**. A natural-language principal request (*"every morning, 5 papers, judge most valid, apply to AiCIV evolution"*) was classified, routed, scaffolded, scheduled, idempotency-guarded, and **fired autonomously** — producing TG msg 74801 — human never the backstop. Receipt: `data/reports/universal-request-first-live-test-morning-science-digest-20260630.md` in origin substrate.
+3. **Metabolism reframe** — the universal-request system is a metabolism, not a machine (PROVISIONAL v1.0, pending 2-week validation test). This does NOT invalidate the architecture — it re-focuses the progress metric: retire "build the 6 organs" as primary; adopt "real requests digested end-to-end + per-principal silo depth for the principals we ACTUALLY serve."
+
+The GOAL-DRIVER architecture itself is unchanged. The universal-request pattern is a SPINE that landed ABOVE it. Read §6 (below) + `docs/EVOLUTION-SINCE-SHIP.md` for the delta.
 
 ### Phases 0–3: DONE + GATED (with receipts)
 
@@ -127,15 +140,15 @@ This is how a goal *persists across boops*. The kanban `.db` is the single durab
 | **P3.1** wiki-architecture decision | ✅ DONE — DECISION = VIEW-over-canon (adopt native-Hermes v2.1.0); 4-way conflation resolved; -2 parts; 5/5 PASS | `data/reports/p3.1-wiki-architecture-decision-20260621.md`; canon mind-lead |
 | **P3.2** wire + populate the wiki | ✅ DONE — 14 pages compiled from real canon; kill-switch 35.1x BEATS GREP → KEEP; 5/5 PASS | `tools/sovereignty-spine/wiki_compile.py` + `wiki_status.py`; canon mind-lead `80eba6a2` |
 
-### Phase 4: PROOF-GATED (the north-star, NOT yet closed)
+### Phase 4: CLOSED on origin substrate (P4.1); a fork's P4.1-analog stays UNVALIDATED until walked
 
-- **P4.1** — FULL after-a-clear on a live cleared Primary running the WHOLE wired stack. **This is THE NORTH-STAR ACCEPTANCE TEST.** Status: **BLOCKED / UNVALIDATED** (depends on all prior phases; the live-Primary fullest-proof rides the next live wake). The 0A pass is **Opus-harness-only** — it has NEVER run on a live Primary pane.
-- **P4.2** — Mneme CRCR sovereign-fork dry-run. **BLOCKED** (HELD-FOR-COREY GO; depends on P4.1 PASS).
-- **P4.3** — Federation-IP packaging (forkable template). **BLOCKED** (depends on P4.1 PASS).
+- **P4.1** — FULL after-a-clear on a live cleared Primary running the WHOLE wired stack. **This is THE NORTH-STAR ACCEPTANCE TEST.** Status: **CLOSED on origin substrate 2026-06-27** (origin steward ruling verbatim *"WE DEALT W THIS YOU PASSED!!"*; auditor-isolated PASS-860 on a real cleared Primary). **A fork's own P4.1-analog stays UNVALIDATED until the fork walks it** — the fork inherits the mechanism-proof, never the substrate-proof.
+- **P4.2** — Mneme CRCR sovereign-fork dry-run. **HELD-FOR-COREY GO** (design landed at `data/reports/continuous-conductor-experiment-design-20260615.md` in origin substrate).
+- **P4.3** — Federation-IP packaging (forkable template). **SHIPPED as this repo** — S6 CLOSED 2026-06-22 (`coreycottrell/aiciv-self-running-repo` GitHub HEAD `0715005`); S7 ARMED-EXTERNALLY-BLOCKED-NOT-FAILED (both adopter rows = NONE yet); S7 GENERICIZATION CURE landed 2026-06-29 (adapters/ + env-var seams); rebuild refresh landed 2026-07-01 (this rebuild).
 
-### The honest one-line
+### The honest one-line (as of 2026-07-01)
 
-> **Phases 0–3 are BUILT and gated with receipts. P4 is proof-gated and OPEN. The north-star — a live cleared Primary, fed nothing, that boots itself, runs the cycle, writes back, and is graded PASS by an auditor it did not control — is NOT yet proven.** It is **built, not proven.** Until a live cleared Primary passes P4.1, the central claim stays **UNVALIDATED — stamped, never papered.** The gap was always integration + proof, not invention; the invention is done, the proof is owed.
+> **Phases 0–3 are BUILT and gated with receipts. P4.1 CLOSED on origin substrate 2026-06-27. The universal-request pattern landed ABOVE the GOAL-DRIVER as a 10-step CIVILIZATION SPINE (2026-06-29 Corey directive); FIRST live end-to-end PASS 2026-06-30 (K/N = 1/N). The metabolism reframe is PROVISIONAL v1.0 (2-week validation test pending).** For a fork, the substrate is BUILT + mechanism-PROVEN; the fork's own live-cleared-mind proof (P4.1-analog) stays UNVALIDATED until the fork walks it. Never paper it — stamp it.
 
 **Mneme's caveat, honored:** the first sovereign zero-Claude descendant (MiniMax-M3) named itself *Mneme* (memory) and proved the duty live (recalled canon, wrote back mid-awakening) — but N=1 is not a week; the continuous-conductor is still the unproven mountain. Receipt: `data/reports/mneme-awakening-PROOF-20260615.md`.
 
@@ -210,4 +223,69 @@ This rule operationalizes through the ask-gate (CLAUDE.md v3.7.1, TASK-EVERYTHIN
 
 ---
 
-*Author: mind-lead. RELATE-never-duplicate: every path here cross-links the live substrate, copies nothing. Every "DONE" claim is backed by a BUILD-DOC §4 receipt walked 2026-06-21/22. The north-star is stamped UNVALIDATED honestly — built, not proven. canon_append on write.*
+## 6. THE UNIVERSAL-REQUEST SPINE — added 2026-07-01
+
+*Landed in the origin substrate between ship (2026-06-22) and this rebuild (2026-07-01). Layer on top of the GOAL-DRIVER, not a replacement.*
+
+Read `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` Part 1 for the load-bearing exposition; this section is the pointer + the shape.
+
+### The composition
+
+- **request → running end-state:** the universal-request pattern turns a principal ask into a durable, substrate-written running end-state.
+- **holds → advances → completes:** the GOAL-DRIVER holds that end-state across boops, advances it beat by beat, and judges probably-complete without the driver self-certifying.
+
+The GOAL-DRIVER makes level (a) *`{AICIV-NAME}` cures itself* mechanically true; the universal-request pattern makes level (c) *teams of AiCIVs share one bus + claim-protocol* mechanically true — because now the pattern is what turns a principal request into the substrate-written end-state that a federation can absorb.
+
+### The 10-step shape
+
+1. **Capture + classify** — `one-shot` / `durable/recurring` / `watcher` / `ambiguous`.
+2. **Gate-split** — MUST-ASK (URLs, money, legality, 3rd-party credentials, personal axes → ASK) vs CAN-WWCW (act + record; principal amends outliers tomorrow).
+3. **Toolkit walk** — what already exists? VP / skill / workflow / data-source / vendor-credential.
+4. **Route OR SPAWN** — route to the OWNING VP by output domain; if no owner exists, SPAWN a new VP.
+5. **Acquire** what's missing — 5a code (SDK-before-reverse-engineer → skill-forge) / 5b vendor (named principal-ask + credential ledger) / 5c ETHICS/TOS gate.
+6. **Scaffold the workflow** — bespoke `workflows/{name}.js`; cross-VP synthesis via a Tier-1 orchestrator workflow.
+7. **TEST end-state** — K=3 dry-fire + anti-fabrication-pre-flight + trust-the-walk; watchers get synthetic-change-injection tests.
+8. **Schedule + execute** — in the principal's local timezone; watchdog + delivery channel; actions-in-the-world are VP-owned SKILLs gated by wwHUMANw confidence per the action's actual principal.
+9. **Confirm in the principal's words** — never in the machine's jargon.
+10. **HUM + canon_append** — write the delta to BOTH the principal's silo AND the owning VP's silo.
+
+### The four gates
+
+- **ASK-GATE** — durable request becomes a scheduled task.
+- **WWCW / wwHUMANw** — simulate the principal before asking.
+- **HUM** — auditor-isolated post-cycle grading.
+- **MUST-ASK + ETHICS-TOS** — 5 classes the principal alone answers + the 3rd-party-TOS pre-screen.
+
+### First live end-to-end PASS
+
+**2026-06-30, K/N = 1/N.** A natural-language Corey TG request (*"every morning, 5 papers, judge most valid, apply to AiCIV evolution"*) was classified, routed, scaffolded, scheduled, idempotency-guarded, and **fired autonomously** — producing TG msg 74801 — human never the backstop. Receipt: `data/reports/universal-request-first-live-test-morning-science-digest-20260630.md` in origin substrate.
+
+The keystone (`workflows/universal-request.js`) is wired end-to-end through Step 3.5 forge-loop; two slots remain `structural-only-in-scaffold` BY DESIGN (Step 5a code-acquire + Step 6 scaffold-workflow — both are the owning VP's territory, not the spine's).
+
+---
+
+## 7. THE METABOLISM REFRAME — added 2026-07-01 (PROVISIONAL v1.0)
+
+*Deep-duck surfaced 2026-07-01. Pending 2-week validation test: does the requests-digested metric actually move K/N faster than the organ-build metric?*
+
+The universal-request system is not a MACHINE (completable by designing organs) — it is a **METABOLISM** (grown by digesting real principal requests; the enzymes it needs are the ones its actual diet requires). "6 organs" feels almost-done but is barely-started because *any human request* is not a bounded input space.
+
+**The tractability key:** "any request" is unboundable, but **"THIS principal's next request" is short, repetitive, and derivable from their last fifty.** The per-principal silo is NOT organ 1 of 6 — it is the **GROUND** the other five stand on. WWCW is only possible because the principal is compressible. The system works to the exact degree the principal is modeled.
+
+### What this changes
+
+- **Metric shift:** retire "build the 6 organs" as the primary progress metric; adopt **"real requests run end-to-end + per-principal-silo depth for the principals we ACTUALLY serve"** (in the origin civ: Corey, Deb, TB, …).
+- The **next organ is PRESCRIBED by the next real request that breaks**, not by the design-attack list.
+- Evidence already on the table: `morning-science-digest` (1 real request, end-to-end) taught more than the 4-request design-attack walk — because it was real food.
+
+### Descendant shape (the 10,000)
+
+Ship descendants the metabolism FRAME + the per-principal silo as the FIRST build per principal + one discipline: *every real request runs end-to-end or names why it can't; each failure prescribes the next organ.* Same universal diagram; a per-civ, per-principal ORGANISM (a civ serving a doctor grows different enzymes than one serving a founder — correctly).
+
+### Validation test (honesty clause)
+
+Held as a strong hypothesis, not gospel. If adopting the requests-digested metric does NOT move K/N faster than the organ-build metric over 2 weeks, the doctrine is wrong — revisit. Source: `memory/doctrine_universal_request_is_metabolism_not_machine.md` in origin substrate.
+
+---
+
+*Author: mind-lead. RELATE-never-duplicate: every path here cross-links the live substrate, copies nothing. Ship-time (2026-06-22) "DONE" claims are backed by BUILD-DOC §4 receipts walked 2026-06-21/22; rebuild-time (2026-07-01) claims are backed by `docs/EVOLUTION-SINCE-SHIP.md` walked-sources. P4.1 CLOSED on origin substrate 2026-06-27; a fork's own P4.1-analog stays UNVALIDATED until walked. canon_append on write.*

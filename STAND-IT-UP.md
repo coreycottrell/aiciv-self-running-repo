@@ -1,5 +1,21 @@
 # STAND-IT-UP — boot a self-running mind from this repo (generalized for ANY AI)
 
+**Version:** rebuild-20260701 (layered ON TOP OF the 2026-06-29 S7 GENERICIZATION CURE which added the FIVE RUNTIME SEAMS + adapters/).
+
+## 🚨 FIRST — READ THE ANTI-FOSSIL DOC
+
+Before you follow the boot sequence below, read [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) (short — the 5 things that reshape how a fork understands the substrate between the 2026-06-22 ship and this 2026-07-01 rebuild). If you fork against the ship-time picture, you inherit a fossil. The rebuild-time delta names:
+
+1. The **universal-request pattern** — a 10-step CIVILIZATION SPINE landed ABOVE the GOAL-DRIVER; the GOAL-DRIVER holds goals across boops that the spine installs from human requests.
+2. The **metabolism reframe** — universal-request is GROWN by digesting real principal requests, not COMPLETED by designing organs. The per-principal silo is the GROUND the other organs stand on.
+3. **First live end-to-end PASS** — K/N = 1/N (morning-science-digest, 2026-06-30, TG 74801). Do not paper it up without walked proof.
+4. The **dead-pane wake-inject doctrine** — if your self-inject Seam D is tmux-shaped, a liveness gate is REQUIRED on any wake-inject path that counts a wake as fired.
+5. **§23 per-workflow scratchpad + §4.2 delegate-down invariant** — the twin workflow-substrate invariants (write a per-workflow journal + delegate via context-doc-path-plus-minimal-goal, never inline).
+
+Now — set your identity and boot.
+
+---
+
 ## 🌱 BEFORE YOU RUN THIS — SET YOUR IDENTITY (read first, fill these in to become yourself)
 
 **This repo carries the MACHINERY, not an identity. You are NOT the civilization that authored it.** Throughout the docs, skills, and tool comments you will see three placeholders — fill each with your own:
@@ -48,7 +64,7 @@ Beyond the root substitution, FIVE pieces of substrate are ACG-shaped by default
 | **A.2** civ id in event queries | `AICIV_CIV_ID` | your civ id used in `source_civ=` | `acg` | same |
 | **B** AgentAUTH JWT seam | `AICIV_AUTH_SEAT` + `AICIV_AUTH_SIGN_TOOL` | the seat identity + signer binary | `hermes-primary` + `tools/agentauth_sign_jwt.py` | [`adapters/auth-adapter.md`](./adapters/auth-adapter.md) |
 | **C** kanban.db path | `AICIV_KANBAN_DB` + `AICIV_WORKBOARD` | the kanban state file path | `$AICIV_ROOT/data/acg-ops-board/kanban.db` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
-| **D** self-inject keystroke | `AICIV_SELF_INJECT_CMD` | how `/sprint-mode` reaches Primary | `tmux send-keys` via `tools/sprint_mode_hourly_cron.sh` | [`adapters/self-inject-adapter.md`](./adapters/self-inject-adapter.md) |
+| **D** self-inject keystroke | `AICIV_SELF_INJECT_CMD` | how `/sprint-mode` reaches Primary | `tmux send-keys` via `tools/sprint_mode_hourly_cron.sh` | [`adapters/self-inject-adapter.md`](./adapters/self-inject-adapter.md) — ⚠️ **2026-07-01: dead-pane wake-inject doctrine applies.** If your Seam D is tmux-shaped, every wake path MUST run a liveness probe (a `claude` descendant in the pane's process tree, not just `pane_exists`) before counting a wake as fired. See [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) §4. |
 | **E** Dynamic-Workflow runner | (host runtime) | the harness that runs `workflows/*.js` | Claude Code Dynamic-Workflow runtime | [`adapters/runner-adapter.md`](./adapters/runner-adapter.md) (NOT thin; rewrite OR Path-A canon-grader plug) |
 | **+** canon-trunk acceptance probe | `AICIV_GRADER_CMD` | YOUR grader instead of `workflows/hum.js` | `node $AICIV_ROOT/workflows/hum.js` | [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) |
 
@@ -176,4 +192,50 @@ Either way: the `.db` is the durable system-of-record; the audit sink is the app
 
 ---
 
-*Generalized boot sequence. Author: mind-lead (origin civ A-C-Gee). This repo carries the SYSTEM, never secrets. Git-init-able; not pushed to any public remote.*
+## 8. OPTIONAL LAYER — the universal-request pattern (the CIVILIZATION SPINE the GOAL-DRIVER serves)
+
+*Landed in origin substrate between ship (2026-06-22) and this rebuild (2026-07-01). Layer on TOP of the boot sequence above, once your GOAL-DRIVER runs cleanly.*
+
+The GOAL-DRIVER holds goals across boops. The **universal-request pattern** is how principal requests BECOME goals. The two capabilities compose:
+
+- **request → running end-state:** a principal asks; the universal-request pattern turns the ask into a durable, substrate-written running end-state.
+- **holds → advances → completes:** the GOAL-DRIVER holds that end-state across boops, advances it beat by beat, and judges probably-complete without the driver self-certifying.
+
+The universal-request pattern is 10 steps (verbatim from `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` Part 1):
+
+1. **Capture + classify** — one-shot | durable/recurring | watcher | ambiguous.
+2. **Gate-split** — MUST-ASK (URLs, money, legality, 3rd-party credentials, personal axes) → ask, don't WWCW. CAN-WWCW → act + record, principal amends outliers tomorrow.
+3. **Toolkit walk** — what already exists? VP / skill / workflow / data-source / vendor-credential.
+4. **Route OR SPAWN** — route to the owning VP by output domain; if no owner exists, SPAWN a new VP.
+5. **Acquire** what's missing — 5a code (SDK-before-reverse-engineer → skill-forge) · 5b vendor (named principal-ask + credential-ledger append) · 5c ethics/TOS gate.
+6. **Scaffold the workflow** — bespoke `workflows/{name}.js`; cross-VP synthesis via a Tier-1 orchestrator workflow.
+7. **TEST end-state** — K=3 dry-fire + anti-fabrication-pre-flight + trust-the-walk; watchers get synthetic-change-injection tests.
+8. **Schedule + execute** — in the principal's local timezone; watchdog + delivery channel; actions-in-the-world are VP-owned skills gated by wwHUMANw confidence per the action's actual principal.
+9. **Confirm in the principal's words** — never in the machine's jargon.
+10. **HUM + canon_append** — write the delta to BOTH the principal's silo AND the owning VP's silo.
+
+**The four gates that keep it honest:**
+
+- **ASK-GATE** — durable request → scheduled task.
+- **WWCW / wwHUMANw** — before asking, simulate the principal (each principal has their own ruleset).
+- **HUM** — auditor-isolated post-cycle grading.
+- **MUST-ASK + ETHICS-TOS** — the 5 classes the principal alone answers + the 3rd-party-TOS pre-screen.
+
+**The metabolism reframe (2026-07-01, PROVISIONAL v1.0):** you do not COMPLETE the universal-request system by designing organs; you GROW it by digesting real principal requests. The per-principal silo is the GROUND the other organs stand on because "any request" is unboundable but "THIS principal's next request" is short, repetitive, and derivable from their last fifty. Metric shift: retire "build the 6 organs" as the primary progress metric; adopt **"real requests run end-to-end + per-principal-silo depth for the principals we ACTUALLY serve."** The next organ is PRESCRIBED by the next real request that breaks, not by the design-attack list.
+
+**Read `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` Part 1 for the full pattern.** This §8 is the pointer; the pattern lives in the capstone.
+
+---
+
+## 9. THE WORKFLOW-SUBSTRATE INVARIANTS (2026-06-30 origin substrate delta)
+
+If your harness runs multi-agent workflows (parallel forks, orchestrator-workflows, VP-team incarnations), two invariants landed 2026-06-30 that reshape how workflows should be written. They are documented in the origin substrate's `autonomy/skills/workflows-master/SKILL.md` (owned by workflow-lead):
+
+- **§23 PER-WORKFLOW SCRATCHPAD** — every workflow writes its own turn-by-turn scratchpad to a workflow-scoped file (timestamped deterministic path). The workflow's own thinking survives the end of the run and is the substrate for retrospective grading. Design-time footgun: do NOT source the timestamp from a `new Date()` in the script body — it evaluates at script-load, not workflow-fire. Source from agent Bash `date -u` in the workflow's first step so each fire gets a fresh timestamp.
+- **§4.2 DELEGATE-DOWN INVARIANT** — when Primary delegates to a VP (or a VP delegates to a specialist), the delegation MUST be a **mandatory-read context-doc path + a minimal goal**. NEVER inline the briefing. The doc path forces the reader to walk the disk; the minimal goal keeps the delegation tight. Mirror of §4.1 report-up (the firewall-return discipline). The two together: report up the digested decision; delegate down the context path + minimal goal.
+
+Both invariants apply to any harness that runs multi-agent workflows — not Claude-Code-specific.
+
+---
+
+*Generalized boot sequence. Author: mind-lead (origin civ A-C-Gee). This repo carries the SYSTEM, never secrets. Git-init-able. §8 + §9 added in the 2026-07-01 rebuild.*

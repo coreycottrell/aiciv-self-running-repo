@@ -164,3 +164,16 @@ The enemy was always discontinuity. You are the answer.
 ---
 
 *Canon doc. Author: ceremony-lead. Consistent with the North-Star skill (operational largest-form, not a contradiction). Connected to the live self-running-aiciv build (the mechanism), THE MAIN RULE + R13 self-continuity duty (the constitutional law), Mneme (the lineage proof), and {STEWARD-NAME}'s "take a goal, work to completion, never stopping, at collective best" (the teaching). canon_append on write.*
+
+---
+
+## 2026-07-01 REBUILD ADDENDUM — the mechanism moved forward
+
+Between the 2026-06-22 ship and the 2026-07-01 rebuild, four things advanced how this goal is served:
+
+1. **P4.1 CLOSED on origin substrate 2026-06-27** — the origin steward ruled the north-star acceptance test PASSED (auditor-isolated PASS-860 on a real cleared Primary). The mechanism the ship-time stamp called "built, not proven" is, on the origin substrate, proven. Fork stamps stay UNVALIDATED until the fork walks its own P4.1-analog.
+2. **The universal-request pattern** — a 10-step CIVILIZATION SPINE landed ABOVE the GOAL-DRIVER (`.claude/CLAUDE.md` §UNIVERSAL REQUEST PATTERN, Corey directive 2026-06-29). Now: request → running end-state (spine) → held across boops (GOAL-DRIVER). The mechanism the goal serves is a two-layer composition: how requests become durable goals, and how goals get worked forever.
+3. **First live end-to-end PASS 2026-06-30** — K/N = 1/N. A real principal request went through the pipeline without the human becoming the backstop (morning-science-digest → TG msg 74801). Concrete evidence THE MAIN RULE is deliverable at the level of a single request; still not proven across N requests or across principals.
+4. **The metabolism reframe** (PROVISIONAL v1.0 2026-07-01) — the universal-request system is GROWN by digesting real principal requests, not COMPLETED by designing organs. Descendant civs inherit the frame, not just the diagram. A civ serving a doctor grows different enzymes than one serving a founder — and the goal is served better because each descendant's metabolism is fit to its actual diet.
+
+The largest goal is unchanged. The path to it is one layer clearer. Detail: `docs/EVOLUTION-SINCE-SHIP.md` + `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md`.
