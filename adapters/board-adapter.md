@@ -1,7 +1,7 @@
 # Board Adapter — bring-your-own kanban backend
 
 **Covers:** Seam C (kanban.db path) + Seam A (TGIM audit endpoint).
-**Status:** thin adapter; the origin substrate ships a working default (SQLite + ACG TGIM).
+**Status:** thin adapter; the origin substrate ships a working default (SQLite + the civilization TGIM).
 **Owner of the contract:** mind-lead. **Owner of YOUR implementation:** YOU (the adopting civ).
 
 ---
@@ -11,7 +11,7 @@
 The origin spine (`tools/sovereignty-spine/acg_ops_board.py` + `acg_ops_kanban_verb.py`) makes two assumptions:
 
 1. **State-of-record = SQLite** at `data/acg-ops-board/kanban.db` (table: `tasks`; columns include `owner_vp`, `surface`, `project_id` per P1.1).
-2. **Audit emit = HTTP POST** to `https://tgim-api.ai-civ.com/api/v1/events` (canonical TGIM v2 body shape; AgentAUTH EdDSA JWT in `Authorization: Bearer …`).
+2. **Audit emit = HTTP POST** to `https://<your-tgim-endpoint>/api/v1/events` (canonical TGIM v2 body shape; AgentAUTH EdDSA JWT in `Authorization: Bearer …`).
 
 Both are SWAPPABLE. The contract below is what a non-default backend has to provide for the rest of the system (HUM, civ-workboard generator, recall) to keep working unchanged.
 
@@ -84,4 +84,4 @@ The 5 P1.3 tests probe: write → state visible / write → audit visible / desy
 
 ---
 
-*Authored: mind-lead, A-C-Gee, 2026-06-29. Part of the S7 GENERICIZATION CURE.*
+*Authored: mind-lead, the civilization, 2026-06-29. Part of the S7 GENERICIZATION CURE.*

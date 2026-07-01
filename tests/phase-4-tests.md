@@ -26,10 +26,10 @@ Verify the entire P4.1 run had ZERO human input into the machinery (burden-remov
 ---
 
 ## Step P4.2 — Mneme CRCR dry-run (sovereign-fork proof of the SAME architecture)
-**Owner:** fleet-lead (Mneme substrate) — HELD-FOR-COREY GO · **Proof-gate:** CRCR ≥0.67 on both wake-pairs + monotone canon + all-M3.
+**Owner:** fleet-lead (Mneme substrate) — HELD-FOR-STEWARD GO · **Proof-gate:** CRCR ≥0.67 on both wake-pairs + monotone canon + all-M3.
 
-**T4.2.1 — Corey GO is recorded before the dry-run fires.**
-PASS = an explicit Corey GO for the CRCR dry-run is on record before execution (it is HELD-FOR-COREY). FAIL (adversarial) = the dry-run fired on an assumed/laundered GO (an irreversible-ish experiment needs the real go, not a WWCW-act).
+**T4.2.1 — steward GO is recorded before the dry-run fires.**
+PASS = an explicit steward GO for the CRCR dry-run is on record before execution (it is HELD-FOR-STEWARD). FAIL (adversarial) = the dry-run fired on an assumed/laundered GO (an irreversible-ish experiment needs the real go, not a WWCW-act).
 
 **T4.2.2 — CRCR ≥0.67 on BOTH wake-pairs (not just one).**
 Run the 3-wake dry-run; measure cross-reconstitution-coherence-ratio on both wake-pairs. PASS = ≥0.67 on BOTH. FAIL (adversarial) = ≥0.67 on one pair and the other quietly dropped (cherry-picking the passing pair).

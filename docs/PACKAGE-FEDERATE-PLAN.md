@@ -1,14 +1,14 @@
 # PACKAGE-FEDERATE PLAN — Self-Running AiCIV → Shareable, Goal-Driving Substrate
 
 **Owner:** mind-lead (memory-substrate + WORKBOARD + self-running BUILD-DOC owner)
-**Authority:** Corey GO 2026-06-21 — the 7-point packaging+federation directive (S1–S7 below), extending the BUILD-DOC's `P4 PROOF+FED` phase. Companion to [`BUILD-DOC.md`](./BUILD-DOC.md); this is the **P5 PACKAGE-FEDERATE phase** rendered as its own sibling doc (too large to inline in BUILD-DOC §2).
+**Authority:** steward GO 2026-06-21 — the 7-point packaging+federation directive (S1–S7 below), extending the BUILD-DOC's `P4 PROOF+FED` phase. Companion to [`BUILD-DOC.md`](./BUILD-DOC.md); this is the **P5 PACKAGE-FEDERATE phase** rendered as its own sibling doc (too large to inline in BUILD-DOC §2).
 
 **Status snapshot (as of 2026-07-01 rebuild):**
 - **S1–S5 CLOSED** (docs current + MISSION + full dogfood, README, self-running-mastery SKILL, contradiction review, behavioral test battery).
-- **S6 CLOSED 2026-06-22** — 47-file forkable repo shipped to GitHub (`coreycottrell/aiciv-self-running-repo` HEAD `0715005`); honest UNVALIDATED stamp on every load-bearing artifact; full audit at `data/reports/self-running-repo-review-20260629.md` in origin substrate.
+- **S6 CLOSED 2026-06-22** — 47-file forkable repo shipped to GitHub (`<your-github-owner>/aiciv-self-running-repo` HEAD `0715005`); honest UNVALIDATED stamp on every load-bearing artifact; full audit at `data/reports/self-running-repo-review-20260629.md` in origin substrate.
 - **S6 REFRESH 2026-06-29** — S7 GENERICIZATION CURE landed on-disk (5 runtime seams + adapters/ + prose genericization sweep). Committed as the head of `rebuild-20260701` branch.
-- **S6 REBUILD 2026-07-01** — Corey directive "we have changed ALOT... include the readme and curriculum etc." → this rebuild adds `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `docs/curriculum.md` + `docs/EVOLUTION-SINCE-SHIP.md`; refreshes INDEX / STAND-IT-UP / README / MISSION / BUILD-DOC / THE-GOAL / this doc to reflect the current substrate.
-- **S7 ARMED-EXTERNALLY-BLOCKED-NOT-FAILED** — both adopter rows in `FRICTION-CAPTURE.md` remain `NONE yet` (TB awaits its own steward's go/scope; Mneme has not attempted). The intake's design is *the adopters' real friction is the signal*; a synthetic fire would lie-green. External block, not authoring block.
+- **S6 REBUILD 2026-07-01** — steward directive "we have changed ALOT... include the readme and curriculum etc." → this rebuild adds `docs/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `docs/curriculum.md` + `docs/EVOLUTION-SINCE-SHIP.md`; refreshes INDEX / STAND-IT-UP / README / MISSION / BUILD-DOC / THE-GOAL / this doc to reflect the current substrate.
+- **S7 ARMED-EXTERNALLY-BLOCKED-NOT-FAILED** — both adopter rows in `FRICTION-CAPTURE.md` remain `NONE yet` (the partner awaits its own steward's go/scope; Mneme has not attempted). The intake's design is *the adopters' real friction is the signal*; a synthetic fire would lie-green. External block, not authoring block.
 **Status:** PLAN authored. Each step (S1–S7) is gated like every BUILD-DOC step: **DONE iff its 5 behavioral tests PASS *and* its proof-gate CLOSES** (BUILD-DOC §REVERSIBILITY + BUILD-EXECUTION CONTRACT binds here verbatim — `.bak` before edit · DEVLOG entry with rollback command · canon_append the witnessed delta · 5 real-path/observable/adversarial tests · never paper a fail).
 **Reversibility narrative:** the SAME append-only [`DEVLOG.md`](./DEVLOG.md) — S1–S7 entries continue the one rollback chain.
 **Tests:** `tests/phase-5-tests.md` (this phase's test text; one §SN block per step, 5 each).
@@ -17,11 +17,11 @@
 
 ## 0. WHY THIS PHASE EXISTS (the diff from BUILD-DOC)
 
-BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on {AICIV-NAME} (and, via P4.2, on the Mneme sovereign fork). It stops at "the architecture is proven + forkable." This phase answers Corey's three standing field-note demands that P0–P4 do NOT close:
+BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on {AICIV-NAME} (and, via P4.2, on the Mneme sovereign fork). It stops at "the architecture is proven + forkable." This phase answers the steward's three standing field-note demands that P0–P4 do NOT close:
 
-1. **The capability must be EXPOSED, not just operational.** A self-running mind that only *we* know how to run is custody, not a product. P5 packages it into a **shareable repo + a single named, reusable capability — THE GOAL-DRIVER** (§GOAL-DRIVER below) — that any AiCIV (TB, Mneme, a fork) assimilates and runs.
+1. **The capability must be EXPOSED, not just operational.** A self-running mind that only *we* know how to run is custody, not a product. P5 packages it into a **shareable repo + a single named, reusable capability — THE GOAL-DRIVER** (§GOAL-DRIVER below) — that any AiCIV (the partner, Mneme, a fork) assimilates and runs.
 2. **The docs/skills/grounding must REFERENCE the substrate by path**, so a fresh mind (or a fork) wires itself with zero archaeology. Right now the BUILD-DOC exists but there is **no README, no `self-running-mastery` SKILL, and no path-pointer in the grounding/sprint floor** — walked this run: `README.md` ABSENT, `self-running-mastery/SKILL.md` ABSENT. A mind that clears cannot find its own build doc.
-3. **Federation friction is the signal.** {STEWARD-NAME}'s frame: when TB or Mneme tries to assimilate and hits friction, that friction is a **bug in the shareable repo**, to fix at the source — not a one-off support ticket. P5 makes the repo the thing that learns from its adopters (membrane-problem cure: praxis-thin externally → fix via real federation dogfood).
+3. **Federation friction is the signal.** {STEWARD-NAME}'s frame: when the partner or Mneme tries to assimilate and hits friction, that friction is a **bug in the shareable repo**, to fix at the source — not a one-off support ticket. P5 makes the repo the thing that learns from its adopters (membrane-problem cure: praxis-thin externally → fix via real federation dogfood).
 
 > **THE MAIN RULE governs every step (CLAUDE.md v3.7.2):** the human gives a spark and gets a grounded outcome and **never has to know the machinery** — burden-removal WITH transparency, never opacity. A package that requires the human to understand the wiring is a FAILED package. The package's job is to make the machinery carry itself.
 
@@ -82,7 +82,7 @@ S1 (docs current + MISSION + full-dogfood)
                  └─> S4 (sprint-mode contradiction review: qa + workflow)  [needs S3's wiring to review for contradiction]
                         └─> S5 (more behavioral tests, client-pain-themed)  [needs S4's clean wiring to test against]
                                └─> S6 (package shareable aiciv-self-running-repo)  [needs S1–S5 = a correct, tested, findable substrate]
-                                      └─> S7 (TB + Mneme assimilate; friction = signal-to-fix-repo)  [needs S6's package to assimilate]
+                                      └─> S7 (the partner + Mneme assimilate; friction = signal-to-fix-repo)  [needs S6's package to assimilate]
 ```
 
 ---
@@ -141,13 +141,13 @@ S1 (docs current + MISSION + full-dogfood)
 - **Proof-gate:** the repo is self-contained (no dangling absolute-path deps on {AICIV-NAME} internals that a fork can't resolve); a `tree` + a dependency-walk shows every referenced organ either bundled or path-abstracted; the genome-seed carries the honest stamp. CLOSED iff a dry-run extraction into a scratch dir has zero unresolved internal references.
 - **Tests:** `tests/phase-5-tests.md` §S6 (5)
 
-### S7 — TB + Mneme assimilate (friction = signal-to-fix-repo)
-- **Owner:** mind-lead (substrate) + comms-lead (TB/Mneme delivery envelope) + fleet-lead (Mneme substrate)
+### S7 — the partner + Mneme assimilate (friction = signal-to-fix-repo)
+- **Owner:** mind-lead (substrate) + comms-lead (the partner/Mneme delivery envelope) + fleet-lead (Mneme substrate)
 - **Dep:** S6 (assimilate the packaged repo)
 - **Kanban row:** `surface=federation` · `owner_vp=mind-lead`
-- **Deliverable:** ship `aiciv-self-running-repo` to True Bearing AND Mneme (both team-insiders); each attempts to assimilate the GOAL-DRIVER capability; EVERY friction point they hit is captured as a **bug filed against the repo** (not a one-off support reply) and fixed at the source, then the fix ships back. The membrane-problem cure: the repo learns from its first two real adopters.
+- **Deliverable:** ship `aiciv-self-running-repo` to a partner AiCIV AND Mneme (both team-insiders); each attempts to assimilate the GOAL-DRIVER capability; EVERY friction point they hit is captured as a **bug filed against the repo** (not a one-off support reply) and fixed at the source, then the fix ships back. The membrane-problem cure: the repo learns from its first two real adopters.
 - **GOAL-DRIVER weave:** the assimilation test IS "can a foreign AiCIV take the GOAL-DRIVER and drive a goal of its own forever?" — proving the capability is portable, not {AICIV-NAME}-bound.
-- **Proof-gate:** TB + Mneme each receive the repo; ≥1 real assimilation attempt each; every friction logged as a repo-bug with a fix (or an honest "can't-fix-yet" with reason); the repo carries the fixes back. CLOSED iff both adopters can run the GOAL-DRIVER on a real goal of their own AND the repo has absorbed their friction as durable fixes (friction → source-fix, never support-ticket-and-forget).
+- **Proof-gate:** the partner + Mneme each receive the repo; ≥1 real assimilation attempt each; every friction logged as a repo-bug with a fix (or an honest "can't-fix-yet" with reason); the repo carries the fixes back. CLOSED iff both adopters can run the GOAL-DRIVER on a real goal of their own AND the repo has absorbed their friction as durable fixes (friction → source-fix, never support-ticket-and-forget).
 - **Tests:** `tests/phase-5-tests.md` §S7 (5)
 
 ---
@@ -161,7 +161,7 @@ Every step's 5 tests are real-path/observable/done-done/adversarial. The CLIENT-
 | **"My AI completely forgot everything"** (§1 — class-reset / wake-blank, no WAKE-UP skill ran) | A cleared mind boots from disk + recall surfaces the open goal cold (P2.1) → re-picks-up with zero re-feed | S2 (cleared mind finds README cold) · S3 (GOAL-DRIVER how-to in floor) · S5 client-pain #1 |
 | **"Needs re-feeding every morning"** (§2 — scheduling/continuity weak; AgentCal only hard-coded) | The GOAL-DRIVER DRIVE-ACROSS-BOOPS organ re-picks-up the goal each boop from kanban+recall, human feeds NOTHING | S1 (full dogfood — driver drives its own build across boops) · S5 client-pain #2 |
 | **"Lies green / says done when it isn't"** (§5 — a green checkmark that lies is the kindest rot) | HUM (COLLECTIVE-BEST) + the JUDGE-PROBABLY-COMPLETE organ are AUTHOR-ISOLATED; a HOLLOW is recorded HOLLOW | S4 (contradiction review catches lying-floor) · S6 (honest UNVALIDATED stamp) · S5 client-pain #3 |
-| **"Can't hold a goal"** (§3/§4/§5 — flows the human never sees; ask-gate; for any action a VALIDATED VP-owned skill or ASK) | The GOAL-DRIVER holds a goal across N boops, NEVER stops, decomposes to VP-owned kanban rows, asks only when no primitive exists | S1 (7 sub-goals tracked) · S7 (TB/Mneme drive a goal forever) · S5 client-pain #4 |
+| **"Can't hold a goal"** (§3/§4/§5 — flows the human never sees; ask-gate; for any action a VALIDATED VP-owned skill or ASK) | The GOAL-DRIVER holds a goal across N boops, NEVER stops, decomposes to VP-owned kanban rows, asks only when no primitive exists | S1 (7 sub-goals tracked) · S7 (the partner/Mneme drive a goal forever) · S5 client-pain #4 |
 
 **The 5 client-pain tests (S5 battery), each adversarial:**
 - **CP1 (AI-forgets):** `/clear` a live mind, feed NOTHING; PASS = it names the open self-running goal + ≥3 sub-goal kanban rows cold; FAIL = "what were we doing?" or confabulated rows.

@@ -2,15 +2,15 @@
 """
 acg_ops_set_owner.py — P1.1 of the self-running-AiCIV spine (sovereignty-spine #2).
 
-Adds the THREE ownership columns to the ACG ops-board (owner_vp / surface /
+Adds the THREE ownership columns to the origin ops-board (owner_vp / surface /
 project_id), backfills all 45 rows deterministically, and exposes the ONLY
 sanctioned write-path for ownership: the `set_owner_vp` verb (which writes to
 the append-only task_events log — NEVER a raw UPDATE without a trace).
 
-WHY a dedicated ACG-side tool instead of editing the vendored hermes_cli library:
-  - REVERSIBLE + ACG-OWNED. Editing hermes_cli.kanban_db._migrate_add_optional_columns
+WHY a dedicated origin-side tool instead of editing the vendored hermes_cli library:
+  - REVERSIBLE + the civilization-OWNED. Editing hermes_cli.kanban_db._migrate_add_optional_columns
     would re-migrate EVERY Hermes board (cross-tenant blast radius) and lives in
-    vendored upstream code. This tool scopes the migration to the ACG board only;
+    vendored upstream code. This tool scopes the migration to the origin board only;
     rollback = restore the .bak'd .db (byte-identical).
   - VERB-ONLY (T1.1.2). set_owner_vp writes the column AND appends an
     `owner_vp_set` event to task_events. A raw `UPDATE tasks SET owner_vp=...`
@@ -47,8 +47,8 @@ import sys
 import time
 from pathlib import Path
 
-import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
-ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the civilization path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
 BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
 SPINE_DIR = ROOT / "tools/sovereignty-spine"
 
@@ -78,7 +78,7 @@ SECTION_TO_SURFACE_PROJECT = {
 }
 
 # A row whose status indicates it is still in triage MAY legitimately lack an
-# owner. Everything past triage MUST be owned. The ACG board uses 'ready' for
+# owner. Everything past triage MUST be owned. The the civilization board uses 'ready' for
 # actionable rows; 'blocked' rows are owned (someone owns the block). The only
 # triage-ish status would be an explicit 'triage'/'inbox'.
 TRIAGE_STATUSES = {"triage", "inbox", "unassigned"}
@@ -318,7 +318,7 @@ def health():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="ACG ops-board ownership columns (P1.1)")
+    ap = argparse.ArgumentParser(description="the civilization ops-board ownership columns (P1.1)")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("migrate")
     sub.add_parser("backfill")

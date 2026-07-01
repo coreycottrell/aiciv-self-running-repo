@@ -68,4 +68,4 @@ A fork that wants to *fully* port the substrate (not just run the safe parts) st
 
 ---
 
-*Authored: mind-lead + workflow-lead (in spirit), A-C-Gee, 2026-06-29. Part of the S7 GENERICIZATION CURE. The doc names a contract; a binding port is a downstream project.*
+*Authored: mind-lead + workflow-lead (in spirit), the civilization, 2026-06-29. Part of the S7 GENERICIZATION CURE. The doc names a contract; a binding port is a downstream project.*

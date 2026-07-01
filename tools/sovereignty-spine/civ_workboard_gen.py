@@ -2,7 +2,7 @@
 """
 civ_workboard_gen.py — P1.2 of the self-running-AiCIV spine (sovereignty-spine #3).
 
-GENERATES WORKBOARD §0 (MASTER TODO) as a VIEW over the durable ACG ops-board
+GENERATES WORKBOARD §0 (MASTER TODO) as a VIEW over the durable the civilization ops-board
 (data/acg-ops-board/kanban.db), grouped by surface → owner_vp → project_id.
 
 THE WHOLE POINT (the stale-§0 cure):
@@ -55,8 +55,8 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
-ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the civilization path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
 BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
 WORKBOARD = ROOT / "WORKBOARD.md"
 
@@ -383,7 +383,7 @@ def freshness(strict=False):
 
 
 def main():
-    ap = argparse.ArgumentParser(description="ACG WORKBOARD §0 generator (P1.2 — VIEW over kanban.db)")
+    ap = argparse.ArgumentParser(description="the civilization WORKBOARD §0 generator (P1.2 — VIEW over kanban.db)")
     sub = ap.add_subparsers(dest="cmd", required=True)
     rp = sub.add_parser("render")
     rp.add_argument("--dry-run", action="store_true")

@@ -1,6 +1,6 @@
 # `adapters/` — bring-your-own-backend seams
 
-**Born 2026-06-29 as part of the S7 GENERICIZATION CURE** (the cure True Bearing named after a full review of the shipped self-running-repo). The repo's seven organs (RECEIVE / DECOMPOSE / TRACK / DRIVE / NEVER-STOP / HUM / ASSESS) ride three pieces of substrate that are ACG-shaped by default: a kanban board (SQLite at `data/acg-ops-board/kanban.db`), an event-audit API (TGIM at `tgim-api.ai-civ.com`) with an AgentAUTH JWT signer, and a self-injection keystroke mechanism (tmux `send-keys` on the origin substrate). A fork that wants to run on a different stack does NOT have to fork the tools — it implements the **adapter contracts in this directory** and points the env-vars at its own implementation.
+**Born 2026-06-29 as part of the S7 GENERICIZATION CURE** (the cure a partner AiCIV named after a full review of the shipped self-running-repo). The repo's seven organs (RECEIVE / DECOMPOSE / TRACK / DRIVE / NEVER-STOP / HUM / ASSESS) ride three pieces of substrate that are origin-shaped by default: a kanban board (SQLite at `data/acg-ops-board/kanban.db`), an event-audit API (TGIM at `<your-tgim-endpoint>`) with an AgentAUTH JWT signer, and a self-injection keystroke mechanism (tmux `send-keys` on the origin substrate). A fork that wants to run on a different stack does NOT have to fork the tools — it implements the **adapter contracts in this directory** and points the env-vars at its own implementation.
 
 ## The three adapters
 
@@ -12,11 +12,11 @@
 
 A fourth seam — Seam E (the `.js` Dynamic-Workflow runner that assumes the Claude Code harness) — is documented in [`runner-adapter.md`](./runner-adapter.md). It is NOT a thin adapter (`workflows/*.js` are not portable across harnesses today — they invoke `Agent({…})`, `Skill({…})`, `Workflow({…})` host primitives Claude Code provides). The runner-adapter doc names the contract a non-Claude-Code harness has to provide for the workflows to run.
 
-A fifth document — [`canon-grader-adapter.md`](./canon-grader-adapter.md) — covers the GENERIC CANON-TRUNK ACCEPTANCE-PROBE seam (S7 cure point #3). The origin repo's HUM probe is graded by ACG's mind-lead; an adopter plugs in **their own grader** (e.g. True Bearing's Drift / bulletproof-hum). The contract that grader implements is documented there.
+A fifth document — [`canon-grader-adapter.md`](./canon-grader-adapter.md) — covers the GENERIC CANON-TRUNK ACCEPTANCE-PROBE seam (S7 cure point #3). The origin repo's HUM probe is graded by the civilization's mind-lead; an adopter plugs in **their own grader** (e.g. a partner AiCIV's Drift / bulletproof-hum). The contract that grader implements is documented there.
 
 ## What the adapters preserve
 
-- **Reversibility.** Every env-var has an origin default; an unimplemented adapter falls back to the ACG-origin behavior and a fork stands up incrementally.
+- **Reversibility.** Every env-var has an origin default; an unimplemented adapter falls back to the origin-substrate behavior and a fork stands up incrementally.
 - **One write-path, two records.** Whatever backend you point at, the invariant from P1.3 holds: every kanban verb produces both a durable state-write (the board) AND an append-only audit event (the sink). Zero-desync is the contract.
 - **Suggest-never-mutate auditor isolation.** The canon-grader contract is the same auditor-isolation discipline the origin HUM runs (a SEPARATE mind grades the author's cycle); a fork's grader inherits the discipline, not the implementation.
 
@@ -24,7 +24,7 @@ A fifth document — [`canon-grader-adapter.md`](./canon-grader-adapter.md) — 
 
 | Env-var | What it points at | Origin default |
 |---|---|---|
-| `AICIV_TGIM_ENDPOINT` | base URL of YOUR event-audit API | `https://tgim-api.ai-civ.com` |
+| `AICIV_TGIM_ENDPOINT` | base URL of YOUR event-audit API | `https://<your-tgim-endpoint>` |
 | `AICIV_CIV_ID` | your civ id used in `source_civ=` queries | `acg` |
 | `AICIV_AUTH_SEAT` | the seat identity used to sign tgim-read JWTs | `hermes-primary` |
 | `AICIV_AUTH_SIGN_TOOL` | path under `$AICIV_ROOT` to your JWT signer | `tools/agentauth_sign_jwt.py` |
@@ -34,4 +34,4 @@ A fifth document — [`canon-grader-adapter.md`](./canon-grader-adapter.md) — 
 
 ---
 
-*Authored: mind-lead, A-C-Gee, 2026-06-29. Part of the S7 GENERICIZATION CURE; the receipt for this directory's creation is at `data/reports/self-running-s7-cure-receipt-20260629.md` in the origin substrate.*
+*Authored: mind-lead, the civilization, 2026-06-29. Part of the S7 GENERICIZATION CURE; the receipt for this directory's creation is at `data/reports/self-running-s7-cure-receipt-20260629.md` in the origin substrate.*

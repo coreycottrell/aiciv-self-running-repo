@@ -37,8 +37,8 @@ import re
 import sys
 from pathlib import Path
 
-import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
-ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the civilization path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 # S7 GENERICIZATION CURE (2026-06-29): explicit AICIV_KANBAN_DB seam (Seam C). A fork may either
 # (a) override AICIV_ROOT and inherit the default `<ROOT>/data/acg-ops-board/kanban.db` layout, OR
@@ -47,7 +47,7 @@ HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/acg-ops-board/kanban.db")))
 WORKBOARD = Path(_os.environ.get("AICIV_WORKBOARD", str(ROOT / "WORKBOARD.md")))
 
-# The board slug for ACG's own ops board (per the adoption proof).
+# The board slug for the civilization's own ops board (per the adoption proof).
 BOARD_SLUG = "acg-ops"
 
 # Map a §0 subsection emoji-header to the owning VP assignee (best-effort;
@@ -63,7 +63,7 @@ SECTION_OWNER = {
 }
 
 # Explicit owner tokens that can appear at the end of a §0 line, e.g.
-# "— **mind-lead**" or "— **Corey**" or "— **mind+fleet+tgim**".
+# "— **mind-lead**" or "— **the steward**" or "— **mind+fleet+tgim**".
 OWNER_RE = re.compile(r"—\s*\*\*([^*]+)\*\*\s*$")
 
 
@@ -228,7 +228,7 @@ def cutover(dry_run: bool = True, include_done: bool = False):
                 f"status_in_ledger={it['status']}\n"
                 f"---\n{it['raw']}"
             )
-            # priority: simple heuristic — explicit Corey-gated = high.
+            # priority: simple heuristic — explicit the steward-gated = high.
             prio = 5
             if "corey" in it["owner"].lower():
                 prio = 7
@@ -302,7 +302,7 @@ def status():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="ACG durable ops-board cutover (sovereignty-spine #1)")
+    ap = argparse.ArgumentParser(description="the civilization durable ops-board cutover (sovereignty-spine #1)")
     ap.add_argument("cmd", choices=["dry-run", "cutover", "status", "parse"],
                     help="dry-run=plan only; cutover=write durable rows; status=read-back; parse=show parsed items")
     ap.add_argument("--include-done", action="store_true",

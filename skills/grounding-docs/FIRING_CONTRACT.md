@@ -29,7 +29,7 @@ Do **NOT** fire for:
 
 Read these 7 documents in order. After EACH ONE, stop and write a 5-7-5 haiku capturing the document's essence. The haiku is a comprehension gate — proves you actually understood vs. just scrolled.
 
-1. **Doc 0**: `autonomy/skills/aiciv-psychology/SKILL.md` (READ FIRST — Corey 2026-05-13; the 5 degradation causes + fix-paths)
+1. **Doc 0**: `autonomy/skills/aiciv-psychology/SKILL.md` (READ FIRST — the steward 2026-05-13; the 5 degradation causes + fix-paths)
 2. **Doc 1**: `.claude/CLAUDE.md` (identity / CEO Rule / safety / lethal act / 5 things)
 3. **Doc 2**: `exports/architecture/VERTICAL-TEAM-LEADS.md` (12 verticals + rosters + spawn protocol)
 4. **Doc 3**: `.claude/skills/conductor-of-conductors/SKILL.md` (shutdown asymmetry / TeamCreate once)

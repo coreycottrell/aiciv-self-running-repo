@@ -25,7 +25,7 @@ import sys
 import time
 from pathlib import Path
 
-ROOT = Path("/home/corey/projects/AI-CIV/ACG")
+ROOT = Path("$AICIV_ROOT")
 SPINE = ROOT / "tools/sovereignty-spine"
 BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
 OUTBOX_DB = ROOT / "data/tgim-outbox/outbox.db"

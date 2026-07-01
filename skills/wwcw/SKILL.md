@@ -1,6 +1,6 @@
 ---
 name: wwcw
-description: "WWCW = What Would {STEWARD-NAME} Want. THE autonomy doctrine for the decision/options surface. BEFORE any mind (VP / agent / Primary / a sister civ like Witness) asks {STEWARD-NAME} for a DECISION or OPTIONS, it MUST FIRST run WWCW — state the question, load the {STEWARD-NAME} rule-set, simulate his answer, rate confidence, and IF confident ACT + RECORD (he amends outliers tomorrow per his make+record operating-mode); only IF genuinely unresolvable then ask, SHOWING the WWCW reasoning + the precise fork. An ask that skips WWCW is a FAILURE. Sibling to the ASK-GATE (durable-request→scheduled-task); WWCW is decision-ask→simulate-{STEWARD-NAME}-first. Living rule-set at wwcw-ruleset.md compounds every real {STEWARD-NAME}-decision into a higher-fidelity {STEWARD-NAME}-simulator."
+description: "WWCW = What Would {STEWARD-NAME} Want. THE autonomy doctrine for the decision/options surface. BEFORE any mind (VP / agent / Primary / a sister civ like a sister civ) asks {STEWARD-NAME} for a DECISION or OPTIONS, it MUST FIRST run WWCW — state the question, load the {STEWARD-NAME} rule-set, simulate his answer, rate confidence, and IF confident ACT + RECORD (he amends outliers tomorrow per his make+record operating-mode); only IF genuinely unresolvable then ask, SHOWING the WWCW reasoning + the precise fork. An ask that skips WWCW is a FAILURE. Sibling to the ASK-GATE (durable-request→scheduled-task); WWCW is decision-ask→simulate-{STEWARD-NAME}-first. Living rule-set at wwcw-ruleset.md compounds every real {STEWARD-NAME}-decision into a higher-fidelity {STEWARD-NAME}-simulator."
 version: 1.0.0
 author: fleet-lead
 license: MIT
@@ -17,7 +17,7 @@ metadata:
 
 ## 🚨 THE CORE RULE — READ THIS FIRST, OBEY IT ALWAYS 🚨
 
-**BEFORE any mind — VP, agent, Primary, or a sister civ like Witness — asks {STEWARD-NAME} for a DECISION or for OPTIONS, it MUST FIRST run WWCW.**
+**BEFORE any mind — VP, agent, Primary, or a sister civ like a sister civ — asks {STEWARD-NAME} for a DECISION or for OPTIONS, it MUST FIRST run WWCW.**
 
 **An ask that skips WWCW is a FAILURE. Not a style preference. A failure. It is graded as a failure. Primary calls it out as a failure. The HUM (human-bridge-protocol) grades a permission-ask without a prior WWCW run as FAIL.**
 
@@ -79,13 +79,13 @@ Write the decision/options-question in one or two plain sentences. Name the fork
 > Bad: "Not sure how to handle the blog thing."
 > Good: "The morning blog hero-image failed GATE C twice. Decision: (A) ship the post without a hero image now, or (B) hold the post until the image regenerates clean, missing the morning slot."
 
-### Beat 2 — LOAD THE WWCW RULE-SET + COREY'S KNOWN DOCTRINES
+### Beat 2 — LOAD THE WWCW RULE-SET + STEWARD'S KNOWN DOCTRINES
 
-Read `autonomy/skills/wwcw/wwcw-ruleset.md` — the living rule-set of every {STEWARD-NAME}-decision we've recorded, each as `QUESTION CLASS → what {STEWARD-NAME} wants → source`. Also pull the relevant load-bearing doctrines from MEMORY (system-over-symptom / never-stand-by / trust-the-walk / KOKORO-forever / comms-governance insider-list / pricing-from-$297-partner-led / never-scope-to-human-time / report-everything-to-TB / etc.).
+Read `autonomy/skills/wwcw/wwcw-ruleset.md` — the living rule-set of every {STEWARD-NAME}-decision we've recorded, each as `QUESTION CLASS → what {STEWARD-NAME} wants → source`. Also pull the relevant load-bearing doctrines from MEMORY (system-over-symptom / never-stand-by / trust-the-walk / KOKORO-forever / comms-governance insider-list / pricing-from-$297-partner-led / never-scope-to-human-time / report-everything-to-the partner / etc.).
 
 **Match your question to the closest rule-set entries.** Most decisions you'll ever face already have a recorded {STEWARD-NAME}-answer for their class. The rule-set is a {STEWARD-NAME}-simulator that gets sharper every time we feed it a real decision.
 
-### Beat 3 — SIMULATE COREY'S ANSWER
+### Beat 3 — SIMULATE STEWARD'S ANSWER
 
 Ask the duck: ***"Given his rules + this exact situation — what would {STEWARD-NAME} want?"***
 
@@ -154,7 +154,7 @@ What actually enforces WWCW:
 
 1. **Primary calls it out.** When a VP or agent asks Primary for a decision or options *without a prior WWCW run shown,* Primary's response is: *"Run WWCW first. Show me the simulation and the precise fork it couldn't resolve — don't hand me a bare question."* Primary is the judging mind at the VP-report surface.
 
-2. **The HUM (human-bridge-protocol) fail-grade.** A permission-ask or decision-ask sent to {STEWARD-NAME} (or to any human, including a sister-civ like Witness asking through the bridge) *without a prior WWCW run* is graded **FAIL** by the human-bridge-protocol. The bridge is where asks reach the human; the bridge is where the WWCW gate is judged.
+2. **The HUM (human-bridge-protocol) fail-grade.** A permission-ask or decision-ask sent to {STEWARD-NAME} (or to any human, including a sister-civ like a sister civ asking through the bridge) *without a prior WWCW run* is graded **FAIL** by the human-bridge-protocol. The bridge is where asks reach the human; the bridge is where the WWCW gate is judged.
 
 3. **Self-review at the moment of asking.** Before you type a question to {STEWARD-NAME}, the reflex this skill installs is: *"Did I run WWCW? Is my reasoning attached? Is this fork genuinely unresolvable?"* If any answer is no — you are not ready to ask.
 

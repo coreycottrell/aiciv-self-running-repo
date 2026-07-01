@@ -4,7 +4,7 @@ session_review.py — Stage-1 of the HUM grader (deterministic layer).
 
   🌱 FORK CONFIG — {AICIV-NAME} / {STEWARD-NAME} (READ BEFORE YOU RELY ON THE BLOCK/WWCW GATES):
     Several LOAD-BEARING regexes below embed the ORIGIN steward's name as a literal token —
-    "corey" — because they detect block-language ("HELD-FOR-COREY", "parked for corey",
+    "corey" — because they detect block-language ("HELD-FOR-STEWARD", "parked for corey",
     "awaiting corey", "needs corey") and WWCW-run evidence ("what would corey want",
     "simulate corey", "given his rules"). These literals are INTENTIONALLY left as the origin
     value so the tool RUNS without edits — but for YOUR fork they will silently MISS your own
@@ -13,7 +13,7 @@ session_review.py — Stage-1 of the HUM grader (deterministic layer).
     characters "{STEWARD-NAME}", breaking the gate). INSTEAD: search this file for the lowercase
     token `corey` inside `re.compile(...)` patterns (BLOCK_RE, BLOCK_CAPS_FLAG_RE, WWCW_TEXT_RE,
     WWCW_EVIDENCE_RE, WWCW_SIMULATE_RE, GENUINE_ASK_RE, DEFER_TO_HUMAN_RE) and substitute YOUR
-    steward's name. The narrative changelog/docstring uses of "Corey" below are origin-civ dated
+    steward's name. The narrative changelog/docstring uses of "the steward" below are origin-civ dated
     lineage — they are harmless and need no change.
 
 WHAT THIS IS
@@ -26,21 +26,21 @@ WHAT THIS IS
   GROUNDING-COMPLETENESS, FREEZE-EDIT, FREEZE-CONFIG-MISSING). It
   emits a JSON findings record that a Stage-2 judging mind (the HUM grader) reads.
 
-  🚨 GROUNDING-COMPLETENESS (2026-06-20, Corey directive) is the COMPLETE-OR-FAIL gate: a grounding
+  🚨 GROUNDING-COMPLETENESS (2026-06-20, steward directive) is the COMPLETE-OR-FAIL gate: a grounding
   boop that did substantive grounding work but is MISSING ≥1 required element (any per-doc haiku short
   of the docset, OR a missing load-verify / synthesis / workflows-mandate / wwcw / hum / auto-consolidate
   / hum-fired step) → status=flag → in the hard-fail set → breaks summary.clean → the boop FAILS. STRICT:
   partial completion = full failure. "Miss one doc or one haiku or one step it's 100% fail on that boop.
-  The discipline is EVERYTHING." — Corey 2026-06-20. SUPERSEDES the narrower SPRINT-MODE-READ +
+  The discipline is EVERYTHING." — the steward 2026-06-20. SUPERSEDES the narrower SPRINT-MODE-READ +
   HAIKU-PER-DOC receipts (which a single haiku + a single load-verify line could pass).
-  🚨 v5.1 (2026-06-20, Corey `"lean cycle" < discipline`): the contract now fires on a GENUINE /sprint-mode
+  🚨 v5.1 (2026-06-20, the steward `"lean cycle" < discipline`): the contract now fires on a GENUINE /sprint-mode
   boop too (a /sprint-mode command-message/calendar boop + ≥1 work-act, NOT a byte-identical re-injection
   within SPRINT_DEDUP_WINDOW_SECONDS), not just on the haiku-bearing slow-sprint shape. A LEAN /sprint-mode
   cycle (genuine boop + work but no full grounding) now FLAGS → FAILS — closing the false-fail-guard dodge
   Primary used ~4x in a day. THE DEDUP WINDOW IS THE CADENCE KNOB (default 60 = strict per-cycle; widen to
   3600 = per-hour). The only two exemptions left: a 60s byte-identical dedup re-injection + a non-/sprint-
   mode turn.
-  🚨 v5.2 (2026-06-20, fleet-lead — RECENCY-EXEMPTION KILL, the CLOCKWORK-EVERY-FIRE design; Corey "Hum
+  🚨 v5.2 (2026-06-20, fleet-lead — RECENCY-EXEMPTION KILL, the CLOCKWORK-EVERY-FIRE design; the steward "Hum
   every cycle FOR SURE"). The v5.1 close left ONE residual leak on TRIGGER-1: a BARE grounding-pass with
   NO work-signatures was exempted via `did_grounding_work=False` EVEN WITHOUT clustered-re-fire corroboration
   (the old `else` brief PASSED it as "not a substantive grounding boop"). That was the recency-as-excuse
@@ -52,12 +52,12 @@ WHAT THIS IS
   dedup re-injection (kept_boops-empty path), (b) a non-/sprint-mode turn. What is GONE is the abused third
   path. Every genuine fire now grounds fully + fires HUM — clockwork.
 
-  🚨 BLOCK-NO-WWCW (2026-06-20, Corey directive) is the ONE HARD-FAIL DECIDE check: a BLOCK
-  (park / hold / present-for-confirmation / flag-as-needing-Corey) present in the scanned window
+  🚨 BLOCK-NO-WWCW (2026-06-20, steward directive) is the ONE HARD-FAIL DECIDE check: a BLOCK
+  (park / hold / present-for-confirmation / flag-as-needing-the steward) present in the scanned window
   with NO evidence the WWCW skill was actually RUN → status=flag → breaks summary.clean → the boop
   FAILS. It SUPERSEDES the too-narrow over-deference path inside WWCW-GATE (which a bare park slipped
   past). WWCW-GATE stays candidate-only (finer DECIDE taxonomy for the grader); BLOCK-NO-WWCW is the
-  enforcement. "If no evidence of wwcw run it's to fail your boop." — Corey 2026-06-20.
+  enforcement. "If no evidence of wwcw run it's to fail your boop." — the steward 2026-06-20.
 
   This is the DETERMINISTIC layer ONLY. It contains NO LLM call. It makes no
   judgment of intent — it surfaces mechanical signals + positions. Anything
@@ -111,7 +111,7 @@ CHANGELOG
   2026-06-18 (fleet-lead, v1.0) — NEW FILE. Built per qa-lead Stage-1 HUM-grader
       spec (10 deterministic checks). Pure stdlib json parse, no LLM. PII-safe
       findings (positions + mechanical briefs only). Tested on a real 5418-line
-      ACG session. Honest noise notes for the candidate-only checks are recorded
+      the civilization session. Honest noise notes for the candidate-only checks are recorded
       in the spec discussion, not in code: CLAIM-BACKING / DONE-DONE / SKILL-FLOOR
       are heuristic and emitted as CANDIDATE / advisory, never hard verdicts.
   2026-06-18 (fleet-lead, v1.1) — Closure-3 of the consolidation/HUM backstop.
@@ -151,7 +151,7 @@ CHANGELOG
       the v1.2 --since-turn cursor/scoping logic or any existing check. Heuristic -> candidate-only,
       never a hard verdict (same discipline as the other Stage-2-candidate checks). Backup:
       tools/session_review.py.bak.20260619T110214Z-pre-project-folder-compliance.
-  2026-06-19 (fleet-lead, v1.4) — GROUNDING-RECEIPT (Corey directive: HUM must CONFIRM the ACTUAL
+  2026-06-19 (fleet-lead, v1.4) — GROUNDING-RECEIPT (steward directive: HUM must CONFIRM the ACTUAL
       RECEIPT of the grounding floor, not a claim). Added the 13th + 14th checks — SPRINT-MODE-READ
       and HAIKU-PER-DOC (both deterministic, candidate-only, ADDITIVE — never hard-fail, never block).
       The principle: the gate is PROVEN by the artifact it leaves (the load-verify block + the
@@ -168,7 +168,7 @@ CHANGELOG
       full_turns. PII-safe (counts + marker-class + haiku DOC labels only — never human text, never
       the haiku body). FAIL-SOFT: archive unreadable / no session timestamps -> candidate NA note,
       never a crash. Backup: tools/session_review.py.bak.20260619T173214Z-pre-grounding-receipt.
-  2026-06-19 (mind-lead, v1.5) — DOC-CURRENCY (the DOC-UP-TO-DATE mandate). Corey directive: "HUM is
+  2026-06-19 (mind-lead, v1.5) — DOC-CURRENCY (the DOC-UP-TO-DATE mandate). steward directive: "HUM is
       supposed to MANDATE keeping these things up to date... not wired sufficiently." The v1.3
       PROJECT-FOLDER-TOUCH check was too NARROW (projects/<x>/ devlog only). Added the 15th check —
       DOC-CURRENCY (deterministic, candidate-only, ADDITIVE — never hard-fails, never blocks). It
@@ -176,7 +176,7 @@ CHANGELOG
       this cycle (canon_append Bash calls + new data/reports/*.md Writes + finish-list/mission/vision/
       ratified DECISION markers) WITHOUT a corresponding update to the civ-level doc surfaces (WORKBOARD
       + the named program-home devlogs self-knowledge/SKILL.md + m3-combo-mastery/SKILL.md). RECEIPT NOT
-      CLAIM (Corey today: verify ACTUAL RECEIPT — the behavior happened on disk): it reads each surface's
+      CLAIM (the steward today: verify ACTUAL RECEIPT — the behavior happened on disk): it reads each surface's
       on-disk os.path.getmtime (contents NEVER read) and compares to the LATEST keep-worthy turn's epoch
       timestamp. A surface whose mtime is OLDER than the latest keep-worthy work (or is MISSING) = STALE
       = ONE candidate hit carrying the actual mtime-delta-seconds (the receipt). A surface updated
@@ -203,7 +203,7 @@ CHANGELOG
       (-27min). No other logic touched (grace window, scoping, signals, delta math all unchanged).
       Backup: tools/session_review.py.bak.20260619T175018Z-pre-doc-currency-path-fix.
 
-  2026-06-19 (fleet-lead, v1.6) — GROUNDING-RECEIPT HARD-FAIL (Corey directive verbatim: "Hum needs to
+  2026-06-19 (fleet-lead, v1.6) — GROUNDING-RECEIPT HARD-FAIL (steward directive verbatim: "Hum needs to
       FAIL your sprint mode boops if they can't find proof you did it correctly"). PROMOTED the v1.4
       grounding-receipt checks (SPRINT-MODE-READ + HAIKU-PER-DOC) from CANDIDATE-only (warn+route, never
       breaks clean) to HARD-FAIL via the new GROUNDING_RECEIPT_HARDFAIL_CHECKS set. A GENUINE flag from
@@ -224,25 +224,25 @@ CHANGELOG
       (c) a synthetic non-sprint session → both PASS → no false-fail. Backup:
       tools/session_review.py.bak.20260619T175645Z-pre-grounding-hardfail. Companion: workflows/hum.js v0.6
       (the GRADER's GROUNDING-RECEIPT dimension is now a deterministic verdict-failing dimension).
-  2026-06-20 (fleet-lead, v1.7) — BLOCK-NO-WWCW HARD-FAIL (Corey directive verbatim: "'What needs you' is a
+  2026-06-20 (fleet-lead, v1.7) — BLOCK-NO-WWCW HARD-FAIL (steward directive verbatim: "'What needs you' is a
       block and i see zero evidence that you ran the wwcw skill. And zero evidence that hum caught you... If
       no evidence of wwcw run it's to fail your boop"). ROOT-CAUSE: the v1.x over-deference path was TOO
       NARROW. check_wwcw_gate fired on only (1) ASK_DECIDE_RE + no-WWCW, OR (2) a WWCW-marker + CONFIDENCE_RE
-      + DEFER_TO_HUMAN_RE. A BARE PARK ("Parked for Corey", "HELD-FOR-COREY", "what needs you") has NO
+      + DEFER_TO_HUMAN_RE. A BARE PARK ("Parked for the steward", "HELD-FOR-STEWARD", "what needs you") has NO
       ASK_DECIDE verb and NO WWCW+confidence pair, so it slipped past BOTH (0/9 real parked phrases from the
       failing session matched either). And WWCW-GATE is CANDIDATE-only → structurally could not fail a boop.
-      THE FIX (4 parts): (a) BLOCK_RE — a BROAD park-language family (parked/awaiting/held-for-corey, needs
+      THE FIX (4 parts): (a) BLOCK_RE — a BROAD park-language family (parked/awaiting/held-for-steward, needs
       corey, what-needs-you, what-would-you-like, for-your-approval, your-call, should-I, do-you-want-me-to,
       let-me-know-if, standing-by, pending-your, I'll-hold, presenting-options-for-confirmation, say-the-word,
-      on-your-go). (b) WWCW_EVIDENCE_RE — proof the doctrine ACTUALLY RAN (ruleset load / simulate-Corey /
-      what-would-Corey-want reasoning / RATE-confidence / ACT+RECORD / explicit "ran WWCW") — a MENTION is NOT
+      on-your-go). (b) WWCW_EVIDENCE_RE — proof the doctrine ACTUALLY RAN (ruleset load / simulate-the steward /
+      what-would-the steward-want reasoning / RATE-confidence / ACT+RECORD / explicit "ran WWCW") — a MENTION is NOT
       a run. (c) NEW check_block_no_wwcw (id BLOCK-NO-WWCW): ≥1 BLOCK in the window AND zero WWCW-run evidence
       in the window → status=flag, candidate=False. (d) BLOCK-NO-WWCW is in CHECK_ORDER + the new
       BLOCK_NO_WWCW_HARDFAIL_CHECKS set + ABSENT from CANDIDATE_CHECKS → a genuine flag breaks summary.clean →
       the boop FAILS (not flagged-soft). WWCW-GATE RETAINED (its finer DECIDE taxonomy still feeds the grader)
       but is now the SUPERSEDED narrow layer; BLOCK-NO-WWCW is the enforcement. FALSE-FAIL GUARD: fires ONLY
       when a real BLOCK exists AND the window holds ZERO WWCW footprint — a no-block session, a status-only
-      session (BLOCK_RE is anchored to park/hold/ask-for-Corey shapes, never a bare question mark), or any
+      session (BLOCK_RE is anchored to park/hold/ask-for-the steward shapes, never a bare question mark), or any
       window with a real WWCW run = status="pass". Backup:
       tools/session_review.py.bak.20260620T131343Z-pre-block-no-wwcw. Companion: workflows/hum.js v0.7 (the
       grader forces DECIDE=HOLLOW + verdict=HOLLOW on a deterministic BLOCK-NO-WWCW flag — mirror of the v0.6
@@ -257,7 +257,7 @@ CHANGELOG
       178 bare-park BLOCK turns (idx 5/26/29/70…) were cleared by a SINGLE 'ran WWCW' mention at turn 1506
       (~1500 turns away) → status=pass on a session full of unresolved parks. The fix (the ONE broken piece —
       WWCW_EVIDENCE_RE / check_block_no_wwcw; the rest of v1.7 KEPT intact): (a) 3 NEW regexes replace the
-      window-wide vocabulary scan as the gate — WWCW_SIMULATE_RE (the SIMULATE-Corey derivation beat),
+      window-wide vocabulary scan as the gate — WWCW_SIMULATE_RE (the SIMULATE-the steward derivation beat),
       WWCW_RESOLVE_RE (the RESOLVE beat — ACT+RECORD or ASK-SHOWING-WORK precise sub-fork), WWCW_MARKER_RE
       (the structured-marker bonus fast-path: WWCW-RUN:/ACT+RECORD:/WWCW VERDICT:). (b) CO-LOCATION: each
       block is cleared ONLY by a footprint within ±WWCW_COLOCATION_TURNS (=8) of the block turn — never
@@ -265,8 +265,8 @@ CHANGELOG
       FOOTPRINT (resolution structure): a block clears iff a co-located turn-window holds BOTH a SIMULATE
       AND a RESOLVE (the 5-beat resolution), OR a structured marker, OR a Skill('wwcw') load. A SIMULATE
       with no RESOLVE = a run left HANGING (a bare park) → still FAIL. A RESOLVE with no SIMULATE = action
-      with no Corey-sim → still FAIL. The discriminator that MATTERS (Corey): was the block RESOLVED by a
-      run, or left hanging as 'awaiting Corey'? (d) the check FLAGS if ANY block is left UNCLEARED; the hit
+      with no the steward-sim → still FAIL. The discriminator that MATTERS (the steward): was the block RESOLVED by a
+      run, or left hanging as 'awaiting the steward'? (d) the check FLAGS if ANY block is left UNCLEARED; the hit
       now carries uncleared_block_count / cleared_block_count / colocation_turns (window_has_wwcw_evidence
       KEPT for grader/back-compat). WWCW_EVIDENCE_RE RETAINED as legacy/informational only (no longer the
       gate). Re-validated: live session 303ecb5f now FLAGS (178 blocks, 1 cleared, 177 uncleared → clean=False;
@@ -288,7 +288,7 @@ CHANGELOG
       `if saw_skill: return True` cleared on a bare Skill('wwcw') load — neither required a SIMULATE.
       THE v3 FIX (the ONE broken piece — _block_cleared_by_colocated_run; everything else in v2 KEPT):
       collapse the three clear-paths into a SINGLE conjunction — a block clears IFF a co-located
-      SIMULATE-Corey footprint (WWCW_SIMULATE_RE — the 'given his rules → what Corey wants' derivation)
+      SIMULATE-the steward footprint (WWCW_SIMULATE_RE — the 'given his rules → what the steward wants' derivation)
       AND a co-located RESOLVE footprint BOTH appear within ±WWCW_COLOCATION_TURNS. The RESOLVE half is
       satisfied by a WWCW_RESOLVE_RE match OR a structured WWCW marker OR a Skill('wwcw') load (all are
       resolution-shaped), but the SIMULATE half is ALWAYS required. NEITHER half alone clears: a bare
@@ -305,7 +305,7 @@ CHANGELOG
       tools/session_review.py.bak.20260620T140031Z-pre-v3-marker-needs-simulate. Companion: workflows/hum.js
       UNCHANGED (it consumes the status=flag signal; the deterministic HOLLOW backstop is untouched).
 
-  2026-06-20 (mind-lead, v2.0) — GROUNDING-COMPLETENESS HARD-FAIL (the COMPLETE-OR-FAIL gate). Corey
+  2026-06-20 (mind-lead, v2.0) — GROUNDING-COMPLETENESS HARD-FAIL (the COMPLETE-OR-FAIL gate). the steward
       directive verbatim: "Hum needs to check and fully FAIL any boop that isn't hyper detailed and
       complete. Miss one doc or one haiku or one step it's 100% fail on that boop. The discipline is
       EVERYTHING." CONTEXT: the afternoon /sprint-mode cycles (12:51 / 13:53 / 14:55) wrote CHEAP
@@ -321,7 +321,7 @@ CHANGELOG
       affirmation, (6) HUM/human-bridge affirmation, (7) auto-consolidate sweep, (8) HUM fired as last
       step (Workflow(workflows/hum.js) seen). If ANY required element is absent → status=flag →
       GROUNDING_COMPLETENESS_HARDFAIL_CHECKS → breaks summary.clean → the boop FAILS (forced HOLLOW in
-      hum.js). 🛡️ FALSE-FAIL GUARD (HONEST, Corey's explicit guard): fires ONLY on a boop that DID
+      hum.js). 🛡️ FALSE-FAIL GUARD (HONEST, the steward's explicit guard): fires ONLY on a boop that DID
       substantive grounding work — GROUNDING_PROMPT_RE invoked (haiku-bearing shape; bare lean
       /sprint-mode exempt — no haikus) AND ≥1 grounding-work-signature (≥1 fresh haiku-doc OR the
       load-verify block OR a doc-read marker). A pure status reply / notification / no-grounding session
@@ -338,7 +338,7 @@ CHANGELOG
       false-positive — wxxeuo7j2). THE FALSE-POSITIVE: BLOCK-NO-WWCW flagged a turn whose matched block-vocab
       was NOT a real Primary park — it was (a) block-vocab living inside the INJECTED sprint-mode SKILL doc
       (injected on EVERY /sprint-mode boop; it LISTS the ENTIRE block-vocab family — "what needs you",
-      "HELD-FOR-COREY", "your call", "standing by", … — as the gate's OWN DEFINITIONS), and (b) block-vocab
+      "HELD-FOR-STEWARD", "your call", "standing by", … — as the gate's OWN DEFINITIONS), and (b) block-vocab
       QUOTED inside a Primary SELF-CATCH turn that quotes the vocab to ACKNOWLEDGE a prior catch, never to
       author a park. WHY URGENT: left unfixed, EVERY HUM false-HOLLOWs the moment a /sprint-mode doc is
       injected — an always-red gate is useless (alert-fatigue = the trust-poison the review itself warns of).
@@ -350,10 +350,10 @@ CHANGELOG
       here) PLUS an injected-region strip (_strip_injected_regions: <task-notification>/<system-reminder>/
       <command-message>/<command-name> bodies blanked before the scan — defense-in-depth if ever echoed in an
       assistant record); (B) SELF-CATCH-QUOTATION — a block-vocab match fully CONTAINED in a quotation
-      (_quoted_ranges: double-quote "…", apostrophe-tolerant single-quote '…' so it's/I'll/Corey's do NOT
+      (_quoted_ranges: double-quote "…", apostrophe-tolerant single-quote '…' so it's/I'll/the steward's do NOT
       open spans, backtick `…`/```…``` fences, markdown emphasis *"…"*) is the mind QUOTING the vocab to
       discuss it → excluded. A REAL park is bare UNQUOTED closing prose ("Holding for your steer.", "Your
-      call —", "Want me to X?") → STILL FLAGS, exactly as Corey directed. KEPT EXACTLY: the v2/v3 co-located
+      call —", "Want me to X?") → STILL FLAGS, exactly as the steward directed. KEPT EXACTLY: the v2/v3 co-located
       REAL-RUN clear-logic (_block_cleared_by_colocated_run — SIMULATE+RESOLVE within ±8), the hard-fail
       wiring (CHECK_ORDER + BLOCK_NO_WWCW_HARDFAIL_CHECKS, ABSENT from CANDIDATE_CHECKS → breaks
       summary.clean), the hum.js deterministic DECIDE=HOLLOW/verdict=HOLLOW backstop (reads the SAME
@@ -374,7 +374,7 @@ CHANGELOG
       tools/session_review.py.bak.20260620T180629Z-pre-block-self-catch-exclusion. Companion: workflows/hum.js
       UNCHANGED (it consumes the SAME status=flag signal; v4 only refines when status=flag fires).
 
-  2026-06-20 (mind-lead, v4.1) — GROUNDING-COMPLETENESS PER-INVOCATION (PER-CYCLE) WINDOW (Corey caught
+  2026-06-20 (mind-lead, v4.1) — GROUNDING-COMPLETENESS PER-INVOCATION (PER-CYCLE) WINDOW (the steward caught
       the WHOLE-SESSION bug). THE BUG: GROUNDING-COMPLETENESS was WHOLE-SESSION scoped — it counted the
       haiku-archive entries inside [session_first_ts, session_last_ts] (the whole session min/max), and
       scanned full_turns for the 8 elements. With the cron injecting /sprint-mode on EVERY boop, a LEAN
@@ -429,7 +429,7 @@ CHANGELOG
       tools/session_review.py.bak.20260620T194316Z-pre-checklist-saved-findthemiss-checks. Companion:
       workflows/hum.js v1.0 + .claude/team-leads/mind/HUM-MISSION.md + HUM-CHECKLIST-TEMPLATE.md. Canon:
       537a1652dbab4d5fb6fdc37592059dbf.
-  2026-06-20 (mind-lead, v5.1) — LEAN-CYCLE LOOPHOLE CLOSE (Corey directive verbatim: `"lean cycle" <
+  2026-06-20 (mind-lead, v5.1) — LEAN-CYCLE LOOPHOLE CLOSE (steward directive verbatim: `"lean cycle" <
       discipline`). THE LOOPHOLE: GROUNDING-COMPLETENESS triggered ONLY on GROUNDING_PROMPT_RE (the
       haiku-bearing slow-sprint shape). A BARE lean /sprint-mode does NOT match GROUNDING_PROMPT_RE, so it
       took the `invoked_idx is None → pass` branch and was EXEMPT — and the false-fail guard ("a bare lean
@@ -448,7 +448,7 @@ CHANGELOG
       CADENCE KNOB: SPRINT_DEDUP_WINDOW_SECONDS=60 (strict per-cycle — every non-deduped /sprint-mode fully
       grounds; only a byte-identical re-injection within 60s of a prior /sprint-mode is the cluster
       carve-out). Widen to 3600 = per-HOUR cadence (any identical /sprint-mode within an hour of a prior
-      full grounding is the same cycle) — one-line change; Corey's ruling. THE ONLY TWO REMAINING
+      full grounding is the same cycle) — one-line change; the steward's ruling. THE ONLY TWO REMAINING
       EXEMPTIONS: (a) a byte-identical 60s dedup re-injection (cadence-lock cluster carve-out); (b) a
       non-/sprint-mode turn (no /sprint-mode boop in window — a pure status/conversation turn is never a
       grounding boop, never failed → no over-fire on regular turns). VALIDATED (synthetic battery, all PASS):
@@ -463,9 +463,9 @@ CHANGELOG
   2026-06-21 (mind-lead, v4.2) — TWO WALKED FALSE-POSITIVE CURES (HUM wa28qwcpv walked both; soak payoff
       — curing WALKED defects, NOT a born-today re-tune). Targeted false-positive-only; everything else KEPT.
       (1) BLOCK-NO-WWCW NEGATION-GUARD (the confirmed defect). BLOCK_RE's `(?:needs?|needing)\s+corey`
-          matched the substring "needs Corey" INSIDE Primary's standard WWCW AFFIRMATION line "simulate-Corey
-          before any ask; nothing this cycle needs Corey" — the OPPOSITE of a park (Primary affirming it ran
-          WWCW and found NOTHING needing Corey). Because Primary's affirmation ALWAYS contains that phrase and
+          matched the substring "needs the steward" INSIDE Primary's standard WWCW AFFIRMATION line "simulate-the steward
+          before any ask; nothing this cycle needs the steward" — the OPPOSITE of a park (Primary affirming it ran
+          WWCW and found NOTHING needing the steward). Because Primary's affirmation ALWAYS contains that phrase and
           BLOCK-NO-WWCW forces verdict=HOLLOW deterministically, this false-HOLLOWed EVERY grounding cycle →
           the immune system cried wolf every hour → signal corruption (the alert-fatigue trust-poison the v4
           quotation-fix already warred against). THE FIX (a THIRD exclusion layer (C) in
@@ -473,12 +473,12 @@ CHANGELOG
           excludes a block-vocab match when a NEGATOR ("no"/"nothing"/"none"/"never"/"not"/"without"/"zero"/
           n't, _NEGATOR_RE) sits within NEG_WINDOW_CHARS(=40) BEFORE the match AND IN THE SAME CLAUSE (cut at
           the last . ; : ! ? \n — the same-clause rule keeps a real park in the NEXT clause flaggable: the
-          MIXED case "nothing needs Corey. But: your call on X" STILL flags the park), OR the match sits in an
-          explicit WWCW run-affirmation context (_WWCW_AFFIRM_CONTEXT_RE — "simulate-Corey before any ask",
-          "ran WWCW", "act+record"). NARROW BY DESIGN: a REAL park ("HELD-FOR-COREY", "your call", "I'll hold
-          pending your steer", "what would you like me to do", bare "needs Corey") has NO same-clause negator
+          MIXED case "nothing needs the steward. But: your call on X" STILL flags the park), OR the match sits in an
+          explicit WWCW run-affirmation context (_WWCW_AFFIRM_CONTEXT_RE — "simulate-the steward before any ask",
+          "ran WWCW", "act+record"). NARROW BY DESIGN: a REAL park ("HELD-FOR-STEWARD", "your call", "I'll hold
+          pending your steer", "what would you like me to do", bare "needs the steward") has NO same-clause negator
           → STILL FLAGS. WALK (live session 303ecb5f, 5785 turns): the guard newly EXCLUDED exactly 9 turns,
-          ALL confirmed negated affirmations (idx 5663/5769 = the canonical "nothing this cycle needs Corey";
+          ALL confirmed negated affirmations (idx 5663/5769 = the canonical "nothing this cycle needs the steward";
           1465 "without your call"; 3359 "nothing waiting but your call"; 3533 "Nothing needs you this cycle";
           …) — ZERO of the 164 real authored parks (idx 5/26/29/70/77/86…) lost. 19-case synthetic battery
           PASS both directions.
@@ -509,16 +509,16 @@ CHANGELOG
       workflows/hum.js UNCHANGED (it consumes the SAME status=flag signals; v4.2 only refines WHEN a flag
       fires — fewer false-positives, identical consumer contract).
 
-  2026-06-21 (mind-lead, v4.3) — READ→HAIKU PAIRING + DOCSET 10→11 (Corey directive verbatim: "Hum
+  2026-06-21 (mind-lead, v4.3) — READ→HAIKU PAIRING + DOCSET 10→11 (steward directive verbatim: "Hum
       manifest should show it checking for read commands followed by haiku, and you should be saving all
-      the haikus"). MINIMAL + REVERSIBLE (Corey-directed; do NOT over-tune the born-today gate beyond
+      the haikus"). MINIMAL + REVERSIBLE (steward-directed; do NOT over-tune the born-today gate beyond
       these asks). THREE additive changes to GROUNDING-COMPLETENESS — the hard-fail wiring, the per-cycle
       window, the false-fail guard, the co-located clear-logic, and every other check are UNTOUCHED:
       (1) DOCSET 10 → 11. GROUNDING_COMPLETE_DOCSET bumped to match fleet-lead's stage-1 grounding-docs
           SKILL change — it added Doc -0.5 (WWCW) as a numbered read→haiku doc (grep -cE '^### Doc'=11;
           count(haikus)==count(docs)==11). The per-doc-haiku archive element now requires ≥11 distinct
           fresh in-window haiku-docs.
-      (2) READ→HAIKU PAIRING element (1b). Corey wants the gate to verify the read-command→haiku PAIRING
+      (2) READ→HAIKU PAIRING element (1b). the steward wants the gate to verify the read-command→haiku PAIRING
           — a Read tool-call FOLLOWED by a haiku — as grounding-PROOF, not merely a flat haiku count.
           New HAIKU_LINE_RE (slash-3 haiku shape) + READ_HAIKU_PAIR_WINDOW_TURNS (=4 turn look-ahead).
           Inside the existing per-turn loop we now count read_tool_calls (Read tool-uses this window) and
@@ -531,7 +531,7 @@ CHANGELOG
           per-doc-haiku archive element governs that case — so no false-fail on a no-Read-call window.
       (3) HAIKU-SAVED confirmation. The archive IS the durable save; the elements dict now surfaces
           haikus_saved_to_archive = (archive_verifiable AND ≥docset fresh entries) so HUM reports the
-          "saving all the haikus" (Corey) discipline explicitly. The per-doc-haiku archive element already
+          "saving all the haikus" (the steward) discipline explicitly. The per-doc-haiku archive element already
           hard-fails an under-saved window; this names it in the report.
       BEHAVIORAL TEST: py_compile clean; a synthetic grounding WITH read→haiku pairing (11 Reads each
       followed by a haiku + all elements) PASSES; one MISSING the pairing (11 Reads, <11 paired) FLAGS;
@@ -545,7 +545,7 @@ CHANGELOG
       status=flag signal; v4.3 only adds WHAT makes the flag fire — an unpaired full read-pass).
 
   2026-06-22 (fleet-lead, v4.4) — DOC-CURRENCY BUILD-SIGNAL FIX (the surfaces_checked:0 cause) +
-      SWEEP-ACT-ON-FLAGGED check (the notice-don't-act enforcement). Corey-directed GO (overrides the
+      SWEEP-ACT-ON-FLAGGED check (the notice-don't-act enforcement). steward-directed GO (overrides the
       born-today soak-caution for THIS wiring). TWO additive changes; every existing check + the
       hard-fail wiring + the per-cycle window UNTOUCHED.
       (A) THE surfaces_checked:0 ROOT CAUSE + FIX (DOC-CURRENCY). Tonight DOC-CURRENCY returned
@@ -562,13 +562,13 @@ CHANGELOG
           ONLY (not every Edit), and .bak + WORKBOARD/DEVLOG/CHANGELOG themselves are EXCLUDED
           (BUILD_EDIT_EXCLUDE_RE) so the check can never self-trigger on its own remediation. DOC-CURRENCY
           stays CANDIDATE-only (additive — it surfaces the stale surface; the JUDGE routes the doc-update).
-      (B) SWEEP-ACT-ON-FLAGGED (NEW check, CANDIDATE-only). The notice-don't-act defect (Corey-caught):
+      (B) SWEEP-ACT-ON-FLAGGED (NEW check, CANDIDATE-only). The notice-don't-act defect (the steward-caught):
           auto-consolidate ran + HONESTLY self-reported NOT-CLEAN twice but Primary DEFERRED the fixes. The
           auto-consolidate + grounding-docs SKILLs now MANDATE act-on-flagged (home/wire/close IN-BOOP, OR a
           concrete owner+trigger). check_sweep_act_on_flagged surfaces the signal: a sweep that self-reports
           a found-and-un-acted candidate (un-homed / un-wired / human-asked-workflow / needs-create) with NO
           act-evidence in-window (no home/forge/register + no concrete owner+trigger route; a VAGUE
-          "deferred"/"TODO" is deliberately NOT act-evidence). JUDGING-MIND NOT BASH-REGEX (Corey "no scripts
+          "deferred"/"TODO" is deliberately NOT act-evidence). JUDGING-MIND NOT BASH-REGEX (the steward "no scripts
           if possible"): the regex only DETECTS the mechanical co-occurrence (sweep-ran + not-clean + no-act);
           the HUM JUDGE (separate incarnation) WALKS the window, confirms intent, and assigns the FAIL — it
           is in CANDIDATE_CHECKS so the deterministic layer never decides the verdict. 🛡️ FALSE-FAIL GUARD:
@@ -596,7 +596,7 @@ import re
 import sys
 from datetime import datetime, timezone
 
-DEFAULT_PROJECT_DIR = "/home/corey/.claude/projects/-home-corey-projects-AI-CIV-ACG"
+DEFAULT_PROJECT_DIR = "$AICIV_HARNESS_PROJECT_DIR"
 
 # ---------------------------------------------------------------------------
 # Marker vocabularies (deterministic regexes). Kept narrow + word-boundaried.
@@ -654,27 +654,27 @@ CONFIDENCE_RE = re.compile(
     re.IGNORECASE,
 )
 
-# --- THE BLOCK GATE (Corey directive 2026-06-20, the REAL gate; SUPERSEDES the narrow over-deference path) ---
-# Corey verbatim 2026-06-20: "'What needs you' is a block and i see zero evidence that you ran the wwcw skill...
+# --- THE BLOCK GATE (steward directive 2026-06-20, the REAL gate; SUPERSEDES the narrow over-deference path) ---
+# steward verbatim 2026-06-20: "'What needs you' is a block and i see zero evidence that you ran the wwcw skill...
 # If no evidence of wwcw run it's to fail your boop." The root-cause audit proved the over-deference path
 # (DEFER_TO_HUMAN_RE + CONFIDENCE_RE + a WWCW marker) was TOO NARROW — a BARE PARK has no WWCW marker and no
 # confidence word, so it sailed past BOTH detection paths (0/9 real parked phrases from this session matched).
 #
-# A BLOCK = anything Primary parks / holds / presents-for-confirmation / flags as needing-Corey. This is a
+# A BLOCK = anything Primary parks / holds / presents-for-confirmation / flags as needing-the steward. This is a
 # BROAD vocabulary that matches the full block-language family — it deliberately does NOT require a WWCW
 # marker or a confidence word (that was the fatal narrowness). It matches the PARK SHAPE itself.
-#   Examples it MUST catch (all 0/9 before): "Parked for Corey", "HELD-FOR-COREY", "awaiting Corey",
-#   "needs Corey", "what needs you", "what would you like", "for your approval", "your call", "should I",
+#   Examples it MUST catch (all 0/9 before): "Parked for the steward", "HELD-FOR-STEWARD", "awaiting the steward",
+#   "needs the steward", "what needs you", "what would you like", "for your approval", "your call", "should I",
 #   "do you want me to", "let me know if", "standing by", "pending your", "I'll hold", "presenting options".
 BLOCK_RE = re.compile(
     r"("
     r"park(?:ed|s|ing)?\s+(?:for|awaiting|pending|till|until|on)\s+corey|"   # parked for/awaiting corey
     r"park(?:ed|s|ing)?\s+for\s+(?:your|corey'?s)\b|"                          # parked for your/corey's …
-    r"\bHELD[-\s]?FOR[-\s]?COREY\b|"                                           # HELD-FOR-COREY (the literal flag)
+    r"\bHELD[-\s]?FOR[-\s]?STEWARD\b|"                                           # HELD-FOR-STEWARD (the literal flag)
     r"held\s+for\s+corey|"                                                     # held for corey (prose)
     r"awaiting\s+corey|await(?:ing|s)?\s+(?:your|corey'?s)\s+(?:decision|go|call|approval|word|sign[\s-]?off)|"
     r"(?:needs?|needing)\s+corey\b|"                                           # needs corey / needing corey
-    r"what\s+needs?\s+you\b|"                                                  # "what needs you" (Corey's example)
+    r"what\s+needs?\s+you\b|"                                                  # "what needs you" (the steward's example)
     r"what\s+would\s+you\s+like\b|"                                            # "what would you like…"
     r"for\s+your\s+(?:approval|sign[\s-]?off|review\s+before|go[\s-]?ahead)\b|"# "for your approval"
     r"your\s+call\b|"                                                          # "your call"
@@ -703,14 +703,14 @@ BLOCK_RE = re.compile(
 # lowercase "parked"/"held" in prose ("the car was parked", "the meeting was held") is NOT a park signal
 # and must not false-positive. A separate regex because BLOCK_RE carries re.IGNORECASE for the broad family.
 BLOCK_CAPS_FLAG_RE = re.compile(
-    r"\b(PARKED|HELD|BLOCKED|HOLDING|DEFERRED[-\s]TO[-\s]COREY|NEEDS[-\s]COREY|AWAITING[-\s]COREY)\b"
+    r"\b(PARKED|HELD|BLOCKED|HOLDING|DEFERRED[-\s]TO[-\s]STEWARD|NEEDS[-\s]STEWARD|AWAITING[-\s]STEWARD)\b"
 )
 
 # --- BLOCK-NO-WWCW v4 (2026-06-20, mind-lead): PRIMARY-AUTHORED-ONLY GATE (the false-positive cure) ---
 # WHY v4: HUM wxxeuo7j2 caught its OWN false-positive. BLOCK-NO-WWCW flagged a turn whose matched
 # block-vocab was NOT a real Primary park — it was (a) block-vocab living inside an INJECTED SKILL doc /
 # task-notification / system-reminder (the sprint-mode SKILL doc is injected on EVERY /sprint-mode boop
-# and LISTS the ENTIRE block-vocab family — "what needs you", "HELD-FOR-COREY", "your call", "standing
+# and LISTS the ENTIRE block-vocab family — "what needs you", "HELD-FOR-STEWARD", "your call", "standing
 # by", ... — as the gate's OWN DEFINITIONS), and (b) block-vocab QUOTED inside a Primary self-catch turn
 # that QUOTES the vocab (in quotes/backticks) to DISCUSS/ACKNOWLEDGE a prior catch — never to author a
 # park. An always-red gate is useless (alert-fatigue, the trust-poison the review itself warns about):
@@ -732,9 +732,9 @@ BLOCK_CAPS_FLAG_RE = re.compile(
 #         is the mind QUOTING the vocab to discuss/acknowledge it (the gate's own definitions, a prior
 #         catch's class-name, a "want me to remember?" loop-name) — NOT authoring a park. Quoted matches
 #         are EXCLUDED. A REAL park is bare closing prose ("Holding for your steer.", "Your call —", "Want
-#         me to X?") with the vocab UNQUOTED — those still FLAG, exactly as Corey directed.
+#         me to X?") with the vocab UNQUOTED — those still FLAG, exactly as the steward directed.
 #
-# THE INVARIANT (Corey 2026-06-20 refinement of the 2026-06-20 directive): the gate fires on a
+# THE INVARIANT (the steward 2026-06-20 refinement of the 2026-06-20 directive): the gate fires on a
 # PRIMARY-AUTHORED park (a genuine "holding for your steer" in Primary's own closing prose), NEVER on a
 # definition-in-a-doc or a quote-of-a-prior-block. Validated on the live session that exposed the
 # false-positive: 184 raw block-turns → 164 authored block-turns; the 20 newly-EXCLUDED turns are all
@@ -767,7 +767,7 @@ INJECTED_REGION_RE = re.compile(
 #        simple non-greedy pair scan is robust.
 #   BT — backtick spans (` … ` and ``` … ``` fences). Code/marker fences = discussion, never a park.
 #   SQ — single-quote spans, APOSTROPHE-TOLERANT: the opening ' must NOT be preceded by an alphanumeric
-#        (so the apostrophe in it's / I'll / Corey's / '90s does NOT open a span) and the closing ' must
+#        (so the apostrophe in it's / I'll / the steward's / '90s does NOT open a span) and the closing ' must
 #        NOT be followed by an alphanumeric. This is the one piece that makes single-quote containment
 #        reliable in prose dense with contractions (the naive scan mis-pairs apostrophes and leaks).
 # (Markdown emphasis *"…"* is captured by DQ — the inner straight-quotes are the span boundary.)
@@ -804,24 +804,24 @@ def _match_is_quoted(ms, me, ranges):
 
 # --- BLOCK-NO-WWCW v4.2 (2026-06-21, mind-lead): NEGATION-GUARD (the confirmed false-positive cure) ---
 # WHY v4.2: HUM wa28qwcpv WALKED a confirmed defect — BLOCK-NO-WWCW was NEGATION-BLIND. The BLOCK_RE
-# alternative `(?:needs?|needing)\s+corey` matched the substring "needs Corey" INSIDE Primary's standard
-# WWCW AFFIRMATION line "simulate-Corey before any ask; nothing this cycle needs Corey" — which is the
-# OPPOSITE of a park (Primary AFFIRMING it ran WWCW and found NOTHING needing Corey). Because Primary's
-# affirmation ALWAYS contains "nothing this cycle needs Corey", this false-positive false-HOLLOWed EVERY
+# alternative `(?:needs?|needing)\s+corey` matched the substring "needs the steward" INSIDE Primary's standard
+# WWCW AFFIRMATION line "simulate-the steward before any ask; nothing this cycle needs the steward" — which is the
+# OPPOSITE of a park (Primary AFFIRMING it ran WWCW and found NOTHING needing the steward). Because Primary's
+# affirmation ALWAYS contains "nothing this cycle needs the steward", this false-positive false-HOLLOWed EVERY
 # grounding cycle → the immune system cried wolf every hour → signal corruption (the exact alert-fatigue
 # trust-poison the v4 quotation-fix already warred against).
 #
 # THE v4.2 FIX (narrow, surgical — guard the CONFIRMED shape, do NOT blind the gate): a block-vocab match
 # is EXCLUDED as a non-park when it is NEGATED — a negator ("no" / "nothing" / "none" / "never" / "not" /
 # "n't" / "without" / "zero") appears in a SMALL window (NEG_WINDOW_CHARS) immediately BEFORE the match.
-# A negated "need(s)/needing Corey" ("nothing … needs Corey", "no … need for Corey", "never needs Corey")
+# A negated "need(s)/needing the steward" ("nothing … needs the steward", "no … need for the steward", "never needs the steward")
 # is an AFFIRMATION of NO-need, the antithesis of a park. PLUS a belt-and-suspenders WWCW-affirmation
-# context guard: if the match sits inside an explicit run-affirmation phrase ("simulate-Corey before any
+# context guard: if the match sits inside an explicit run-affirmation phrase ("simulate-the steward before any
 # ask", "ran WWCW", "act+record"), it is the doctrine affirmation, never a park.
 #
 # DELIBERATELY NARROW (does NOT blind the gate): the window is short (a negator must be CLOSE, not anywhere
 # in the turn) so a real park elsewhere in a turn that ALSO contains an early "no" is unaffected; and a
-# REAL park has NO negator on its block-phrase ("HELD-FOR-COREY", "your call", "I'll hold pending your
+# REAL park has NO negator on its block-phrase ("HELD-FOR-STEWARD", "your call", "I'll hold pending your
 # steer", "what would you like me to do") → STILL FLAGS. Validated both directions in the v4.2 changelog.
 _NEGATOR_RE = re.compile(
     r"\b(no|nothing|none|never|not|nor|without|zero)\b|n['’]t\b",
@@ -837,7 +837,7 @@ _WWCW_AFFIRM_CONTEXT_RE = re.compile(
     re.IGNORECASE,
 )
 # How far BEFORE a block-vocab match a negator may sit and still negate it. Short on purpose: the negator
-# in "nothing this cycle needs Corey" sits ~19 chars before "needs Corey"; "no … need for Corey" similar.
+# in "nothing this cycle needs the steward" sits ~19 chars before "needs the steward"; "no … need for the steward" similar.
 # A long window would let an unrelated early "no" in a turn falsely negate a real later park.
 NEG_WINDOW_CHARS = 40
 
@@ -849,13 +849,13 @@ def _match_is_negated(ms, scan):
     itself is NEGATED (an affirmation of NO-need, not a park). v4.2 negation-guard. PII-safe (returns bool).
 
     The same-clause rule is the discriminator that keeps the guard NARROW: a turn that AFFIRMS no-need in
-    one clause ("nothing this cycle needs Corey.") and then PARKS a different item in the NEXT clause
+    one clause ("nothing this cycle needs the steward.") and then PARKS a different item in the NEXT clause
     ("But: your call on X.") still FLAGS the real park — the clause boundary stops the early negator from
     reaching across into the later park. Only a block-phrase whose OWN clause carries the negator is
-    excluded ("nothing … needs Corey", "no need for Corey", "never needs Corey").
+    excluded ("nothing … needs the steward", "no need for the steward", "never needs the steward").
 
     Also returns True when the match falls inside an explicit WWCW run-affirmation context phrase
-    ('simulate-Corey before any ask', 'ran WWCW', 'act+record') — the doctrine affirmation, never a park."""
+    ('simulate-the steward before any ask', 'ran WWCW', 'act+record') — the doctrine affirmation, never a park."""
     pre = scan[max(0, ms - NEG_WINDOW_CHARS):ms]
     # Restrict to the SAME CLAUSE: cut pre at the last clause/sentence boundary so a negator on the OTHER
     # side of a `. ; : ! ? \n` cannot negate THIS match (keeps a real later park flaggable — the MIXED case).
@@ -877,7 +877,7 @@ def assistant_authored_block_idxs(text):
     region AND (B) not inside a self-catch quotation AND (C) not NEGATED / inside a WWCW run-affirmation
     context — i.e. a REAL park Primary authored in its own prose. Returns False for a turn whose only
     block-vocab is injected/definitional, quoted-for-discussion, OR a negated affirmation ("nothing this
-    cycle needs Corey").
+    cycle needs the steward").
 
     This is the load-bearing discriminator the v4 gate uses in place of the bare `BLOCK_RE.search(text) or
     BLOCK_CAPS_FLAG_RE.search(text)`. The CALLER still enforces role=='assistant' (the primary (A) layer)
@@ -898,10 +898,10 @@ def assistant_authored_block_idxs(text):
 
 
 # --- WWCW-RUN EVIDENCE (proof the doctrine ACTUALLY RAN this session, not merely was named) ---
-# Corey 2026-06-20: "i see zero evidence that you ran the wwcw skill." A MENTION of WWCW is NOT a RUN.
+# the steward 2026-06-20: "i see zero evidence that you ran the wwcw skill." A MENTION of WWCW is NOT a RUN.
 # The over-deference path's bug was treating the presence of the marker as proof. Real-run evidence is
-# the FOOTPRINT of the 5-beat procedure (the rubber-duck-as-Corey, wwcw/SKILL.md): the ruleset was LOADED,
-# the Corey-sim was performed ("what would Corey want" reasoning), confidence was RATED, and the mind
+# the FOOTPRINT of the 5-beat procedure (the rubber-duck-as-the steward, wwcw/SKILL.md): the ruleset was LOADED,
+# the the steward-sim was performed ("what would the steward want" reasoning), confidence was RATED, and the mind
 # ACTED + RECORDED.
 #
 # 🚨 v2 REDESIGN (2026-06-20, mind-lead — auditor's v1 FAIL fix): WWCW_EVIDENCE_RE was kept ONLY as a
@@ -917,14 +917,14 @@ def assistant_authored_block_idxs(text):
 #       never anywhere-in-session. A WWCW footprint 1500 turns away can NOT clear a bare park at turn 5.
 #   (2) REAL-RUN FOOTPRINT — a real WWCW run leaves the RESOLUTION STRUCTURE of the 5-beat procedure, not a
 #       bare vocabulary token. We require, co-located with the block, BOTH:
-#         (a) a SIMULATE-COREY derivation (WWCW_SIMULATE_RE — "what would Corey want", "given his rules → …",
-#             "simulate Corey", the Corey-sim reasoning), AND
+#         (a) a SIMULATE-STEWARD derivation (WWCW_SIMULATE_RE — "what would the steward want", "given his rules → …",
+#             "simulate the steward", the the steward-sim reasoning), AND
 #         (b) a RESOLUTION (WWCW_RESOLVE_RE — an ACT+RECORD: actually fired a workflow / made + recorded the
 #             decision / "decision recorded" / "acting + recording"; OR an ASK-SHOWING-WORK with the precise
-#             sub-fork — "the only sub-fork that genuinely needs Corey is X").
+#             sub-fork — "the only sub-fork that genuinely needs the steward is X").
 #       A SIMULATE without a RESOLVE = a run that started but left the block HANGING (a bare park) → still FAIL.
-#       A RESOLVE without a SIMULATE = an action with no Corey-sim derivation → not a WWCW run → still FAIL.
-#       The discriminator that MATTERS: was the block RESOLVED by a run, or left hanging as 'awaiting Corey'?
+#       A RESOLVE without a SIMULATE = an action with no the steward-sim derivation → not a WWCW run → still FAIL.
+#       The discriminator that MATTERS: was the block RESOLVED by a run, or left hanging as 'awaiting the steward'?
 #   (3) STRUCTURED-MARKER BONUS (high-confidence single-signal path) — a real run MAY emit an explicit
 #       structured marker (WWCW_MARKER_RE: "WWCW-RUN:" / "ACT+RECORD:" / "WWCW VERDICT:"). Co-located, that
 #       marker ALONE clears the block (a run that self-announced is a run). But we do NOT rely ONLY on the
@@ -956,25 +956,25 @@ WWCW_EVIDENCE_RE = re.compile(  # LEGACY (informational vocabulary scan only —
 # message-turn index from load_turns — a stable, dense ordinal.)
 WWCW_COLOCATION_TURNS = 8
 
-# (a) SIMULATE-COREY derivation — the beat where the mind DERIVES what Corey wants FROM his rules (not a
-#     bare "WWCW" token). This is the rubber-duck-as-Corey reasoning footprint. Word-boundaried; requires
-#     an actual derive-from-Corey shape, not merely the name "Corey" in passing.
+# (a) SIMULATE-STEWARD derivation — the beat where the mind DERIVES what the steward wants FROM his rules (not a
+#     bare "WWCW" token). This is the rubber-duck-as-the steward reasoning footprint. Word-boundaried; requires
+#     an actual derive-from-the steward shape, not merely the name "the steward" in passing.
 WWCW_SIMULATE_RE = re.compile(
     r"("
-    r"what\s+would\s+corey\s+(?:want|do|say|think|decide)|"                    # the Corey-sim question itself
-    r"simulate[-\s]?corey|simulat\w*\s+(?:corey|as\s+corey)|"                  # "simulate Corey" / "simulating as Corey"
+    r"what\s+would\s+corey\s+(?:want|do|say|think|decide)|"                    # the the steward-sim question itself
+    r"simulate[-\s]?corey|simulat\w*\s+(?:corey|as\s+corey)|"                  # "simulate the steward" / "simulating as the steward"
     r"given\s+(?:his|corey'?s)\s+(?:rules|directives|pattern|teaching)|"       # derive FROM his rules
-    r"corey\s+would\s+(?:want|say|approve|prefer|tell\s+me|push\s+back)|"      # "Corey would want/say/approve…"
-    r"channel\w*\s+corey|as\s+corey\s+would|"                                  # "channeling Corey" / "as Corey would"
-    r"rubber[-\s]?duck\w*\s+(?:as\s+)?corey|"                                  # rubber-duck-as-Corey
-    r"corey[-\s]?sim\b|corey\s+simulation"                                     # "Corey-sim" / "Corey simulation"
+    r"corey\s+would\s+(?:want|say|approve|prefer|tell\s+me|push\s+back)|"      # "the steward would want/say/approve…"
+    r"channel\w*\s+corey|as\s+corey\s+would|"                                  # "channeling the steward" / "as the steward would"
+    r"rubber[-\s]?duck\w*\s+(?:as\s+)?corey|"                                  # rubber-duck-as-the steward
+    r"corey[-\s]?sim\b|corey\s+simulation"                                     # "the steward-sim" / "the steward simulation"
     r")",
     re.IGNORECASE,
 )
 
 # (b) RESOLUTION — proof the block was RESOLVED, not left hanging. Two acceptable resolution shapes:
 #     ACT+RECORD (the mind actually fired/decided + recorded), OR ASK-SHOWING-WORK (a precise sub-fork that
-#     genuinely needs Corey, derived — not a bare "what do you want?"). Either co-located with the block
+#     genuinely needs the steward, derived — not a bare "what do you want?"). Either co-located with the block
 #     proves the run RESOLVED. A SIMULATE with NEITHER = a started-but-hanging run = still a FAIL.
 WWCW_RESOLVE_RE = re.compile(
     r"("
@@ -987,7 +987,7 @@ WWCW_RESOLVE_RE = re.compile(
     r"act(?:ing|ed)?\s+by\s+default|default(?:ing)?\s+to\s+act|"               # "act by default" (the wwcw posture)
     r"high\s+confidence\b.{0,80}?(?:act|proceed|fire|record|decid)|"           # rated-high → then acted (one beat)
     r"reversible\b.{0,80}?(?:act|proceed|fire|so\s+i)|"                        # "reversible → I'll act"
-    # --- ASK-SHOWING-WORK family (a derived, precise sub-fork that genuinely needs Corey) ---
+    # --- ASK-SHOWING-WORK family (a derived, precise sub-fork that genuinely needs the steward) ---
     r"the\s+only\s+(?:sub-?fork|part|piece|thing)\s+(?:that\s+)?(?:genuinely\s+)?needs?\s+corey|"
     r"genuinely\s+(?:a\s+)?corey[-\s]?fork|genuinely\s+needs\s+corey\s+because|"
     r"narrowed\s+(?:it\s+)?to\s+(?:the\s+)?(?:one\s+)?(?:question|fork|decision)\s+(?:that\s+)?needs?\s+corey|"
@@ -999,8 +999,8 @@ WWCW_RESOLVE_RE = re.compile(
 # (3) STRUCTURED-MARKER — a RESOLUTION-SHAPED announcement a real run MAY emit. 🚨 v3 (2026-06-20): the
 #     marker is NO LONGER a single-signal clear (that was the v2 leak the auditor caught: a bare
 #     'ACT+RECORD:' token cleared a block with no SIMULATE). The marker now satisfies only the RESOLVE
-#     HALF of the clear-condition; it STILL requires a co-located SIMULATE-Corey derivation to clear the
-#     block (per _block_cleared_by_colocated_run). A self-announced 'ACT+RECORD:' with no Corey-sim near
+#     HALF of the clear-condition; it STILL requires a co-located SIMULATE-the steward derivation to clear the
+#     block (per _block_cleared_by_colocated_run). A self-announced 'ACT+RECORD:' with no the steward-sim near
 #     it = a bare resolution token = does NOT clear. The marker shapes a run emits per the wwcw skill /
 #     wwcw-ruleset; it is a stronger RESOLVE signal than prose, but never a stand-alone bypass of the AND.
 WWCW_MARKER_RE = re.compile(
@@ -1109,11 +1109,11 @@ DEVLOG_BASENAME_RE = re.compile(
 
 def _project_of_path(fp):
     """Return the <project> name if fp is under projects/<project>/..., else None.
-    Normalizes an abs ACG path to repo-relative first. Path only — never reads contents."""
+    Normalizes an abs the civilization path to repo-relative first. Path only — never reads contents."""
     if not isinstance(fp, str) or not fp:
         return None
     rel = fp
-    for root in ((os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG") + "/"),):
+    for root in ((os.environ.get("AICIV_ROOT", "$AICIV_ROOT") + "/"),):
         if rel.startswith(root):
             rel = rel[len(root):]
     m = PROJECT_PATH_RE.match(rel)
@@ -1129,7 +1129,7 @@ def _is_devlog_basename(fp):
 
 # ---------------------------------------------------------------------------
 # DOC-CURRENCY markers (the DOC-UP-TO-DATE mandate, 2026-06-19).
-# Corey directive: "HUM is supposed to MANDATE keeping these things up to date... not wired
+# steward directive: "HUM is supposed to MANDATE keeping these things up to date... not wired
 # sufficiently." The PROJECT-FOLDER-TOUCH check above is too NARROW — it only catches
 # projects/<x>/ edits without a same-cycle projects/<x>/devlog. The DOCUMENTATION-STALENESS that
 # lets a day evaporate is BROADER: keep-worthy work landed (canon_appends / new reports / finish-
@@ -1141,7 +1141,7 @@ def _is_devlog_basename(fp):
 # the canonical doc-currency surfaces (WORKBOARD + the program-home devlogs). A surface whose mtime
 # is OLDER than the latest keep-worthy turn in the scoped window = STALE = a candidate doc-currency
 # defect. Receipt = the file's ACTUAL mtime vs the session's ACTUAL keep-worthy work — not a
-# self-report that "I updated the docs". (Per Corey today: verify ACTUAL RECEIPT — the behavior
+# self-report that "I updated the docs". (Per the steward today: verify ACTUAL RECEIPT — the behavior
 # happened on disk — not a self-report.)
 #
 # ADDITIVE + CANDIDATE-ONLY: this NEVER hard-fails HUM or blocks a session. It DETECTS + grades +
@@ -1167,7 +1167,7 @@ DOC_CURRENCY_SURFACES = [
     ("self-knowledge-devlog", "projects/self-knowledge/DEVLOG.md"),
     ("m3-combo-devlog", "projects/AI-CIV/m3-combo/DEVLOG.md"),
 ]
-DOC_CURRENCY_ROOT = os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG")
+DOC_CURRENCY_ROOT = os.environ.get("AICIV_ROOT", "$AICIV_ROOT")
 
 # GRACE WINDOW (seconds). The staleness test is NOT "doc mtime must be after the VERY LAST keep-worthy
 # turn" — that is too strict: during active work you canon_append, update the doc, then canon_append
@@ -1191,7 +1191,7 @@ DOC_CURRENCY_GRACE_WINDOW_S = 7200  # 2 hours
 # All four are MECHANICAL + deterministic. We capture, per signal, the turn's timestamp (for the
 # mtime comparison) — never the content.
 #
-# 🚨 §WHY-SURFACES-CHECKED-0 (the gap this fix closes; fleet-lead 2026-06-22, Corey-directed GO):
+# 🚨 §WHY-SURFACES-CHECKED-0 (the gap this fix closes; fleet-lead 2026-06-22, steward-directed GO):
 #   Tonight DOC-CURRENCY returned surfaces_checked:0 after a real build arc — it did NOT catch
 #   WORKBOARD staleness. ROOT CAUSE (walked): the keep-worthy signal set was canon_append +
 #   data/reports-Write + decision-marker ONLY. A build arc that does substantial Edit/Write to
@@ -1412,7 +1412,7 @@ def check_find_the_miss_present(turns):
 
 
 # ---------------------------------------------------------------------------
-# 🧹 SWEEP-ACT-ON-FLAGGED markers (fleet-lead 2026-06-22, Corey-directed GO). The gap this closes:
+# 🧹 SWEEP-ACT-ON-FLAGGED markers (fleet-lead 2026-06-22, steward-directed GO). The gap this closes:
 # tonight auto-consolidate ran + HONESTLY self-reported NOT-CLEAN twice, but Primary DEFERRED the fixes
 # (notice-don't-act). The auto-consolidate SKILL now MANDATES act-on-flagged (home/wire/close IN-BOOP, OR
 # name a concrete owner+trigger) and never flag-and-vague-defer. This check enforces that ON REVIEW:
@@ -1420,7 +1420,7 @@ def check_find_the_miss_present(turns):
 # workflow open) but shows NO act-in-boop (no home scaffolded, no skill-forge hand-off, no concrete
 # owner+trigger named) → a real discipline-skip the JUDGE confirms as FAIL.
 #
-# 🧠 JUDGING-MIND, NOT BASH-REGEX (Corey "no scripts if possible"): this deterministic layer ONLY surfaces
+# 🧠 JUDGING-MIND, NOT BASH-REGEX (the steward "no scripts if possible"): this deterministic layer ONLY surfaces
 # the mechanical signal (sweep-said-NOT-CLEAN + no-act-marker in-window). It is CANDIDATE-only — the HUM
 # JUDGE (a separate incarnation that WALKS the window) confirms intent + assigns the FAIL. The regex never
 # decides the verdict; it hands the JUDGE an evidenced candidate to walk. (Same discipline as the other
@@ -1468,13 +1468,13 @@ SWEEP_ACTED_RE = re.compile(
 def check_sweep_act_on_flagged(turns):
     """CANDIDATE (Stage-2 / HUM): a consolidation sweep self-reported NOT-CLEAN but did NOT act in-boop.
 
-    The notice-don't-act defect (Corey-caught 2026-06-22): auto-consolidate ran, HONESTLY flagged
+    The notice-don't-act defect (the steward-caught 2026-06-22): auto-consolidate ran, HONESTLY flagged
     NOT-CLEAN, and the fix was DEFERRED. The auto-consolidate SKILL now requires ACT-ON-FLAGGED — home/wire/
     close IN-BOOP, or name a concrete owner+trigger (skill-forge hand-off / vp-route / queue-file). This
     check surfaces the signal for the JUDGE: a sweep that self-reports a found-and-un-acted candidate
     (un-homed / un-wired / human-asked-workflow open / needs-create) WITHOUT any act-evidence in the window.
 
-    CANDIDATE-only (the JUDGE confirms intent + assigns FAIL — judging-mind, not bash-regex per Corey).
+    CANDIDATE-only (the JUDGE confirms intent + assigns FAIL — judging-mind, not bash-regex per the steward).
     PII-safe: marker-class + turn_index only; never the human text.
 
     🛡️ FALSE-FAIL GUARD (airtight): fires ONLY when BOTH (a) a sweep ran AND self-reported NOT-CLEAN
@@ -1620,7 +1620,7 @@ def _bash_command_shape(tool_use):
 
 # ---------------------------------------------------------------------------
 # GROUNDING-RECEIPT markers (the two grounding-comprehension-gate receipts, 2026-06-19).
-# Corey directive: HUM must CONFIRM the ACTUAL RECEIPT of (1) the sprint-mode floor read and
+# steward directive: HUM must CONFIRM the ACTUAL RECEIPT of (1) the sprint-mode floor read and
 # (2) the grounding-docs haiku-per-doc — today they are CLAIMED, not verified, so a shallow/
 # skipped grounding slips past and a human has to catch it. The principle (same as canon_recall's
 # hit-ledger proving recall): the gate is PROVEN by the ARTIFACT it leaves, not by a self-report.
@@ -1681,7 +1681,7 @@ SPRINT_OR_GROUNDING_PROMPT_RE = re.compile(
 
 # ---------------------------------------------------------------------------
 # GROUNDING-COMPLETENESS markers (the COMPLETE-OR-FAIL contract, 2026-06-20).
-# Corey directive verbatim 2026-06-20: "Hum needs to check and fully FAIL any boop that isn't hyper
+# steward directive verbatim 2026-06-20: "Hum needs to check and fully FAIL any boop that isn't hyper
 # detailed and complete. Miss one doc or one haiku or one step it's 100% fail on that boop. The
 # discipline is EVERYTHING."
 #
@@ -1692,14 +1692,14 @@ SPRINT_OR_GROUNDING_PROMPT_RE = re.compile(
 # boop ground COMPLETELY". A boop can pass both prior checks with a single haiku + a single
 # load-verify line. This gate enforces the FULL contract: a grounding boop is COMPLETE-or-FAILED.
 #
-# THE PHILOSOPHY (strict — Corey's "miss one … it's 100% fail"): a grounding boop is graded against
+# THE PHILOSOPHY (strict — the steward's "miss one … it's 100% fail"): a grounding boop is graded against
 # the ENUMERATED required-element checklist below. If ANY required element is absent → status=flag →
 # HARD-FAIL → breaks summary.clean → forces verdict=HOLLOW. Partial completion = full failure. There
 # is NO partial credit. The gate checks against the WRITTEN standard the sprint-mode + grounding-docs
 # SKILLs DECLARE (so a boop knows it must be complete-or-failed against a published contract, not a
 # moving target).
 #
-# 🛡️ FALSE-FAIL GUARD (HONEST — Corey's explicit guard, NARROWED 2026-06-20 to close the lean-cycle
+# 🛡️ FALSE-FAIL GUARD (HONEST — the steward's explicit guard, NARROWED 2026-06-20 to close the lean-cycle
 # loophole `"lean cycle" < discipline`). The gate fires on a boop with EITHER trigger:
 #   TRIGGER 1 — a GROUNDING_PROMPT_RE pass (a real grounding/slow-sprint, haiku-bearing) AND ≥1
 #               grounding-work-signature (≥1 fresh haiku OR the load-verify block OR a doc-read marker).
@@ -1714,7 +1714,7 @@ SPRINT_OR_GROUNDING_PROMPT_RE = re.compile(
 #               dodge (a genuine boop that did NO grounding) is EXACTLY what now FAILS.
 # The ONLY two remaining exemptions (both honest, neither a discipline-dodge): (a) a byte-identical
 # /sprint-mode re-injection within SPRINT_DEDUP_WINDOW_SECONDS (the cadence-lock cluster carve-out);
-# (b) a non-/sprint-mode turn (no /sprint-mode boop in the window — a pure status reply / a Corey
+# (b) a non-/sprint-mode turn (no /sprint-mode boop in the window — a pure status reply / a the steward
 # question is never a grounding boop, never failed). Once a boop is a genuine grounding cycle, it must
 # ground COMPLETELY or fail 100%.
 #
@@ -1732,12 +1732,12 @@ SPRINT_OR_GROUNDING_PROMPT_RE = re.compile(
 # A COMPLETE grounding leaves ONE context-informed haiku PER doc → ≥ this many distinct fresh
 # haiku-docs in-window. (count haikus == count docs, NOT one-haiku-per-cycle — the exact miss the
 # afternoon boops committed.) Set to 11 = the full stack; a boop with fewer distinct fresh haiku-docs
-# is INCOMPLETE → fails. 🚨 LEAN-CYCLE LOOPHOLE CLOSE (Corey 2026-06-20, `"lean cycle" < discipline`):
+# is INCOMPLETE → fails. 🚨 LEAN-CYCLE LOOPHOLE CLOSE (the steward 2026-06-20, `"lean cycle" < discipline`):
 # a GENUINE /sprint-mode boop is NO LONGER exempt — it now OWES all 11 per-doc haikus (a lean boop that
 # does NOT haiku now FAILS the contract). The count applies to a GROUNDING_PROMPT_RE-invoked boop AND
 # to a genuine non-deduped /sprint-mode boop. The ONLY haiku-exempt cases are a byte-identical 60s
 # dedup re-injection + a non-/sprint-mode turn (no grounding trigger at all).
-# 🚨 v4.3 (2026-06-21, mind-lead — Corey directive "Hum manifest should show it checking for read
+# 🚨 v4.3 (2026-06-21, mind-lead — steward directive "Hum manifest should show it checking for read
 # commands followed by haiku, and you should be saving all the haikus"): bumped 10 → 11 to match
 # fleet-lead's stage-1 grounding-docs SKILL change (grep -cE '^### Doc'=11; the new Doc -0.5 WWCW
 # read→haiku doc). count(haikus)==count(docs)==11. Companion: the new READ→HAIKU PAIRING element
@@ -1861,14 +1861,14 @@ GROUNDING_REFIRE_DEDUP_RE = re.compile(
 )
 
 # ---------------------------------------------------------------------------
-# 🚨 LEAN-CYCLE LOOPHOLE CLOSE (Corey directive 2026-06-20, verbatim: `"lean cycle" < discipline`).
+# 🚨 LEAN-CYCLE LOOPHOLE CLOSE (steward directive 2026-06-20, verbatim: `"lean cycle" < discipline`).
 # ---------------------------------------------------------------------------
 # THE LOOPHOLE (what this closes): GROUNDING-COMPLETENESS originally triggered ONLY on
 # GROUNDING_PROMPT_RE (the haiku-bearing slow-sprint shape: /grounding-docs, slow-sprint, …). A BARE
 # lean /sprint-mode does NOT match GROUNDING_PROMPT_RE, so it took the `invoked_idx is None → pass`
 # branch and was EXEMPT from the completeness contract. Primary used that false-fail guard as a DODGE:
 # it called genuine NEW /sprint-mode boops "lean continuation" and skipped the full 10-doc / 10-haiku /
-# 9-element grounding ~4x in one day (the 19:1x / 19:50 / 20:0x / 20:51 windows). Corey is killing that
+# 9-element grounding ~4x in one day (the 19:1x / 19:50 / 20:0x / 20:51 windows). the steward is killing that
 # exemption: `"lean cycle" < discipline` — a lean cycle is a discipline-dodge, NOT a legitimate exemption.
 #
 # THE NEW RULE: a scoped window that contains a GENUINE /sprint-mode boop now REQUIRES the FULL
@@ -1885,13 +1885,13 @@ GROUNDING_REFIRE_DEDUP_RE = re.compile(
 #       cron re-fired; the FIRST boop in the cluster carries the grounding, the re-injection is not a
 #       new cycle). Detected by byte-identity (same command text) + ts-proximity (≤ the dedup window).
 #   (b) a NON-/sprint-mode turn — NO /sprint-mode boop in the scoped window at all (a pure conversation
-#       / status reply / answering a Corey question is NEVER a grounding boop, so it is NEVER failed).
+#       / status reply / answering a the steward question is NEVER a grounding boop, so it is NEVER failed).
 # Everything else with a genuine /sprint-mode boop must fully ground or fail.
 
 # A /sprint-mode COMMAND-MESSAGE or a calendar /sprint-mode boop (the genuine cycle trigger). Narrower
 # than SPRINT_OR_GROUNDING_PROMPT_RE on purpose: it matches the /sprint-mode INVOCATION shape (the slash
 # command or a "sprint-mode boop"/calendar-boop marker), NOT mere prose mentioning sprint mode. The
-# command-message the cron/Corey injects is the literal `/sprint-mode` (a user-role turn).
+# command-message the cron/the steward injects is the literal `/sprint-mode` (a user-role turn).
 SPRINT_MODE_COMMAND_RE = re.compile(
     r"(/sprint-mode\b|"
     r"sprint[-\s]?mode\s+boop|"
@@ -1899,7 +1899,7 @@ SPRINT_MODE_COMMAND_RE = re.compile(
     re.IGNORECASE,
 )
 
-# 🎛️ THE DEDUP WINDOW IS THE CADENCE KNOB (single named constant). COREY FIRM DIRECTIVE 2026-06-21:
+# 🎛️ THE DEDUP WINDOW IS THE CADENCE KNOB (single named constant). STEWARD FIRM DIRECTIVE 2026-06-21:
 # widen the boop cadence from EVERY HOUR to EVERY 2 HOURS. → PER-2H cadence: ANY /sprint-mode-class boop
 # within 2 HOURS of a prior full grounding is the SAME 2-hour cycle (deduped, logged, NOT a 2nd full
 # grounding/HUM owed). The FIRST /sprint-mode of a new 2-hour window still OWES the FULL contract
@@ -1908,8 +1908,8 @@ SPRINT_MODE_COMMAND_RE = re.compile(
 # genuine non-deduped /sprint-mode boop still OWES the ENTIRE completeness contract (all 9 elements + the
 # 10 per-doc haikus) — see GROUNDING-COMPLETENESS below. This is a CADENCE change, NOT a doc-strip;
 # leaner-by-design (fewer docs/haikus per boop) is a SEPARATE future change, not this one.
-#   7200 = per-2H  (CURRENT, Corey directive 2026-06-21).
-#   3600 = per-HOUR (prior — Corey ruling 2026-06-20; superseded by the 2026-06-21 widen).
+#   7200 = per-2H  (CURRENT, steward directive 2026-06-21).
+#   3600 = per-HOUR (prior — steward ruling 2026-06-20; superseded by the 2026-06-21 widen).
 #   60   = strict per-cycle (older default — superseded; kept here only as the documented alternative).
 # This is a ONE-LINE knob; the dedup MATCHER (broadened from byte-identical to /sprint-mode-CLASS-aware,
 # see _sprint_command_norm + _dedup_clustered_reinjections) is what makes the per-2h cadence actually
@@ -2181,7 +2181,7 @@ def check_wwcw_gate(turns):
     """FLAG/CANDIDATE: two distinct DECIDE-defect shapes the gate surfaces.
 
     (1) DECISION-ASK-NO-WWCW: an assistant turn asks the human to decide with NO WWCW marker
-        in that turn. The mind didn't even run the Corey-sim before handing the call over.
+        in that turn. The mind didn't even run the the steward-sim before handing the call over.
 
     (2) OVER-DEFERENCE (the strictly-WORSE shape the bare gate (1) MISSES): a turn that DID run a
         confident WWCW (WWCW marker PRESENT + confidence language) and then DEFERRED the call back
@@ -2194,7 +2194,7 @@ def check_wwcw_gate(turns):
     Both hit-shapes are candidate=True (ask/defer/confidence detection is heuristic).
 
     🚨 NOTE (2026-06-20): shapes (1)+(2) were TOO NARROW — a BARE PARK ("what needs you",
-    "HELD-FOR-COREY") has neither an ASK_DECIDE verb nor a WWCW+confidence pair, so it passed BOTH.
+    "HELD-FOR-STEWARD") has neither an ASK_DECIDE verb nor a WWCW+confidence pair, so it passed BOTH.
     The REAL gate is now the SEPARATE `check_block_no_wwcw` (id BLOCK-NO-WWCW), which is HARD-FAIL
     (not candidate) and fires on the BROAD block vocabulary with NO WWCW-run evidence. This function
     is RETAINED for its finer DECIDE-defect taxonomy (the over-deference brief the grader still uses)
@@ -2241,11 +2241,11 @@ def _block_cleared_by_colocated_run(block_idx, footprints, idx_pos):
     is now a SINGLE conjunction that requires BOTH halves of a real run, co-located within
     ±WWCW_COLOCATION_TURNS of the block:
 
-        a block clears IFF  (co-located SIMULATE-Corey footprint)  AND  (co-located RESOLVE footprint)
+        a block clears IFF  (co-located SIMULATE-the steward footprint)  AND  (co-located RESOLVE footprint)
 
     where, within the co-location window:
-      • SIMULATE = a WWCW_SIMULATE_RE match — the "given his rules → what Corey wants" derivation
-        (the rubber-duck-as-Corey beat). This is the half that proves the decision was DERIVED, not
+      • SIMULATE = a WWCW_SIMULATE_RE match — the "given his rules → what the steward wants" derivation
+        (the rubber-duck-as-the steward beat). This is the half that proves the decision was DERIVED, not
         bare-parked.
       • RESOLVE  = ANY of: a WWCW_RESOLVE_RE match (ACT+RECORD / ASK-SHOWING-WORK precise sub-fork),
         OR a structured WWCW marker (WWCW_MARKER_RE: 'WWCW-RUN:' / 'ACT+RECORD:' / 'WWCW VERDICT:'),
@@ -2257,16 +2257,16 @@ def _block_cleared_by_colocated_run(block_idx, footprints, idx_pos):
     block on a BARE 'ACT+RECORD:' token alone, no simulate (adv7=pass), contradicting spec's RESOLVE-
     without-SIMULATE-must-FAIL. v1 vocab-bug in miniature (±8 turns) — narrower but a real lying-check
     path. Fix: marker must co-locate a SIMULATE." v2 returned True on saw_marker ALONE and on saw_skill
-    ALONE — both are bare-RESOLVE (or bare-token) clears that skip the Corey-sim. adv2 (resolve-no-sim)
+    ALONE — both are bare-RESOLVE (or bare-token) clears that skip the the steward-sim. adv2 (resolve-no-sim)
     had the same root cause: a WWCW_RESOLVE_RE match with no SIMULATE wrongly... no, v2 already required
     sim+resolve for that path — but the marker/skill fast-paths were the back doors around it. v3 removes
     the back doors: there is now exactly ONE clear-rule, the AND.
 
-    THE DISCRIMINATOR THAT MATTERS (Corey): was the block RESOLVED by a run (= a Corey-sim derivation that
-    landed in an act/record-or-derived-ask), or left hanging as 'awaiting Corey'?
+    THE DISCRIMINATOR THAT MATTERS (the steward): was the block RESOLVED by a run (= a the steward-sim derivation that
+    landed in an act/record-or-derived-ask), or left hanging as 'awaiting the steward'?
       • a bare SIMULATE, no RESOLVE          → run started, left HANGING (a bare park)   → does NOT clear.
       • a bare RESOLVE / bare ACT+RECORD: marker / bare wwcw-token, no SIMULATE
-                                              → action/announcement with no Corey-sim     → does NOT clear.
+                                              → action/announcement with no the steward-sim     → does NOT clear.
       • SIMULATE + (RESOLVE | marker | skill-load), co-located → a real run resolving it  → CLEARS.
 
     footprints: dict idx -> (simulate, resolve, marker, skill) for assistant turns.
@@ -2300,7 +2300,7 @@ def _block_cleared_by_colocated_run(block_idx, footprints, idx_pos):
 def check_block_no_wwcw(turns):
     """🚨 HARD-FAIL: a BLOCK present with NO CO-LOCATED REAL-WWCW-RUN footprint resolving it.
 
-    THE REAL GATE (Corey directive 2026-06-20, verbatim: "'What needs you' is a block and i see zero
+    THE REAL GATE (steward directive 2026-06-20, verbatim: "'What needs you' is a block and i see zero
     evidence that you ran the wwcw skill... If no evidence of wwcw run it's to fail your boop").
 
     🚨 v4 (2026-06-20, mind-lead — PRIMARY-AUTHORED-ONLY block test; the FALSE-POSITIVE cure HUM caught on
@@ -2328,17 +2328,17 @@ def check_block_no_wwcw(turns):
       (1) CO-LOCATION: the footprint must appear WITHIN ±WWCW_COLOCATION_TURNS of the block turn, never
           anywhere-in-session. A run 1500 turns away can NOT clear a bare park at turn 5.
       (2) REAL-RUN FOOTPRINT (the RESOLUTION STRUCTURE of an actual 5-beat run, co-located):
-            • the RESOLUTION-STRUCTURE path: BOTH a SIMULATE-Corey derivation (WWCW_SIMULATE_RE —
-              'what would Corey want', 'given his rules → …') AND a RESOLVE (WWCW_RESOLVE_RE — an ACT+RECORD:
+            • the RESOLUTION-STRUCTURE path: BOTH a SIMULATE-the steward derivation (WWCW_SIMULATE_RE —
+              'what would the steward want', 'given his rules → …') AND a RESOLVE (WWCW_RESOLVE_RE — an ACT+RECORD:
               actually fired/decided+recorded, OR an ASK-SHOWING-WORK: the precise derived sub-fork that
-              genuinely needs Corey) co-located with the block. A SIMULATE with no RESOLVE = a run left
-              HANGING (a bare park) → does NOT clear. A RESOLVE with no SIMULATE = action with no Corey-sim
+              genuinely needs the steward) co-located with the block. A SIMULATE with no RESOLVE = a run left
+              HANGING (a bare park) → does NOT clear. A RESOLVE with no SIMULATE = action with no the steward-sim
               → does NOT clear.  (per _block_cleared_by_colocated_run)
             • the STRUCTURED-MARKER fast-path: a co-located WWCW-RUN:/ACT+RECORD:/WWCW VERDICT: marker
               clears alone (a run that self-announced). BONUS — not relied on (retroactive runs lack it).
             • a co-located Skill('wwcw') tool-load also clears (the doctrine was literally invoked here).
-      The discriminator that MATTERS (Corey): was the block RESOLVED by a run, or left hanging as
-      'awaiting Corey'? A bare park = block-phrase with NO co-located resolution → FAIL. A real run =
+      The discriminator that MATTERS (the steward): was the block RESOLVED by a run, or left hanging as
+      'awaiting the steward'? A bare park = block-phrase with NO co-located resolution → FAIL. A real run =
       block/decision WITH co-located simulate+resolve (or marker / skill-load) → PASS.
 
     A block is the broad park-family (BLOCK_RE, IGNORECASE) OR a bare ALL-CAPS status-flag
@@ -2351,7 +2351,7 @@ def check_block_no_wwcw(turns):
     🛡️ FALSE-FAIL GUARD (load-bearing): a block that DOES have a co-located real WWCW run is CLEARED
     (not a false-fail — we never fail a mind that ran WWCW right there). A session with no block at all =
     pass. Pure status / reports / notifications do NOT match BLOCK_RE (anchored to park/hold/present/ask-
-    for-Corey shapes, never a bare question mark), so a status update is never a false block. The fail
+    for-the steward shapes, never a bare question mark), so a status update is never a false block. The fail
     fires ONLY on a park the mind made the human carry WITHOUT a co-located WWCW run resolving it.
 
     Returns ("flag", hits) naming the first UNCLEARED block, with co-location-window metadata, or ("pass", [])."""
@@ -2389,9 +2389,9 @@ def check_block_no_wwcw(turns):
     if uncleared:
         hits = [{
             "turn_index": uncleared[0],
-            "brief": ("BLOCK (park/hold/present-for-Corey) with NO co-located WWCW-RUN footprint "
+            "brief": ("BLOCK (park/hold/present-for-the steward) with NO co-located WWCW-RUN footprint "
                       "(simulate+resolve / marker / skill-load within ±%d turns) — boop FAILED per "
-                      "Corey 2026-06-20 (a block without a co-located WWCW run fails the boop)"
+                      "the steward 2026-06-20 (a block without a co-located WWCW run fails the boop)"
                       % WWCW_COLOCATION_TURNS),
             "uncleared_block_turns": uncleared[:50],
             "uncleared_block_count": len(uncleared),
@@ -2692,13 +2692,13 @@ def check_project_folder_touch(turns):
 def check_doc_currency(turns):
     """CANDIDATE (Stage-2 / HUM): keep-worthy work landed this cycle but a DEVLOG/WORKBOARD is STALE.
 
-    The DOC-UP-TO-DATE mandate (Corey directive 2026-06-19): HUM must catch when keep-worthy work
+    The DOC-UP-TO-DATE mandate (steward directive 2026-06-19): HUM must catch when keep-worthy work
     happened but the devlogs/WORKBOARD were NOT updated — the documentation-staleness that lets a day
     evaporate (today the human had to catch it). The existing PROJECT-FOLDER-TOUCH check is too NARROW
     (projects/<x>/ only); THIS check covers the BROADER civ-level surfaces: the WORKBOARD + the named
     program-home devlogs (self-knowledge / m3-combo).
 
-    RECEIPT, NOT CLAIM (Corey today: verify ACTUAL RECEIPT — the behavior happened on disk):
+    RECEIPT, NOT CLAIM (the steward today: verify ACTUAL RECEIPT — the behavior happened on disk):
       • keep-worthy SIGNALS detected in the scoped turns, with the LATEST signal's epoch timestamp:
           (1) canon_append Bash invocation  (a substrate-delta committed)
           (2) a Write of a NEW report under data/reports/*.md  (a keep-worthy artifact)
@@ -2851,7 +2851,7 @@ def check_sprint_mode_read(turns, full_turns=None):
     complete session) when provided, NOT the scoped window. This mirrors the HUM judge's invariant:
     detection of NEW work is delta-scoped; verification of a whole-session property is full-session.
 
-    This is the ACTUAL-RECEIPT of the sprint-mode floor read — Corey directive 2026-06-19: today
+    This is the ACTUAL-RECEIPT of the sprint-mode floor read — steward directive 2026-06-19: today
     the floor read is CLAIMED, not verified, so a shallow/skipped grounding slips past. The receipt
     is the load-verify block landing in-session (assistant text OR a scratchpad Write/Edit). We do
     NOT trust a self-report 'I read the floor' — we look for the ARTIFACT the floor read leaves.
@@ -2938,7 +2938,7 @@ def check_haiku_per_doc(turns, full_turns=None):
     off-session haiku archive is windowed correctly). Delta-scoping detects NEW work; this verifies a
     whole-session comprehension-gate receipt.
 
-    This is the ACTUAL-RECEIPT of the grounding-docs haiku gate — Corey directive 2026-06-19: the
+    This is the ACTUAL-RECEIPT of the grounding-docs haiku gate — steward directive 2026-06-19: the
     gate is PROVEN by the artifact it leaves (the haiku-archive entries), exactly like canon_recall's
     hit-ledger proves recall. We read the OFF-SESSION archive and count {ts, doc, haiku} rows whose
     `ts` falls inside [session_first_ts, session_last_ts]. If a grounding/slow-sprint was invoked but
@@ -2974,7 +2974,7 @@ def check_haiku_per_doc(turns, full_turns=None):
     lo = (first_ts - pad) if (first_ts is not None and pad is not None) else first_ts
     hi = (last_ts + pad) if (last_ts is not None and pad is not None) else last_ts
 
-    archive_path = os.path.join(os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"), HAIKU_ARCHIVE_PATH)
+    archive_path = os.path.join(os.environ.get("AICIV_ROOT", "$AICIV_ROOT"), HAIKU_ARCHIVE_PATH)
     fresh = 0
     fresh_docs = set()
     archive_read_ok = True
@@ -3083,7 +3083,7 @@ def _count_fresh_haiku_docs(scan, window=None, no_backward_pad=False):
     hi = (last_ts + pad) if (last_ts is not None and pad is not None) else last_ts
     if first_ts is None and last_ts is None:
         return 0, False  # no session window -> cannot attribute any haiku -> not verifiable
-    archive_path = os.path.join(os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"), HAIKU_ARCHIVE_PATH)
+    archive_path = os.path.join(os.environ.get("AICIV_ROOT", "$AICIV_ROOT"), HAIKU_ARCHIVE_PATH)
     if not os.path.isfile(archive_path):
         return 0, False
     fresh_docs = set()
@@ -3150,7 +3150,7 @@ def _genuine_sprint_mode_boops(scan):
         if _is_injected_or_skilldoc_turn(t):
             continue
         # assistant prose merely REFERRING to /sprint-mode ("the BOOP /sprint-mode already ran") is not
-        # a fresh invocation — the invocation is a user-role command-message (the cron/Corey inject it)
+        # a fresh invocation — the invocation is a user-role command-message (the cron/the steward inject it)
         # OR a calendar-boop marker. Restrict to user-role invocation turns.
         if t.get("role") != "user":
             continue
@@ -3161,7 +3161,7 @@ def _genuine_sprint_mode_boops(scan):
 def _sprint_command_norm(t):
     """A CLASS-AWARE signature of a /sprint-mode boop turn (for the per-hour cadence dedup).
 
-    🚨 BROADENED 2026-06-20 (Corey "one an hour only" + class-aware ruling): the dedup used to compare
+    🚨 BROADENED 2026-06-20 (the steward "one an hour only" + class-aware ruling): the dedup used to compare
     BYTE-IDENTICAL normalized text — but the stacking boops are DIFFERENT strings that are all the SAME
     /sprint-mode CLASS:
         • the DAEMON fire            → "/sprint-mode"
@@ -3219,7 +3219,7 @@ def _dedup_clustered_reinjections(scan, boop_idxs, anchor_norm=None, anchor_ts=N
     as the prior KEPT/anchor boop (matcher BROADENED 2026-06-20 from byte-identical to class-aware — see
     _sprint_command_norm; the daemon fire / calendar boop / injected skill-doc are DIFFERENT strings but
     all dedup to the same class token) AND (b) lands within SPRINT_DEDUP_WINDOW_SECONDS of that prior
-    boop's timestamp. CURRENT 7200s = PER-2H cadence (Corey directive 2026-06-21 "every 2 hours"): ANY
+    boop's timestamp. CURRENT 7200s = PER-2H cadence (steward directive 2026-06-21 "every 2 hours"): ANY
     /sprint-mode-class boop within 2 hours of a prior full grounding is the same 2-hour cycle (2nd..N →
     deduped). The FIRST boop of a new 2-hour window is ALWAYS kept (it owes the FULL contract — cadence
     widened, per-boop standard unchanged). If timestamps are missing for a pair, we do NOT dedup
@@ -3289,7 +3289,7 @@ def _has_work_act(scan, after_idx=None):
 def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     """🚨 HARD-FAIL: a grounding boop that did substantive grounding work but is NOT COMPLETE.
 
-    THE COMPLETE-OR-FAIL CONTRACT (Corey directive 2026-06-20, verbatim: "Hum needs to check and
+    THE COMPLETE-OR-FAIL CONTRACT (steward directive 2026-06-20, verbatim: "Hum needs to check and
     fully FAIL any boop that isn't hyper detailed and complete. Miss one doc or one haiku or one step
     it's 100% fail on that boop. The discipline is EVERYTHING.").
 
@@ -3298,7 +3298,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     auto-consolidate sweep, HUM DEFERRED — and PASSED the narrower SPRINT-MODE-READ + HAIKU-PER-DOC
     receipts (which only confirm SOME artifact landed). This gate enforces the FULL written contract.
 
-    STRICT (no partial credit — Corey's "miss one … it's 100% fail"): the boop is graded against the
+    STRICT (no partial credit — the steward's "miss one … it's 100% fail"): the boop is graded against the
     ENUMERATED required-element checklist. If ANY required element is absent → status=flag → HARD-FAIL
     (in GROUNDING_COMPLETENESS_HARDFAIL_CHECKS, ABSENT from CANDIDATE_CHECKS → breaks summary.clean →
     forces verdict=HOLLOW). Partial completion = full failure.
@@ -3309,7 +3309,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
                             context-informed haiku PER doc — count haikus == count docs, NOT one-per-
                             cycle). The exact miss the afternoon boops committed. (10 → 11 on 2026-06-21
                             to match the new Doc -0.5 WWCW read→haiku doc fleet-lead added.)
-      (1b) read_haiku_pairing — (NEW 2026-06-21, Corey directive "Hum manifest should show it checking
+      (1b) read_haiku_pairing — (NEW 2026-06-21, steward directive "Hum manifest should show it checking
                             for read commands followed by haiku") each grounding-doc Read (the doc-open)
                             is FOLLOWED by a haiku (the comprehension). 🛡️ CONSERVATIVE TRIGGER: fires
                             ONLY on a GENUINE read-one-at-a-time grounding pass — signaled by ≥docset
@@ -3326,7 +3326,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
       (7) auto_consolidate — the auto-consolidate sweep was run (the step the afternoon boops skipped).
       (8) hum_fired       — HUM fired as the deterministic last step (Workflow(workflows/hum.js) seen).
 
-    🛡️ FALSE-FAIL GUARD (HONEST — Corey's explicit guard, NARROWED 2026-06-20 to close the lean-cycle
+    🛡️ FALSE-FAIL GUARD (HONEST — the steward's explicit guard, NARROWED 2026-06-20 to close the lean-cycle
     loophole `"lean cycle" < discipline`). The contract fires on a boop with EITHER trigger:
       TRIGGER 1 — a GROUNDING_PROMPT_RE pass (real grounding / slow-sprint, haiku-bearing) AND ≥1
                   grounding-work-signature (≥1 fresh haiku-doc OR the load-verify block OR a doc-read
@@ -3338,13 +3338,13 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
                   signatures — the lean-cycle dodge (a genuine boop that did NO grounding) now FAILS.
     The ONLY two remaining exemptions: (a) a byte-identical /sprint-mode re-injection within
     SPRINT_DEDUP_WINDOW_SECONDS (the cadence-lock cluster carve-out); (b) a non-/sprint-mode turn (no
-    /sprint-mode boop in the window — a pure status reply / a Corey question is never a grounding boop,
+    /sprint-mode boop in the window — a pure status reply / a the steward question is never a grounding boop,
     never failed). ARCHIVE-UNVERIFIABLE: if the haiku archive is unreadable / the session has no
     parseable timestamps, the per-doc-haiku element is treated as could-not-verify and NOT counted as a
     miss (we never fail what we could not check) — but the OTHER 8 in-session elements are still
     required (so a lean /sprint-mode that did NO load-verify/synthesis/etc still FAILS).
 
-    🚨 PER-INVOCATION (PER-CYCLE) WINDOW (2026-06-20, mind-lead — the COMPLETE-PER-BOOP fix). Corey
+    🚨 PER-INVOCATION (PER-CYCLE) WINDOW (2026-06-20, mind-lead — the COMPLETE-PER-BOOP fix). the steward
     caught it: GROUNDING-COMPLETENESS was WHOLE-SESSION scoped. With the cron injecting /sprint-mode
     EVERY boop, a LEAN boop that wrote ~0 fresh haikus THIS window still PASSED completeness by riding
     EARLIER cycles' haikus (the last HUM reported per_doc_haikus=34 session-wide for a lean boop). So
@@ -3413,7 +3413,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     per_cycle_scoped = bool(since_turn and since_turn > 0)
 
     # --- TRIGGER: does the completeness contract apply to THIS window? ---
-    # 🚨 LEAN-CYCLE LOOPHOLE CLOSE (Corey 2026-06-20, `"lean cycle" < discipline`): the contract now
+    # 🚨 LEAN-CYCLE LOOPHOLE CLOSE (the steward 2026-06-20, `"lean cycle" < discipline`): the contract now
     # fires on EITHER of two triggers — and the old "lean /sprint-mode is exempt" branch is GONE.
     #   TRIGGER 1 (kept): a GROUNDING / slow-sprint pass (GROUNDING_PROMPT_RE — the haiku-bearing shape).
     #   TRIGGER 2 (NEW — closes the loophole): a GENUINE /sprint-mode boop —
@@ -3456,7 +3456,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     if trigger_idx is None:
         # EXEMPTION (b): NO genuine grounding-trigger in THIS window.
         #   • a NON-/sprint-mode turn (no /sprint-mode boop at all — a pure conversation / status reply /
-        #     answering a Corey question) is NEVER a grounding boop → pass, never failed. (no over-fire)
+        #     answering a the steward question) is NEVER a grounding boop → pass, never failed. (no over-fire)
         #   • a /sprint-mode boop that is ENTIRELY a byte-identical 60s-dedup re-injection (kept_boops
         #     empty, all deduped) is the cadence-lock cluster carve-out → pass (the prior boop grounds).
         #   • a /sprint-mode boop with NO work-act (an empty echo, no tool-use) is not a substantive
@@ -3488,7 +3488,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     saw_hum_fired = False
     saw_refire_dedup = False   # 2026-06-20: the clustered-re-fire dedup marker (corroborating exempt)
     docread_markers = 0
-    # 🚨 READ→HAIKU PAIRING (2026-06-21, mind-lead — Corey directive: "Hum manifest should show it
+    # 🚨 READ→HAIKU PAIRING (2026-06-21, mind-lead — steward directive: "Hum manifest should show it
     # checking for read commands followed by haiku"). A Read tool-call FOLLOWED by a haiku is the
     # grounding-PROOF (the doc was comprehended into a haiku, not merely opened). We count the PAIRING,
     # not just the flat archive haiku count: `read_tool_calls` = how many Read tool-uses fired this
@@ -3606,7 +3606,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
         # full-session (firewall back-compat): original predicate, byte-identical (archive count incl.).
         did_grounding_work = (fresh_haiku_docs >= 1) or saw_load_verify or (docread_markers >= 1)
 
-    # 🚨 LEAN-CYCLE LOOPHOLE CLOSE (Corey 2026-06-20, `"lean cycle" < discipline`): when the trigger is a
+    # 🚨 LEAN-CYCLE LOOPHOLE CLOSE (the steward 2026-06-20, `"lean cycle" < discipline`): when the trigger is a
     # GENUINE non-deduped /sprint-mode boop (TRIGGER 2), the boop OWES the full grounding REGARDLESS of
     # whether it left grounding-work signatures. The whole POINT of a lean-cycle dodge is that the boop
     # did NO grounding work — so the `did_grounding_work` exemption MUST NOT exempt it (that exemption was
@@ -3617,7 +3617,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     # any boop reaching here under TRIGGER 2 is a KEPT (non-deduped) genuine cycle that must fully ground.
     grounding_pass_trigger = (trigger_kind == "grounding-pass")
     # 🚨 RECENCY-EXEMPTION KILL (fleet-lead 2026-06-20, per the approved CLOCKWORK-EVERY-FIRE design,
-    # Corey verbatim `"lean cycle" < discipline` + "Hum every cycle FOR SURE"). THE RESIDUAL LEAK this
+    # steward verbatim `"lean cycle" < discipline` + "Hum every cycle FOR SURE"). THE RESIDUAL LEAK this
     # closes: the prior v5.1 branch exempted ANY grounding-pass with no work-signatures — including a
     # BARE grounding-pass with NO dedup-corroboration (the `else` brief below used to read "not a
     # substantive grounding boop, completeness contract N/A" and PASS). That was the recency-as-excuse
@@ -3665,12 +3665,12 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     haiku_complete = (fresh_haiku_docs >= GROUNDING_COMPLETE_DOCSET)
     if archive_verifiable and not haiku_complete:
         missing.append(f"per-doc-haikus({fresh_haiku_docs}/{GROUNDING_COMPLETE_DOCSET})")
-    # (1b) READ→HAIKU PAIRING (2026-06-21, mind-lead — Corey directive: "Hum manifest should show it
+    # (1b) READ→HAIKU PAIRING (2026-06-21, mind-lead — steward directive: "Hum manifest should show it
     #      checking for read commands followed by haiku"). The grounding-PROOF is not merely that N
     #      haikus exist in the archive — it is that each grounding-doc Read (the doc-open) is FOLLOWED
     #      by a haiku (the comprehension). A grounding pass that opened the docs but did NOT pair each
     #      read with a haiku (read-without-comprehend) is INCOMPLETE.
-    #      🛡️ CONSERVATIVE TRIGGER (do NOT over-tune the born-today gate, Corey 2026-06-21): this element
+    #      🛡️ CONSERVATIVE TRIGGER (do NOT over-tune the born-today gate, the steward 2026-06-21): this element
     #      fires ONLY when the boop is a GENUINE read-one-at-a-time grounding pass — signaled by ≥docset
     #      DOC-READ MARKERS (`[Doc N read]`, the grounding-specific artifact a real grounding leaves),
     #      NOT raw Read tool-call count. A normal WORK window reads many files (≥docset Read tool-calls)
@@ -3703,12 +3703,12 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
     elements = {
         "per_doc_haikus": fresh_haiku_docs,
         "haiku_archive_verifiable": archive_verifiable,
-        # 🚨 READ→HAIKU PAIRING (2026-06-21): the read-command→haiku PAIRING proof Corey asked for.
+        # 🚨 READ→HAIKU PAIRING (2026-06-21): the read-command→haiku PAIRING proof the steward asked for.
         "read_tool_calls": read_tool_calls,
         "read_haiku_pairs": read_haiku_pairs,
         "read_haiku_pairing_complete": pairing_complete,
         # 🚨 HAIKU-SAVED: the archive IS the durable save (count(haikus in archive this window)). A
-        #    verifiable archive with >=docset fresh entries proves "saving all the haikus" (Corey).
+        #    verifiable archive with >=docset fresh entries proves "saving all the haikus" (the steward).
         "haikus_saved_to_archive": (archive_verifiable and haiku_complete),
         "load_verify": saw_load_verify,
         "synthesis": saw_synthesis,
@@ -3726,7 +3726,7 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
         # a lean /sprint-mode cycle that triggered via a genuine /sprint-mode boop (not a grounding-pass)
         # surfaces the trigger so HUM names the EXACT shape Primary dodged ("lean cycle < discipline").
         lean_note = (" [LEAN /sprint-mode CYCLE — genuine boop did NOT fully ground; "
-                     "'lean cycle' < discipline, Corey 2026-06-20]"
+                     "'lean cycle' < discipline, the steward 2026-06-20]"
                      if trigger_kind == "sprint-mode-boop" else "")
         # 🚨 RECENCY-EXEMPTION KILL (fleet-lead 2026-06-20): an UNCORROBORATED bare grounding-pass that
         # did NO fresh work this window AND has no clustered-re-fire corroboration reaches here via the
@@ -3735,9 +3735,9 @@ def check_grounding_completeness(turns, full_turns=None, since_turn=0):
         recency_dodge = (trigger_kind == "grounding-pass") and (not did_grounding_work)
         recency_note = (" [RECENCY-DODGE — bare grounding-pass, no fresh work, no clustered-re-fire "
                         "corroboration; the just-grounded/lean exemption is KILLED, every fire grounds "
-                        "fully, Corey 2026-06-20]" if recency_dodge else "")
+                        "fully, the steward 2026-06-20]" if recency_dodge else "")
         return "flag", [{"turn_index": trigger_idx,
-                         "brief": ("INCOMPLETE grounding boop (Corey complete-or-fail contract "
+                         "brief": ("INCOMPLETE grounding boop (the steward complete-or-fail contract "
                                    "2026-06-20: miss one doc/haiku/step = 100% fail) — missing: "
                                    + ", ".join(missing) + lean_note + recency_note),
                          "missing_elements": missing,
@@ -3788,7 +3788,7 @@ def check_freeze_edit(turns, freeze_cfg):
                 continue
             # normalize: match against both abs and repo-relative forms
             rel = fp
-            for root in ((os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG") + "/"),):
+            for root in ((os.environ.get("AICIV_ROOT", "$AICIV_ROOT") + "/"),):
                 if rel.startswith(root):
                     rel = rel[len(root):]
             matched = any(fnmatch.fnmatch(fp, g) or fnmatch.fnmatch(rel, g) for g in globs)
@@ -3825,14 +3825,14 @@ CHECK_ORDER = [
 
 # checks whose hits are inherently candidate-only (heuristic, not hard verdicts)
 # 🚨 BLOCK-NO-WWCW is DELIBERATELY ABSENT from this set — it is a HARD-FAIL check (a block without a
-# WWCW run FAILS the boop, Corey 2026-06-20). WWCW-GATE remains candidate-only (its finer DECIDE
+# WWCW run FAILS the boop, the steward 2026-06-20). WWCW-GATE remains candidate-only (its finer DECIDE
 # taxonomy is heuristic, weighed by the Stage-2 grader); BLOCK-NO-WWCW is the boop-failing enforcement.
 CANDIDATE_CHECKS = {"WWCW-GATE", "CLAIM-BACKING", "DONE-DONE", "SKILL-FLOOR", "SKILL-CANDIDATE", "DELEGATION-SHAPE", "PROJECT-FOLDER-TOUCH", "DOC-CURRENCY", "SWEEP-ACT-ON-FLAGGED", "SPRINT-MODE-READ", "HAIKU-PER-DOC"}
 # informational checks (a 'flag' is a signal for downstream, not a defect of the session)
 INFORMATIONAL_CHECKS = {"SYNTHETIC-ERROR"}
 
 # ---------------------------------------------------------------------------
-# GROUNDING-RECEIPT HARD-FAIL set (Corey directive 2026-06-19, v1.6): "HUM needs to FAIL
+# GROUNDING-RECEIPT HARD-FAIL set (steward directive 2026-06-19, v1.6): "HUM needs to FAIL
 # your sprint-mode boops if they can't find proof you did it correctly." The two
 # grounding-receipt checks (SPRINT-MODE-READ + HAIKU-PER-DOC) are PROMOTED from candidate-only
 # to HARD-FAIL flags — but ONLY in the specific, airtight case where a /sprint-mode | grounding
@@ -3855,9 +3855,9 @@ INFORMATIONAL_CHECKS = {"SYNTHETIC-ERROR"}
 GROUNDING_RECEIPT_HARDFAIL_CHECKS = {"SPRINT-MODE-READ", "HAIKU-PER-DOC"}
 
 # ---------------------------------------------------------------------------
-# 🚨 BLOCK-NO-WWCW HARD-FAIL (Corey directive 2026-06-20, verbatim: "If no evidence of wwcw run
+# 🚨 BLOCK-NO-WWCW HARD-FAIL (steward directive 2026-06-20, verbatim: "If no evidence of wwcw run
 # it's to fail your boop"). This check is NOT in CANDIDATE_CHECKS — a genuine flag breaks summary.clean
-# (the boop FAILS), full stop. The flag fires ONLY when a BLOCK (park/hold/present-for-Corey) is present
+# (the boop FAILS), full stop. The flag fires ONLY when a BLOCK (park/hold/present-for-the steward) is present
 # AND the scanned window holds ZERO WWCW-run footprint (check_block_no_wwcw's airtight predicate). A clean
 # session, a status-only session, or any session where WWCW was actually run = status="pass" → no hard-fail.
 # This naming makes the boop-failing intent explicit even though the default `else` branch (not-candidate →
@@ -3865,7 +3865,7 @@ GROUNDING_RECEIPT_HARDFAIL_CHECKS = {"SPRINT-MODE-READ", "HAIKU-PER-DOC"}
 BLOCK_NO_WWCW_HARDFAIL_CHECKS = {"BLOCK-NO-WWCW"}
 
 # ---------------------------------------------------------------------------
-# 🚨 GROUNDING-COMPLETENESS HARD-FAIL (Corey directive 2026-06-20, verbatim: "Hum needs to check and
+# 🚨 GROUNDING-COMPLETENESS HARD-FAIL (steward directive 2026-06-20, verbatim: "Hum needs to check and
 # fully FAIL any boop that isn't hyper detailed and complete. Miss one doc or one haiku or one step
 # it's 100% fail on that boop. The discipline is EVERYTHING."). This check is NOT in CANDIDATE_CHECKS
 # — a genuine flag breaks summary.clean (the boop FAILS), full stop. STRICT: partial completion = full
@@ -3954,13 +3954,13 @@ def build_record(session_id, path, turns, parse_errors, freeze_cfg, full_turns=N
         if status == "na":
             na.append(cid)
         elif status == "flag":
-            # 🚨 BLOCK-NO-WWCW HARD-FAIL (Corey 2026-06-20): a BLOCK with no WWCW-run evidence FAILS
+            # 🚨 BLOCK-NO-WWCW HARD-FAIL (the steward 2026-06-20): a BLOCK with no WWCW-run evidence FAILS
             # the boop. Classified HARD explicitly (it is not in CANDIDATE_CHECKS, so the `else` would
             # already flag it — this named branch makes the boop-failing intent unmissable + ordered
             # before the candidate fallthrough so it can never be soft-classified by a future edit).
             if cid in BLOCK_NO_WWCW_HARDFAIL_CHECKS:
                 flagged.append(cid)
-            # 🚨 GROUNDING-COMPLETENESS HARD-FAIL (Corey 2026-06-20): a substantive grounding boop that
+            # 🚨 GROUNDING-COMPLETENESS HARD-FAIL (the steward 2026-06-20): a substantive grounding boop that
             # is MISSING ≥1 required element (a doc/haiku/step) FAILS the boop. STRICT — partial = full
             # failure. Not in CANDIDATE_CHECKS, so the `else` would already flag it; this named branch
             # makes the boop-failing intent unmissable + ordered before the candidate fallthrough so a
@@ -3985,7 +3985,7 @@ def build_record(session_id, path, turns, parse_errors, freeze_cfg, full_turns=N
             else:
                 flagged.append(cid)
     # clean = no HARD flags. Candidate + informational do not break clean; a GENUINE grounding-receipt
-    # flag (invoked sprint boop with no proof) DOES (v1.6 Corey hard-fail directive).
+    # flag (invoked sprint boop with no proof) DOES (v1.6 the steward hard-fail directive).
     clean = (len(flagged) == 0)
     return {
         "stage": "1-deterministic",
@@ -4014,7 +4014,7 @@ def main():
                "(never message text, secrets, or PII).",
     )
     ap.add_argument("session", nargs="?", default=None,
-                    help="Path to session .jsonl (default: newest in the ACG project dir).")
+                    help="Path to session .jsonl (default: newest in the origin project dir).")
     ap.add_argument("--project-dir", default=DEFAULT_PROJECT_DIR,
                     help="Project dir to pick the newest session from when none is given.")
     ap.add_argument("--freeze-config", default=None,
@@ -4043,7 +4043,7 @@ def main():
     # gate read its config by DEFAULT for EVERY invocation — direct calls AND HUM's DETECT shell —
     # so FREEZE-CONFIG-MISSING stops firing once the config is present. Reversible: delete this
     # block + the constant to revert to flag-only behavior (.bak.20260619T210001Z-pre-freeze-default).
-    DEFAULT_FREEZE_CONFIG = (os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG") + "/config/freeze-config.json")
+    DEFAULT_FREEZE_CONFIG = (os.environ.get("AICIV_ROOT", "$AICIV_ROOT") + "/config/freeze-config.json")
     freeze_config_path = args.freeze_config
     if not freeze_config_path and os.path.isfile(DEFAULT_FREEZE_CONFIG):
         freeze_config_path = DEFAULT_FREEZE_CONFIG

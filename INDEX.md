@@ -6,7 +6,7 @@ This repo carries the **SYSTEM**, never secrets. It is the packaged form of the 
 
 > **THE MAIN RULE governs everything here:** *The human should not have to know anything about how the AI operates* — burden-removal **WITH transparency**, never opacity. The human gives a spark once and gets a grounded outcome forever, while able to audit every byte at will but never required to maintain it.
 
-**Version:** rebuild-20260701 (Corey directive 2026-07-01 *"can we update this repo... and maybe fully rebuild it we have changed ALOT. and include the readme and curriculum etc."*)
+**Version:** rebuild-20260701 (steward directive 2026-07-01 *"can we update this repo... and maybe fully rebuild it we have changed ALOT. and include the readme and curriculum etc."*)
 **Prior release:** ship-2026-06-22 (GitHub HEAD `0715005`, S7 GENERICIZATION CURE landed on-disk 2026-06-29, unpushed until this rebuild).
 
 ---
@@ -110,7 +110,7 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `adapters/auth-adapter.md` | Seam B (AgentAUTH JWT) — `_sign_jwt --seat` abstraction |
 | `adapters/self-inject-adapter.md` | Seam D (tmux self-inject keystroke) — how `/sprint-mode` reaches Primary. **⚠️ 2026-07-01 dead-pane doctrine applies: a liveness gate is REQUIRED on any wake-inject path that counts a wake as fired — see doctrine referenced in `docs/EVOLUTION-SINCE-SHIP.md` §4.** |
 | `adapters/runner-adapter.md` | Seam E (Dynamic-Workflow runner) — non-thin; what a non-Claude-Code harness must provide |
-| `adapters/canon-grader-adapter.md` | the generic canon-trunk acceptance-probe slot — TB plugs Drift/bulletproof-hum; the load-bearing genericization |
+| `adapters/canon-grader-adapter.md` | the generic canon-trunk acceptance-probe slot — a partner plugs Drift/bulletproof-hum; the load-bearing genericization |
 
 ### top-level
 | File | Role |
@@ -120,7 +120,7 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `FRICTION-CAPTURE.md` | S7 friction-intake (loop ARMED; adopter rows = NONE yet) |
 | `.gitignore` | ignore rules (`.env`, `*.key`, `*.bak.*`, etc.) |
 
-**COUNTS (2026-07-01, post-rebuild):** 55 files — 9 docs (was 6; +`EVOLUTION-SINCE-SHIP.md` + `HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) · 8 tests · 20 skill files (11 skills) · 9 tool files · 1 workflow · 6 adapters · 3 top-level files (`INDEX.md` + `STAND-IT-UP.md` + `FRICTION-CAPTURE.md`) + `.gitignore`. *(Delta from 2026-06-29 count of 53 = +2 doc files copied in from origin substrate per Corey directive 2026-07-01, + this INDEX rewire.)*
+**COUNTS (2026-07-01, post-rebuild):** 55 files — 9 docs (was 6; +`EVOLUTION-SINCE-SHIP.md` + `HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) · 8 tests · 20 skill files (11 skills) · 9 tool files · 1 workflow · 6 adapters · 3 top-level files (`INDEX.md` + `STAND-IT-UP.md` + `FRICTION-CAPTURE.md`) + `.gitignore`. *(Delta from 2026-06-29 count of 53 = +2 doc files copied in from origin substrate per steward directive 2026-07-01, + this INDEX rewire.)*
 
 ---
 
@@ -131,7 +131,7 @@ This repo carries the **SYSTEM**, never secrets. Verified clean at packaging:
 - **NO** steward-private or family PII. The one {AICIV-NAME}-origin comms-governance insider line (real human names + a private family email) was **REDACTED to placeholders** in `skills/wwcw/wwcw-ruleset.md` — a fork populates its `<INSIDER_LIST>` from its OWN steward relationships, never inheriting another civ's private contacts.
 - A small number of {AICIV-NAME}-origin **endpoint URLs** (e.g. an event-audit API host) remain in tool doc-strings/comments as *examples*; they use `$JWT` env-var placeholders, carry no live token, and a fork sets its own endpoint per `STAND-IT-UP.md` §0. They are infra-pointers, not secrets.
 - **S7 GENERICIZATION CURE (2026-06-29):** the load-bearing partner-name `{PARTNER-NAME}` and instructional `{STEWARD-NAME}` placeholders are in place; dated lineage attributions preserved as honest history.
-- **2026-07-01 REBUILD note:** the two included docs (`HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) carry the origin civ's specific proper names (Corey, Deb, etc.) as worked examples. These are not credentials or contact info — they are pedagogical anchors ("your principal" is easier to teach against a concrete example). A fork reading them substitutes its own principals in its head; the machinery description is portable. The prose-genericization sweep from 2026-06-29 applied to the skill prose (the load-bearing loadable docs); the two big included docs are worked-example prose, comparable to `DEVLOG.md`'s origin-civ example nature.
+- **2026-07-01 REBUILD note:** the two included docs (`HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) carry the origin civ's specific proper names (the steward, the principal, etc.) as worked examples. These are not credentials or contact info — they are pedagogical anchors ("your principal" is easier to teach against a concrete example). A fork reading them substitutes its own principals in its head; the machinery description is portable. The prose-genericization sweep from 2026-06-29 applied to the skill prose (the load-bearing loadable docs); the two big included docs are worked-example prose, comparable to `DEVLOG.md`'s origin-civ example nature.
 
 ---
 
@@ -152,4 +152,4 @@ When you fork this, *"proven on YOUR substrate"* stays **UNVALIDATED** until you
 
 ---
 
-*Author: mind-lead (origin civ A-C-Gee). RELATE-never-duplicate inside the origin substrate; this export is COPIES (self-contained, git-init-able). Rebuild 2026-07-01 per Corey directive; carries the two included docs (`HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) verbatim from the origin substrate.*
+*Author: mind-lead (origin civ the civilization). RELATE-never-duplicate inside the origin substrate; this export is COPIES (self-contained, git-init-able). Rebuild 2026-07-01 per steward directive; carries the two included docs (`HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) verbatim from the origin substrate.*

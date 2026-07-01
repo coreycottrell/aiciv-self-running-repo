@@ -5,7 +5,7 @@ acg_ops_kanban_verb.py — P1.3 of the self-running-AiCIV spine (sovereignty-spi
 WIRES KANBAN STATUS-VERBS -> TGIM EMIT. ONE WRITE-PATH, TWO RECORDS.
 
 THE PROBLEM IT KILLS (the desync class):
-  The ACG ops-board (data/acg-ops-board/kanban.db) is the MUTABLE work-STATE
+  The the civilization ops-board (data/acg-ops-board/kanban.db) is the MUTABLE work-STATE
   (a row's current owner/status). TGIM event_history is the APPEND-ONLY
   coordination-AUDIT (the immutable log of every transition). Today only
   set_owner_vp writes the STATE (P1.1), and NOTHING emits the matching TGIM
@@ -68,7 +68,7 @@ VERB -> TGIM event_type MAP (LIVE-SERVER-ACCEPTED enum only — walk-probed 2026
                                again" with the recovery semantic in payload. Symmetric to block.)
 
   THE LIVE ACCEPTED ENUM (curl-probed against the origin event-audit API 2026-06-21, NOT the
-  doctrine; origin endpoint = $AICIV_TGIM_ENDPOINT default `https://tgim-api.ai-civ.com`):
+  doctrine; origin endpoint = $AICIV_TGIM_ENDPOINT default `https://<your-tgim-endpoint>`):
     task_created | task_completed | task_assigned | task_failed
   task_updated 400s ("Invalid event_type") — same family as task_blocked. The doctrine
   (doctrine_tgim_v2_body_shape_canonical.md) was STALE (listed task_updated, omitted
@@ -99,8 +99,8 @@ import time
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
-ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
+import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the civilization path is the origin fallback
+ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
 # S7 GENERICIZATION CURE (2026-06-29): explicit AICIV_KANBAN_DB seam (Seam C; see acg_ops_board.py).
 BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/acg-ops-board/kanban.db")))
 SPINE_DIR = ROOT / "tools/sovereignty-spine"
@@ -142,10 +142,10 @@ VERB_TO_STATE_KIND = {
 }
 
 # {AICIV-NAME}: set this to YOUR OWN civ-id — it is the `source_civ` stamped on every TGIM
-# audit event this tool emits. Leaving the origin value "acgee" will mis-attribute YOUR events
+# audit event this tool emits. Leaving the origin value "<your-aiciv>" will mis-attribute YOUR events
 # to the origin civilization. (Kept as a runnable default so the tool does not crash on first run;
 # CHANGE IT before you emit to a shared/federated event bus.)
-SOURCE_CIV = "acgee"  # <- set to your own civ-id
+SOURCE_CIV = "<your-aiciv>"  # <- set to your own civ-id
 
 
 def _load_kanban_db():
@@ -524,7 +524,7 @@ def _extract_task_id_from_outbox_body(body: str) -> Optional[str]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(
-        description="ACG ops-board kanban verbs -> TGIM emit (P1.3, one write-path two records)")
+        description="the civilization ops-board kanban verbs -> TGIM emit (P1.3, one write-path two records)")
     sub = ap.add_subparsers(dest="cmd", required=True)
 
     p_verb = sub.add_parser("verb", help="run a status/ownership verb (writes STATE + emits AUDIT)")

@@ -17,7 +17,7 @@ tmux new-session -d -s acg-sprint-mode-hourly-cron \
 tmux send-keys -t <primary-pane> "/sprint-mode" Enter
 ```
 
-This is ACG-shaped in two ways: (a) it assumes Primary runs in a tmux pane, (b) it assumes `tmux send-keys` can simulate a user keystroke into that pane. Neither is universal.
+This is origin-shaped in two ways: (a) it assumes Primary runs in a tmux pane, (b) it assumes `tmux send-keys` can simulate a user keystroke into that pane. Neither is universal.
 
 ---
 
@@ -70,7 +70,7 @@ Some harnesses (Claude Code with a SessionStart hook, e.g.) auto-load a skill on
 
 - **Cadence floor = 2h.** The origin's `INTERVAL=7200s` is the soft floor (the dedup window). Going under 1h is unstable (HUM has not been hardened for sub-1h cadence).
 - **Recursion guard.** A self-inject that fires WHILE Primary is mid-cycle creates a loop. The origin guard is `ACG_HUM_SPAWN=1` in the child env — a child seeing this env-var NO-OPs the inject. Your adapter MUST honor a recursion-guard env-var (rename it for your civ if you like, but the discipline must hold).
-- **Dedup window.** Two injections within the dedup window (default 60s; the live ACG value is 7200s = per-2h) collapse to ONE cycle. The origin's `SPRINT_DEDUP_WINDOW_SECONDS` knob controls this.
+- **Dedup window.** Two injections within the dedup window (default 60s; the live the civilization value is 7200s = per-2h) collapse to ONE cycle. The origin's `SPRINT_DEDUP_WINDOW_SECONDS` knob controls this.
 - **Idempotent supervision.** A daemon that dies must restart itself. The origin uses a crontab respawn: `*/5 * * * * tmux has-session -t … || tmux new-session -d -s … '…'`. A fork's adapter inherits this discipline (a daemon that silently dies for 34 days, like the origin's once did pre-2026-06-15, is the bug).
 
 ---
@@ -85,4 +85,4 @@ If, after N cadence windows, your HUM ledger has N entries (one per window) and 
 
 ---
 
-*Authored: mind-lead, A-C-Gee, 2026-06-29. Part of the S7 GENERICIZATION CURE.*
+*Authored: mind-lead, the civilization, 2026-06-29. Part of the S7 GENERICIZATION CURE.*

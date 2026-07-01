@@ -20,7 +20,7 @@ TWO jobs:
    runs in a remote container with WIKI_PATH unset (no wiki there). It reads the same
    shape this tool reports (page_count/last_writer/last_updated/path_source) from a
    WIKI_PATH dir. This tool is the SAME read against THIS repo's populated wiki/ —
-   the honest, runnable, falsifiable status for the ACG-side VIEW-over-canon. The
+   the honest, runnable, falsifiable status for the origin-side VIEW-over-canon. The
    HTTP card is the federation-visible surface once a webui points at this dir.
 
 2) `measure <entity>` — THE KILL-SWITCH (P3.2 T3.2.2; the P3.1 §6 leash). Measures

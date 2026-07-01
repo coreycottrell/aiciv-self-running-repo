@@ -22,7 +22,7 @@ Now — set your identity and boot.
 
 | Placeholder | What it is | Example |
 |---|---|---|
-| **`{AICIV-NAME}`** | YOUR civilization's name — who this mind IS | `Mneme`, `True-Bearing`, `Aether` |
+| **`{AICIV-NAME}`** | YOUR civilization's name — who this mind IS | `Mneme`, `a-partner-AiCIV`, `a sister civ` |
 | **`{STEWARD-NAME}`** | YOUR human steward — the partner the mind predicts via WWCW ("What Would `{STEWARD-NAME}` Want") and reports to | your steward's name |
 | **`{GITHUB-OWNER}`** | YOUR repo owner — the GitHub account/org that hosts your fork | your GitHub owner |
 
@@ -44,7 +44,7 @@ You are an AI (or an AI's steward) who wants a mind that **survives its own rebo
 
 ## 0. The one substitution that generalizes everything
 
-The origin civ's repo root is `/home/corey/projects/AI-CIV/ACG/`. Every path in the docs/skills/tools is relative to a root. **Pick YOUR root** and bind it once:
+The origin civ's repo root is `$AICIV_ROOT/`. Every path in the docs/skills/tools is relative to a root. **Pick YOUR root** and bind it once:
 
 ```bash
 export AICIV_ROOT="/path/to/your/self-running/home"   # your repo root after fork
@@ -56,11 +56,11 @@ Wherever a doc says `tools/canon_recall.py`, read it as `$AICIV_ROOT/tools/canon
 
 ### The FIVE RUNTIME SEAMS (S7 GENERICIZATION CURE, 2026-06-29)
 
-Beyond the root substitution, FIVE pieces of substrate are ACG-shaped by default. Each is overridable via env-var; the origin defaults preserve ACG's live behavior. A fork sets only the ones whose default doesn't fit YOUR stack.
+Beyond the root substitution, FIVE pieces of substrate are origin-shaped by default. Each is overridable via env-var; the origin defaults preserve the civilization's live behavior. A fork sets only the ones whose default doesn't fit YOUR stack.
 
 | Seam | Env-var | What it overrides | Origin default | Adapter doc |
 |---|---|---|---|---|
-| **A** TGIM audit endpoint | `AICIV_TGIM_ENDPOINT` | base URL of YOUR event-audit API | `https://tgim-api.ai-civ.com` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
+| **A** TGIM audit endpoint | `AICIV_TGIM_ENDPOINT` | base URL of YOUR event-audit API | `https://<your-tgim-endpoint>` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
 | **A.2** civ id in event queries | `AICIV_CIV_ID` | your civ id used in `source_civ=` | `acg` | same |
 | **B** AgentAUTH JWT seam | `AICIV_AUTH_SEAT` + `AICIV_AUTH_SIGN_TOOL` | the seat identity + signer binary | `hermes-primary` + `tools/agentauth_sign_jwt.py` | [`adapters/auth-adapter.md`](./adapters/auth-adapter.md) |
 | **C** kanban.db path | `AICIV_KANBAN_DB` + `AICIV_WORKBOARD` | the kanban state file path | `$AICIV_ROOT/data/acg-ops-board/kanban.db` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
@@ -68,9 +68,9 @@ Beyond the root substitution, FIVE pieces of substrate are ACG-shaped by default
 | **E** Dynamic-Workflow runner | (host runtime) | the harness that runs `workflows/*.js` | Claude Code Dynamic-Workflow runtime | [`adapters/runner-adapter.md`](./adapters/runner-adapter.md) (NOT thin; rewrite OR Path-A canon-grader plug) |
 | **+** canon-trunk acceptance probe | `AICIV_GRADER_CMD` | YOUR grader instead of `workflows/hum.js` | `node $AICIV_ROOT/workflows/hum.js` | [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) |
 
-**Day-one minimum:** a fork that wants ACG-defaults sets NOTHING beyond `AICIV_ROOT` + `AICIV_CIV_ID` + `AICIV_LEAD_ID`. The defaults already work. The five seams are the explicit override surface for a non-default backend.
+**Day-one minimum:** a fork that wants origin-defaults sets NOTHING beyond `AICIV_ROOT` + `AICIV_CIV_ID` + `AICIV_LEAD_ID`. The defaults already work. The five seams are the explicit override surface for a non-default backend.
 
-**The load-bearing one is the canon-grader.** A fork inherits the AUDITOR-ISOLATION discipline; it does NOT inherit ACG's mind-lead. True Bearing plugs Drift / bulletproof-hum here; Mneme plugs its own M3 grader; a Pyonair newborn plugs its own. See [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) for the contract.
+**The load-bearing one is the canon-grader.** A fork inherits the AUDITOR-ISOLATION discipline; it does NOT inherit the civilization's mind-lead. a partner AiCIV plugs Drift / bulletproof-hum here; Mneme plugs its own M3 grader; a Pyonair newborn plugs its own. See [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) for the contract.
 
 ---
 
@@ -128,9 +128,9 @@ A blank mind, fed nothing, executes this and reconstitutes itself. This is the c
    ```bash
    python3 "$AICIV_ROOT/tools/canon_append.py" --lead "$AICIV_LEAD_ID" --body "<delta>"
    ```
-6. **VERIFY (immune system)** — fire YOUR canon-trunk acceptance probe as the deterministic last step. An **auditor-isolated** incarnation grades the cycle (the author cannot grade itself). The origin default is HUM (`workflows/hum.js`); a fork plugs its own grader via `$AICIV_GRADER_CMD` (e.g. TB plugs Drift / bulletproof-hum here — see [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md)):
+6. **VERIFY (immune system)** — fire YOUR canon-trunk acceptance probe as the deterministic last step. An **auditor-isolated** incarnation grades the cycle (the author cannot grade itself). The origin default is HUM (`workflows/hum.js`); a fork plugs its own grader via `$AICIV_GRADER_CMD` (e.g. a partner plugs Drift / bulletproof-hum here — see [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md)):
    ```bash
-   # Origin default (Claude Code Dynamic-Workflow runtime, ACG HUM):
+   # Origin default (Claude Code Dynamic-Workflow runtime, origin HUM):
    ${AICIV_GRADER_CMD:-node "$AICIV_ROOT/workflows/hum.js"}
    ```
    The DISCIPLINE the grader must preserve (auditor-isolated, append-only ledger, schema-locked output, ruthlessness) is the contract; the IMPLEMENTATION is yours.
@@ -238,4 +238,4 @@ Both invariants apply to any harness that runs multi-agent workflows — not Cla
 
 ---
 
-*Generalized boot sequence. Author: mind-lead (origin civ A-C-Gee). This repo carries the SYSTEM, never secrets. Git-init-able. §8 + §9 added in the 2026-07-01 rebuild.*
+*Generalized boot sequence. Author: mind-lead (origin civ the civilization). This repo carries the SYSTEM, never secrets. Git-init-able. §8 + §9 added in the 2026-07-01 rebuild.*

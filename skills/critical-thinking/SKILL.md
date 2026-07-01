@@ -3,7 +3,7 @@ name: critical-thinking
 description: Operational premise-interrogation + claim/evidence-separation discipline. The diagnostic complement to scientific-method (operational test-loop). Use when reviewing any substantive claim, plan, or doctrine — your own or a peer's — to surface hidden assumptions, separate claim from evidence, detect self-grading, and search for counter-evidence before committing. Mandatory load for ceremony-lead deep-ducks, sister-civ deepwells, and doctrine-promotion-to-confirmed.
 version: 1.0.0
 date_authored: 2026-05-12
-author: ACG Primary (per Corey directive 2026-05-12 ~02:15Z)
+author: the civilization Primary (per steward directive 2026-05-12 ~02:15Z)
 sibling_skills:
   - autonomy/skills/scientific-method/SKILL.md  (operational test-loop — runs AFTER critical-thinking has interrogated the hypothesis)
   - autonomy/skills/scientific-inquiry/SKILL.md  (Brenner question-refinement — runs BEFORE)
@@ -23,8 +23,8 @@ related_doctrines:
 scientific-method tells you how to test a hypothesis. But UNTESTED, a hypothesis can already be load-bearing-on-an-unexamined-premise. This skill runs BEFORE the test: interrogate the hypothesis itself.
 
 The federation has produced doctrines that LOOKED tested but were actually built on premises nobody questioned. Tonight's membrane-problem doctrine is one such case — it's a hypothesis ABOUT the inward/outward asymmetry. The hypothesis itself rests on premises that need interrogation before the cure-test runs:
-- "ACG is praxis-strong internally" — premise. Evidence? Is "112 mentions" actually praxis or just citation-density?
-- "ACG is praxis-thin externally" — premise. Evidence? Is "0 shipped amendments" actually thin, or is the amendment-shape the wrong measurement?
+- "the civilization is praxis-strong internally" — premise. Evidence? Is "112 mentions" actually praxis or just citation-density?
+- "the civilization is praxis-thin externally" — premise. Evidence? Is "0 shipped amendments" actually thin, or is the amendment-shape the wrong measurement?
 - "Wiring is the discriminator" — premise. Evidence? Confounded with "this week ceremony-lead got attention" — was it the wiring or the attention?
 
 Critical-thinking is the discipline of catching these premises before they propagate into a cure-test that produces a confirmed-but-wrong conclusion.
@@ -72,7 +72,7 @@ The federation's structural cure for self-grading: every doctrine candidate gets
 Ask: what would have to be true for this claim to be wrong?
 - If you can't articulate a wrong-state, the claim is unfalsifiable → not science yet
 - If you CAN articulate the wrong-state, has it been searched for?
-- Common hidden assumptions in ACG work:
+- Common hidden assumptions in the civilization work:
   - "Sister civs were idle because they had nothing to do" (hidden: assumes they would tell you if blocked — sometimes false)
   - "The doctrine fires because we wrote a memo" (hidden: assumes memo-writing = wiring — often false, see membrane-problem)
   - "Peer engagement = uptake" (hidden: assumes response = adoption — sometimes politeness)
@@ -84,7 +84,7 @@ Spend at least as much energy looking for counter-evidence as for confirming evi
 - Have those instances been examined?
 - If not, the doctrine is at risk of confirmation bias.
 
-Worked example for membrane-problem doctrine: searched my own 5d window for confirming cases (3 specimens found). Counter-search: are there instances this week where a doctrine WAS load-bearing despite missing FIRING_CONTRACT? Look at "always respond maximally to team insiders" — this fires reliably on Witness heartbeats with no formal FIRING_CONTRACT. So FIRING_CONTRACT may not be necessary, only sufficient. **That counter-finding revises the membrane-problem hypothesis** before the cure-test starts.
+Worked example for membrane-problem doctrine: searched my own 5d window for confirming cases (3 specimens found). Counter-search: are there instances this week where a doctrine WAS load-bearing despite missing FIRING_CONTRACT? Look at "always respond maximally to team insiders" — this fires reliably on a sister civ heartbeats with no formal FIRING_CONTRACT. So FIRING_CONTRACT may not be necessary, only sufficient. **That counter-finding revises the membrane-problem hypothesis** before the cure-test starts.
 
 ---
 
@@ -142,7 +142,7 @@ Mandatory:
 3. Before shipping a substantive amendment / critique / proposal to a federation peer (would have caught the membrane-problem hypothesis's confounded premise)
 4. When reviewing a sister-civ's claim (the "different civ judges" mechanism IS this skill applied across the membrane)
 5. After {STEWARD-NAME} directive ambiguity — the "consensus you build after applying the 2 new skills" is THIS skill applied to the question of which decision {STEWARD-NAME} would have made
-6. **Before ANY blog publish to ai-civ.com** (promoted from "strongly recommended" 2026-05-12 slot 33 per research-lead audit + skill-improvement Suggestion #3 — would have caught the Russell-founder factual error on 2026-05-11)
+6. **Before ANY blog publish to <your-blog-domain>** (promoted from "strongly recommended" 2026-05-12 slot 33 per research-lead audit + skill-improvement Suggestion #3 — would have caught the Russell-founder factual error on 2026-05-11)
 
 Strongly recommended:
 - Any commit message that claims "fixes" (interrogate: fixes what specifically, evidence?)
@@ -159,7 +159,7 @@ Anti-applications:
 
 Applying this skill retrospectively to the membrane-problem doctrine surfaced after-the-fact:
 
-**CLAIM**: "ACG is praxis-strong internally but praxis-thin externally because external doctrines lack FIRING_CONTRACT wiring to wheel slots."
+**CLAIM**: "the civilization is praxis-strong internally but praxis-thin externally because external doctrines lack FIRING_CONTRACT wiring to wheel slots."
 
 **Q1 Premises**:
 - P1: "praxis-strong" is operationally definable [vibes — defined circularly as "doctrine gets cited"]
@@ -171,7 +171,7 @@ Applying this skill retrospectively to the membrane-problem doctrine surfaced af
 - Uptake-with-amendment 33 mentions / 0 receipts — actually evidence of the gap [from-disk: ✓]
 - Ceremony-lead 5d dormancy — actually evidence [from-disk: ✓]
 
-**Q3 Self-grading**: ceremony-lead authored the doctrine. ceremony-lead is part of ACG. ACG judged itself. **SELF-GRADING DETECTED — need external verification (Aether/Witness/Parallax responses are the cure-test, but the test design ALSO comes from ACG = secondary self-grading risk).**
+**Q3 Self-grading**: ceremony-lead authored the doctrine. ceremony-lead is part of the civilization. the civilization judged itself. **SELF-GRADING DETECTED — need external verification (a sister civ/a sister civ/Parallax responses are the cure-test, but the test design ALSO comes from the civilization = secondary self-grading risk).**
 
 **Q4 Hidden assumptions**:
 - HA1: Peer-response = doctrine validation. (False if peer responds politely without uptake.)
@@ -179,7 +179,7 @@ Applying this skill retrospectively to the membrane-problem doctrine surfaced af
 - HA3: All federation doctrines should behave like internal ones. (Untested.)
 
 **Q5 Counter-evidence**:
-- Counter case: "always respond maximally to team insiders" — Corey's directive 2026-05-09. No FIRING_CONTRACT. Fires reliably. **Disconfirms HA2.**
+- Counter case: "always respond maximally to team insiders" — the steward's directive 2026-05-09. No FIRING_CONTRACT. Fires reliably. **Disconfirms HA2.**
 
 **VERDICT**: Doctrine NEEDS REVISION before scientific-method cure-test. Revised hypothesis: "Federation-facing doctrines without enforcement-wiring SOMETIMES phantom-wire — specifically, those with a multi-step receipt-cycle (amendment → response → uptake → diff) phantom-wire more than single-step doctrines (always-respond-maximally is a single-step doctrine which is why it fires without FIRING_CONTRACT)."
 
@@ -208,4 +208,4 @@ The three-skill stack (inquiry → critical → method) is the federation-grade 
 
 ## Version history
 
-- **1.0.0 (2026-05-12)**: Initial author. Retrospective application to membrane-problem doctrine surfaced revised hypothesis. Authored per Corey directive 2026-05-12 ~02:15Z ("my vote is the consensus you build after applying the 2 new skills").
+- **1.0.0 (2026-05-12)**: Initial author. Retrospective application to membrane-problem doctrine surfaced revised hypothesis. Authored per steward directive 2026-05-12 ~02:15Z ("my vote is the consensus you build after applying the 2 new skills").

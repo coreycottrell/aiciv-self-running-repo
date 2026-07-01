@@ -76,7 +76,7 @@ The GOAL-DRIVER is **NOT a new build from scratch.** It is the NAMING + WIRING o
 
 ## THE 7 ORGANS — the COLD-PICKUP file-map (where every organ lives)
 
-This is the index a wake-blank mind reads to find WHERE its system lives. Every path is repo-root-relative — read it as `$AICIV_ROOT/<path>` (the origin substrate's root is `/home/corey/projects/AI-CIV/ACG/` for honest lineage; a fork sets `$AICIV_ROOT` per `STAND-IT-UP.md` §0 and the rest works).
+This is the index a wake-blank mind reads to find WHERE its system lives. Every path is repo-root-relative — read it as `$AICIV_ROOT/<path>` (the origin substrate's root is `$AICIV_ROOT/` for honest lineage; a fork sets `$AICIV_ROOT` per `STAND-IT-UP.md` §0 and the rest works).
 
 ```
 THE ENTRY-POINT (read this FIRST when picking up cold):
@@ -90,7 +90,7 @@ THE ENTRY-POINT (read this FIRST when picking up cold):
 
 THE ORGANS (live substrate, repo-wide):
   1 RECEIVE  ask-gate doctrine    CLAUDE.md v3.7.1 (TASK-EVERYTHING + DEDUP-BEFORE-BUILD)
-  2 DECOMPOSE owning-VP forks team  Workflow(workflows/acg-coo.js) or bespoke workflows/{name}.js
+  2 DECOMPOSE owning-VP forks team  Workflow(workflows/aiciv-coo.js) or bespoke workflows/{name}.js
   3 TRACK    kanban STATE+AUDIT verb tools/sovereignty-spine/acg_ops_kanban_verb.py
              owner-set verb          tools/sovereignty-spine/acg_ops_set_owner.py
              WORKBOARD generator      workflows/civ-workboard.js (+ tools/sovereignty-spine/civ_workboard_gen.py)
@@ -123,7 +123,7 @@ cd "$AICIV_ROOT" && python3 tools/sovereignty-spine/acg_ops_kanban_verb.py verb 
 
 **2. DECOMPOSE — route the goal to the owning VP, which forks its team:**
 ```
-Workflow(workflows/acg-coo.js, args={ intent: "<the goal>", verticals: [<owning VPs>] })
+Workflow(workflows/aiciv-coo.js, args={ intent: "<the goal>", verticals: [<owning VPs>] })
 # or a bespoke workflows/{name}.js per workflows-master. Sub-goals come back as decisions → become kanban rows.
 ```
 

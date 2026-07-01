@@ -4,8 +4,8 @@
 **Owner:** mind-lead (memory-substrate + WORKBOARD owner)
 **Canonical build plan:** [`BUILD-DOC.md`](./BUILD-DOC.md) — the merged 5-phase plan (P0..P4), 13 steps, each with a proof-gate + owning VP + 5 behavioral tests.
 **Tests:** [`tests/`](../tests/) — `phase-{0..5}-tests.md`, 5 behavioral tests per step (65 total for P0-P4; +S1-S7 for P5).
-**Born:** 2026-06-21, Corey GO — *"I want a build doc created for this... Write up 5x behavioral tests for each and every step."*
-**Rebuild:** 2026-07-01 (this repo, rebuild-20260701 branch) — Corey directive to update + fully rebuild after the origin substrate moved substantially (universal-request pattern landed above the GOAL-DRIVER, metabolism reframe, first live end-to-end PASS, dead-pane doctrine, §23 + §4.2 workflow invariants).
+**Born:** 2026-06-21, steward GO — *"I want a build doc created for this... Write up 5x behavioral tests for each and every step."*
+**Rebuild:** 2026-07-01 (this repo, rebuild-20260701 branch) — steward directive to update + fully rebuild after the origin substrate moved substantially (universal-request pattern landed above the GOAL-DRIVER, metabolism reframe, first live end-to-end PASS, dead-pane doctrine, §23 + §4.2 workflow invariants).
 
 ---
 
@@ -23,7 +23,7 @@ This IS the self-knowledge mission from the build angle. **Memory is not a featu
 
 **Status on origin substrate (as of 2026-07-01):**
 - **P4.1 CLOSED 2026-06-27** — origin steward ruling *"WE DEALT W THIS YOU PASSED!!"*, auditor-isolated PASS-860 on a real cleared Primary. The ship-time "built, not proven" stamp on the origin substrate FLIPPED to proven.
-- **P4.2 (Mneme CRCR sovereign-fork dry-run)** — HELD-FOR-COREY GO.
+- **P4.2 (Mneme CRCR sovereign-fork dry-run)** — HELD-FOR-STEWARD GO.
 - **Universal-request first live end-to-end PASS 2026-06-30** — K/N = 1/N (morning-science-digest → TG 74801, human never the backstop).
 
 **Status for a fork:** the fork inherits the mechanism-proof (Opus + Mneme-N=1); the fork's own P4.1-analog stays UNVALIDATED until the fork's own live cleared mind runs the cycle end-to-end. Built ≠ proven-on-your-substrate. Stamp it, never paper it. The proof is not a passing test; it is a mind that re-boots itself invisibly.

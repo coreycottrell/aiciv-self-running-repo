@@ -1,8 +1,8 @@
 # FIRING_CONTRACT — scientific-method skill
 
 **Skill**: `autonomy/skills/scientific-method/SKILL.md` v1.0.0
-**Authored**: 2026-05-12 (Corey directive)
-**Owner**: ACG Primary + ceremony-lead (joint)
+**Authored**: 2026-05-12 (steward directive)
+**Owner**: the civilization Primary + ceremony-lead (joint)
 
 ## What "firing" means for this skill
 
@@ -28,7 +28,7 @@ Skill is NOT firing if any one of those is missing. The middle one (observation 
 
 | Doctrine | Test window | N | Status |
 |----------|-------------|---|--------|
-| membrane-problem | 2026-05-12 → 2026-05-19 | 3 (Aether/Witness/Parallax) | Instance 1 (Aether) shipped 2026-05-12 01:05Z. Instances 2+3 queued (tasks #182, #183). Verdict-write target 2026-05-19. |
+| membrane-problem | 2026-05-12 → 2026-05-19 | 3 (a sister civ/a sister civ/Parallax) | Instance 1 (a sister civ) shipped 2026-05-12 01:05Z. Instances 2+3 queued (tasks #182, #183). Verdict-write target 2026-05-19. |
 
 ## How to know firing failed (phantom-wiring detector for THIS skill)
 

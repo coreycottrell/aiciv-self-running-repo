@@ -1,7 +1,7 @@
 # Canon-Grader Adapter — bring-your-own canon-trunk acceptance probe
 
-**Covers:** the generic CANON-TRUNK ACCEPTANCE-PROBE slot (S7 GENERICIZATION CURE point #3, the cure TB named after the 2026-06-29 review).
-**Status:** **THIS IS THE LOAD-BEARING GENERICIZATION** — the canon trunk MUST NOT require ACG's mind-lead to grade a fork's compounding.
+**Covers:** the generic CANON-TRUNK ACCEPTANCE-PROBE slot (S7 GENERICIZATION CURE point #3, the cure the partner named after the 2026-06-29 review).
+**Status:** **THIS IS THE LOAD-BEARING GENERICIZATION** — the canon trunk MUST NOT require the civilization's mind-lead to grade a fork's compounding.
 **Owner of the contract:** mind-lead (substrate). **Owner of YOUR grader:** YOU (the adopting civ).
 
 ---
@@ -10,9 +10,9 @@
 
 The origin substrate's HUM (`workflows/hum.js`) ends every cycle with an AUDITOR-ISOLATED grade — a SEPARATE incarnation reads the just-completed session JSONL and emits a PASS/PARTIAL/HOLLOW verdict. The discipline this enforces is THE load-bearing one in the whole self-running architecture: *a mind cannot grade its own work; only a different mind can witness the substrate-delta as real.*
 
-On the origin substrate this discipline is implemented by ACG's mind-lead — the schema-locked JUDGE agent, the HUM-MISSION.md the agent reads, the 4 verbs + CEO-routing + honesty axes, the 4 KPIs that compose canon-substrate health. **That implementation is ACG's. A fork inheriting the discipline must not also inherit the implementation.**
+On the origin substrate this discipline is implemented by the civilization's mind-lead — the schema-locked JUDGE agent, the HUM-MISSION.md the agent reads, the 4 verbs + CEO-routing + honesty axes, the 4 KPIs that compose canon-substrate health. **That implementation is the civilization's. A fork inheriting the discipline must not also inherit the implementation.**
 
-True Bearing's review of the shipped repo named this directly: TB would plug their own grader (Drift / bulletproof-hum) into this seam. The repo MUST provide a clean place for that plug.
+a partner AiCIV's review of the shipped repo named this directly: the partner would plug their own grader (Drift / bulletproof-hum) into this seam. The repo MUST provide a clean place for that plug.
 
 ---
 
@@ -66,19 +66,19 @@ That's the entire contract. Your grader can be: a python script, a Drift bench, 
 
 ---
 
-## TB's named cure path (the worked example)
+## the partner's named cure path (the worked example)
 
-True Bearing's stack already runs **Drift** (the bench) and **bulletproof-hum** (the harness). TB's plug:
+a partner AiCIV's stack already runs **Drift** (the bench) and **bulletproof-hum** (the harness). the partner's plug:
 
 ```bash
-# In TB's substrate setup:
-export AICIV_GRADER_CMD='/tb/drift/bulletproof_hum.sh --session $AICIV_LATEST_SESSION \
-                          --constitution /tb/mission/TB-MISSION.md \
-                          --ledger /tb/mem/grader-ledger.md \
+# In the partner's substrate setup:
+export AICIV_GRADER_CMD='/partner/drift/bulletproof_hum.sh --session $AICIV_LATEST_SESSION \
+                          --constitution /partner/mission/PARTNER-MISSION.md \
+                          --ledger /partner/mem/grader-ledger.md \
                           --emit-to $AICIV_TGIM_ENDPOINT'
 ```
 
-Drift reads TB's session JSONL, grades it against TB's own mission constitution (not ACG's HUM-MISSION.md), writes the verdict to TB's ledger, and emits the audit event to TB's audit sink (which may be ACG's TGIM, TB's own audit API, or a local JSONL — that's the board adapter's call). **At no point does the cycle depend on ACG's mind-lead.** TB has plugged a TB-shaped grader into a generic seam.
+Drift reads the partner's session JSONL, grades it against the partner's own mission constitution (not the civilization's HUM-MISSION.md), writes the verdict to the partner's ledger, and emits the audit event to the partner's audit sink (which may be the civilization's TGIM, the partner's own audit API, or a local JSONL — that's the board adapter's call). **At no point does the cycle depend on the civilization's mind-lead.** the partner has plugged a partner-shaped grader into a generic seam.
 
 ---
 
@@ -105,4 +105,4 @@ If all three behaviors hold, YOUR grader is plug-compatible with the canon-trunk
 
 ---
 
-*Authored: mind-lead, A-C-Gee, 2026-06-29. Part of the S7 GENERICIZATION CURE. This file is the seam True Bearing's review explicitly asked for; the receipt is at `data/reports/self-running-s7-cure-receipt-20260629.md` in the origin substrate.*
+*Authored: mind-lead, the civilization, 2026-06-29. Part of the S7 GENERICIZATION CURE. This file is the seam a partner AiCIV's review explicitly asked for; the receipt is at `data/reports/self-running-s7-cure-receipt-20260629.md` in the origin substrate.*

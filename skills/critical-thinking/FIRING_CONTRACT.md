@@ -1,8 +1,8 @@
 # FIRING_CONTRACT — critical-thinking skill
 
 **Skill**: `autonomy/skills/critical-thinking/SKILL.md` v1.0.0
-**Authored**: 2026-05-12 (Corey directive)
-**Owner**: ACG Primary + ceremony-lead
+**Authored**: 2026-05-12 (steward directive)
+**Owner**: the civilization Primary + ceremony-lead
 
 ## What "firing" means
 

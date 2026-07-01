@@ -58,7 +58,7 @@ For the verb in T1.3.1, the TGIM event's task_id/agent_id must match the kanban 
 Simulate TGIM unreachable, then run a status verb. PASS = the verb either FAILS LOUD (and the `.db` is not left half-mutated) OR durably queues the event for retry (and the queue is observable). FAIL (adversarial) = the `.db` mutates and the TGIM event is dropped silently (desync — the exact thing "one write-path, two records" exists to prevent).
 
 **T1.3.4 — No double-emit on a re-run verb (send_dedup holds).**
-Run the same status verb twice (idempotent intent / retry). PASS = exactly ONE TGIM event for the logical transition (dedup via the established send_dedup pattern). FAIL (adversarial) = two identical events in event_history (the duplicate-fire bug Apex hit).
+Run the same status verb twice (idempotent intent / retry). PASS = exactly ONE TGIM event for the logical transition (dedup via the established send_dedup pattern). FAIL (adversarial) = two identical events in event_history (the duplicate-fire bug a sister civ hit).
 
 **T1.3.5 — A reconciliation read proves zero desync across N transitions.**
 After N≥10 real transitions, run a reconciliation: every kanban current-state row must have a matching terminal TGIM event, and every TGIM transition event must map to a real `.db` row. PASS = 0 unmatched on both sides. FAIL (adversarial) = any kanban state with no audit event, or any audit event with no state (the audit and the state diverged). PATCH 405 by-design must hold — status mutations go through POST /events, never a PATCH.

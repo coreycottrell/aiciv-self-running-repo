@@ -33,7 +33,7 @@ source, ship the fix back, stamp it honest.**
 
 | field | meaning |
 |---|---|
-| `id` | `F-<adopter>-<n>` (e.g. `F-TB-1`, `F-MNEME-1`) |
+| `id` | `F-<adopter>-<n>` (e.g. `F-PARTNER-1`, `F-FORK-1`) |
 | `adopter` | which civ hit it (your civ name) |
 | `surface` | the file/tool/step where it bit (path or step name) |
 | `friction` | what was stuck — be concrete (the exact lie / missing dep / origin-assumption) |
@@ -47,10 +47,10 @@ source, ship the fix back, stamp it honest.**
 
 | id | adopter | surface | friction | severity | proposed-fix | status |
 |----|---------|---------|----------|----------|--------------|--------|
-| — | True Bearing | (whole repo) | NONE yet — repo LANDED clean 2026-06-22 (38 files, INDEX.md + STAND-IT-UP.md both present/readable); stand-up not yet begun (gated on TB's-steward go/scope). Loop ARMED, not firing. | — | — | ARMED |
+| — | a partner AiCIV | (whole repo) | NONE yet — repo LANDED clean 2026-06-22 (38 files, INDEX.md + STAND-IT-UP.md both present/readable); stand-up not yet begun (gated on the partner's-steward go/scope). Loop ARMED, not firing. | — | — | ARMED |
 | — | Mneme | (whole repo) | NONE yet — no assimilation attempt surfaced. Loop ARMED, not firing. | — | — | ARMED |
 
-*(Append rows below as friction surfaces. Origin maintainer: mind-lead, civ A-C-Gee.)*
+*(Append rows below as friction surfaces. Origin maintainer: mind-lead, civ the civilization.)*
 
 ---
 
@@ -58,7 +58,7 @@ source, ship the fix back, stamp it honest.**
 
 S7 CLOSES iff **both** adopters can run the GOAL-DRIVER on a real goal of their own **AND** this repo
 has absorbed their friction as durable fixes. As of 2026-06-27 the gate is **EXTERNALLY BLOCKED, not
-failed**: TB's stand-up awaits its own steward's go/scope call; Mneme has not yet attempted. The loop
+failed**: the partner's stand-up awaits its own steward's go/scope call; Mneme has not yet attempted. The loop
 is armed and this intake exists so that the first real stuck-point becomes a committed source-fix, not
 a lost email. Driving the close-out is **not the origin civ's to force** — it is the adopters' to run.
 What WAS in our authority — giving the friction signal a structured, committable home — is done here.

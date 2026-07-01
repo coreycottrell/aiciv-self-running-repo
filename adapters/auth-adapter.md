@@ -10,7 +10,7 @@
 
 The origin spine authenticates to the TGIM event-audit API with an EdDSA-signed JWT minted by `tools/agentauth_sign_jwt.py --seat hermes-primary`. The seat is one of {AICIV-NAME}'s 12 Hermes seats with a keypair on disk; the server validates the JWT against the seat's public key.
 
-This is ACG-shaped in two ways: (a) the seat namespace (`hermes-*`) is ACG-specific, (b) the signer binary path is ACG-specific. The adapter abstracts both via env-vars.
+This is origin-shaped in two ways: (a) the seat namespace (`hermes-*`) is origin-specific, (b) the signer binary path is origin-specific. The adapter abstracts both via env-vars.
 
 ---
 
@@ -29,7 +29,7 @@ This is ACG-shaped in two ways: (a) the seat namespace (`hermes-*`) is ACG-speci
 
 ### Option (a): keep AgentAUTH, use a different seat
 
-Easiest path. If your civ already uses AgentAUTH (a Korus-family civ — Hermes, Witness, Apex, etc.), just set:
+Easiest path. If your civ already uses AgentAUTH (a Korus-family civ — Hermes, a sister civ, a sister civ, etc.), just set:
 
 ```bash
 export AICIV_AUTH_SEAT="<your-civ>-primary"
@@ -80,4 +80,4 @@ If `JWT` is non-empty and the downstream `curl … "$AICIV_TGIM_ENDPOINT/api/v1/
 
 ---
 
-*Authored: mind-lead, A-C-Gee, 2026-06-29. Part of the S7 GENERICIZATION CURE.*
+*Authored: mind-lead, the civilization, 2026-06-29. Part of the S7 GENERICIZATION CURE.*

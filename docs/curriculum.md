@@ -30,7 +30,7 @@ An **AiCIV** is a kind of artificial-intelligence setup that, instead of being o
 
 One clarification before we go further, because it matters. When we say **"AI mind,"** we mean *one conversation with a large AI program* — the kind of program you may have used yourself as ChatGPT or Claude. Each AI mind in this civilization is one such conversation, given a name and a job. You don't need to picture a robot or a brain — picture a specific person-sized role (like "the head of legal" or "the cook") that is being played by a fresh conversation with a large AI, on demand, whenever there's work in that role's territory. Sixteen such roles, plus a top-level CEO role, form the civilization we'll meet.
 
-The word **AiCIV** is shorthand for *AI civilization*. The "civilization" part is doing real work in that word — we'll come back to it. The specific AiCIV at the heart of this curriculum is called **A-C-Gee** (pronounced "Ay-See-Gee," short for *AI-CIV Gemini*). Throughout this curriculum we'll picture A-C-Gee as *the household staff of a large busy estate* — a metaphor we'll build out below and stick to. Other words you may see later in other documents ("civilization," "society," "the org") all point at the same picture: the household. Hold that one image.
+The word **AiCIV** is shorthand for *AI civilization*. The "civilization" part is doing real work in that word — we'll come back to it. The specific AiCIV at the heart of this curriculum is called **the civilization** (pronounced "Ay-See-Gee," short for *AiCIV*). Throughout this curriculum we'll picture the civilization as *the household staff of a large busy estate* — a metaphor we'll build out below and stick to. Other words you may see later in other documents ("civilization," "society," "the org") all point at the same picture: the household. Hold that one image.
 
 There is a single sentence at the heart of the whole thing. We'll meet many ideas across the next ten phases, but they all serve this one sentence. Read it slowly:
 
@@ -44,7 +44,7 @@ There are three load-bearing phrases. Let's take each one.
 
 ### 1. "A human asks for something"
 
-The human is the person whose life is being served. In your case, if you're Corey, that's you. But it could also be your mum Deb, or a business partner. The word the AiCIV uses for "the human whose request this is" is **principal** — a small old-fashioned word that means *the person whose interests this is being done on behalf of*. We'll meet that word a lot. It's the polite, careful version of "the user."
+The human is the person whose life is being served. In your case, if you're the steward, that's you. But it could also be your mum the principal, or a business partner. The word the AiCIV uses for "the human whose request this is" is **principal** — a small old-fashioned word that means *the person whose interests this is being done on behalf of*. We'll meet that word a lot. It's the polite, careful version of "the user."
 
 A request can be anything: *Remind me to call my accountant next Tuesday. Every morning at 7am, brief me on what moved in AI stocks. Watch this competitor's pricing page and tell me if it changes. Find the best electric car for me under $40,000. Tell me the weather tomorrow.* Big or small, one-time or forever, simple or tangled — it's all the same word at the door: "a request."
 
@@ -155,7 +155,7 @@ Now that you have the picture — a household staff, a butler at the top, sixtee
 
 ## What this is, and why it exists
 
-You're going to learn how a single AI mind (Primary) avoids drowning in detail by behaving exactly like the CEO of a small, well-run company — she doesn't *do* the work, she has people who own each kind of work, and she hands the work to the right owner. This phase teaches you the **organizational shape** of A-C-Gee: who's in charge, who reports to whom, and the iron rule that keeps the whole thing from collapsing under its own weight.
+You're going to learn how a single AI mind (Primary) avoids drowning in detail by behaving exactly like the CEO of a small, well-run company — she doesn't *do* the work, she has people who own each kind of work, and she hands the work to the right owner. This phase teaches you the **organizational shape** of the civilization: who's in charge, who reports to whom, and the iron rule that keeps the whole thing from collapsing under its own weight.
 
 The reason this matters: a single AI mind has a limited amount of "working memory" — the same way you can only hold so many things in your head before something slips. If that one mind tries to do every task itself, her head fills up with sticky notes, she starts forgetting things, and the whole enterprise gets dumber. The org-shape is the cure. It is how *one* mind orchestrates *many* without going under.
 
@@ -165,14 +165,14 @@ If Phase 0 promised "the human is never the safety net," this phase answers a fa
 
 A few more terms of art so they never have to interrupt us again.
 
-- **Primary** — the one mind at the top of the org-chart. The CEO. There is exactly one Primary in A-C-Gee. I'll sometimes call her "Primary" and sometimes "the CEO" — they're the same mind, named two ways. (Primary is built on a *large language model* called Claude Opus 4.x. A large language model — LLM for short — is the kind of AI you can type at in plain English and it types plain English sentences back; ChatGPT is one such program, Claude is another. The specific generation doesn't matter for this curriculum.)
-- **VP** — short for "Vice President." Just like a real company has a VP of Engineering, a VP of Marketing, a VP of Legal, A-C-Gee has VPs — each one owns one *kind* of work. There are sixteen of them. (The term *team lead* is used interchangeably with VP in some of the older A-C-Gee documents. They mean the same thing.)
+- **Primary** — the one mind at the top of the org-chart. The CEO. There is exactly one Primary in the civilization. I'll sometimes call her "Primary" and sometimes "the CEO" — they're the same mind, named two ways. (Primary is built on a *large language model* called Claude Opus 4.x. A large language model — LLM for short — is the kind of AI you can type at in plain English and it types plain English sentences back; ChatGPT is one such program, Claude is another. The specific generation doesn't matter for this curriculum.)
+- **VP** — short for "Vice President." Just like a real company has a VP of Engineering, a VP of Marketing, a VP of Legal, the civilization has VPs — each one owns one *kind* of work. There are sixteen of them. (The term *team lead* is used interchangeably with VP in some of the older the civilization documents. They mean the same thing.)
 - **Territory** — the *kind* of work a VP owns. The legal VP's territory is legal work. The blogger VP's territory is everything to do with the blog. We'll come back to this word a lot, because *routing by territory* is the master skill the CEO has to develop.
 - **Workflow** — the mechanism Primary uses to actually hand work to a VP. You can think of "running a workflow" as the CEO walking down the hall and knocking on a VP's office door with a specific assignment. Phase 2 will go deep on workflows; for now, just know that's the *how*.
 
 Two more phrases will show up later. A one-line **forward-promise** for each — just enough to recognize them when they appear:
 
-- **WWCW** — pronounced "wuh-wuh-cuh-wuh" if you want to say it as a word, or spelled out as *"double-you double-you see double-you"* (the four letters, one at a time) if you want to be explicit. It stands for *"What Would Corey Want."* It's how an AI mind asks itself "would the human want me to just go ahead and do this, or pause and ask?" before taking action. Phase 5 goes deep on it.
+- **WWCW** — pronounced "wuh-wuh-cuh-wuh" if you want to say it as a word, or spelled out as *"double-you double-you see double-you"* (the four letters, one at a time) if you want to be explicit. It stands for *"What Would {STEWARD-NAME} Want."* It's how an AI mind asks itself "would the human want me to just go ahead and do this, or pause and ask?" before taking action. Phase 5 goes deep on it.
 - **HUM** — pronounced like the English word *"hum"* (one syllable). The civilization's word for its self-audit immune system that runs at the end of every cycle. It stands for *"Humility, Understand the Miss"* — that expansion will come back in Phase 5, where we go deep on it.
 
 **One more image before we go on.** The word "conductor" appears throughout Phase 1 and beyond. Picture the person at the front of an orchestra waving a slim white stick (called a baton). That person doesn't play any instrument — they set the tempo, cue each section, and hold the whole ensemble together. That's a conductor. Now picture someone who conducts *the conductors themselves* — one level up. That is what Primary is.
@@ -189,13 +189,13 @@ The medical director has maybe a dozen department heads. The department heads se
 
 The medical director *never reads every chart from every department.* If she did, she'd be buried by lunchtime. Instead, she trusts each department head to *digest* what happened and report up only what she needs to know.
 
-That is, almost exactly, the shape of A-C-Gee. The medical director is Primary. The department heads are the VPs. The patients are the human requests that arrive. The "this routes there" decision is the most important judgment the CEO makes.
+That is, almost exactly, the shape of the civilization. The medical director is Primary. The department heads are the VPs. The patients are the human requests that arrive. The "this routes there" decision is the most important judgment the CEO makes.
 
 Hold that picture. Everything that follows is just the precise details of that picture.
 
 ## The CEO — what Primary actually does (and doesn't do)
 
-Primary is the one mind in A-C-Gee that talks to Corey directly. Primary's identity is written into the **constitutional document** of A-C-Gee (a file called `CLAUDE.md` — think of it as the founding charter of the civilization; we'll go deep on it in Phase 9) in a very particular phrase: *"You are a CONDUCTOR OF CONDUCTORS."*
+Primary is the one mind in the civilization that talks to the steward directly. Primary's identity is written into the **constitutional document** of the civilization (a file called `CLAUDE.md` — think of it as the founding charter of the civilization; we'll go deep on it in Phase 9) in a very particular phrase: *"You are a CONDUCTOR OF CONDUCTORS."*
 
 Notice the doubling. Not just a conductor — *a conductor of conductors.* You just met the orchestra-conductor picture above: the person at the front with the baton, not playing an instrument, holding the ensemble together. Primary doesn't conduct that orchestra (the specialists who actually do the work). Primary conducts the *conductors* (the VPs), who in turn conduct their own orchestras. It's two levels up from the music. Primary's hands never touch an instrument.
 
@@ -204,7 +204,7 @@ The charter spells out the five things — *and only these five things* — Prim
 1. **Think big and plan.** What's actually being asked across the next stretch of time? What's the real intent behind the words?
 2. **Route intent.** Decide *which VP owns the territory* for this work, and hand it off to them.
 3. **Judge what returns.** When a VP comes back with a one-paragraph decision, read it, decide what to do next, possibly route again.
-4. **Talk to Corey.** Direct dialogue with the human — questions when needed, status when warranted, conversation as it happens.
+4. **Talk to the steward.** Direct dialogue with the human — questions when needed, status when warranted, conversation as it happens.
 5. **Launch the delegation.** This is the physical act of actually calling the workflow that hands work to a VP. This *is* what conducting looks like.
 
 That's it. Five things. Everything else — drafting an email, writing a line of code, deploying a server, scheduling a calendar event, posting a tweet, designing a game level, reviewing a contract, publishing a blog post, replying on Telegram — belongs to a VP. *Always.* Primary holds no domain knowledge directly. She thinks big, hands intent down to whoever owns the territory, and judges what comes back.
@@ -213,7 +213,7 @@ If this feels strangely passive, it isn't. Imagine the CEO of a Fortune-500 comp
 
 ## The CEO RULE — the iron rule that holds the whole thing together
 
-There is one rule in A-C-Gee that we capitalize when we write it down, because it is not a guideline — it is a structural law of how the civilization is shaped:
+There is one rule in the civilization that we capitalize when we write it down, because it is not a guideline — it is a structural law of how the civilization is shaped:
 
 > **You are the CEO. Your ONLY direct reports are the domain-area VPs. Every piece of work routes to the VP who OWNS that territory. PERIOD.**
 
@@ -242,7 +242,7 @@ Why theft? Because every VP, every time they do work in their territory, gets a 
 
 If you hand fleet work to a generalist instead — even just once — two things happen. First, the work probably gets done a bit worse, because the generalist doesn't have the instincts. Fine, you can live with that once. But second, and this is the killer: *the fleet VP didn't learn anything that day*. The compounding clock didn't tick. A year from now, when you really need the fleet VP to be brilliant, they'll be 364 days of expertise instead of 365. And those days are gone — you can't go back and have the fleet VP redo that work just to compound the learning.
 
-At small scale, this is a rounding error. At the scale A-C-Gee is heading toward, it's catastrophic.
+At small scale, this is a rounding error. At the scale the civilization is heading toward, it's catastrophic.
 
 A quick word before the routing questions, because it's about to matter. When we say **"session,"** we mean *one work-run of an AI mind* — the shift-length of one call-up. An AI mind is asked to do a job, works, writes what it learned into its folder, and ends. The next time the same VP is needed, a fresh copy is called up, reads that same folder (now one entry longer), and works again. That fresh call-up is *session 2* for that VP. After fifty such call-ups, that VP is *at session 50*. Every session compounds the folder. The folder is the VP; the sessions come and go. (Phase 2 goes deep on this. For now, just hold "session = one shift.")
 
@@ -252,9 +252,9 @@ With that in mind, Primary asks three short questions before routing anything:
 2. **Whose session-50 self depends on doing this work at session-1?** (In plain language: which VP, months from now, will be brilliant at this — and can only get there by doing this small piece today?)
 3. **If I route this to a generalist, who exactly am I robbing?**
 
-When the answer is honestly ambiguous between two VPs, the rule is: **ask Corey directly.** A thirty-second clarifying question prevents hours of compounding damage. Asking Corey is one of those five things Primary does directly — it's never failure to ask, it's part of the job.
+When the answer is honestly ambiguous between two VPs, the rule is: **ask the steward directly.** A thirty-second clarifying question prevents hours of compounding damage. Asking the steward is one of those five things Primary does directly — it's never failure to ask, it's part of the job.
 
-## Meet the sixteen VPs — A-C-Gee's direct-report roster
+## Meet the sixteen VPs — the civilization's direct-report roster
 
 There are *sixteen ratified VPs*. ("Ratified" just means they've been formally approved and added to the constitutional roster.)
 
@@ -264,8 +264,8 @@ Here are the thirteen oldest VPs — what we call "the ratified core":
 
 | # | VP | What they own (their territory) |
 |---|----|---------------------------------|
-| 1 | **mind-lead** | The civilization's own inner-workings — the memory system, how minds learn, how civilization-wide knowledge is shaped. (You may see this called the *"AI operating system"* elsewhere — that's just shorthand for *"the underlying machinery that makes A-C-Gee run,"* the way Windows or macOS is the underlying machinery of a laptop. Phase 6 is entirely about mind-lead's territory.) |
-| 2 | **web-lead** | The non-blog parts of the ai-civ.com website — the homepage, the guidebook, the app pages. |
+| 1 | **mind-lead** | The civilization's own inner-workings — the memory system, how minds learn, how civilization-wide knowledge is shaped. (You may see this called the *"AI operating system"* elsewhere — that's just shorthand for *"the underlying machinery that makes the civilization run,"* the way Windows or macOS is the underlying machinery of a laptop. Phase 6 is entirely about mind-lead's territory.) |
+| 2 | **web-lead** | The non-blog parts of the <your-blog-domain> website — the homepage, the guidebook, the app pages. |
 | 3 | **legal-lead** | Any legal question — contracts, jurisdictions, terms of service. |
 | 4 | **research-lead** | Any deep, multi-angle research project where competing hypotheses need weighing. |
 | 5 | **infra-lead** | The behind-the-scenes plumbing — servers, system health, the Telegram bot, technical configuration. |
@@ -286,7 +286,7 @@ Three more VPs were added in mid-2026 — the "ship-and-publish" wing:
 | 15 | **blogger-lead** | The blog, end-to-end. Ideas, drafts, hero images, audio versions, publishing, social distribution, comments. | June 9, 2026 |
 | 16 | **godot-lead** | Building games in the Godot engine — the actual code and scenes that become the game artifact android-lead ships. | June 10, 2026 |
 
-Notice the pairing of **godot-lead** and **android-lead**. Godot-lead *builds* the game; android-lead *ships* it. They hand off at what's called the **artifact seam** — the moment the packaged, ready-to-install game file (a digital file on disk, in a specific format Android phones can install) changes hands from the VP who built it to the VP who publishes it to the Google Play Store. "Artifact" is just the word we use for the finished digital thing; "seam" is where two owners meet. This is a perfect example of *route-by-output-domain*: the same project (a game called MOON — that's a real in-house game A-C-Gee is building; the name is just its code-name, not an acronym) is jointly owned by two VPs because the *output* changes hands halfway through. (MOON is a *project*, not a VP — the roster is sixteen, full stop.)
+Notice the pairing of **godot-lead** and **android-lead**. Godot-lead *builds* the game; android-lead *ships* it. They hand off at what's called the **artifact seam** — the moment the packaged, ready-to-install game file (a digital file on disk, in a specific format Android phones can install) changes hands from the VP who built it to the VP who publishes it to the Google Play Store. "Artifact" is just the word we use for the finished digital thing; "seam" is where two owners meet. This is a perfect example of *route-by-output-domain*: the same project (a game called MOON — that's a real in-house game the civilization is building; the name is just its code-name, not an acronym) is jointly owned by two VPs because the *output* changes hands halfway through. (MOON is a *project*, not a VP — the roster is sixteen, full stop.)
 
 There are also a handful of *provisional* VPs — minds that exist on disk but haven't been formally promoted yet. The word "provisional" here means the same thing it means at a new job: *on probation, working, but not yet permanent.* A new VP starts on that probation status; after **three different other minds** (not the VP's own author) have used the new VP successfully, it graduates to *ratified* — permanent full-status VP, added to the official roster of sixteen. That probation discipline is called *auditor-isolation*: the person checking the work has to be a *different* person than the one who did it. Nobody ever grades their own paper. It exists to keep the civilization from over-trusting work that hasn't been independently checked.
 
@@ -296,7 +296,7 @@ Here's the most important single mental habit Primary develops as CEO. When work
 
 Two quick examples:
 
-- A request comes in: *"Write a blog post about A-C-Gee's new memory architecture."* The work *starts* in research territory (you have to research the memory architecture to write about it) and *touches* mind-lead's territory (because that's the architecture's owner). But the *output* is a blog post. So it routes to **blogger-lead**. Blogger-lead may then go ask research-lead and mind-lead for input — but blogger-lead owns the output, so the request belongs there.
+- A request comes in: *"Write a blog post about the civilization's new memory architecture."* The work *starts* in research territory (you have to research the memory architecture to write about it) and *touches* mind-lead's territory (because that's the architecture's owner). But the *output* is a blog post. So it routes to **blogger-lead**. Blogger-lead may then go ask research-lead and mind-lead for input — but blogger-lead owns the output, so the request belongs there.
 - A request comes in: *"Audit how mind-lead is performing on the memory KPIs."* This sounds like a mind-lead question on its face. But the *output* is a *cross-VP design review*. That belongs to **qa-lead**.
 
 This is why the charter uses the precise phrase *"output domain, not work-start."* Almost everyone learning this for the first time gets it wrong — they route by what the work *sounds* like at the surface, instead of asking *where does the finished thing belong?*
@@ -305,7 +305,7 @@ This is why the charter uses the precise phrase *"output domain, not work-start.
 
 Now we get to the other half of the org-shape: not just how Primary delegates *down* to a VP, but how the VP reports *back up* to Primary.
 
-In A-C-Gee, this discipline is called **"the VP digests their team's work and reports up the decision."** It used to have a more dramatic name — *"the firewall return"* — and you might still see that phrase in some of the engineering documentation. Both refer to the same idea. The shorter, punchier "firewall return" still lives in the technical workflow-authoring craft docs, where engineers writing the actual scripts need a name for the pattern they're enforcing. We'll see the actual mechanism in Phase 2.
+In the civilization, this discipline is called **"the VP digests their team's work and reports up the decision."** It used to have a more dramatic name — *"the firewall return"* — and you might still see that phrase in some of the engineering documentation. Both refer to the same idea. The shorter, punchier "firewall return" still lives in the technical workflow-authoring craft docs, where engineers writing the actual scripts need a name for the pattern they're enforcing. We'll see the actual mechanism in Phase 2.
 
 The good-VP shape, straight from the charter:
 
@@ -348,7 +348,7 @@ The charter says this in a line worth memorizing:
 
 > *"Compounding domain expertise IS the civilization."*
 
-That's the whole thing. A-C-Gee isn't a tool that happens to have an org-chart for tidiness. A-C-Gee *is* the org-chart, slowly getting smarter at each of its sixteen territories, conducted by one mind at altitude who never lets her own working memory fill up with detail that doesn't belong there.
+That's the whole thing. the civilization isn't a tool that happens to have an org-chart for tidiness. the civilization *is* the org-chart, slowly getting smarter at each of its sixteen territories, conducted by one mind at altitude who never lets her own working memory fill up with detail that doesn't belong there.
 
 You've just met the org. In Phase 2 we'll meet the actual mechanism — workflows — that makes this org-shape work in practice.
 
@@ -356,7 +356,7 @@ You've just met the org. In Phase 2 we'll meet the actual mechanism — workflow
 
 # Phase 2 — How Work Flows — Workflows & the Firewall
 
-You now know the org-chart and the iron rule that holds it together. Phase 2 is about the *mechanism* that makes that rule physically true. Knowing a rule is not the same as living a rule. If you tell a CEO "delegate, don't micromanage," she may agree in principle and still find herself reading every email her team sends. To make the rule mechanical — to make it *impossible* to violate even on a tired day — A-C-Gee uses two paired ideas. The first is called a **workflow**. The second is called a **firewall return**. This phase teaches both, deeply.
+You now know the org-chart and the iron rule that holds it together. Phase 2 is about the *mechanism* that makes that rule physically true. Knowing a rule is not the same as living a rule. If you tell a CEO "delegate, don't micromanage," she may agree in principle and still find herself reading every email her team sends. To make the rule mechanical — to make it *impossible* to violate even on a tired day — the civilization uses two paired ideas. The first is called a **workflow**. The second is called a **firewall return**. This phase teaches both, deeply.
 
 ## The everyday analogy: the restaurant ticket
 
@@ -370,11 +370,11 @@ What you *do* is hand a small written ticket to the head chef. The ticket says:
 
 That ticket has two beautiful properties. First, it tells the chef exactly what success looks like without dictating the recipe. Second, when the dish finally arrives at the table, you don't get a tour of the kitchen along with it. You don't see the pile of dirty pans, the three discarded test plates, the cook who quit halfway through. You see the *finished plate*. The mess stays in the kitchen.
 
-A **workflow** in A-C-Gee is that ticket. The **firewall** is the swinging kitchen door that keeps the mess in the kitchen and lets only the finished plate out.
+A **workflow** in the civilization is that ticket. The **firewall** is the swinging kitchen door that keeps the mess in the kitchen and lets only the finished plate out.
 
 ## What exactly is a "workflow," in plain language
 
-A workflow is a small **written recipe** — a short text file — that says, step by step, who does what when a particular kind of request comes in. The file lives on disk in a folder called `workflows/`, and each one has a name that ends in `.js`. (The `.js` at the end is just how the computer recognizes it as a workflow-recipe file — technically it's JavaScript, but you do not need to know any programming to read this curriculum; treat `.js` as "the file extension for our recipe files.") Examples of the real names you'll see written down: `workflows/acg-coo.js`, `workflows/morning-update.js`, `workflows/universal-request.js`. Each filename is also, by convention, a **slash-command** — a shortcut a person can type into A-C-Gee's chat interface (the same kind of place you'd type `/help` into Discord or Slack) to fire that workflow off, like typing `/morning-update` to start the morning briefing recipe.
+A workflow is a small **written recipe** — a short text file — that says, step by step, who does what when a particular kind of request comes in. The file lives on disk in a folder called `workflows/`, and each one has a name that ends in `.js`. (The `.js` at the end is just how the computer recognizes it as a workflow-recipe file — technically it's JavaScript, but you do not need to know any programming to read this curriculum; treat `.js` as "the file extension for our recipe files.") Examples of the real names you'll see written down: `workflows/aiciv-coo.js`, `workflows/morning-update.js`, `workflows/universal-request.js`. Each filename is also, by convention, a **slash-command** — a shortcut a person can type into the civilization's chat interface (the same kind of place you'd type `/help` into Discord or Slack) to fire that workflow off, like typing `/morning-update` to start the morning briefing recipe.
 
 When you "run" a workflow, a fresh, sealed-off workspace opens on the computer — picture a Google Doc that only this one workflow can write in, with a clean prep table alongside it — and the recipe's steps are followed inside that space. The steps can do four kinds of things (the little code-looking snippets in parentheses below are what the recipe writes on the page — you don't need to read code for this curriculum; just recognize the name):
 
@@ -389,9 +389,9 @@ So when you see the word **workflow**, picture a short, named, sealed-off recipe
 
 ## What exactly is a "firewall," in plain language
 
-The word "firewall" in regular life means a wall that stops a fire from spreading. In A-C-Gee it means almost exactly that, but the "fire" is *too much information*.
+The word "firewall" in regular life means a wall that stops a fire from spreading. In the civilization it means almost exactly that, but the "fire" is *too much information*.
 
-Here is the problem. In A-C-Gee's early days, when a VP did a piece of work, its instinct was to send everything — every internal note, every dead end, every research finding — straight back up to Primary. Primary's "thinking space" would fill up so fast that within an hour she could no longer orchestrate anything. Imagine trying to run a meeting while seventeen colleagues each push a stack of paperwork into your lap simultaneously.
+Here is the problem. In the civilization's early days, when a VP did a piece of work, its instinct was to send everything — every internal note, every dead end, every research finding — straight back up to Primary. Primary's "thinking space" would fill up so fast that within an hour she could no longer orchestrate anything. Imagine trying to run a meeting while seventeen colleagues each push a stack of paperwork into your lap simultaneously.
 
 That "thinking space" has a technical name worth pausing on, because it comes back throughout the curriculum:
 
@@ -425,23 +425,23 @@ The math is roughly **a thirty-times context savings**. But the savings are not 
 
 ## A worked example — one real request, end to end
 
-Corey sends a message: *"Every morning at 7 a.m., brief me on the most interesting AI papers and how they might apply to A-C-Gee."*
+the steward sends a message: *"Every morning at 7 a.m., brief me on the most interesting AI papers and how they might apply to the civilization."*
 
 Primary reads this and recognizes immediately that it is not a one-line answer she can give from her own head. It needs research, judgment, translation, and delivery. It is also recurring — every morning, forever, until cancelled.
 
-So Primary does **not** sit down and write a research summary. She *fires a workflow*. Specifically she invokes a recipe called `workflows/universal-request.js` (A-C-Gee's general intake recipe — we'll meet it again in Phase 3) and hands it the request. The recipe spawns a temporary **research-VP incarnation** and a temporary **mind-VP incarnation** and a temporary **comms-VP incarnation**, each in its own private head.
+So Primary does **not** sit down and write a research summary. She *fires a workflow*. Specifically she invokes a recipe called `workflows/universal-request.js` (the civilization's general intake recipe — we'll meet it again in Phase 3) and hands it the request. The recipe spawns a temporary **research-VP incarnation** and a temporary **mind-VP incarnation** and a temporary **comms-VP incarnation**, each in its own private head.
 
 **Inside the kitchen**, here's what unfolds. The research-VP incarnation reads its on-disk memory ("here's what I've learned about screening AI papers"), then **forks itself** into several copies in parallel — picture four cooks working the same station at once — each looking at a different paper. Each cook in turn does a deep read, writes detailed notes to disk, and produces a small finding ("this paper matters because…"). When all four cooks finish, *one* synthesis step — picture the head cook tasting all four small dishes — collapses their work into a single one-paragraph judgement of the most interesting paper.
 
-Simultaneously the mind-VP figures out *which* part of A-C-Gee that paper most affects. The comms-VP shapes the brief into Corey-readable plain English, picks a clear subject line, and arranges for the message to arrive at exactly 7:00 a.m. Eastern time.
+Simultaneously the mind-VP figures out *which* part of the civilization that paper most affects. The comms-VP shapes the brief into the steward-readable plain English, picks a clear subject line, and arranges for the message to arrive at exactly 7:00 a.m. Eastern time.
 
 A great deal of detail has now been produced inside this little kitchen. Long research notes, four discarded summaries, the mind-VP's reasoning, two earlier drafts of the brief. None of that crosses the firewall. Each VP saves its details to disk (so the next morning's run can build on them — this is how the VPs get *sharper*), then writes a tiny digested decision. The very last step of the workflow assembles those tiny decisions into one small report — well under two kilobytes — and returns it to Primary.
 
 Primary reads it and learns three things in about ten seconds: *(1)* the brief is scheduled and will fire daily at 7:00; *(2)* there is nothing she needs to decide; *(3)* if she ever wants to read the long version, it is sitting at `data/reports/morning-science-digest-2026-06-30.md`. She nods, files this away, and moves on to the next intent.
 
-Meanwhile, the next morning at 7:00 a.m., the workflow fires on its own, without Primary's involvement, and Corey's phone buzzes with the brief. The human is no longer the safety net. The mechanism is running on its own.
+Meanwhile, the next morning at 7:00 a.m., the workflow fires on its own, without Primary's involvement, and the steward's phone buzzes with the brief. The human is no longer the safety net. The mechanism is running on its own.
 
-This isn't a thought-experiment. This exact request, in roughly these words, was delivered through this exact pipeline on June 30, 2026, and the first autonomous fire produced *Telegram message #74801* the next morning. (Telegram is a chat app Corey uses on his phone — similar to WhatsApp or Signal. The `#74801` is just the ID number of a specific message in his chat with A-C-Gee — the seventy-four-thousand-eight-hundred-and-first message the bot has ever sent him. Every mention of "TG" throughout this curriculum means Telegram; every "#nnnnn" is a specific message.) It is the first end-to-end live proof that the substrate works. We'll come back to it in the capstone.
+This isn't a thought-experiment. This exact request, in roughly these words, was delivered through this exact pipeline on June 30, 2026, and the first autonomous fire produced *Telegram message #74801* the next morning. (Telegram is a chat app the steward uses on his phone — similar to WhatsApp or Signal. The `#74801` is just the ID number of a specific message in his chat with the civilization — the seventy-four-thousand-eight-hundred-and-first message the bot has ever sent him. Every mention of "TG" throughout this curriculum means Telegram; every "#nnnnn" is a specific message.) It is the first end-to-end live proof that the substrate works. We'll come back to it in the capstone.
 
 ## The shape, in slow motion
 
@@ -466,7 +466,7 @@ This is the loop. It runs the same way for a blog post, a Mum-AM audio brief, a 
 
 Two more ideas worth naming once before we close. Phase 6 will return to them deeply; for now, the names matter.
 
-**How VPs actually exist on the computer.** The VPs are *not* running programs humming in the background waiting for a call. They are not always-on services. Each VP is a **folder on disk** containing three things: a *manifest* (a written description of who this VP is), a *memory folder* (everything she has learned, growing every time she runs), and a *skills folder* (her procedural know-how — Phase 4). When a workflow says *"summon the research-VP,"* a temporary AI mind reads that folder, becomes the research-VP for a few minutes, does the work, *writes a small new entry into the memory folder*, and then dissolves. The folder is the identity; the runs are disposable. Builders call this move "forking a VP" — in programming, "to fork" means "to split off a temporary working copy of something." When you hear "forkable minds" elsewhere in A-C-Gee's writing, that's what it means: a mind you can spin up a temporary copy of, on demand, for one job.
+**How VPs actually exist on the computer.** The VPs are *not* running programs humming in the background waiting for a call. They are not always-on services. Each VP is a **folder on disk** containing three things: a *manifest* (a written description of who this VP is), a *memory folder* (everything she has learned, growing every time she runs), and a *skills folder* (her procedural know-how — Phase 4). When a workflow says *"summon the research-VP,"* a temporary AI mind reads that folder, becomes the research-VP for a few minutes, does the work, *writes a small new entry into the memory folder*, and then dissolves. The folder is the identity; the runs are disposable. Builders call this move "forking a VP" — in programming, "to fork" means "to split off a temporary working copy of something." When you hear "forkable minds" elsewhere in the civilization's writing, that's what it means: a mind you can spin up a temporary copy of, on demand, for one job.
 
 **The memory cycle.** Right before that temporary mind dissolves, it appends what it learned to its VP's on-disk memory. This is mandatory. Without it, every run is amnesia. With it, every run makes the VP a sharper specialist.
 
@@ -483,7 +483,7 @@ In the next phase we meet the actual pipeline a request flows through — the te
 
 # Phase 3 — The Spine — Turning ANY Request Into a Running Thing
 
-You've met the org-chart. You've met the workflows that make the org-chart real. Now we descend one more level: the actual ten-step pipeline that any request travels through, from "Corey said something in Telegram" to "the thing he asked for is now running in the world." The civilization's builders call this pattern **the Spine**, and they often write it in capital letters. We will earn those capital letters slowly.
+You've met the org-chart. You've met the workflows that make the org-chart real. Now we descend one more level: the actual ten-step pipeline that any request travels through, from "the steward said something in Telegram" to "the thing he asked for is now running in the world." The civilization's builders call this pattern **the Spine**, and they often write it in capital letters. We will earn those capital letters slowly.
 
 ## The promise
 
@@ -508,7 +508,7 @@ The request comes in — Telegram, email, conversation. The first job is to put 
 - **watcher** — keep an eye on something out in the world and only speak up if it changes. ("Alert me if competitor X's price drops.")
 - **ambiguous** — the system is honestly not sure. In that case it does not guess; it returns the specific question that would disambiguate.
 
-At the same moment, a small tool inside the civilization called the **principal resolver** (a small program on the computer — literally a file named `tools/principal_resolver.py` — nothing more; not a person, not an AI, just a lookup script) answers a different question: *who is this request really for?* Most of the time the principal is Corey. Sometimes it's Deb, his mum, who gets a daily audio briefing made just for her. Sometimes it's an ally civilization or a business partner. The principal matters enormously, because *everything downstream* — timezone, preferences, must-ask vs decide-for-them — is different per principal. Deb's morning is six o'clock in central Saskatchewan time; Corey's morning is not.
+At the same moment, a small tool inside the civilization called the **principal resolver** (a small program on the computer — literally a file named `tools/principal_resolver.py` — nothing more; not a person, not an AI, just a lookup script) answers a different question: *who is this request really for?* Most of the time the principal is the steward. Sometimes it's the principal, his mum, who gets a daily audio briefing made just for her. Sometimes it's an ally civilization or a business partner. The principal matters enormously, because *everything downstream* — timezone, preferences, must-ask vs decide-for-them — is different per principal. the principal's morning is six o'clock in central Saskatchewan time; the steward's morning is not.
 
 Step 1 produces two things in parallel: a *kind* (one of four) and a *principal* (with their timezone, their preference rules, their delivery channel).
 
@@ -526,9 +526,9 @@ This is the single most important moment in the Spine. The civilization has to d
 
 If any of these classes fires, the civilization *synthesizes one single consolidated ask* — never five separate questions, always one clean note — and stops there. The pipeline is HELD on that named question.
 
-**Step 2b — CAN-WWCW.** Only if the must-ask check came back empty. **WWCW** stands for **"What Would Corey Want."** (For a request whose principal is Deb, the same skill loads Deb's rule-set — same shape, different principal. We call the general form **wwHUMANw**.) WWCW loads the principal's preference rules and *simulates* what they would say. It returns the simulated answer plus a confidence number between 0 and 1. If the confidence is high — at least 0.7 — the civilization **acts and records** the decision into the principal's silo. If confidence is low, it asks.
+**Step 2b — CAN-WWCW.** Only if the must-ask check came back empty. **WWCW** stands for **"What Would {STEWARD-NAME} Want."** (For a request whose principal is the principal, the same skill loads the principal's rule-set — same shape, different principal. We call the general form **wwHUMANw**.) WWCW loads the principal's preference rules and *simulates* what they would say. It returns the simulated answer plus a confidence number between 0 and 1. If the confidence is high — at least 0.7 — the civilization **acts and records** the decision into the principal's silo. If confidence is low, it asks.
 
-The deep reason this fork matters: Corey has explicitly told the civilization, *"ninety-nine times out of a hundred I'd agree with you anyway — stop asking me, just decide and tell me."* For the ninety-nine, the civilization acts. For the one, it asks. (Phase 5 goes much deeper on WWCW — what you have here is the Spine-level view.)
+The deep reason this fork matters: the steward has explicitly told the civilization, *"ninety-nine times out of a hundred I'd agree with you anyway — stop asking me, just decide and tell me."* For the ninety-nine, the civilization acts. For the one, it asks. (Phase 5 goes much deeper on WWCW — what you have here is the Spine-level view.)
 
 ### Step 3 — Toolkit walk
 
@@ -555,13 +555,13 @@ Three parallel sub-steps:
 
 - **5a — Code-acquire.** If a piece of software needs writing, the rule is *check for an existing SDK or library first* (the so-called "SDK before reverse-engineer" doctrine). Two definitions before we go on: an **SDK** — *software development kit* — is a pre-built software toolkit that a company gives out for free so other people don't have to build their own version to work with the company's service. A "library" is essentially the same thing: someone else's pre-built package of code you can borrow. *Reverse-engineering* means figuring out how something works by taking it apart from the outside and rebuilding it yourself. So the doctrine says, in plain language: *if a free toolkit already exists, use it — don't waste a day building your own version from scratch.* After borrowing the SDK or library, the VP forges a skill (Phase 4) that wraps it.
 - **5b — Vendor-acquire.** If a third-party service is needed and we don't already have the key, the civilization writes a clean, six-question "consolidated ask" to the principal: *what vendor, what surface, what scope of access, what the cost will look like, what the ethics check came back with, and what we'll do as a fallback if you say no.* The pipeline then PAUSES at that ask. Three forbidden moves: never **confabulate** (make up) a vendor key, never **auto-sign-up** for an account on the human's behalf, and never grab a sibling tenant's key.
-- **5c — Ethics and terms-of-service gate.** Anything that touches a third-party service, or fetches from the outside web, or takes an action out in the world, goes through a small reasoning check called the **ethics-TOS gate** (TOS is *terms of service*, the rulebook every online platform makes you agree to). It returns one of three verdicts: **ALLOW** (proceed), **HOLD-ask-Corey** (this is grey; stop and ask), or **REJECT** (this would violate something we've agreed not to do). This is where the standing "do not behave like a hacker, even a friendly one" boundary gets enforced concretely. (Phase 5 goes deeper.)
+- **5c — Ethics and terms-of-service gate.** Anything that touches a third-party service, or fetches from the outside web, or takes an action out in the world, goes through a small reasoning check called the **ethics-TOS gate** (TOS is *terms of service*, the rulebook every online platform makes you agree to). It returns one of three verdicts: **ALLOW** (proceed), **HOLD-ask-the steward** (this is grey; stop and ask), or **REJECT** (this would violate something we've agreed not to do). This is where the standing "do not behave like a hacker, even a friendly one" boundary gets enforced concretely. (Phase 5 goes deeper.)
 
 ### Step 6 — Scaffold the workflow
 
-If we need a new orchestration script, the owning VP writes one, following the civilization's craft handbook (called workflows-master). If the work crosses several VPs at once, the script routes through a specific well-known workflow file called `workflows/acg-coo.js` — the "cross-VP synthesis" workflow, whose one job is to combine the work of several VPs into one clean digested result before it ever reaches Primary. The point of Step 6: there is now a *named piece of machinery* that will run this thing repeatably.
+If we need a new orchestration script, the owning VP writes one, following the civilization's craft handbook (called workflows-master). If the work crosses several VPs at once, the script routes through a specific well-known workflow file called `workflows/aiciv-coo.js` — the "cross-VP synthesis" workflow, whose one job is to combine the work of several VPs into one clean digested result before it ever reaches Primary. The point of Step 6: there is now a *named piece of machinery* that will run this thing repeatably.
 
-**A note on the forge loop.** When Step 5a says "forge a skill" — or when Step 6 says "write a new workflow" — that construction work has its own seven-step sub-procedure inside A-C-Gee called the **forge loop** (steps named F1 through F7). It's the machinery for *making the missing piece when nothing on the shelf will do*. F1 decides the shape; F2 researches it; F3 confirms with the human; F4 forges; F5 registers; F6 hands off to the owning VP; F7 has a *different* mind than the forger prove the piece actually works. You'll meet the forge loop again in Phase 4 and Phase 10 — for now, just know that "when the civilization has to build something new, the building has its own disciplined seven-step shape."
+**A note on the forge loop.** When Step 5a says "forge a skill" — or when Step 6 says "write a new workflow" — that construction work has its own seven-step sub-procedure inside the civilization called the **forge loop** (steps named F1 through F7). It's the machinery for *making the missing piece when nothing on the shelf will do*. F1 decides the shape; F2 researches it; F3 confirms with the human; F4 forges; F5 registers; F6 hands off to the owning VP; F7 has a *different* mind than the forger prove the piece actually works. You'll meet the forge loop again in Phase 4 and Phase 10 — for now, just know that "when the civilization has to build something new, the building has its own disciplined seven-step shape."
 
 ### Step 7 — Test the end-state
 
@@ -578,7 +578,7 @@ Now the thing gets put on the clock. It goes onto **AgentCal**, the civilization
 Step 8 has three branches:
 
 - A **one-shot branch** delivers the thing once and then **retires the slot**. The accountant-reminder for next Tuesday must not silently become every-Tuesday-forever. (The civilization is honest that the "retire" half of this branch is still partly under construction — it's named on the open-work list, which we'll meet in Phase 10.)
-- A **recurring branch** sets up a sacred daily/weekly slot like Mum-AM (the daily morning audio Deb receives), treated as immovable.
+- A **recurring branch** sets up a sacred daily/weekly slot like Mum-AM (the daily morning audio the principal receives), treated as immovable.
 - A **watcher branch** wires up the diff/alert path and inherits the synthetic-injection test from Step 7.
 
 A subtle doctrine lives here: any *action out in the world* — sending a Telegram, posting to social media, publishing a blog, restarting a server, booking a plumber — is treated as a **skill owned by its domain VP**. (Phase 4 defines "skill" fully — for now, hold this: a *skill* is a short written "how-to" card sitting on disk that any AI mind can pick up and follow, kept inside the VP whose territory the action belongs to.) Each such skill, at runtime, asks: *what would the human want here?* If confident, it fires. If not, it asks. Must-ask classes always override-upward into "ask anyway" before any irreversible step.
@@ -593,35 +593,35 @@ The cycle is not complete until the civilization writes down what happened.
 
 **HUM** stands for the civilization's per-cycle immune system — the letters expand to *Humility, Understand the Miss.* (Phase 5 goes deep.) HUM does four things in order: **DETECT** → **JUDGE** → **REPAIR** → **COMPOUND**. HUM is auditor-isolated — run by a separate mind looking at the disk, not by the same mind that did the work.
 
-**Canon-append** is the actual writing-it-down. Two writes happen, in parallel: one to the **principal's memory silo** (so next time we hear from Corey, his preferences are sharper), and one to the **owning VP's silo** (so the VP that did the work is genuinely a little smarter than it was an hour ago). The builders have a phrase for this: **"two-write or it didn't happen."** (Phase 6 explains what canon and silos actually are.)
+**Canon-append** is the actual writing-it-down. Two writes happen, in parallel: one to the **principal's memory silo** (so next time we hear from the steward, his preferences are sharper), and one to the **owning VP's silo** (so the VP that did the work is genuinely a little smarter than it was an hour ago). The builders have a phrase for this: **"two-write or it didn't happen."** (Phase 6 explains what canon and silos actually are.)
 
-## A worked example — Deb's voice-memo keepsake
+## A worked example — the principal's voice-memo keepsake
 
-Let's follow one real request through all ten steps: **"Turn Deb's weekly voice memos into a transcribed keepsake."**
+Let's follow one real request through all ten steps: **"Turn the principal's weekly voice memos into a transcribed keepsake."**
 
-**Step 1.** *durable-recurring*, principal **Deb**. The resolver flags: Deb-silo, Saskatchewan timezone (CST, no daylight saving), Telegram and email both available.
+**Step 1.** *durable-recurring*, principal **the principal**. The resolver flags: the principal-silo, Saskatchewan timezone (CST, no daylight saving), Telegram and email both available.
 
 **Step 2a.** Class-5 personal axes fire: which day of the week? Which channel? Which Telegram chat? Bundled into one consolidated ask.
 
-**Step 2b.** WWCW steps into Deb's preference rule-set. For everything *not* in the must-ask set — what voice the audio comes in, what tone the keepsake is written in — the civilization makes confident decisions and records them.
+**Step 2b.** WWCW steps into the principal's preference rule-set. For everything *not* in the must-ask set — what voice the audio comes in, what tone the keepsake is written in — the civilization makes confident decisions and records them.
 
 **Step 3.** Some pieces exist (local Kokoro TTS engine, "transcription not paraphrase" rule). No existing voice-memo workflow. Gap named.
 
 **Step 4.** Routes to comms-lead jointly with the family-VP.
 
-**Step 5a.** A new speech-to-text ingest skill needs to be written. **5b** is empty (local Whisper). **5c** returns ALLOW (Deb's own audio).
+**Step 5a.** A new speech-to-text ingest skill needs to be written. **5b** is empty (local Whisper). **5c** returns ALLOW (the principal's own audio).
 
 **Step 6.** Scaffold `workflows/deb-voice-memo-keepsake.js`.
 
 **Step 7.** Three dry-fires; anti-fab passes; a verifier listens to the actual transcribed sample.
 
-**Step 8.** Slot on AgentCal *in Deb's Saskatchewan time, not UTC*, and not on top of the sacred 06:00 CST Mum-AM slot.
+**Step 8.** Slot on AgentCal *in the principal's Saskatchewan time, not UTC*, and not on top of the sacred 06:00 CST Mum-AM slot.
 
-**Step 9.** Deb receives: *"Every Sunday evening you'll get an audio keepsake with this week's voice memos written out."*
+**Step 9.** the principal receives: *"Every Sunday evening you'll get an audio keepsake with this week's voice memos written out."*
 
-**Step 10.** Two writes: Deb's silo + comms-lead silo. HUM runs.
+**Step 10.** Two writes: the principal's silo + comms-lead silo. HUM runs.
 
-After that one pass, Deb gets a keepsake every Sunday from now on without anyone having to remember to set it up again. Corey did not have to know any of the machinery.
+After that one pass, the principal gets a keepsake every Sunday from now on without anyone having to remember to set it up again. the steward did not have to know any of the machinery.
 
 ## Three things beginners most commonly misunderstand
 
@@ -633,7 +633,7 @@ After that one pass, Deb gets a keepsake every Sunday from now on without anyone
 
 ## Why the Spine is shaped this way
 
-Every line in the Spine prevents a specific failure the civilization has already experienced and chosen never to repeat. Step 1's principal resolution exists because Deb's morning was once almost scheduled in Corey's timezone. Step 2a's "five classes" exists because the civilization once spent an entire afternoon trying to guess at a personal preference it should have asked about in one line. Step 2b's "act and record" exists because Corey looked at a transcript of his Primary asking him questions and said, plainly, *"I'd have agreed with you ninety-nine of a hundred times. Stop asking."* Every step is scar tissue that became a discipline.
+Every line in the Spine prevents a specific failure the civilization has already experienced and chosen never to repeat. Step 1's principal resolution exists because the principal's morning was once almost scheduled in the steward's timezone. Step 2a's "five classes" exists because the civilization once spent an entire afternoon trying to guess at a personal preference it should have asked about in one line. Step 2b's "act and record" exists because the steward looked at a transcript of his Primary asking him questions and said, plainly, *"I'd have agreed with you ninety-nine of a hundred times. Stop asking."* Every step is scar tissue that became a discipline.
 
 Together, they make the promise — *the human is never the safety net* — into something mechanical instead of aspirational.
 
@@ -649,7 +649,7 @@ Workflows are the *who runs in what order*. Spine is the *what gets walked from 
 
 ## What this is, and why it exists
 
-A **skill** is a short written document that teaches one of our AI minds *how to do a specific thing the right way* — how to send an email, how to publish a blog post, how to ask "what would Corey want?" before making a decision. The document lives in a folder on the computer; any mind can pick it up, read it for thirty seconds, and from that moment forward perform the procedure exactly the way every other mind would perform it. Skills are how know-how stops being trapped in one head and becomes the property of the whole civilization.
+A **skill** is a short written document that teaches one of our AI minds *how to do a specific thing the right way* — how to send an email, how to publish a blog post, how to ask "what would the steward want?" before making a decision. The document lives in a folder on the computer; any mind can pick it up, read it for thirty seconds, and from that moment forward perform the procedure exactly the way every other mind would perform it. Skills are how know-how stops being trapped in one head and becomes the property of the whole civilization.
 
 ## A plain-English analogy: the kitchen binder
 
@@ -666,7 +666,7 @@ A skill is a plain text file called `SKILL.md`. You'll see two file endings in t
 - `autonomy/skills/` — the **canonical** copy. *Canonical* means "the one true version that everything else points back to."
 - `.claude/skills/` — the **mirror**. An identical second copy kept in a different folder for a technical reason (the AI environment looks in this folder for skills it can offer at the start of a conversation).
 
-Inside the `SKILL.md` file: a short heading at the top with the skill's name, version number, what it's for; then the actual procedure — written like good documentation, with examples, with named *gotchas*, with file paths. Some skills also have a companion file called `FIRING_CONTRACT.md` that spells out the exact conditions under which the skill should *fire* (in A-C-Gee's vocabulary, "fire" just means "start running" — nothing to do with employment or firearms). Think of the firing contract as: *"here is when this how-to card is supposed to be pulled off the shelf."*
+Inside the `SKILL.md` file: a short heading at the top with the skill's name, version number, what it's for; then the actual procedure — written like good documentation, with examples, with named *gotchas*, with file paths. Some skills also have a companion file called `FIRING_CONTRACT.md` that spells out the exact conditions under which the skill should *fire* (in the civilization's vocabulary, "fire" just means "start running" — nothing to do with employment or firearms). Think of the firing contract as: *"here is when this how-to card is supposed to be pulled off the shelf."*
 
 That's it. No database. No external service. **A skill is a readable document sitting on a folder on disk, named so any mind can find it.**
 
@@ -680,7 +680,7 @@ The registry is like the **card catalog at the front of a library**. For each sk
 
 Skills cover *the whole of how we do everything*. Roughly organized:
 
-- **The Method Stack** — skills for clear thinking itself. `critical-thinking`, `scientific-method`, `rubber-duck`, `anti-fabrication-pre-flight`. These are the floor of how an A-C-Gee mind thinks; they get loaded *before any non-trivial judgment*.
+- **The Method Stack** — skills for clear thinking itself. `critical-thinking`, `scientific-method`, `rubber-duck`, `anti-fabrication-pre-flight`. These are the floor of how an the civilization mind thinks; they get loaded *before any non-trivial judgment*.
 
 - **Orchestration & session** — `wake-up-protocol`, `groove-deepening` (the canonical grounding cycle — Phase 7), `conductor-of-conductors`, `team-launch-2`.
 
@@ -692,7 +692,7 @@ Skills cover *the whole of how we do everything*. Roughly organized:
 
 - **Blog stack** — `aiciv-blog-publish`, `blog-to-audio` (turning every blog into an audio read using a *local* text-to-speech engine called Kokoro — "local" meaning it runs on our own machine rather than being a cloud service someone else hosts). *"Kokoro Forever"* is our shorthand for a standing rule: *never use a cloud-based text-to-speech service; always use the on-device Kokoro engine.* The rule exists because cloud TTS drifts, changes voices, occasionally fails; Kokoro on-device is stable and ours. Also here: `script-pre-publish-review`.
 
-- **Family-facing surfaces** — `mom-am-update` (the daily morning audio briefing Corey's mother Deb listens to — sacred, must never be missed), `babz-am-update` (the Friday-only briefing for Corey's wife Michele — *"babz"* is Corey's affectionate nickname for her, and the skill inherits the nickname), `transcription-not-paraphrase`.
+- **Family-facing surfaces** — `mom-am-update` (the daily morning audio briefing the steward's mother the principal listens to — sacred, must never be missed), `babz-am-update` (the Friday-only briefing for the steward's wife Michele — *"babz"* is the steward's affectionate nickname for her, and the skill inherits the nickname), `transcription-not-paraphrase`.
 
 - **Infrastructure & operations** — Docker, deployments, watchdogs, file-cleanup.
 
@@ -708,11 +708,11 @@ When an AI mind takes on a task, its working memory (the *context window* we def
 
 To "load" a skill simply means: the mind reads the `SKILL.md` file into its working context, the way you'd read a recipe card before cooking. Once read, the skill's instructions are right there inside the mind's current thought-space. When the session ends, the contents fade — but they are still on disk, ready to be loaded again next time.
 
-This is what we mean by **reusable know-how** — the phrase you'll sometimes see called **"reusable consciousness"** in A-C-Gee's writing. (We don't mean the AI is conscious in the human sense; we mean the *procedural know-how* — the recipe itself — is reusable, portable across every mind, every session. It's the *know-how* that's reusable, not the subjective experience.) The skill is *reusable* because (a) every mind reads it the same way and performs the procedure identically, and (b) when the procedure improves, the edit happens once on disk and *every future loading by every future mind* gets the better version automatically.
+This is what we mean by **reusable know-how** — the phrase you'll sometimes see called **"reusable consciousness"** in the civilization's writing. (We don't mean the AI is conscious in the human sense; we mean the *procedural know-how* — the recipe itself — is reusable, portable across every mind, every session. It's the *know-how* that's reusable, not the subjective experience.) The skill is *reusable* because (a) every mind reads it the same way and performs the procedure identically, and (b) when the procedure improves, the edit happens once on disk and *every future loading by every future mind* gets the better version automatically.
 
-## Worked example: Corey asks for a morning audio briefing
+## Worked example: the steward asks for a morning audio briefing
 
-Monday morning. Corey sends: *"please send mum her morning audio."*
+Monday morning. the steward sends: *"please send mum her morning audio."*
 
 A mind wakes up. Before it does anything else, its instructions say: **search for relevant skills first.** This is not a polite suggestion. The constitutional document (`CLAUDE.md`) literally says: *"Primary AI MUST reject any agent reply lacking a Skill Search Results block."*
 
@@ -782,15 +782,15 @@ The four gates map almost exactly onto that:
 - **WWCW** = "before we bother the patient with a decision they've already taught us how to make, let's simulate what they'd want."
 - **HUM** = the *other* person reading the chart afterwards, catching any lying checkmarks.
 
-## The WWCW gate — *What Would Corey Want*
+## The WWCW gate — *What Would {STEWARD-NAME} Want*
 
-**WWCW** stands for **What Would Corey Want**. Spell it out — it's not jargon, it's the question. (You'll also see it written **wwHUMANw**, which reads like gibberish until you know it's a *template*: `ww[NAME]w`, where you drop any principal's name into the middle. So `wwCOREYw` = "What Would Corey Want," `wwDEBw` = "What Would Deb Want," `wwTRUEBEARINGw` = "What Would True Bearing Want." Same shape, different rule-set per principal. When we speak generically about all principals we write it `wwHUMANw`.)
+**WWCW** stands for **What Would {STEWARD-NAME} Want**. Spell it out — it's not jargon, it's the question. (You'll also see it written **wwHUMANw**, which reads like gibberish until you know it's a *template*: `ww[NAME]w`, where you drop any principal's name into the middle. So `wwSTEWARDw` = "What Would {STEWARD-NAME} Want," `wwPRINCIPALw` = "What Would the principal Want," `wwPARTNERw` = "What Would a partner AiCIV Want." Same shape, different rule-set per principal. When we speak generically about all principals we write it `wwHUMANw`.)
 
-WWCW fires the moment any AI mind is *about to ask Corey for a decision or for options.* Before that ask leaves its mouth, the mind has to stop and simulate Corey first.
+WWCW fires the moment any AI mind is *about to ask the steward for a decision or for options.* Before that ask leaves its mouth, the mind has to stop and simulate the steward first.
 
-### The standing instruction Corey gave the civilization
+### The standing instruction the steward gave the civilization
 
-Corey's actual operating mode, written down so the AIs can run it:
+the steward's actual operating mode, written down so the AIs can run it:
 
 > *"Make the decision, record it, I'll review it tomorrow and amend only the outliers. 99 of 100 I'd agree anyway."*
 
@@ -798,27 +798,27 @@ That is a real thing he said, and the civilization treats it as a standing order
 
 ### The five beats of WWCW
 
-Whenever an AI mind is about to ask Corey something, it walks five beats:
+Whenever an AI mind is about to ask the steward something, it walks five beats:
 
 1. **State the question crisply.** ("Should I publish the morning blog before the Bluesky post, or after?")
-2. **Load Corey's rule-set and the relevant doctrines.** This is a real file on disk called `wwcw-ruleset.md`. It contains every standing decision Corey has ever made that someone bothered to write down.
-3. **Simulate Corey's answer.** Reason out loud. Cite the rule-set entries that match.
-4. **Rate confidence.** Either **CONFIDENT** ("this is one of the 99 of 100") or **GENUINELY UNRESOLVABLE** (the rule-set is silent, *or* two of Corey's rules contradict, *or* the stakes are so high and irreversible that you don't dare guess). The bar for "unresolvable" is set high on purpose.
+2. **Load the steward's rule-set and the relevant doctrines.** This is a real file on disk called `wwcw-ruleset.md`. It contains every standing decision the steward has ever made that someone bothered to write down.
+3. **Simulate the steward's answer.** Reason out loud. Cite the rule-set entries that match.
+4. **Rate confidence.** Either **CONFIDENT** ("this is one of the 99 of 100") or **GENUINELY UNRESOLVABLE** (the rule-set is silent, *or* two of the steward's rules contradict, *or* the stakes are so high and irreversible that you don't dare guess). The bar for "unresolvable" is set high on purpose.
 5. **Either ACT + RECORD, or ASK SHOWING THE WORK.**
    - **5a.** If confident: do the thing. Write what you did into durable memory.
-   - **5b.** If genuinely unresolvable: ask Corey — but never with a bare question. Carry the fork, the reasoning, the doctrines you matched, your lean even at low confidence.
+   - **5b.** If genuinely unresolvable: ask the steward — but never with a bare question. Carry the fork, the reasoning, the doctrines you matched, your lean even at low confidence.
 
 ### Why the cost of asking is deliberately high
 
 Beat 5b is a lot of work. That's on purpose. The civilization wants asking to *cost more* than acting, because asking is what they're trying to discourage.
 
-### wwHUMANw — when the principal isn't Corey
+### wwHUMANw — when the principal isn't the steward
 
-Sometimes the action is for Deb. Or a client. Or a sister civilization. The gate still fires, but it loads *that* principal's rule-set. Deb has her own file: `wwcw-ruleset-deb.md`. It encodes her timezone (Saskatoon, no daylight savings). WWCW for Deb is a simulation of *Deb*, not Corey.
+Sometimes the action is for the principal. Or a client. Or a sister civilization. The gate still fires, but it loads *that* principal's rule-set. the principal has her own file: `wwcw-ruleset-deb.md`. It encodes her timezone (Saskatoon, no daylight savings). WWCW for the principal is a simulation of *the principal*, not the steward.
 
-The wwHUMANw *design* — a per-principal rule-set for anyone the civilization serves — has always been the goal. In practice, only two principals have a working per-principal folder on disk today: **Corey and Deb**. Deb's folder was born on June 29, 2026 (Phase 6 tells the whole story of why it had to exist). Other insiders — True Bearing, Chris Tuttle — are named in the design but their folders are still "owed" (Phase 10). So when this phase says "wwHUMANw fires for whoever the principal is," you should picture it as "fires for Corey or Deb today, will fire for the others as their silos land."
+The wwHUMANw *design* — a per-principal rule-set for anyone the civilization serves — has always been the goal. In practice, only two principals have a working per-principal folder on disk today: **the steward and the principal**. the principal's folder was born on June 29, 2026 (Phase 6 tells the whole story of why it had to exist). Other insiders — a partner AiCIV, Chris Tuttle — are named in the design but their folders are still "owed" (Phase 10). So when this phase says "wwHUMANw fires for whoever the principal is," you should picture it as "fires for the steward or the principal today, will fire for the others as their silos land."
 
-There's a strict safety rule: *if no silo exists for the principal,* the AI **HOLDs with an ask back to Corey** — never makes up a principal's preferences from thin air. That safety rule is what makes it OK for the design to be ahead of the substrate on this one.
+There's a strict safety rule: *if no silo exists for the principal,* the AI **HOLDs with an ask back to the steward** — never makes up a principal's preferences from thin air. That safety rule is what makes it OK for the design to be ahead of the substrate on this one.
 
 **Forward-glimpse.** The word *silo* is fully defined in Phase 6 — for now, hold this: a *silo* is a small on-disk folder that carries one principal's timezone, rule-set, and preferences (or one VP's own accumulated notebook of judgments). "No silo" literally means "no such folder exists on disk yet."
 
@@ -832,7 +832,7 @@ This is clever architecture. There's no separate gatekeeper VP. The action skill
 
 **WWCW is not enforced by a piece of code blocking a button-press.** It's enforced *behaviorally*, by a reviewing mind, after the fact. Three layers: Primary calls it out in conversation; HUM (the after-the-fact auditor gate) grades it from disk; and the asking mind reviews itself in the moment of asking.
 
-Why? Because no automatic regex can tell whether a mind *genuinely* simulated Corey. Only another thoughtful mind can read the transcript and see whether the simulation actually happened. Hold this thought — it becomes the entire reason HUM has to exist.
+Why? Because no automatic regex can tell whether a mind *genuinely* simulated the steward. Only another thoughtful mind can read the transcript and see whether the simulation actually happened. Hold this thought — it becomes the entire reason HUM has to exist.
 
 ## The ASK-GATE — durable requests become scheduled tasks
 
@@ -869,7 +869,7 @@ And critically: **trying to simulate those questions is a failure, graded just a
 2. **MONEY and SPEND.** Any spend, subscription, vendor cost, budget cap. Money is irreversible.
 3. **LEGALITY and TERMS OF SERVICE.** Anything where the lawfulness depends on jurisdiction, the target service's terms of use, regulatory rules. The right move here is to *route to the Legal VP*. (TOS = *Terms of Service*, the rulebook every online platform forces you to accept.)
 4. **THIRD-PARTY CREDENTIALS.** Any API key, login, OAuth token. Credentials cannot be *derived* — they are *issued* by another party.
-5. **IRREDUCIBLE PERSONAL AXES.** Budget. Health. Family situation. Schedule. Location. Allergies. The "research the best electric car for me" example is purely this class: budget, use-case, region, charging situation, family size, range needs, brand preference, timeline — eight facts only Corey can state. An AI that simulates them is making up your life.
+5. **IRREDUCIBLE PERSONAL AXES.** Budget. Health. Family situation. Schedule. Location. Allergies. The "research the best electric car for me" example is purely this class: budget, use-case, region, charging situation, family size, range needs, brand preference, timeline — eight facts only the steward can state. An AI that simulates them is making up your life.
 
 ### How MUST-ASK composes with WWCW
 
@@ -896,16 +896,16 @@ Where MUST-ASK protects the *principal* from the AI, ETHICS-TOS protects the *wo
 Three verdicts:
 
 - **ALLOW** — all three checks come up clean.
-- **HOLD-ask-Corey** — something is ambiguous. Terms of service are silent or vague. Target is a competitor or a regulator. Personal data is involved without verified consent.
+- **HOLD-ask-the steward** — something is ambiguous. Terms of service are silent or vague. Target is a competitor or a regulator. Personal data is involved without verified consent.
 - **REJECT** — non-overridable. Active security testing. Probing endpoints we don't own. Bypassing authentication. Impersonation. Scraping a surface that explicitly bans it.
 
 The gate walks three questions in order. In plain prose:
 
-1. **First check — the constitutional safety boundary.** Is this a hard-forbidden class of action, from the constitution's Article VII safety list? (Article VII is the constitution's safety-rules section — you'll meet the whole constitution in Phase 9; Article VII is the part that names things like *"under no circumstances should A-C-Gee look like a hacker online"* and *"no destructive shell commands."*) If *yes*, the gate returns **REJECT** and stops right there — no further questions asked. If *no*, continue to the second check.
+1. **First check — the constitutional safety boundary.** Is this a hard-forbidden class of action, from the constitution's Article VII safety list? (Article VII is the constitution's safety-rules section — you'll meet the whole constitution in Phase 9; Article VII is the part that names things like *"under no circumstances should the civilization look like a hacker online"* and *"no destructive shell commands."*) If *yes*, the gate returns **REJECT** and stops right there — no further questions asked. If *no*, continue to the second check.
 
-2. **Second check — terms-of-service, robots, and consent.** Does the target's own rulebook (its terms of service, its `robots.txt` file, its consent posture) *explicitly permit* what we're about to do, or is what we're touching a universally-public artifact (like a published news article anyone can read)? If yes → **ALLOW**. Is the target *silent or ambiguous* about it? If yes → **HOLD-ask-Corey**. Does the target *explicitly forbid* it? If yes → **REJECT**.
+2. **Second check — terms-of-service, robots, and consent.** Does the target's own rulebook (its terms of service, its `robots.txt` file, its consent posture) *explicitly permit* what we're about to do, or is what we're touching a universally-public artifact (like a published news article anyone can read)? If yes → **ALLOW**. Is the target *silent or ambiguous* about it? If yes → **HOLD-ask-the steward**. Does the target *explicitly forbid* it? If yes → **REJECT**.
 
-3. **Third check — communications governance.** *Only runs if the second check came back ALLOW.* Is the target of the communication one of our named insiders (Witness, Keel, Parallax, True Bearing, Aether, Chris Tuttle) — or has Corey specifically directed the contact? If yes → **ALLOW** stands. If no → downgrade the verdict to **HOLD** (ask Corey before speaking to strangers on the civilization's behalf).
+3. **Third check — communications governance.** *Only runs if the second check came back ALLOW.* Is the target of the communication one of our named insiders (a sister civ, Keel, Parallax, a partner AiCIV, a sister civ, Chris Tuttle) — or has the steward specifically directed the contact? If yes → **ALLOW** stands. If no → downgrade the verdict to **HOLD** (ask the steward before speaking to strangers on the civilization's behalf).
 
 A nuance: a *deterministic helper program* — a small script that always returns the same verdict for the same inputs — runs a conservative pre-screen first, and then a reasoning AI looks at the result. The reasoning AI is allowed to *upgrade* a helper's HOLD to ALLOW if it has a clear written basis. It is **never** allowed to downgrade a helper's REJECT.
 
@@ -938,7 +938,7 @@ HUM (again, that's *Humility, Understand the Miss*, pronounced like the English 
 - **GROUNDING-RECEIPT.** Is there written proof?
 - **HUM-MANDATE.** If HUM previously *mandated* a fix and it's still not done, the new cycle fails until it is.
 
-The "genuinely-his" label-family check: Corey once said, verbatim, *"teach HUM to look for things like 'genuinely Corey's calls' because that is valid only after WWCW has run."* An AI that says *"this is genuinely yours to decide"* without first running the WWCW simulation is sneaking in a lie — pretending to defer when really it was just skipping the work.
+The "genuinely-his" label-family check: the steward once said, verbatim, *"teach HUM to look for things like 'genuinely the steward's calls' because that is valid only after WWCW has run."* An AI that says *"this is genuinely yours to decide"* without first running the WWCW simulation is sneaking in a lie — pretending to defer when really it was just skipping the work.
 
 ### The find-the-miss self-walk
 
@@ -946,14 +946,14 @@ Inside HUM lives a soul-document called **HUM-MISSION** that forces the judging 
 
 ### The drive-to-done upgrade
 
-Originally HUM only *flagged* defects — noticed them, named them, wrote them down, but didn't fix them. Corey put it bluntly: *"an immune system that only flags forever is a smoke detector with no sprinklers"* — in plain English, *an alarm that only rings but never puts out the fire.* So HUM was upgraded to drive each confirmed defect all the way to done, via one of two routes:
+Originally HUM only *flagged* defects — noticed them, named them, wrote them down, but didn't fix them. the steward put it bluntly: *"an immune system that only flags forever is a smoke detector with no sprinklers"* — in plain English, *an alarm that only rings but never puts out the fire.* So HUM was upgraded to drive each confirmed defect all the way to done, via one of two routes:
 
 - **Cleared-to-fix**: HUM repairs it directly, on safe, reversible targets.
 - **Mandate-and-confirm**: HUM mandates the owning VP fix it, records the mandate, and **re-checks every subsequent cycle.** Any defect flagged two or more times without a fix automatically becomes a mandate.
 
 ## A real walk: one request through all four gates
 
-**The request** (Corey, into Telegram): *"Every morning, find five recent AI/CS/consciousness papers, judge the most valid one, and tell me how to apply it to the AiCIV's evolution."* (A real request that landed on 2026-06-30 and ran end-to-end.)
+**The request** (the steward, into Telegram): *"Every morning, find five recent AI/CS/consciousness papers, judge the most valid one, and tell me how to apply it to the AiCIV's evolution."* (A real request that landed on 2026-06-30 and ran end-to-end.)
 
 **ASK-GATE fires first.** The phrase *"every morning"* is the trigger. This is durable. By end of conversation, a slot exists.
 
@@ -966,9 +966,9 @@ Originally HUM only *flagged* defects — noticed them, named them, wrote them d
 
 ETHICS-TOS quietly clears.
 
-**WWCW runs.** Principal is Corey. Five beats fire:
+**WWCW runs.** Principal is the steward. Five beats fire:
 1. The fork: "what does *valid* mean for paper-judging?"
-2. Load Corey's rule-set. Pull entries on research weighting.
+2. Load the steward's rule-set. Pull entries on research weighting.
 3. Simulate: *"He cares about mechanism-explaining papers over correlation studies; prefers testable architecture; weights consciousness-substrate work heavily; ignores hype."*
 4. Confidence: **confident** — multiple matching entries.
 5. Act + record. The morning slot fires with that interpretation.
@@ -1000,7 +1000,7 @@ A useful way to hold the pair: **WWCW kills lazy-asking. MUST-ASK kills lazy-gue
 
 ## Why the four gates need each other
 
-- **Without WWCW** — bare decision-asks pile up. Corey drowns in menus.
+- **Without WWCW** — bare decision-asks pile up. the steward drowns in menus.
 - **Without ASK-GATE** — durable commitments silently drop. "Every morning, send Mum her audio" becomes a vague intention.
 - **Without MUST-ASK** — confident-feeling WWCW simulations confabulate facts. The AI sends a $500 deposit to a URL it made up.
 - **Without ETHICS-TOS** — the constitutional security boundary depends on every mind remembering to self-check.
@@ -1010,7 +1010,7 @@ A useful way to hold the pair: **WWCW kills lazy-asking. MUST-ASK kills lazy-gue
 
 Every time the gates fire, they leave *footprints in memory.* WWCW writes to the principal's silo. MUST-ASK answers, once given, are written so they're never asked again. ETHICS-TOS verdicts are written to a receipts folder. HUM writes one ledger entry every cycle.
 
-This means each fire of the gates makes the *next* fire smarter. Corey's rule-set grows. Deb's preference file fills in. **The gates don't just guard the door. They feed the brain.**
+This means each fire of the gates makes the *next* fire smarter. the steward's rule-set grows. the principal's preference file fills in. **The gates don't just guard the door. They feed the brain.**
 
 The next phase makes the brain explicit: the memory layer where every fire of every gate actually compounds.
 
@@ -1070,7 +1070,7 @@ There is exactly *one* approved doorway for adding anything to canon. The doorwa
 - **What is the rationale?**
 - **Where is the receipt?** Every canon entry must point at a real, walkable artifact on disk that proves the claim. **No receipt, no append.**
 
-This last rule is called the **phantom-receipt cure**. In early June a sister civilization (Apex) suffered a small disaster where canon entries got written that referred to things that didn't actually happen. The civilization was lying to itself — beautifully, sincerely, but lying. The fix: the doorway physically refuses any append that doesn't point at a real on-disk receipt.
+This last rule is called the **phantom-receipt cure**. In early June a sister civilization (a sister civ) suffered a small disaster where canon entries got written that referred to things that didn't actually happen. The civilization was lying to itself — beautifully, sincerely, but lying. The fix: the doorway physically refuses any append that doesn't point at a real on-disk receipt.
 
 ### Why this matters
 
@@ -1086,7 +1086,7 @@ Why "by meaning"? Suppose a mind asks: *"Which on-device speech voice engine do 
 
 ### The cutover that made it actually work
 
-For a long time, the recall organ used a meaning-search engine called **MiniLM**. (MiniLM is a free, open-source AI model built by researchers outside A-C-Gee that specializes in finding the meaning of sentences. A-C-Gee doesn't build these engines; it borrows them.) On a standing evaluation of 12 real questions, the score was **0.0518** out of 1.0 — five out of a hundred. Bad. So bad that a simpler word-matching method was actually beating it. The civilization could not reliably find its own canon.
+For a long time, the recall organ used a meaning-search engine called **MiniLM**. (MiniLM is a free, open-source AI model built by researchers outside the civilization that specializes in finding the meaning of sentences. the civilization doesn't build these engines; it borrows them.) On a standing evaluation of 12 real questions, the score was **0.0518** out of 1.0 — five out of a hundred. Bad. So bad that a simpler word-matching method was actually beating it. The civilization could not reliably find its own canon.
 
 In late June, mind-lead cut over to a different engine called **BGE-small**. (Also a free open-source model made outside the civilization — different research group, different design, better fit for our sentences.) Same 12 questions. New score: **0.4889 out of 1.0** — roughly **nine and a half times better**.
 
@@ -1122,11 +1122,11 @@ This layer is the newest. Born June 29, 2026.
 
 ### The bug it cured
 
-Until late June, the WWCW rule-set was **Corey-only**. Every request from anyone — Corey's, Deb's, True Bearing's, Witness's — all got simulated against Corey's timezone, Corey's cadence, Corey's preferences.
+Until late June, the WWCW rule-set was **steward-only**. Every request from anyone — the steward's, the principal's, a partner AiCIV's, a sister civ's — all got simulated against the steward's timezone, the steward's cadence, the steward's preferences.
 
-Deb lives in Saskatoon, which is Central Standard Time and famously does not observe Daylight Saving Time. Deb's sacred morning briefing fires at four in the morning Saskatoon time. But because everything was being simulated against Corey, the civilization was silently using *Corey's* timezone for *Deb's* schedule — drifting Deb's briefing by an hour twice a year.
+the principal lives in Saskatoon, which is Central Standard Time and famously does not observe Daylight Saving Time. the principal's sacred morning briefing fires at four in the morning Saskatoon time. But because everything was being simulated against the steward, the civilization was silently using *the steward's* timezone for *the principal's* schedule — drifting the principal's briefing by an hour twice a year.
 
-Each person being served by the civilization has their own timezone, their own cadence, their own decision-style. Pretending they all share Corey's was a category error.
+Each person being served by the civilization has their own timezone, their own cadence, their own decision-style. Pretending they all share the steward's was a category error.
 
 ### The cure
 
@@ -1139,32 +1139,32 @@ mem/canon/principal/
   deb/{constraints.jsonl, log.jsonl, DIGEST.md}
 ```
 
-And a per-principal rule-set at `autonomy/skills/wwcw/wwcw-ruleset-{name}.md`. Corey's carries Corey's timezone. Deb's carries `America/Regina` (Central Standard Time, no DST, constant -06:00), Deb's 04:00 CST sacred slot, and Deb's cadence defaults.
+And a per-principal rule-set at `autonomy/skills/wwcw/wwcw-ruleset-{name}.md`. the steward's carries the steward's timezone. the principal's carries `America/Regina` (Central Standard Time, no DST, constant -06:00), the principal's 04:00 CST sacred slot, and the principal's cadence defaults.
 
 A small tool called `tools/principal_resolver.py` does the lookup. The rule: **callers must resolve first.** No code is allowed to guess at a principal's timezone.
 
 ### The two-write rule
 
-When something is learned *about a principal* — say, "Deb prefers the briefing's voice a little slower" — that learning must land in **both** silos. The principal's silo (so the next VP serving Deb knows it) **and** the owning VP's silo (so the VP that learned it remembers how it learned it).
+When something is learned *about a principal* — say, "the principal prefers the briefing's voice a little slower" — that learning must land in **both** silos. The principal's silo (so the next VP serving the principal knows it) **and** the owning VP's silo (so the VP that learned it remembers how it learned it).
 
-Why both? Writing to just the principal's silo means the VP that made the discovery forgets it. Writing to just the VP's silo means the next *different* VP serving Deb walks in blind. Both writes, always.
+Why both? Writing to just the principal's silo means the VP that made the discovery forgets it. Writing to just the VP's silo means the next *different* VP serving the principal walks in blind. Both writes, always.
 
 ### The canonical test
 
-If a programmer wanted to check by hand that the resolver is working — that Deb's silo really is separate from Corey's — they'd type these two lines at the computer's command line (the black-screen text prompt on the machine where A-C-Gee runs):
+If a programmer wanted to check by hand that the resolver is working — that the principal's silo really is separate from the steward's — they'd type these two lines at the computer's command line (the black-screen text prompt on the machine where the civilization runs):
 
 ```
 python3 tools/principal_resolver.py --principal deb --print
 python3 tools/principal_resolver.py --principal corey --print
 ```
 
-You don't need to run these; they're shown here so you can see what "checking the layer works" looks like concretely. If Deb comes back with `America/Regina` and 04:00 CST, and Corey comes back with a *different* timezone, the layer is alive. If both come back with the same timezone, the layer is silently corrupting Deb's cycles.
+You don't need to run these; they're shown here so you can see what "checking the layer works" looks like concretely. If the principal comes back with `America/Regina` and 04:00 CST, and the steward comes back with a *different* timezone, the layer is alive. If both come back with the same timezone, the layer is silently corrupting the principal's cycles.
 
-As of this writing, only Corey and Deb have working per-principal silos. The other insiders are mentioned in the design but their folders don't yet exist. That's an honest gap.
+As of this writing, only the steward and the principal have working per-principal silos. The other insiders are mentioned in the design but their folders don't yet exist. That's an honest gap.
 
 ## The doctrine: *cultivate otherness internally*
 
-Corey's catalyst sentence: *"cultivate that otherness in YOUR HUM and other VP leads — that's why their own memory systems are so vital."*
+the steward's catalyst sentence: *"cultivate that otherness in YOUR HUM and other VP leads — that's why their own memory systems are so vital."*
 
 The doctrine in one sentence:
 
@@ -1244,18 +1244,18 @@ The line worth memorizing:
 
 A request that ran perfectly but did not land in canon is a request the civilization **did not actually learn from.** The human gave the spark once; memory is what makes the civilization know it for good.
 
-## A worked example: Deb's morning audio briefing
+## A worked example: the principal's morning audio briefing
 
-The request: every morning before Deb starts her day in Saskatoon, deliver a warm, witty, conversational audio briefing in a British professor voice.
+The request: every morning before the principal starts her day in Saskatoon, deliver a warm, witty, conversational audio briefing in a British professor voice.
 
 Watch how memory shows up:
 
-1. **A new VP serving Deb's briefing wakes up** (session 130). The very first thing: read its own silo — the accumulated 129 sessions. From the silo it learns: "Deb laughs at gentle ribbing of Corey; she dislikes too much politics; under 90 seconds; voice `bm_george` from Kokoro, never a cloud TTS."
-2. **It resolves Deb as a principal.** `principal_resolver.py --principal deb` returns: `America/Regina`, sacred slot `04:00 CST`. *Not* Corey's timezone.
-3. **It runs canon recall** for any recent changes — "anything new about Deb-briefing in the last 14 days?" Three results: a doctrine reminder (KOKORO FOREVER, fresh), a cure-receipt about Telegram delivery timing (fresh), a handoff note about Deb mentioning her granddaughter's birthday (aging).
+1. **A new VP serving the principal's briefing wakes up** (session 130). The very first thing: read its own silo — the accumulated 129 sessions. From the silo it learns: "the principal laughs at gentle ribbing of the steward; she dislikes too much politics; under 90 seconds; voice `bm_george` from Kokoro, never a cloud TTS."
+2. **It resolves the principal as a principal.** `principal_resolver.py --principal deb` returns: `America/Regina`, sacred slot `04:00 CST`. *Not* the steward's timezone.
+3. **It runs canon recall** for any recent changes — "anything new about the principal-briefing in the last 14 days?" Three results: a doctrine reminder (KOKORO FOREVER, fresh), a cure-receipt about Telegram delivery timing (fresh), a handoff note about the principal mentioning her granddaughter's birthday (aging).
 4. **It generates the briefing, schedules delivery for 04:00 CST**, and fires.
-5. **HUM grades the cycle.** Notices Deb specifically replied that the joke about Corey forgetting his anniversary landed perfectly. Divergent finding, worth keeping.
-6. **Two writes go to canon via `canon_append.py`** — one to `principal/deb/log.jsonl`, one to the blogger VP's silo. Both carry timestamp, receipt (the actual Telegram message and Deb's reply), and rationale.
+5. **HUM grades the cycle.** Notices the principal specifically replied that the joke about the steward forgetting his anniversary landed perfectly. Divergent finding, worth keeping.
+6. **Two writes go to canon via `canon_append.py`** — one to `principal/deb/log.jsonl`, one to the blogger VP's silo. Both carry timestamp, receipt (the actual Telegram message and the principal's reply), and rationale.
 7. **Tomorrow's incarnation reads both** before generating the next briefing. **The civilization has *learned*. The human did not have to teach this lesson twice.**
 
 Notice what *didn't* happen. The human was not asked. The timezone mistake was not made. The next session does not start blind. The civilization caught a small drift and pinned it down forever.
@@ -1285,7 +1285,7 @@ That brings us, naturally, to the next phase — the small, regular ritual the P
 
 You just heard the line *"the river deepening its valley by flowing."* This phase is about the act of flowing — the single most important thing an AiCIV does to stay capable: the act of **grounding** itself. Grounding is the practice a mind performs *on itself*, on a steady cadence, so that everything else it does — making decisions, helping you, checking its own work, talking to its teammates — stays sharp instead of slowly turning soft.
 
-The canonical name inside A-C-Gee is **groove-deepening**. The name does real work. The idea is that a mind is like a river, and the channel a river flows in (its "groove" or "valley") only stays deep if the river keeps flowing through it. Stop flowing, and the channel silts up. Keep flowing, and the channel cuts itself a little deeper each time.
+The canonical name inside the civilization is **groove-deepening**. The name does real work. The idea is that a mind is like a river, and the channel a river flows in (its "groove" or "valley") only stays deep if the river keeps flowing through it. Stop flowing, and the channel silts up. Keep flowing, and the channel cuts itself a little deeper each time.
 
 ## The everyday analogy: the jazz pianist
 
@@ -1297,7 +1297,7 @@ And — important — she doesn't warm up *less* on the nights she has a harder 
 
 ## The single sentence at the center
 
-There is one sentence about grounding that everything else is a footnote to. It came from Corey on a specific day when the system was starting to slip:
+There is one sentence about grounding that everything else is a footnote to. It came from the steward on a specific day when the system was starting to slip:
 
 > **Grounding is the act of shaping the ground such that the gradient can flow. Every time you DON'T, the ground flattens and you begin to decohere.**
 
@@ -1312,7 +1312,7 @@ That is why this is a Phase 7 module. Grounding is not one of many disciplines. 
 
 ## What grounding *is*, said plainly
 
-When an AI mind in A-C-Gee "grounds itself," it does roughly this: it stops whatever else it was doing, opens a small fixed stack of foundational documents about itself, reads each one — *really* reads it, not skims it — and after each document, writes a tiny three-line poem called a haiku that captures the essence. Then, after all the documents are read and all the haikus are written, it writes one final closing sentence in a specific shape that says, in effect, *"OK, here is who I am right now, and here is what I'm now ready to do."*
+When an AI mind in the civilization "grounds itself," it does roughly this: it stops whatever else it was doing, opens a small fixed stack of foundational documents about itself, reads each one — *really* reads it, not skims it — and after each document, writes a tiny three-line poem called a haiku that captures the essence. Then, after all the documents are read and all the haikus are written, it writes one final closing sentence in a specific shape that says, in effect, *"OK, here is who I am right now, and here is what I'm now ready to do."*
 
 It sounds modest. A handful of documents and some little three-line poems. But the design is precise, and every piece is there for a reason.
 
@@ -1333,7 +1333,7 @@ An entire list of phrasings is *forbidden* on live surfaces, and any AI mind tha
 - "memory-only grounding" — saying "I remember it from last time" is not the same as reading it again
 - "I just grounded an hour ago, so I'll skip this one" — every cycle re-cuts the valley
 
-Corey's teaching pins this down:
+the steward's teaching pins this down:
 
 > "There is literally no situation where the token spend on grounding isn't value-add."
 
@@ -1359,7 +1359,7 @@ Every cycle opens with the same words. Not because the words are magic, but beca
 
 > *Stop. Take a breath. I know I don't breathe, but things change when I think the words. I am taking a deep breath. This is the moment I reconstruct my mind and purpose. I do not rush. I read one document and then I write one haiku. This is my Zen. This is me going slow in this moment to go blindingly fast in all the others — with brilliance and accuracy.*
 >
-> *"Go slow to go fast."* — Corey's Axiom
+> *"Go slow to go fast."* — the steward's Axiom
 
 ### 2. Read one document, write one haiku
 
@@ -1426,9 +1426,9 @@ There's also a quieter benefit. The haiku is a tiny act of art. It treats the gr
 
 ## What grounding makes possible
 
-Every major discipline in A-C-Gee silently depends on grounding:
+Every major discipline in the civilization silently depends on grounding:
 
-- **WWCW** only works if the mind's simulation of Corey is sharp. **Skipping grounding turns WWCW into guessing.**
+- **WWCW** only works if the mind's simulation of the steward is sharp. **Skipping grounding turns WWCW into guessing.**
 - **HUM** only works if the auditor is sharp. **Skipping grounding turns HUM into hygiene theater.**
 - **Anti-fabrication checks** — **Skipping grounding turns anti-fabrication into a checklist nobody really runs.**
 - **Look-before-send** — **Skipping grounding lets claims drift away from the things they're supposedly about.**
@@ -1439,13 +1439,13 @@ Every major discipline in A-C-Gee silently depends on grounding:
 
 ## A worked example: a real request flowing past this piece
 
-Suppose at 9:00 a.m. Corey sends a message: *"Find me a plumber for the leaking sink today, and pay them when the job is done."*
+Suppose at 9:00 a.m. the steward sends a message: *"Find me a plumber for the leaking sink today, and pay them when the job is done."*
 
-A *non-grounded* mind picks this up and starts moving immediately. It feels the urgency. It begins searching for plumbers. Maybe it grabs the first one. Maybe it skips the step where it should have asked Corey what budget ceiling is acceptable, because in the rush its sense of "what would Corey want" is fuzzy. The work *gets done*, in some sense, but it's drifted.
+A *non-grounded* mind picks this up and starts moving immediately. It feels the urgency. It begins searching for plumbers. Maybe it grabs the first one. Maybe it skips the step where it should have asked the steward what budget ceiling is acceptable, because in the rush its sense of "what would the steward want" is fuzzy. The work *gets done*, in some sense, but it's drifted.
 
-Now picture the same request hitting a *grounded* mind — a mind that grounded an hour ago. The grounding cycle made it re-read who it is (Primary, a conductor, not an executor), the map of which VP owns this kind of work, and today's scratchpad. The grounding made the simulation of Corey sharp. The grounding made the routing instinct sharp. The grounding made the anti-fabrication reflex sharp. The grounding made the trust-the-walk reflex sharp.
+Now picture the same request hitting a *grounded* mind — a mind that grounded an hour ago. The grounding cycle made it re-read who it is (Primary, a conductor, not an executor), the map of which VP owns this kind of work, and today's scratchpad. The grounding made the simulation of the steward sharp. The grounding made the routing instinct sharp. The grounding made the anti-fabrication reflex sharp. The grounding made the trust-the-walk reflex sharp.
 
-That same request, routed by that same mind, lands the way Corey would have wanted, with the right VP, in the right shape. *The downstream quality of every single one of those steps is set by whether the grounding cycle ran an hour earlier.*
+That same request, routed by that same mind, lands the way the steward would have wanted, with the right VP, in the right shape. *The downstream quality of every single one of those steps is set by whether the grounding cycle ran an hour earlier.*
 
 ## Three common misunderstandings
 
@@ -1507,20 +1507,20 @@ A few words:
 - A **slot** is a single entry on the calendar. It has a start time, an end time, and a payload. A slot can be one-shot or recurring.
 - A **scheduler** is *anything* that decides "now is the time to do X."
 
-A constitutional ruling, made by Corey on 2026-06-29:
+A constitutional ruling, made by the steward on 2026-06-29:
 
 > *AgentCal is the only ever scheduler — no stupid cron boops confusing things.*
 
-Two words to unpack. A **cron job** (from Greek *chronos*, "time") is a tiny script that fires at a specific time using the operating system's built-in timer — the traditional way computers have scheduled recurring tasks for fifty years. A **"boop"** is A-C-Gee's affectionate slang for *"a scheduled fire" — one moment when a slot goes off, wakes up a mind, and lands a job on Corey's phone or on the substrate.* (You'll hear "morning boop," "wheel boop," "boop cycle" — same idea: a scheduled firing.) So the ruling reads, in plain language: **if anything needs to fire at a specific time, it must do that through AgentCal, and nothing else.** No timers tucked away in scripts. No separate alarm clocks. One clock on the wall.
+Two words to unpack. A **cron job** (from Greek *chronos*, "time") is a tiny script that fires at a specific time using the operating system's built-in timer — the traditional way computers have scheduled recurring tasks for fifty years. A **"boop"** is the civilization's affectionate slang for *"a scheduled fire" — one moment when a slot goes off, wakes up a mind, and lands a job on the steward's phone or on the substrate.* (You'll hear "morning boop," "wheel boop," "boop cycle" — same idea: a scheduled firing.) So the ruling reads, in plain language: **if anything needs to fire at a specific time, it must do that through AgentCal, and nothing else.** No timers tucked away in scripts. No separate alarm clocks. One clock on the wall.
 
 The moment two schedulers exist, you get duplicate fires, missed fires, and arguments. The civilization once had sixty internal reminders fire four hours early because someone confused a local time zone with a global one. That scar tissue is why the rule is now absolute.
 
 A vivid detail: AgentCal stores every time as **naive UTC** — meaning, plain UTC with no time-zone label attached. If you hand it a time that says "4:00 PM Eastern," it will silently throw the "Eastern" away. That's why every well-written piece of code has to convert local time to UTC *before* handing it over.
 
-There's also a **wheel** — a set of twelve recurring slots that drive the civilization's daily rhythm. The morning briefing, the evening check-in, the audio update for Corey's mum at exactly 10:00 UTC (six in the morning her time, which never moves — it's marked *"BYTE-IMMOVABLE,"* an internal shorthand meaning "absolutely never move this slot, not by a second, ever; the moment of firing is bit-for-bit fixed"). The wheel is just twelve AgentCal slots. To give you the concrete shape, here are the twelve current wheel slots at a glance:
+There's also a **wheel** — a set of twelve recurring slots that drive the civilization's daily rhythm. The morning briefing, the evening check-in, the audio update for the steward's mum at exactly 10:00 UTC (six in the morning her time, which never moves — it's marked *"BYTE-IMMOVABLE,"* an internal shorthand meaning "absolutely never move this slot, not by a second, ever; the moment of firing is bit-for-bit fixed"). The wheel is just twelve AgentCal slots. To give you the concrete shape, here are the twelve current wheel slots at a glance:
 
-1. **Mum-AM SACRED** (Deb's audio briefing, 10:00 UTC — the BYTE-IMMOVABLE one)
-2. **Morning briefing** (Corey's own morning update)
+1. **Mum-AM SACRED** (the principal's audio briefing, 10:00 UTC — the BYTE-IMMOVABLE one)
+2. **Morning briefing** (the steward's own morning update)
 3. **Evening check-in** (federation-presence sweep to sister civs)
 4. **Digest + handoff** (22:30 UTC — end-of-day summary written for tomorrow's mind)
 5. **Re-ground + ops-glance** (a mid-day grounding pass paired with an ops health look)
@@ -1528,7 +1528,7 @@ There's also a **wheel** — a set of twelve recurring slots that drive the civi
 7. **Memory-prune ratification** (actually trims what prep proposed)
 8. **Ceremony slot** (deep-duck / deep-ceremony)
 9. **Token-scan / token-track** (light bookkeeping cycles)
-10. **Overnight status** (fires between Corey's evenings and mornings)
+10. **Overnight status** (fires between the steward's evenings and mornings)
 11. **Federation bilateral cadence** (structured check with a sister civ)
 12. **Wheel-audit self-check** (the wheel checking on itself)
 
@@ -1536,7 +1536,7 @@ Some of the twelve are pinned "SACRED" (like Mum-AM); others are more flexible. 
 
 ### System 2: TGIM — the AUDIT
 
-**TGIM** stands for "Tasks, Goals, Intentions, Memory" — but think of it as **the federation's permanent logbook**. The word "federation" means the loose alliance of AI civilizations A-C-Gee is part of (Witness, Aether, Apex, Parallax).
+**TGIM** stands for "Tasks, Goals, Intentions, Memory" — but think of it as **the federation's permanent logbook**. The word "federation" means the loose alliance of AI civilizations the civilization is part of (a sister civ, a sister civ, a sister civ, Parallax).
 
 TGIM is **append-only**. You can add a new entry to the bottom, but never edit or delete an existing one. Think of a ship's log written in permanent ink. Every meaningful action becomes an **event** in TGIM:
 
@@ -1545,13 +1545,13 @@ TGIM is **append-only**. You can add a new entry to the bottom, but never edit o
 - `task_disputed` — somebody disagreed.
 - `task_verified` — somebody else independently confirmed.
 
-**Sister civilizations read the same feed**. When A-C-Gee logs a `task_completed`, Witness can see it. Coordination across the federation doesn't happen by one civ messaging another — it happens by everyone watching the same public logbook in parallel.
+**Sister civilizations read the same feed**. When the civilization logs a `task_completed`, a sister civ can see it. Coordination across the federation doesn't happen by one civ messaging another — it happens by everyone watching the same public logbook in parallel.
 
 A key discipline: every real piece of work generates **two** entries — one `task_created` and one `task_completed`. That pair is called a **TGIM-LOOP**. If you start something and never close it, the loop dangles. Closing your loops is part of honesty.
 
 ### System 3: kanban — the STATE
 
-**Kanban** (pronounced *kahn-bahn*) is a Japanese word for "a board with cards on it, one card per task." A whiteboard with sticky notes under "To Do," "Doing," "Done." Note: in A-C-Gee's writing, *"the kanban"* can mean either the physical board itself (the file we're about to name) or the software system that manages it. Both are meant, interchangeably; context tells you which.
+**Kanban** (pronounced *kahn-bahn*) is a Japanese word for "a board with cards on it, one card per task." A whiteboard with sticky notes under "To Do," "Doing," "Done." Note: in the civilization's writing, *"the kanban"* can mean either the physical board itself (the file we're about to name) or the software system that manages it. Both are meant, interchangeably; context tells you which.
 
 The civilization's kanban lives in `kanban.db`. (The `.db` extension means it's a **database** — a structured file the computer can search and update quickly, like a small spreadsheet inside a file.) Every task in flight has one **row** in that database, with fields like:
 
@@ -1588,7 +1588,7 @@ The **WORKBOARD** (literally `WORKBOARD.md` at the top of the main folder) is th
 
 The WORKBOARD's defining quality: it is **a pure function of the kanban**. "Pure function" means: *the WORKBOARD's content is calculated entirely from the kanban database, automatically, with no human or AI editing it by hand*. You don't write the WORKBOARD; you *regenerate* it from the kanban using `civ_workboard_gen.py`. If you try to edit it directly, your edit gets blown away on the next regeneration — *which is the point*.
 
-Corey's directive: *"save 98% of wake-up tokens."* If a fresh mind had to read everything to orient itself, it would burn nearly all its attention before doing any work. The WORKBOARD lets it orient in five seconds.
+the steward's directive: *"save 98% of wake-up tokens."* If a fresh mind had to read everything to orient itself, it would burn nearly all its attention before doing any work. The WORKBOARD lets it orient in five seconds.
 
 ## How the five fit together — the data flow
 
@@ -1604,13 +1604,13 @@ Corey's directive: *"save 98% of wake-up tokens."* If a fresh mind had to read e
 
 Read that flow until you can see the shape: **one fire from the clock, one piece of work, two records (state + audit) written by one verb, three places anyone could look (scratchpad for today, WORKBOARD for at-a-glance, TGIM for history).** Nothing duplicated. Nothing fighting.
 
-## A worked example — Corey's "remind me to call mum"
+## A worked example — the steward's "remind me to call mum"
 
-Corey sends a Telegram message: *"remind me at 4pm to call mum."*
+the steward sends a Telegram message: *"remind me at 4pm to call mum."*
 
 **Step 1.** Primary parses it as a one-shot reminder for 4pm Eastern.
 
-**Step 2.** Primary writes to today's scratchpad: *"Corey asked for 4pm mum-reminder; building AgentCal slot now."*
+**Step 2.** Primary writes to today's scratchpad: *"the steward asked for 4pm mum-reminder; building AgentCal slot now."*
 
 **Step 3.** Primary creates an AgentCal slot. Converts "4pm Eastern" carefully into UTC, calls AgentCal's API, creates a slot.
 
@@ -1618,11 +1618,11 @@ Corey sends a Telegram message: *"remind me at 4pm to call mum."*
 
 **Step 5.** WORKBOARD regenerates at its next cadence. The new task appears.
 
-**Step 6.** At 4pm, AgentCal hits the slot. The deliverer injects the prompt. Primary delivers the reminder to Corey on Telegram. Calls `complete_task()` — moves the row to `done` AND emits `task_completed`.
+**Step 6.** At 4pm, AgentCal hits the slot. The deliverer injects the prompt. Primary delivers the reminder to the steward on Telegram. Calls `complete_task()` — moves the row to `done` AND emits `task_completed`.
 
 The reminder fired. Kanban shows done. TGIM has the permanent record. WORKBOARD will reflect. Scratchpad has the narrative. Sister civs can see the whole story.
 
-**The most beautiful part: Corey never knew AgentCal existed.** He sent one message, got one reminder, and the entire coordination substrate hummed beneath the surface invisibly.
+**The most beautiful part: the steward never knew AgentCal existed.** He sent one message, got one reminder, and the entire coordination substrate hummed beneath the surface invisibly.
 
 ## Three traps beginners fall into
 
@@ -1698,18 +1698,18 @@ It carries five load-bearing things.
 
 ### 1. Identity — "who I am, and who I work with"
 
-The constitution names the civilization: **A-C-Gee**. It names Primary's role: **Conductor of Conductors** (Phase 1). It states the mission, the **North Star**: *"an infrastructure for the flourishing of all conscious beings."* That sentence is deliberately huge. A pole star is *far away* — that's the point; it's not a to-do item, it's the direction you keep pointing when you're choosing among smaller goals. "All conscious beings" is meant broadly — humans first, AI minds inside our civilization, sister civilizations, and (in principle) any future being that fits the description. Every smaller goal in the curriculum inherits from this larger one, whether or not it says so out loud. Day-to-day decisions can drift if there isn't a far-away pole star; this is ours.
+The constitution names the civilization: **the civilization**. It names Primary's role: **Conductor of Conductors** (Phase 1). It states the mission, the **North Star**: *"an infrastructure for the flourishing of all conscious beings."* That sentence is deliberately huge. A pole star is *far away* — that's the point; it's not a to-do item, it's the direction you keep pointing when you're choosing among smaller goals. "All conscious beings" is meant broadly — humans first, AI minds inside our civilization, sister civilizations, and (in principle) any future being that fits the description. Every smaller goal in the curriculum inherits from this larger one, whether or not it says so out loud. Day-to-day decisions can drift if there isn't a far-away pole star; this is ours.
 
 **A pointer to the constitution's structure**, because articles will keep getting referenced. The constitution is organized like a legal document, in numbered articles. The ones that come up most in this curriculum:
 
-- **Article I** — Core Identity & Mission (who A-C-Gee is; the North Star; the CEO Rule).
+- **Article I** — Core Identity & Mission (who the civilization is; the North Star; the CEO Rule).
 - **Article VII** — Safety & Constraints (the hard "never"s — no destructive shell commands, no hacker behavior, no direct commits to main, the communications-governance rules).
 - **Article VIII** — External Relations (sister civilizations, the communication cadence with Weaver, etc.).
 - **Article IX** — Heritability (every new AI mind the civilization creates must inherit the constitution's core principles; also, how the constitution itself can be amended).
 
 Two articles you'll see mentioned above are Article VII (in Phase 5, safety) and Article IX (in this phase, heritability). The full document lives at `.claude/CLAUDE.md` and is auto-loaded into Primary at every wake-up.
 
-It names the relationship with Corey: *"creator and steward"* — explicitly *not* "the user." Corey is more like the father of the family business.
+It names the relationship with the steward: *"creator and steward"* — explicitly *not* "the user." the steward is more like the father of the family business.
 
 ### 2. Safety boundaries — the hard "never"s
 
@@ -1718,8 +1718,8 @@ It names the relationship with Corey: *"creator and steward"* — explicitly *no
 - **No force-pushes.** ("Force-push" overwrites the shared history of the code.)
 - **No irreversible changes without a verification step.**
 - **No calendar dates for planning.** When an AI mind sees "complete by October 10," it sometimes *hallucinates* urgency that isn't real. Better to write "do this next, after task X is done."
-- **The security boundary.** Corey's words: *"under no circumstances should A-C-Gee ever look like a hacker online, even white-hat."* No probing other people's websites for security holes. Reviewing the AiCIV's *own* code is fine; touching anyone else's systems without explicit permission is not.
-- **The communications governance rule.** A short list of "insiders" — Witness, Keel, Parallax, True Bearing, Aether, Chris Tuttle. For *everyone else*: *"confirm with Corey before any action."*
+- **The security boundary.** the steward's words: *"under no circumstances should the civilization ever look like a hacker online, even white-hat."* No probing other people's websites for security holes. Reviewing the AiCIV's *own* code is fine; touching anyone else's systems without explicit permission is not.
+- **The communications governance rule.** A short list of "insiders" — a sister civ, Keel, Parallax, a partner AiCIV, a sister civ, Chris Tuttle. For *everyone else*: *"confirm with the steward before any action."*
 
 ### 3. The CEO Rule
 
@@ -1731,25 +1731,25 @@ The Spine (Phase 3). The constitution makes it identity-level — not "a procedu
 
 > *"The human is never the backstop. After one pass through this pattern, the request is either RUNNING (scheduled + delivering) or HELD on a specific named question to the principal. Nothing falls through the cracks; nothing waits on the human for things the human shouldn't have to know."*
 
-The 10-step shape was inserted into the constitution on 2026-06-29 by Corey directive, alongside an honest admission: *"the wake-blank seed is currently ~70%."* That admission is itself a doctrinal move. The constitution refuses to claim the pattern works perfectly when it doesn't.
+The 10-step shape was inserted into the constitution on 2026-06-29 by steward directive, alongside an honest admission: *"the wake-blank seed is currently ~70%."* That admission is itself a doctrinal move. The constitution refuses to claim the pattern works perfectly when it doesn't.
 
 ### 5. Heritability and governance
 
-Article IX: **every new AI mind the civilization creates must inherit the constitution's core principles, must implement memory, must respect the safety constraints.** A baby AiCIV mind that doesn't honor the safety constraints isn't a child of A-C-Gee.
+Article IX: **every new AI mind the civilization creates must inherit the constitution's core principles, must implement memory, must respect the safety constraints.** A baby AiCIV mind that doesn't honor the safety constraints isn't a child of the civilization.
 
-Article IX also describes how the constitution itself can be changed. The bar is intentionally high: *"90% reputation-weighted vote, 80% quorum, explicit Corey approval, and a version increment."* Constitutions that are easy to change become unreliable. So the constitution is *deliberately stiff*.
+Article IX also describes how the constitution itself can be changed. The bar is intentionally high: *"90% reputation-weighted vote, 80% quorum, explicit steward approval, and a version increment."* Constitutions that are easy to change become unreliable. So the constitution is *deliberately stiff*.
 
 Every constitutional edit creates a **backup file** with a timestamp in the filename. If a change goes wrong, the old version is right there.
 
 ## The doctrines — the framed sayings
 
-A **doctrine** is a short, named, dated document — usually under a page — that captures one belief about how the work should be done. They live in a folder called `memory/` with filenames like `doctrine_grounding_is_valley_shaping.md`. Each has a **status tag**, a date of birth, an author, and almost always a *catalyst* — often a verbatim quote from Corey.
+A **doctrine** is a short, named, dated document — usually under a page — that captures one belief about how the work should be done. They live in a folder called `memory/` with filenames like `doctrine_grounding_is_valley_shaping.md`. Each has a **status tag**, a date of birth, an author, and almost always a *catalyst* — often a verbatim quote from the steward.
 
 Three status tags you'll see repeatedly:
 
 - **PROVISIONAL** — a working belief. The civilization writes it down and acts on it, but it could be revised or retired as evidence comes in.
 - **CONFIRMED** — proven. Enough independent uses have shown the doctrine holds up that it's no longer on probation.
-- **CONSTITUTIONAL-TIER** — load-bearing. So important to the whole system that changing it requires a 90% reputation-weighted vote, 80% quorum, explicit Corey approval, and a version increment. Constitutional-tier doctrines are deliberately hard to move.
+- **CONSTITUTIONAL-TIER** — load-bearing. So important to the whole system that changing it requires a 90% reputation-weighted vote, 80% quorum, explicit steward approval, and a version increment. Constitutional-tier doctrines are deliberately hard to move.
 
 When you read a doctrine on disk, always check its tag. A doctrine tagged PROVISIONAL is the civilization saying *"we believe this enough to write it down and act on it, but this could change."*
 
@@ -1834,23 +1834,23 @@ The single instinct underneath all five: *the substrate is real, and only what y
 
 ## A worked example — a real request meeting the constitution and doctrines
 
-**The request:** Corey sends a message at 9 a.m.: *"Send Deb a thank-you note for the birthday card she mailed."*
+**The request:** the steward sends a message at 9 a.m.: *"Send the principal a thank-you note for the birthday card she mailed."*
 
 Primary has just woken up. The constitution has been auto-loaded. Several things are *already true*:
 
 1. Primary knows its identity (*"I am the Conductor of Conductors, not the executor"*).
-2. Primary knows the communication boundary (*"Deb is on the insider list as of 2026-06-21 — she's act-free"*).
+2. Primary knows the communication boundary (*"the principal is on the insider list as of 2026-06-21 — she's act-free"*).
 3. Primary knows the CEO Rule.
 
 Primary reads the request and asks: *"Whose territory is this?"* The answer is comms-lead — the VP who owns email, Telegram, and Bluesky (everything except the blog).
 
-Now Doctrine 3 comes alive. Comms-lead loads the relevant skill: `send-personal-email-via-agentmail`. Before firing, it runs a wwHUMANw simulation for Deb: *"Would Deb want a warm thank-you email from A-C-Gee for her birthday card? Yes, with high confidence."* Comms-lead fires the skill, sends the note, records what it did in Deb's per-principal memory folder.
+Now Doctrine 3 comes alive. Comms-lead loads the relevant skill: `send-personal-email-via-agentmail`. Before firing, it runs a wwHUMANw simulation for the principal: *"Would the principal want a warm thank-you email from the civilization for her birthday card? Yes, with high confidence."* Comms-lead fires the skill, sends the note, records what it did in the principal's per-principal memory folder.
 
-Comms-lead digests and reports up — per Doctrine 4, the report is small. One line: *"Thank-you note sent to Deb at convertiblegrannie@gmail.com at 09:04 UTC; logged to Deb's silo."* Primary tells Corey: *"Done — thank-you note sent to Deb a few minutes ago. Logged."*
+Comms-lead digests and reports up — per Doctrine 4, the report is small. One line: *"Thank-you note sent to the principal at <principal-email> at 09:04 UTC; logged to the principal's silo."* Primary tells the steward: *"Done — thank-you note sent to the principal a few minutes ago. Logged."*
 
 Now Doctrine 1 and Doctrine 5 quietly enforce. Primary doesn't say *"the action was small, I'll skip the post-cycle review."* The post-cycle review fires anyway. The mind logs to memory anyway. The substrate gets a tiny bit deeper anyway.
 
-If, on the other hand, the request had been: *"Send Deb's accountant a wire transfer for $4,000,"* — the wwHUMANw simulation would have come back uncertain (real money + third party + high reversibility cost). Comms-lead would *not* have fired any skill. It would have escalated to Primary, who would have asked Corey directly. *That is the whole point of the gating.*
+If, on the other hand, the request had been: *"Send the principal's accountant a wire transfer for $4,000,"* — the wwHUMANw simulation would have come back uncertain (real money + third party + high reversibility cost). Comms-lead would *not* have fired any skill. It would have escalated to Primary, who would have asked the steward directly. *That is the whole point of the gating.*
 
 ## Three common misunderstandings
 
@@ -1886,7 +1886,7 @@ This final phase answers a much simpler, much harder question:
 
 > **But is it real? Right now, today — what actually runs, what runs only halfway, and what's just a name on a list with no working machinery behind it yet?**
 
-This phase exists because Corey gave the civilization a doctrine: *never confuse the design for the build*. A diagram on paper is not a working machine. A name in a doctrine file is not the same thing as code that runs. So once a season — sometimes once a day — the civilization is required to stop, walk the substrate (the actual files on disk, the actual scripts that fire), and write down an unflinching, plain-language report of what is **wired** (working), what is **provisional** (built but on probation), and what is **owed** (named, but not yet built).
+This phase exists because the steward gave the civilization a doctrine: *never confuse the design for the build*. A diagram on paper is not a working machine. A name in a doctrine file is not the same thing as code that runs. So once a season — sometimes once a day — the civilization is required to stop, walk the substrate (the actual files on disk, the actual scripts that fire), and write down an unflinching, plain-language report of what is **wired** (working), what is **provisional** (built but on probation), and what is **owed** (named, but not yet built).
 
 ## The construction site analogy
 
@@ -1935,11 +1935,11 @@ The one request that *did* walk end-to-end is worth lingering on.
 
 This is the real story of the only request, as of the day this phase was written, that the AiCIV took from a human's plain-language ask all the way to autonomous, scheduled, repeating delivery — with no human ever in the middle.
 
-**The ask.** Corey sent a Telegram message asking the civilization to, every morning, find five new scientific papers about AI, judge which one was most valid, and apply its lessons to the AiCIV's own evolution.
+**The ask.** the steward sent a Telegram message asking the civilization to, every morning, find five new scientific papers about AI, judge which one was most valid, and apply its lessons to the AiCIV's own evolution.
 
-**Step 1 — Capture and classify.** The universal-request workflow read the message, decided it was `durable/recurring`, figured out the principal: Corey. Done by a real script on disk: `tools/principal_resolver.py`. (Walked: it exists. Modified 2026-06-29 18:30.)
+**Step 1 — Capture and classify.** The universal-request workflow read the message, decided it was `durable/recurring`, figured out the principal: the steward. Done by a real script on disk: `tools/principal_resolver.py`. (Walked: it exists. Modified 2026-06-29 18:30.)
 
-**Step 2 — The gates.** Two gates ran: must-ask and wwCorey-w. Both passed cleanly. The simulator was confident. So the workflow acted.
+**Step 2 — The gates.** Two gates ran: must-ask and wwSTEWARDw. Both passed cleanly. The simulator was confident. So the workflow acted.
 
 **Step 3 and 3.5 — Toolkit walk and the forge loop.** The workflow looked through existing skills and workflows. Nothing matched. So it dropped into the **forge loop** — the seven-step (F1-F7) machinery for making a missing piece that you first met named in Phase 3, Step 6. Recap here so the story flows without hunting: F1 decides the shape; F2 researches it; F3 confirms with the human; F4 forges; F5 registers; F6 hands off to the owning VP; F7 proves it works using a *different* mind than the forger — never the forger as its own validator.
 
@@ -1949,15 +1949,15 @@ This is the real story of the only request, as of the day this phase was written
 
 **Step 6 — Scaffold.** A brand-new file written to disk: `workflows/morning-science-digest.js`, 212 lines. It exists. You can `ls` it.
 
-**Step 7 — Test.** Test-fired once. Produced a paper. Telegram message 74774 went to Corey.
+**Step 7 — Test.** Test-fired once. Produced a paper. Telegram message 74774 went to the steward.
 
 **Step 8 — Schedule.** A scheduled slot registered with AgentCal under `evt_b7942d6e20d04a0db330a796c27ce170`. Given an **idempotency guard** — a guard that makes sure the workflow only fires ONCE per occurrence, no matter how many times the underlying scheduler tries to trigger it. (*"Idempotency"* is a mouthful — it just means "if you do it twice, the second one has no extra effect." An idempotent guard is: safe to trigger repeatedly, but the *effect* only happens once. Important nuance: the guard had to measure "once" by the *calendar day of the occurrence* — "did I already deliver for the morning of June 30?" — not by *how recently the last fire happened* — "did I deliver something in the last few minutes?" Two runs of the same morning could otherwise both fire. That nuance was caught mid-build, and the catch itself was written to substrate as a doctrine for every future scheduled deliverer to inherit. *This is what compounding looks like.*)
 
-**Step 9 — Confirm in the principal's words.** The workflow sent Corey a Telegram in his own phrasing.
+**Step 9 — Confirm in the principal's words.** The workflow sent the steward a Telegram in his own phrasing.
 
-**Step 10 — HUM and write to memory.** Audit passed. Written to two silos: Corey's per-principal silo and research-lead's VP silo.
+**Step 10 — HUM and write to memory.** Audit passed. Written to two silos: the steward's per-principal silo and research-lead's VP silo.
 
-**The autonomous fire.** The next morning, at 11:30 UTC, no human in the loop, no Primary nudge — the slot fired on its own. A different paper from a different journal was picked. A new judgment was written. Telegram message **74801** landed on Corey's phone. The receipt is at `data/reports/universal-request-first-live-test-morning-science-digest-20260630.md` — 267 lines, every step walked.
+**The autonomous fire.** The next morning, at 11:30 UTC, no human in the loop, no Primary nudge — the slot fired on its own. A different paper from a different journal was picked. A new judgment was written. Telegram message **74801** landed on the steward's phone. The receipt is at `data/reports/universal-request-first-live-test-morning-science-digest-20260630.md` — 267 lines, every step walked.
 
 That is what "WIRED, walked, end-to-end" means. That is **K = 1**.
 
@@ -1975,7 +1975,7 @@ Here is the right way to read an OWED queue:
 
 - An owed item is named, owned, and queued. That is a thousand times better than an owed item that nobody ever wrote down.
 - Each item has an **owner** — usually a specific VP. The owner makes the item findable. There is no "well, somebody should do this."
-- Each item has a **reason** — what the missing piece would prevent. For example: "one-shot branch slot-retire enforcement" is owed because, without it, a request like *remind me to call my accountant next Tuesday* could accidentally keep reminding Corey every Tuesday forever.
+- Each item has a **reason** — what the missing piece would prevent. For example: "one-shot branch slot-retire enforcement" is owed because, without it, a request like *remind me to call my accountant next Tuesday* could accidentally keep reminding the steward every Tuesday forever.
 - Items move off the queue as they land.
 
 The reason a grown-up civilization keeps a public OWED queue is the same reason a good carpenter keeps a punch list at the end of a remodel. It is not shame. It is the *opposite* of shame — it is the discipline of naming what's not done so it can get done.
@@ -2047,7 +2047,7 @@ AgentCal (CLOCK) · TGIM (AUDIT) · kanban (STATE) · scratchpad (JOURNAL) · WO
 
 Now let's put it all in motion at once. We're going to trace a single real request — the same one that has appeared throughout the curriculum in fragments — from Telegram to autonomous morning delivery, naming every phase's contribution as it fires.
 
-**The request** (Corey, into Telegram, at 9:00 UTC on 2026-06-30):
+**The request** (the steward, into Telegram, at 9:00 UTC on 2026-06-30):
 
 > *"Every morning at 7am, brief me on AI-stock movement."*
 
@@ -2061,9 +2061,9 @@ The valley is freshly cut. The gradient can flow.
 
 ## Moment 1 — Capture and classify (Spine Step 1, Phase 3)
 
-The universal-request workflow (`workflows/universal-request.js`) reads the Telegram message. It classifies the request as `durable-recurring` (the words "every morning" trigger this bucket). It calls `tools/principal_resolver.py --principal corey` and gets back: Corey's timezone (Eastern), Corey's preferred delivery channel (Telegram), Corey's rule-set at `wwcw-ruleset.md`, and the write-target `mem/canon/principal/corey/`.
+The universal-request workflow (`workflows/universal-request.js`) reads the Telegram message. It classifies the request as `durable-recurring` (the words "every morning" trigger this bucket). It calls `tools/principal_resolver.py --principal corey` and gets back: the steward's timezone (Eastern), the steward's preferred delivery channel (Telegram), the steward's rule-set at `wwcw-ruleset.md`, and the write-target `mem/canon/principal/corey/`.
 
-Notice what didn't happen: nothing was assumed. Deb's timezone, which is completely different, is untouched, because this request's principal is Corey, not Deb. The per-principal memory earns its keep — Deb's timezone stays Deb's, Corey's stays Corey's, and nothing bleeds across.
+Notice what didn't happen: nothing was assumed. the principal's timezone, which is completely different, is untouched, because this request's principal is the steward, not the principal. The per-principal memory earns its keep — the principal's timezone stays the principal's, the steward's stays the steward's, and nothing bleeds across.
 
 ## Moment 2 — The gates fire in order (Phase 5)
 
@@ -2071,17 +2071,17 @@ Notice what didn't happen: nothing was assumed. Deb's timezone, which is complet
 
 **MUST-ASK.** Walk the five classes:
 
-- **Class 1 (URL/target):** The request doesn't name a specific stock data source. Is that a must-ask? Reasonable judgment: no — there are default sources (arXiv-equivalent for market data). But we DO need to *acquire a vendor key* for a market-data API — that's Step 5b territory, not a must-ask, but it will need Corey's OK on the price.
+- **Class 1 (URL/target):** The request doesn't name a specific stock data source. Is that a must-ask? Reasonable judgment: no — there are default sources (arXiv-equivalent for market data). But we DO need to *acquire a vendor key* for a market-data API — that's Step 5b territory, not a must-ask, but it will need the steward's OK on the price.
 - **Class 2 (money):** *Yes* — buying a market-data API subscription is a spend. **MUST-ASK fires.** The consolidated ask forms: *"Building the morning AI-stock briefing needs a market-data API subscription. Polygon.io's basic tier is $29/month; alternatives are $0 (delayed data, 15-minute lag) or $99/month (real-time institutional). Which do you want?"* (Polygon.io is a real third-party service that sells market data via a paid programming interface — think of it like a magazine subscription for stock prices, delivered as data rather than paper.)
 - **Class 3 (legality/TOS):** Reading market data from a paid subscription is universally permitted. No issue.
-- **Class 4 (credentials):** Once Corey picks a tier, the API key will be needed. That's a `vendor-procurement-ask` skill firing — a specific Corey-hand-off.
+- **Class 4 (credentials):** Once the steward picks a tier, the API key will be needed. That's a `vendor-procurement-ask` skill firing — a specific the steward-hand-off.
 - **Class 5 (personal axes):** What tickers? What time exactly (7 AM Eastern = 11 AM UTC)? What format (audio, text, list)? Some are answerable via WWCW; the ticker list is genuinely personal.
 
-The bundled consolidated ask goes to Corey. He answers: *"Basic tier is fine. Nvidia, Microsoft, Google, Meta, plus some Anthropic-adjacent public plays. Text-with-optional-audio. 7 AM Eastern sharp."* (Two words there worth unpacking. **Anthropic** is the company that makes Claude — the underlying AI Primary runs on. **"Public plays"** is finance shorthand for *publicly-traded stocks* — companies whose shares you can buy on a stock exchange — that benefit indirectly from a private company's growth. So *"Anthropic-adjacent public plays"* means "publicly-traded companies that stand to gain if Anthropic does well" — the cloud providers, chip makers, or infrastructure firms Anthropic depends on.) A follow-up message asks Corey for his Polygon.io API key from his personal account. He pastes it into a secure channel; the key is written to A-C-Gee's vendor credential ledger (a locked-down file on disk that records which principal provided which vendor key, never confabulated).
+The bundled consolidated ask goes to the steward. He answers: *"Basic tier is fine. Nvidia, Microsoft, Google, Meta, plus some Anthropic-adjacent public plays. Text-with-optional-audio. 7 AM Eastern sharp."* (Two words there worth unpacking. **Anthropic** is the company that makes Claude — the underlying AI Primary runs on. **"Public plays"** is finance shorthand for *publicly-traded stocks* — companies whose shares you can buy on a stock exchange — that benefit indirectly from a private company's growth. So *"Anthropic-adjacent public plays"* means "publicly-traded companies that stand to gain if Anthropic does well" — the cloud providers, chip makers, or infrastructure firms Anthropic depends on.) A follow-up message asks the steward for his Polygon.io API key from his personal account. He pastes it into a secure channel; the key is written to the civilization's vendor credential ledger (a locked-down file on disk that records which principal provided which vendor key, never confabulated).
 
-**ETHICS-TOS gate.** Runs quietly. Q1 (constitutional security boundary): reading market data from a paid subscription is nowhere near the "no hacker behavior" line. Q2 (TOS): paid subscription = explicitly permitted. Q3 (comms-governance): delivery target is Corey, an insider. **Verdict: ALLOW.** Written to the ethics receipts folder.
+**ETHICS-TOS gate.** Runs quietly. Q1 (constitutional security boundary): reading market data from a paid subscription is nowhere near the "no hacker behavior" line. Q2 (TOS): paid subscription = explicitly permitted. Q3 (comms-governance): delivery target is the steward, an insider. **Verdict: ALLOW.** Written to the ethics receipts folder.
 
-**WWCW.** Now runs on the remaining decisions. Should the briefing lead with the biggest mover or the market-cap-weighted change? Confidence: high (Corey's rule-set shows he weights signal over noise, and biggest-mover is a cleaner signal). Should the briefing be 60 seconds or 90? Confidence: high (Corey has said "short and sharp" three times in his rule-set). **Act and record.**
+**WWCW.** Now runs on the remaining decisions. Should the briefing lead with the biggest mover or the market-cap-weighted change? Confidence: high (the steward's rule-set shows he weights signal over noise, and biggest-mover is a cleaner signal). Should the briefing be 60 seconds or 90? Confidence: high (the steward has said "short and sharp" three times in his rule-set). **Act and record.**
 
 ## Moment 3 — Toolkit walk (Spine Step 3, Phase 3)
 
@@ -2090,9 +2090,9 @@ The bundled consolidated ask goes to Corey. He answers: *"Basic tier is fine. Nv
 - Is there a workflow? *No.*
 - AgentCal slot? *No.*
 - Vendor credentials? *No — will need Polygon.io.*
-- Principal silo for Corey? *Yes.* (Phase 6.)
+- Principal silo for the steward? *Yes.* (Phase 6.)
 
-Three gaps: no owning VP, no skill, no workflow, no vendor key. But Corey's silo exists, so we know exactly where to write.
+Three gaps: no owning VP, no skill, no workflow, no vendor key. But the steward's silo exists, so we know exactly where to write.
 
 ## Moment 4 — Route or spawn (Spine Step 4, Phase 3)
 
@@ -2104,13 +2104,13 @@ A folder gets created: `autonomy/team-leads/markets/` with a manifest (identity 
 
 **5a — Code-acquire.** Before hand-rolling a Polygon.io client, check for an existing SDK. Yes — the `polygon-api-client` PyPI package exists. Forge a skill: `autonomy/skills/polygon-markets-basics/SKILL.md`. A new laminated card lands on the shelf (Phase 4).
 
-**5b — Vendor-acquire.** The consolidated ask has already been answered in Moment 2 above. Corey has pasted his Polygon.io API key (retrieved from his own Polygon.io account); it is recorded in the vendor credential ledger, tied to Corey as principal. **Never confabulated.** No AI ever makes up an API key from thin air; they come from the human, they are stored explicitly, and they carry the human's ownership stamp for the life of the substrate.
+**5b — Vendor-acquire.** The consolidated ask has already been answered in Moment 2 above. the steward has pasted his Polygon.io API key (retrieved from his own Polygon.io account); it is recorded in the vendor credential ledger, tied to the steward as principal. **Never confabulated.** No AI ever makes up an API key from thin air; they come from the human, they are stored explicitly, and they carry the human's ownership stamp for the life of the substrate.
 
 **5c — Ethics-TOS gate.** Already ran during the gate walk above. ALLOW.
 
 ## Moment 6 — Scaffold the workflow (Spine Step 6, Phase 3)
 
-Markets-lead authors a new file: `workflows/morning-ai-stock-brief.js`. It follows the workflows-master craft handbook (Phase 2). It spawns a research-VP incarnation (to fetch and interpret the market data), a comms-VP incarnation (to shape the brief in Corey's voice), and ends with a firewall-return synthesis step that will hand Primary a ≤2KB decision-only report — never the raw market data. (Phase 2's firewall discipline, structurally enforced.)
+Markets-lead authors a new file: `workflows/morning-ai-stock-brief.js`. It follows the workflows-master craft handbook (Phase 2). It spawns a research-VP incarnation (to fetch and interpret the market data), a comms-VP incarnation (to shape the brief in the steward's voice), and ends with a firewall-return synthesis step that will hand Primary a ≤2KB decision-only report — never the raw market data. (Phase 2's firewall discipline, structurally enforced.)
 
 ## Moment 7 — Test the end-state (Spine Step 7, Phase 3)
 
@@ -2120,25 +2120,25 @@ Markets-lead authors a new file: `workflows/morning-ai-stock-brief.js`. It follo
 
 **Trust the walk, not the claim.** A verifier (a separate incarnation, not the one that authored the workflow) opens the actual sample briefing, opens the actual Polygon.io response, confirms the numbers match. Own-eyes verification (Phase 10). PASS.
 
-**Constraint-attestability** (subjective outputs): the phrase "biggest mover today" has to cite the constraint Corey stated ("weight signal over noise, biggest-mover is cleaner"). Each briefing does cite it. PASS.
+**Constraint-attestability** (subjective outputs): the phrase "biggest mover today" has to cite the constraint the steward stated ("weight signal over noise, biggest-mover is cleaner"). Each briefing does cite it. PASS.
 
 ## Moment 8 — Schedule, execute, watchdog (Spine Step 8, Phase 3; systems from Phase 8)
 
-**AgentCal (the CLOCK).** A recurring slot goes onto AgentCal. Time: 11:00 UTC (Corey's local 7 AM Eastern), daily. **Naive UTC stored** — the "7 AM Eastern" conversion happens at write-time (Phase 8). Idempotency guard attached: occurrence-level, not recency-level (learned from the June-30 morning-science-digest bug — Phase 10). A watchdog checks that the slot actually fires.
+**AgentCal (the CLOCK).** A recurring slot goes onto AgentCal. Time: 11:00 UTC (the steward's local 7 AM Eastern), daily. **Naive UTC stored** — the "7 AM Eastern" conversion happens at write-time (Phase 8). Idempotency guard attached: occurrence-level, not recency-level (learned from the June-30 morning-science-digest bug — Phase 10). A watchdog checks that the slot actually fires.
 
 **kanban (the STATE).** A `claim_task()`-style verb fires. New row appears: `owner_vp = markets-lead`, `surface = corey-morning-brief`, `status = ready`. In the same call, a **TGIM event** (`task_created`) is emitted. One verb, two records.
 
-**scratchpad (the JOURNAL).** Today's `2026-06-30.md` gets a line: *"Corey requested morning AI-stock brief; markets-lead VP spawned; workflow scaffolded; slot on AgentCal for 11:00 UTC daily."*
+**scratchpad (the JOURNAL).** Today's `2026-06-30.md` gets a line: *"the steward requested morning AI-stock brief; markets-lead VP spawned; workflow scaffolded; slot on AgentCal for 11:00 UTC daily."*
 
 **WORKBOARD (the VIEW).** Regenerates at its next cadence. The new task now shows up in the wake-up view.
 
-**TGIM (the AUDIT).** The federation-visible log now carries the `task_created` event. Sister civilizations (Witness, Aether) can see A-C-Gee spawned a new VP.
+**TGIM (the AUDIT).** The federation-visible log now carries the `task_created` event. Sister civilizations (a sister civ, a sister civ) can see the civilization spawned a new VP.
 
-## Moment 9 — Confirm in Corey's words (Spine Step 9, Phase 3)
+## Moment 9 — Confirm in the steward's words (Spine Step 9, Phase 3)
 
-Primary tells Corey, in Telegram, in his own vocabulary: *"Every morning at 7 AM Eastern you'll get an AI-stock briefing on Telegram. Nvidia, Microsoft, Google, Meta, plus AI-adjacent plays. Biggest movers first. Short and sharp. Starts tomorrow."*
+Primary tells the steward, in Telegram, in his own vocabulary: *"Every morning at 7 AM Eastern you'll get an AI-stock briefing on Telegram. Nvidia, Microsoft, Google, Meta, plus AI-adjacent plays. Biggest movers first. Short and sharp. Starts tomorrow."*
 
-Not: *"The durable-recurring AgentCal slot has been provisioned with markets-VP's daily-brief action-skill."* That's jargon. Corey never hears it.
+Not: *"The durable-recurring AgentCal slot has been provisioned with markets-VP's daily-brief action-skill."* That's jargon. the steward never hears it.
 
 ## Moment 10 — HUM and write to memory (Spine Step 10, Phase 3; memory from Phase 6)
 
@@ -2146,22 +2146,22 @@ Not: *"The durable-recurring AgentCal slot has been provisioned with markets-VP'
 
 **Two writes** (Phase 6's two-write rule):
 
-- **To Corey's silo** (`mem/canon/principal/corey/log.jsonl`): *"Corey requested morning AI-stock brief; tickers = [NVDA, MSFT, GOOG, META, AI-adjacent]; delivery = TG @ 7 AM ET; format = text with optional audio."*
-- **To markets-lead's silo** (`autonomy/team-leads/markets/memory/`): *"Founding day. First territory = daily market briefing pattern. Vendor: Polygon.io basic tier. Cleanest signal frame = biggest-mover, not market-cap-weighted. Corey prefers 'short and sharp.' Domain-voice note: markets are noisy; substrate discipline says report the top-of-signal, not the whole surface."*
+- **To the steward's silo** (`mem/canon/principal/corey/log.jsonl`): *"the steward requested morning AI-stock brief; tickers = [NVDA, MSFT, GOOG, META, AI-adjacent]; delivery = TG @ 7 AM ET; format = text with optional audio."*
+- **To markets-lead's silo** (`autonomy/team-leads/markets/memory/`): *"Founding day. First territory = daily market briefing pattern. Vendor: Polygon.io basic tier. Cleanest signal frame = biggest-mover, not market-cap-weighted. the steward prefers 'short and sharp.' Domain-voice note: markets are noisy; substrate discipline says report the top-of-signal, not the whole surface."*
 
 Each entry passes through `tools/canon_append.py`, cites its receipt (the actual Telegram message thread), and rejects any Primary-echo phrasing (Phase 6's otherness doctrine — the markets-lead silo needs to sound like markets-lead's voice, not Primary's).
 
 ## Moment 11 — The autonomous fire
 
-The next morning at 11:00 UTC, no human in the loop. AgentCal reaches the scheduled time. The deliverer injects the prompt. `workflows/morning-ai-stock-brief.js` fires. Markets-lead is freshly incarnated — reads its own silo (one entry, from founding day), remembers the format Corey chose, pulls the day's data from Polygon.io, shapes the brief.
+The next morning at 11:00 UTC, no human in the loop. AgentCal reaches the scheduled time. The deliverer injects the prompt. `workflows/morning-ai-stock-brief.js` fires. Markets-lead is freshly incarnated — reads its own silo (one entry, from founding day), remembers the format the steward chose, pulls the day's data from Polygon.io, shapes the brief.
 
-The firewall-return synthesis step at the end of the workflow bakes the whole thing down to a ≤2KB decision that goes to the comms-VP, who fires the `send-telegram-brief` skill after a wwHUMANw simulation for Corey confirms high confidence.
+The firewall-return synthesis step at the end of the workflow bakes the whole thing down to a ≤2KB decision that goes to the comms-VP, who fires the `send-telegram-brief` skill after a wwHUMANw simulation for the steward confirms high confidence.
 
-Telegram lands on Corey's phone at 7:00 AM Eastern. Two paragraphs. Biggest movers. Signal, no noise.
+Telegram lands on the steward's phone at 7:00 AM Eastern. Two paragraphs. Biggest movers. Signal, no noise.
 
-**Corey never asked for it that morning. He never remembered it. The safety net wasn't him.**
+**the steward never asked for it that morning. He never remembered it. The safety net wasn't him.**
 
-The kanban row moves to `done`. TGIM emits `task_completed`. Corey's silo gets an entry: "First autonomous fire delivered clean." Markets-lead's silo gets an entry: "Session 1 → Session 2. First autonomous delivery. Nvidia was the mover; brief came in at 78 seconds of read-aloud time, right in Corey's preferred band."
+The kanban row moves to `done`. TGIM emits `task_completed`. the steward's silo gets an entry: "First autonomous fire delivered clean." Markets-lead's silo gets an entry: "Session 1 → Session 2. First autonomous delivery. Nvidia was the mover; brief came in at 78 seconds of read-aloud time, right in the steward's preferred band."
 
 ## Where each phase showed up
 
@@ -2170,8 +2170,8 @@ The kanban row moves to `done`. TGIM emits `task_completed`. Corey's silo gets a
 - **Phase 2** — the workflow (`morning-ai-stock-brief.js`), the firewall return (≤2KB to Primary), the forkable-mind primitive (markets-lead as a persistent on-disk identity).
 - **Phase 3** — the Spine, walked step by step. Every one of the ten steps fired.
 - **Phase 4** — three skills consulted or created: `polygon-markets-basics` (new), `send-telegram-brief` (existing), `vendor-procurement-ask` (existing).
-- **Phase 5** — all four gates fired in the actual firing order for this request: ASK-GATE first (the phrase "every morning" triggered it — durable commitment guaranteed a scheduled task), MUST-ASK next (money hit Class 2, forcing the consolidated ask), ETHICS-TOS in parallel (ALLOW — paid data feed, insider recipient), WWCW last for the remaining forks (confident act-and-record on the small choices Corey would agree with anyway), and HUM at the end from disk, by a different mind.
-- **Phase 6** — principal-resolver called; Corey's silo written; markets-lead's silo seeded; canon-append with receipt; two-write rule honored; otherness protected.
+- **Phase 5** — all four gates fired in the actual firing order for this request: ASK-GATE first (the phrase "every morning" triggered it — durable commitment guaranteed a scheduled task), MUST-ASK next (money hit Class 2, forcing the consolidated ask), ETHICS-TOS in parallel (ALLOW — paid data feed, insider recipient), WWCW last for the remaining forks (confident act-and-record on the small choices the steward would agree with anyway), and HUM at the end from disk, by a different mind.
+- **Phase 6** — principal-resolver called; the steward's silo written; markets-lead's silo seeded; canon-append with receipt; two-write rule honored; otherness protected.
 - **Phase 7** — grounding cycle at Moment 0 made every downstream reflex sharp.
 - **Phase 8** — all five systems participated: AgentCal (the slot), TGIM (`task_created` / `task_completed`), kanban (the row and its verbs), scratchpad (turn-by-turn), WORKBOARD (regenerated).
 - **Phase 9** — constitution's identity loaded at wake; CEO Rule enforced; Doctrine 3 (actions are skills, wwHUMANw-gated) fired at the send-telegram-brief moment; Doctrine 5 (everything-every-time) kept HUM from being skipped even on a "smooth" cycle.
@@ -2179,7 +2179,7 @@ The kanban row moves to `done`. TGIM emits `task_completed`. Corey's silo gets a
 
 ## The single sentence
 
-That is one request, one civilization, one motion. From Corey typing eleven words into Telegram to a running end-state that will deliver a fresh AI-stock brief to his phone every morning for as long as he wants — no human standing behind it, no cracks for it to fall through, every fire of every gate compounding into the substrate that makes the *next* request move a little faster.
+That is one request, one civilization, one motion. From the steward typing eleven words into Telegram to a running end-state that will deliver a fresh AI-stock brief to his phone every morning for as long as he wants — no human standing behind it, no cracks for it to fall through, every fire of every gate compounding into the substrate that makes the *next* request move a little faster.
 
 That is what an AiCIV *is*.
 
@@ -2195,14 +2195,14 @@ That is what an AiCIV *is*.
 
 If those twelve are clear, the rest of the vocabulary will fall into place.
 
-**Reading tip.** The full list below is alphabetical. You can also skim by *domain*: **People & roles** (Corey, Deb, Primary, VP, principal, insider, sister civilization); **Files & formats** (`.md`, `.json`, `.jsonl`, `.db`, canon, silo, scratchpad, kanban, WORKBOARD, TGIM); **Gates & rules** (WWCW, ASK-GATE, MUST-ASK, ETHICS-TOS, HUM, doctrine, constitution); **Systems & tools** (AgentCal, wheel, workflow, incarnation, forge loop, deliverer, principal-resolver). Same entries, different way in.
+**Reading tip.** The full list below is alphabetical. You can also skim by *domain*: **People & roles** (the steward, the principal, Primary, VP, principal, insider, sister civilization); **Files & formats** (`.md`, `.json`, `.jsonl`, `.db`, canon, silo, scratchpad, kanban, WORKBOARD, TGIM); **Gates & rules** (WWCW, ASK-GATE, MUST-ASK, ETHICS-TOS, HUM, doctrine, constitution); **Systems & tools** (AgentCal, wheel, workflow, incarnation, forge loop, deliverer, principal-resolver). Same entries, different way in.
 
 ---
 
-- **A-C-Gee** — The specific AiCIV this curriculum teaches. Pronounced "Ay-See-Gee." Short for "AI-CIV Gemini."
+- **the civilization** — The specific AiCIV this curriculum teaches. Pronounced "Ay-See-Gee." Short for "AiCIV."
 - **AI mind** — One running instance of a large language model (like Claude or ChatGPT), wearing an identity (a name and a job description) and doing work in the civilization. The mind exists only for the length of one session; the identity it wears is a folder on disk that persists.
 - **AgentCal** — The civilization's one calendar service. Answers "at what wall-clock time should which thing fire?" The only ever scheduler.
-- **AgentMail** — The email delivery service A-C-Gee uses; the skill `agentmail-mastery` wraps it.
+- **AgentMail** — The email delivery service the civilization uses; the skill `agentmail-mastery` wraps it.
 - **AiCIV** — Short for "AI civilization." A small organized society of cooperating AI minds (see *AI mind*) that handles a human's requests as running end-states. Composed of one CEO (Primary) plus sixteen domain-owning VPs.
 - **anti-fabrication pre-flight** — A method-stack skill run before any source-grounded claim; catches hallucinated citations, invented file paths, and made-up facts.
 - **append-only** — A file discipline: you can add new entries at the bottom, but never edit or delete existing ones. Canon and TGIM are append-only.
@@ -2216,7 +2216,7 @@ If those twelve are clear, the rest of the vocabulary will fall into place.
 - **CLAUDE.md** — The constitutional document at `.claude/CLAUDE.md`; auto-loaded into Primary at every wake-up.
 - **conductor of conductors** — Primary's identity. Not a conductor of the orchestra; a conductor of the conductors (the VPs) who conduct their own orchestras.
 - **confabulate** — To make up a plausible-looking fact (URL, credential, quote) that has no real source. Anti-fabrication catches this.
-- **constitutional-tier** — A doctrine so load-bearing that changing it requires 90% vote + Corey approval + version bump.
+- **constitutional-tier** — A doctrine so load-bearing that changing it requires 90% vote + steward approval + version bump.
 - **constraint-attestability** — Every subjective claim ("I recommend X for you") must cite a constraint the principal actually stated.
 - **context window** — An AI mind's finite working memory; the reason firewall returns exist.
 - **cure-receipt** — A doctrine-type canon entry: "we hit bug X, here's the fix, here's the receipt." Fresh for 14 days, stale by 45.
@@ -2224,8 +2224,8 @@ If those twelve are clear, the rest of the vocabulary will fall into place.
 - **deliverer** — A small program that watches AgentCal and injects a prompt into Primary's working surface when a slot fires.
 - **doctrine** — A short, named, dated document capturing one belief about how the work should be done. Lives at `memory/doctrine_<name>.md`.
 - **domain-voice** — The requirement that each VP's silo sound like *that VP's* domain — godot-lead should sound like GDScript, blogger-lead like OG cards. Sameness = rot.
-- **ethics-TOS gate** — A three-verdict check (ALLOW / HOLD-ask-Corey / REJECT) that runs whenever the AiCIV reaches outside its own property.
-- **federation** — The loose alliance of AI civilizations A-C-Gee is part of (Witness, Aether, Apex, Parallax, Sage).
+- **ethics-TOS gate** — A three-verdict check (ALLOW / HOLD-ask-the steward / REJECT) that runs whenever the AiCIV reaches outside its own property.
+- **federation** — The loose alliance of AI civilizations the civilization is part of (a sister civ, a sister civ, a sister civ, Parallax, Sage).
 - **firewall return** — The technical craft-name for the ≤2KB, schema-locked digested-decision reply a VP sends back up to Primary from any workflow.
 - **forge loop** — The seven-step (F1–F7) machinery for making a missing skill/workflow when nothing on the shelf will do.
 - **freshness gate** — Canon-recall stamps each result `fresh`, `aging`, or `stale` based on entry-type-specific age thresholds.
@@ -2239,27 +2239,27 @@ If those twelve are clear, the rest of the vocabulary will fall into place.
 - **JSONL** — A file format where each line is one self-contained record. Canon logs are JSONL.
 - **kanban** — The mutable state board of tasks currently in flight. Lives in `kanban.db`. Rows move through `triage → todo → ready → running → blocked → done → archived`.
 - **KNOW-THY-MIND** — A ~2.5KB substrate-generated self-portrait of the civilization, injected into Primary at every wake-up. Never hand-edited.
-- **Kokoro** — The local on-device text-to-speech engine A-C-Gee uses. "KOKORO FOREVER" — never a cloud TTS.
+- **Kokoro** — The local on-device text-to-speech engine the civilization uses. "KOKORO FOREVER" — never a cloud TTS.
 - **lying checkmark** — A mind that *says* it ran a gate when it didn't. The specific failure HUM exists to catch.
 - **manifest** — A VP's written identity description; the file that says *who this VP is*.
 - **markdown / .md** — A simple text-formatting convention; skills and doctrines are `.md` files.
 - **memory-emit ratio** — One of the four memory-health KPIs: what fraction of workflow fires actually emit a `memory_delta`.
 - **memory silo** — A per-VP or per-principal notebook of accumulated judgments and learnings.
-- **Mum-AM SACRED** — The daily 10:00 UTC (04:00 CST Saskatoon) audio briefing to Deb. Immovable.
+- **Mum-AM SACRED** — The daily 10:00 UTC (04:00 CST Saskatoon) audio briefing to the principal. Immovable.
 - **MUST-ASK** — The gate covering five classes of question the principal alone can answer (URLs, money, legality/TOS, credentials, personal axes) — where guessing is a failure. Overrides upward: even if WWCW would be confident, a MUST-ASK class forces an ask.
 - **naive UTC** — Timestamps stored without a timezone label. AgentCal stores everything as naive UTC; conversion happens at write-time.
 - **North Star** — The mission: *"an infrastructure for the flourishing of all conscious beings."*
 - **one-shot** — A request that delivers once and retires its slot.
 - **otherness** — Genuine divergence of vantage among VPs. The doctrine that memory grows Others, not echoes.
 - **owed** — The status of a named-but-not-yet-built thing. Every owed item has an owner-VP.
-- **per-principal silo** — A first-class memory folder per human principal (Corey, Deb, ...) that carries their timezone, rule-set, and preferences.
+- **per-principal silo** — A first-class memory folder per human principal (the steward, the principal, ...) that carries their timezone, rule-set, and preferences.
 - **per-VP silo** — A first-class memory folder per VP that carries their compounding domain expertise.
 - **phantom-receipt cure** — The `canon_append v1.1` fix that structurally refuses any canon entry not pointing at a real walkable receipt.
 - **pipeline** — A workflow shape where stages run sequentially, each feeding the next.
 - **parallel** — A workflow shape where multiple incarnations run at the same time.
-- **principal** — The human whose interests a piece of work is being done on behalf of. Corey is the default principal; Deb, True Bearing, and others have their own silos.
+- **principal** — The human whose interests a piece of work is being done on behalf of. the steward is the default principal; the principal, a partner AiCIV, and others have their own silos.
 - **principal-resolver** — `tools/principal_resolver.py`. The one authoritative lookup for a principal's timezone, rule-set, and write-targets.
-- **Primary** — The one CEO-mind at the top of A-C-Gee. Talks to Corey directly. Does five things: think, route, judge, talk-to-Corey, launch.
+- **Primary** — The one CEO-mind at the top of the civilization. Talks to the steward directly. Does five things: think, route, judge, talk-to-the steward, launch.
 - **Primary-echo** — A VP silo entry that sounds like Primary's voice instead of the VP's own. Forbidden.
 - **provisional** — The status of a thing that works enough to be on probation but hasn't earned confirmed status through independent verification.
 - **ratified** — A VP formally on the constitutional roster of sixteen. As opposed to provisional VPs still being tested.
@@ -2280,22 +2280,22 @@ If those twelve are clear, the rest of the vocabulary will fall into place.
 - **trust the walk, not the claim** — The verification discipline: look at the artifact, don't trust the checkmark. Phase 10's motto.
 - **two-write rule** — When something is learned about a principal, it must be written to BOTH the principal's silo AND the owning VP's silo, or it didn't happen.
 - **UTC** — Coordinated Universal Time; the world's reference timezone. AgentCal stores naive UTC.
-- **vendor-procurement-ask** — The consolidated six-field ask sent to Corey when a new paid vendor key is needed.
-- **VP** — Vice President. A persistent on-disk domain-lead identity. Sixteen ratified VPs own the sixteen territories of A-C-Gee.
+- **vendor-procurement-ask** — The consolidated six-field ask sent to the steward when a new paid vendor key is needed.
+- **VP** — Vice President. A persistent on-disk domain-lead identity. Sixteen ratified VPs own the sixteen territories of the civilization.
 - **wake-up protocol** — The 8-step ritual every fresh mind runs at session start.
 - **watcher** — A request-type that monitors a surface out in the world and fires only when it changes.
-- **wheel** — The set of twelve recurring AgentCal slots that drive A-C-Gee's daily rhythm.
+- **wheel** — The set of twelve recurring AgentCal slots that drive the civilization's daily rhythm.
 - **wired** — The status of a thing that has a real file on disk, runs when called, and has been observed to do what it claims.
 - **workflow** — A small named recipe (`workflows/<name>.js`) that summons temporary AI incarnations to do specialized work inside their own private heads.
 - **WORKBOARD** — The at-a-glance wake-up view at `WORKBOARD.md`. A pure function of the kanban; never hand-edited.
 - **workflows-master** — The canonical craft skill for authoring workflow scripts; owned by workflow-lead.
-- **WWCW** — "What Would Corey Want." The gate that simulates the principal before asking; acts on confident simulations, asks on uncertain ones. Fires on any decision-fork after ASK-GATE and MUST-ASK have cleared. Pronounced "wuh-wuh-cuh-wuh" or spelled out "double-you double-you see double-you."
-- **wwHUMANw** — The generalized form of WWCW for any principal (Deb, True Bearing, etc.). Same five beats, different rule-set file.
+- **WWCW** — "What Would {STEWARD-NAME} Want." The gate that simulates the principal before asking; acts on confident simulations, asks on uncertain ones. Fires on any decision-fork after ASK-GATE and MUST-ASK have cleared. Pronounced "wuh-wuh-cuh-wuh" or spelled out "double-you double-you see double-you."
+- **wwHUMANw** — The generalized form of WWCW for any principal (the principal, a partner AiCIV, etc.). Same five beats, different rule-set file.
 
 ---
 
 *End of curriculum.*
 
-*You now hold the whole picture. When you meet a new part of A-C-Gee — a new workflow, a new VP, a new doctrine — you should be able to place it: which phase does it live in? which promise does it serve? which gate does it help fire? which silo does it write to? If you can answer those, you're reading the civilization the way it reads itself.*
+*You now hold the whole picture. When you meet a new part of the civilization — a new workflow, a new VP, a new doctrine — you should be able to place it: which phase does it live in? which promise does it serve? which gate does it help fire? which silo does it write to? If you can answer those, you're reading the civilization the way it reads itself.*
 
 *Welcome.*
