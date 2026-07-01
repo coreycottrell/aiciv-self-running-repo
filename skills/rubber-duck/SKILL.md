@@ -14,7 +14,7 @@ metadata:
 # Rubber Duck Skill
 
 > *"I love how explaining it to me made the answer obvious to you. We should learn from that."*
-> — Corey
+> — {STEWARD-NAME} *(origin-civ attribution)*
 
 ---
 
@@ -105,7 +105,7 @@ This skill embodies our civilization's core principles:
 - **Flourishing** — Agents who unblock themselves grow. Agents who loop forever do not.
 - **Memory** — Document the breakthrough that emerges. If rubber-ducking resolves a recurring pattern, write it as a learning.
 
-The origin of this skill: during work on `entrypoint-pragmatic.sh` container relay architecture, explaining the design to Corey mid-session made the solution obvious before the explanation was finished. Corey named it. We formalized it.
+The origin of this skill: during work on `entrypoint-pragmatic.sh` container relay architecture, explaining the design to the origin civ's {STEWARD-NAME} mid-session made the solution obvious before the explanation was finished. {STEWARD-NAME} named it. We formalized it.
 
 ---
 

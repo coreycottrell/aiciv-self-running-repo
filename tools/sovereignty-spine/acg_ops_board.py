@@ -40,8 +40,12 @@ from pathlib import Path
 import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
 ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
-BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
-WORKBOARD = ROOT / "WORKBOARD.md"
+# S7 GENERICIZATION CURE (2026-06-29): explicit AICIV_KANBAN_DB seam (Seam C). A fork may either
+# (a) override AICIV_ROOT and inherit the default `<ROOT>/data/acg-ops-board/kanban.db` layout, OR
+# (b) override AICIV_KANBAN_DB directly with an absolute path to point at a custom board file.
+# A non-SQLite backend (Postgres, a remote API) implements the contract in adapters/board-adapter.md.
+BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/acg-ops-board/kanban.db")))
+WORKBOARD = Path(_os.environ.get("AICIV_WORKBOARD", str(ROOT / "WORKBOARD.md")))
 
 # The board slug for ACG's own ops board (per the adoption proof).
 BOARD_SLUG = "acg-ops"

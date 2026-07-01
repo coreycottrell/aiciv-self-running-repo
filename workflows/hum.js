@@ -445,6 +445,18 @@ export const meta = {
 // fork-resolution: honor $AICIV_ROOT / $AICIV_PROJECT_DIR (STAND-IT-UP §0); ACG paths are the origin fallback
 const ROOT = process.env.AICIV_ROOT || '/home/corey/projects/AI-CIV/ACG'
 const PROJECT_DIR = process.env.AICIV_PROJECT_DIR || '/home/corey/.claude/projects/-home-corey-projects-AI-CIV-ACG'
+// S7 GENERICIZATION CURE (2026-06-29): the FIVE RUNTIME SEAMS abstracted as env-vars (STAND-IT-UP §0 expansion).
+// A fork sets these once at boot; the origin defaults preserve the ACG live behavior on the origin substrate.
+//   AICIV_TGIM_ENDPOINT     — base URL of YOUR event-audit API (origin: tgim-api.ai-civ.com)
+//   AICIV_CIV_ID            — your civ id used in source_civ= queries (origin: acg)
+//   AICIV_AUTH_SEAT         — the seat identity used to sign tgim-read JWTs (origin: hermes-primary)
+//   AICIV_AUTH_SIGN_TOOL    — path under $ROOT to your JWT signer (origin: tools/agentauth_sign_jwt.py)
+//   AICIV_SELF_INJECT_CMD   — a shell template for your harness's self-inject keystroke (origin: tmux send-keys; see adapters/self-inject-adapter.md)
+// Each is read at fire-time; a missing override falls back to the origin so a fork can stand up incrementally.
+const TGIM_ENDPOINT = process.env.AICIV_TGIM_ENDPOINT || 'https://tgim-api.ai-civ.com'
+const CIV_ID = process.env.AICIV_CIV_ID || 'acg'
+const AUTH_SEAT = process.env.AICIV_AUTH_SEAT || 'hermes-primary'
+const AUTH_SIGN_TOOL = process.env.AICIV_AUTH_SIGN_TOOL || 'tools/agentauth_sign_jwt.py'
 // DAILY ROTATION (mind-lead 2026-06-21, {STEWARD-NAME}: "per day tho so early morning daily boop we start new
 // one same way we start new daily scratchpads"). The flat 1004-line hum-ledger.md was rotated into a
 // file-per-day under hum-ledger-daily/YYYY-MM-DD.md (mirroring .claude/scratchpad-daily/). The legacy
@@ -1283,8 +1295,8 @@ const readiness = await agent(
   `Sign a short-lived tgim-READ JWT and GET recent events, then count task_failed CLIENT-SIDE (the server\n` +
   `does NOT honor an event_type= filter — confirmed by live probe; you MUST filter yourself):\n` +
   `  cd ${ROOT}\n` +
-  `  JWT=$(python3 tools/agentauth_sign_jwt.py --seat hermes-primary --claim tgim-read --ttl 600 --print-jwt-only 2>/dev/null | tail -1)\n` +
-  `  curl -s -m 20 -X GET "https://tgim-api.ai-civ.com/api/v1/events?source_civ=acg&limit=100" -H "Authorization: Bearer $JWT"\n` +
+  `  JWT=$(python3 ${AUTH_SIGN_TOOL} --seat ${AUTH_SEAT} --claim tgim-read --ttl 600 --print-jwt-only 2>/dev/null | tail -1)\n` +
+  `  curl -s -m 20 -X GET "${TGIM_ENDPOINT}/api/v1/events?source_civ=${CIV_ID}&limit=100" -H "Authorization: Bearer $JWT"\n` +
   `The response shape is {"data":[ {event_type, timestamp, task_id, agent_id, ...}, ... ]}. Parse it and\n` +
   `set tgim_actual = the count of rows in data[] whose "event_type" == "task_failed". (You may pipe the\n` +
   `curl into a small python3 -c json parse for an exact count — that is fine, still ONE GET.) Capture the\n` +

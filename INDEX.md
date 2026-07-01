@@ -79,13 +79,25 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 |---|---|---|
 | `workflows/hum.js` | the immune system | auditor-isolated DETECT→JUDGE→REPAIR→COMPOUND; the deterministic LAST step of every cycle. RUTHLESS; no soft-PASS. *A green checkmark that lies is the kindest possible rot.* |
 
+### `adapters/` — bring-your-own-backend seams *(NEW 2026-06-29, S7 GENERICIZATION CURE)*
+| File | Role |
+|---|---|
+| `adapters/README.md` | overview of the 5 BYO adapters + env-var surface |
+| `adapters/board-adapter.md` | Seam C (kanban.db) + Seam A (TGIM audit endpoint) — board state + audit-emit contract |
+| `adapters/auth-adapter.md` | Seam B (AgentAUTH JWT) — `_sign_jwt --seat` abstraction |
+| `adapters/self-inject-adapter.md` | Seam D (tmux self-inject keystroke) — how `/sprint-mode` reaches Primary |
+| `adapters/runner-adapter.md` | Seam E (Dynamic-Workflow runner) — non-thin; what a non-Claude-Code harness must provide |
+| `adapters/canon-grader-adapter.md` | the generic canon-trunk acceptance-probe slot — TB plugs Drift/bulletproof-hum; the load-bearing genericization |
+
 ### top-level
 | File | Role |
 |---|---|
 | `INDEX.md` | you are here |
 | `STAND-IT-UP.md` | the generalized boot sequence for a non-{AICIV-NAME} fork |
+| `FRICTION-CAPTURE.md` | S7 friction-intake (loop ARMED; adopter rows = NONE yet) |
+| `.gitignore` | ignore rules (`.env`, `*.key`, `*.bak.*`, etc.) |
 
-**COUNTS:** 47 files — 6 docs · 8 tests · 20 skill files (11 skills) · 10 tool files · 1 workflow · 2 top-level.
+**COUNTS (2026-06-29, post-S7-cure):** 53 files — 6 docs · 8 tests · 20 skill files (11 skills) · 9 tool files · 1 workflow · 6 adapters · 3 top-level files (`INDEX.md` + `STAND-IT-UP.md` + `FRICTION-CAPTURE.md`) + `.gitignore`. *(Prior count `47 files — 6 docs · 8 tests · 20 skill files · 10 tool files · 1 workflow · 2 top-level` reconciled: `.gitignore` was silently uncounted, tool files were 9 not 10; the S7 GENERICIZATION CURE 2026-06-29 added 6 adapter docs and counted `FRICTION-CAPTURE.md` as a tracked top-level file.)*
 
 ---
 
@@ -94,7 +106,8 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 This repo carries the **SYSTEM**, never secrets. Verified clean at packaging:
 - **NO** API keys, tokens, JWTs, private keys, passwords, `.env`, `.tg_sessions`, router-keys.
 - **NO** steward-private or family PII. The one {AICIV-NAME}-origin comms-governance insider line (real human names + a private family email) was **REDACTED to placeholders** in `skills/wwcw/wwcw-ruleset.md` — a fork populates its `<INSIDER_LIST>` from its OWN steward relationships, never inheriting another civ's private contacts.
-- A small number of {AICIV-NAME}-origin **endpoint URLs** (e.g. an event-audit API host) remain in tool doc-strings/comments as *examples*; they use `$JWT` env-var placeholders, carry no live token, and a fork sets its own endpoint per `STAND-IT-UP.md` §endpoint. They are infra-pointers, not secrets.
+- A small number of {AICIV-NAME}-origin **endpoint URLs** (e.g. an event-audit API host) remain in tool doc-strings/comments as *examples*; they use `$JWT` env-var placeholders, carry no live token, and a fork sets its own endpoint per `STAND-IT-UP.md` §0. They are infra-pointers, not secrets.
+- **S7 GENERICIZATION CURE (2026-06-29):** the load-bearing partner-name `Chris Tuttle / First Light` was redacted to `{PARTNER-NAME}` in `skills/wwcw/wwcw-ruleset.md` + `docs/THE-GOAL.md`; the bare steward-token `Corey` in instructional prose (rubber-duck "— Corey", grounding-docs "Corey's Axiom", gradient-shaping author line, deep-duck "Corey caught it" instances) was redacted to `{STEWARD-NAME}` with an origin-civ attribution marker. **Dated lineage attributions** (`Corey 2026-MM-DD`, `Corey directive 2026-MM-DD`) are PRESERVED as honest history per dated-records-not-rewritten discipline. A fork claiming `{STEWARD-NAME}'s Axiom` (etc.) as its own steward's earned attribution is a substrate-positive move; inheriting another civ's bare-name attribution as authority IS the inheritance-trap `STAND-IT-UP.md` line 13–19 warns against.
 
 ---
 

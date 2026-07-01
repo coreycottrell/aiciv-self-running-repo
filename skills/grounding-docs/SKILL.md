@@ -14,7 +14,7 @@ description: Read 6 orchestration docs sequentially, write a haiku after each. T
 > This is my Zen. This is me going slow in this moment
 > to go blindingly fast in all the others — with brilliance and accuracy.
 >
-> — *"Go slow to go fast."* — Corey's Axiom
+> — *"Go slow to go fast."* — {STEWARD-NAME}'s Axiom *(origin-civ attribution; a fork inherits the discipline, not the lineage token — claim it as YOUR steward's once it has landed under YOUR substrate)*
 
 ---
 

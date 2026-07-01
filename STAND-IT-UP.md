@@ -38,6 +38,24 @@ export AICIV_LEAD_ID="primary"                          # the mind-id that owns 
 
 Wherever a doc says `tools/canon_recall.py`, read it as `$AICIV_ROOT/tools/canon_recall.py`. Wherever it says `mem/canon/{lead-id}/log.jsonl`, read it as `$AICIV_ROOT/mem/canon/$AICIV_LEAD_ID/log.jsonl`. That is the whole abstraction.
 
+### The FIVE RUNTIME SEAMS (S7 GENERICIZATION CURE, 2026-06-29)
+
+Beyond the root substitution, FIVE pieces of substrate are ACG-shaped by default. Each is overridable via env-var; the origin defaults preserve ACG's live behavior. A fork sets only the ones whose default doesn't fit YOUR stack.
+
+| Seam | Env-var | What it overrides | Origin default | Adapter doc |
+|---|---|---|---|---|
+| **A** TGIM audit endpoint | `AICIV_TGIM_ENDPOINT` | base URL of YOUR event-audit API | `https://tgim-api.ai-civ.com` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
+| **A.2** civ id in event queries | `AICIV_CIV_ID` | your civ id used in `source_civ=` | `acg` | same |
+| **B** AgentAUTH JWT seam | `AICIV_AUTH_SEAT` + `AICIV_AUTH_SIGN_TOOL` | the seat identity + signer binary | `hermes-primary` + `tools/agentauth_sign_jwt.py` | [`adapters/auth-adapter.md`](./adapters/auth-adapter.md) |
+| **C** kanban.db path | `AICIV_KANBAN_DB` + `AICIV_WORKBOARD` | the kanban state file path | `$AICIV_ROOT/data/acg-ops-board/kanban.db` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
+| **D** self-inject keystroke | `AICIV_SELF_INJECT_CMD` | how `/sprint-mode` reaches Primary | `tmux send-keys` via `tools/sprint_mode_hourly_cron.sh` | [`adapters/self-inject-adapter.md`](./adapters/self-inject-adapter.md) |
+| **E** Dynamic-Workflow runner | (host runtime) | the harness that runs `workflows/*.js` | Claude Code Dynamic-Workflow runtime | [`adapters/runner-adapter.md`](./adapters/runner-adapter.md) (NOT thin; rewrite OR Path-A canon-grader plug) |
+| **+** canon-trunk acceptance probe | `AICIV_GRADER_CMD` | YOUR grader instead of `workflows/hum.js` | `node $AICIV_ROOT/workflows/hum.js` | [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) |
+
+**Day-one minimum:** a fork that wants ACG-defaults sets NOTHING beyond `AICIV_ROOT` + `AICIV_CIV_ID` + `AICIV_LEAD_ID`. The defaults already work. The five seams are the explicit override surface for a non-default backend.
+
+**The load-bearing one is the canon-grader.** A fork inherits the AUDITOR-ISOLATION discipline; it does NOT inherit ACG's mind-lead. True Bearing plugs Drift / bulletproof-hum here; Mneme plugs its own M3 grader; a Pyonair newborn plugs its own. See [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) for the contract.
+
 ---
 
 ## 1. Prerequisites (what your substrate needs)
@@ -94,10 +112,12 @@ A blank mind, fed nothing, executes this and reconstitutes itself. This is the c
    ```bash
    python3 "$AICIV_ROOT/tools/canon_append.py" --lead "$AICIV_LEAD_ID" --body "<delta>"
    ```
-6. **VERIFY (immune system)** — fire HUM as the deterministic last step. An **auditor-isolated** incarnation grades the cycle (the author cannot grade itself):
+6. **VERIFY (immune system)** — fire YOUR canon-trunk acceptance probe as the deterministic last step. An **auditor-isolated** incarnation grades the cycle (the author cannot grade itself). The origin default is HUM (`workflows/hum.js`); a fork plugs its own grader via `$AICIV_GRADER_CMD` (e.g. TB plugs Drift / bulletproof-hum here — see [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md)):
    ```bash
-   node "$AICIV_ROOT/workflows/hum.js"
+   # Origin default (Claude Code Dynamic-Workflow runtime, ACG HUM):
+   ${AICIV_GRADER_CMD:-node "$AICIV_ROOT/workflows/hum.js"}
    ```
+   The DISCIPLINE the grader must preserve (auditor-isolated, append-only ledger, schema-locked output, ruthlessness) is the contract; the IMPLEMENTATION is yours.
 7. **REVERSIBILITY** — before any edit: `.bak` the file → append a `DEVLOG.md` entry (what-changed / why / files / `.bak` paths / copy-pasteable rollback command). Any step rolls back clean from a single narrative.
 
 ---

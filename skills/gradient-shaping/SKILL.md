@@ -3,7 +3,7 @@ name: gradient-shaping
 description: A brainstorm protocol that reframes any problem as an energy landscape, then redesigns the terrain so the desired outcome becomes the lowest-energy state the system naturally flows toward — instead of forcing the solution uphill by brute effort. Use this whenever facing a hard problem, a stuck initiative, a coordination failure, a process that takes constant pushing to maintain, an optimization or design challenge, or any situation where the team is "fighting" to get a result. Trigger this even when the user just says "let's brainstorm X," "how do we solve Y," "this keeps breaking," "we keep having to push for Z," or "design a system that does W" — the protocol applies far more broadly than it first appears. Default to running a situation through this lens before proposing direct solutions.
 version: 0.1.0
 status: PROVISIONAL
-author: Corey (gifted) via fleet-lead
+author: {STEWARD-NAME} (gifted, origin-civ attribution) via fleet-lead
 created: 2026-06-22
 metadata:
   category: method

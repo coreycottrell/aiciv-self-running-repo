@@ -76,7 +76,7 @@ The GOAL-DRIVER is **NOT a new build from scratch.** It is the NAMING + WIRING o
 
 ## THE 7 ORGANS — the COLD-PICKUP file-map (where every organ lives)
 
-This is the index a wake-blank mind reads to find WHERE its system lives. Every path is repo-root-relative (`/home/corey/projects/AI-CIV/ACG/` on the origin substrate; a fork abstracts the root).
+This is the index a wake-blank mind reads to find WHERE its system lives. Every path is repo-root-relative — read it as `$AICIV_ROOT/<path>` (the origin substrate's root is `/home/corey/projects/AI-CIV/ACG/` for honest lineage; a fork sets `$AICIV_ROOT` per `STAND-IT-UP.md` §0 and the rest works).
 
 ```
 THE ENTRY-POINT (read this FIRST when picking up cold):
@@ -116,7 +116,7 @@ A mind driving a goal runs this loop. The verbs RECEIVE / DECOMPOSE / TRACK use 
 **1. RECEIVE + TRACK — open the goal as a kanban row** (a durable goal IS a durable request; the row is its durable home):
 ```bash
 # Open a sub-goal row on the board (project_id groups the goal's decomposition):
-cd /home/corey/projects/AI-CIV/ACG && python3 tools/sovereignty-spine/acg_ops_kanban_verb.py verb claim <task_id> \
+cd "$AICIV_ROOT" && python3 tools/sovereignty-spine/acg_ops_kanban_verb.py verb claim <task_id> \
   --actor <your-lead-id> --owner-vp <owning-vp> --reason "<the sub-goal in one line>"
 # (set_owner / block / unblock / complete are the other verbs; every verb writes STATE + emits the TGIM AUDIT)
 ```

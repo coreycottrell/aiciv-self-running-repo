@@ -67,12 +67,17 @@ VERB -> TGIM event_type MAP (LIVE-SERVER-ACCEPTED enum only — walk-probed 2026
                                row to live/assigned; task_assigned re-asserts "this row is alive
                                again" with the recovery semantic in payload. Symmetric to block.)
 
-  THE LIVE ACCEPTED ENUM (curl-probed against tgim-api.ai-civ.com 2026-06-21, NOT the doctrine):
+  THE LIVE ACCEPTED ENUM (curl-probed against the origin event-audit API 2026-06-21, NOT the
+  doctrine; origin endpoint = $AICIV_TGIM_ENDPOINT default `https://tgim-api.ai-civ.com`):
     task_created | task_completed | task_assigned | task_failed
   task_updated 400s ("Invalid event_type") — same family as task_blocked. The doctrine
   (doctrine_tgim_v2_body_shape_canonical.md) was STALE (listed task_updated, omitted
   task_failed); reconciled to the live server enum this run. reconcile() is event_type-AGNOSTIC
   (it joins on the deterministic task_id, never the type), so this re-map keeps it GREEN.
+
+  S7 GENERICIZATION (2026-06-29): the TGIM emit-target is overridable via $AICIV_TGIM_ENDPOINT
+  (Seam A). A non-TGIM audit sink (a local append-only JSONL, a custom event API) implements
+  the contract in adapters/board-adapter.md §emit.
 
 REVERSIBLE / ADDITIVE:
   - This module is the SANCTIONED verb wrapper. It REUSES acg_ops_set_owner
@@ -96,7 +101,8 @@ from typing import Any, Dict, Optional
 
 import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); ACG path is the origin fallback
 ROOT = Path(_os.environ.get("AICIV_ROOT", "/home/corey/projects/AI-CIV/ACG"))
-BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
+# S7 GENERICIZATION CURE (2026-06-29): explicit AICIV_KANBAN_DB seam (Seam C; see acg_ops_board.py).
+BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/acg-ops-board/kanban.db")))
 SPINE_DIR = ROOT / "tools/sovereignty-spine"
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 
