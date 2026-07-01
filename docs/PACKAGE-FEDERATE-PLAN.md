@@ -36,7 +36,7 @@ BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on {AICIV-NAME
 | # | Organ | Verb | Substrate it rides (already built) |
 |---|---|---|---|
 | 1 | **RECEIVE** | `goal_open(text)` | ask-gate (CLAUDE.md v3.7.1) — a durable goal is a durable request; routes to TASK-EVERYTHING |
-| 2 | **DECOMPOSE** | `goal_decompose` | the owning VP forks its team; sub-goals become kanban rows (`acg_ops_kanban_verb.py`) carrying `owner_vp`/`surface`/`project_id` |
+| 2 | **DECOMPOSE** | `goal_decompose` | the owning VP forks its team; sub-goals become kanban rows (`aiciv_ops_kanban_verb.py`) carrying `owner_vp`/`surface`/`project_id` |
 | 3 | **TRACK** | kanban rows + `civ-workboard.js` | P1.1/P1.2/P1.3 — durable `.db`, generated WORKBOARD §0, TGIM audit on every verb |
 | 4 | **DRIVE-ACROSS-BOOPS** | recall→DECIDE→act→LEARN each boop | P2.1 cold-recall surfaces the open goal each wake; the mind re-picks-up cold, no human re-feed |
 | 5 | **NEVER-STOP** | sprint-mode is a MANDATORY workflow | sprint-mode every-2h + bash-fired HUM as the deterministic last step; idle = kryptonite (compound-or-extinct) |
@@ -56,7 +56,7 @@ BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on {AICIV-NAME
 | Item | State | Don't re-do |
 |---|---|---|
 | **P0–P3 (the whole spine + organs + knowledge organ)** | 11/13 BUILD-DOC steps gates CLOSED | The kanban spine, civ-workboard generator, TGIM-emit, cold-recall, bash-fired HUM, wiki-organ are BUILT. P5 CONSUMES them. |
-| **P1.1 owner_vp/surface/project_id + backfill 45** | ✅ DONE (45/45 owned, NULL fails loud) | The kanban schema the GOAL-DRIVER tracks on. Reuse `acg_ops_kanban_verb.py`. |
+| **P1.1 owner_vp/surface/project_id + backfill 45** | ✅ DONE (45/45 owned, NULL fails loud) | The kanban schema the GOAL-DRIVER tracks on. Reuse `aiciv_ops_kanban_verb.py`. |
 | **P1.2 civ-workboard.js generator** | ✅ DONE (WORKBOARD §0 = generated VIEW over `.db`) | The TRACK organ's surface. Don't rebuild a hand-board. |
 | **P1.3 kanban verbs → TGIM emit** | ✅ DONE (one write-path, two records) | The audit trail. Reuse it; don't add a parallel log. |
 | **P2.1 cold-recall (0.0052→#1)** | ✅ DONE (5/5 cold) | The DRIVE-ACROSS-BOOPS organ's re-pickup mechanism. |
@@ -72,7 +72,7 @@ BUILD-DOC P0–P4 proves a mind that **survives its own reboots** on {AICIV-NAME
 
 ## THE 7 STEPS (S1–S7) — ordered, dependency-aware, kanban-dogfooded
 
-> **Ordering principle:** make the substrate FINDABLE first (S1 docs current + S2 README + S3 grounding-wiring), then make it CORRECT (S4 contradiction review), then make it PROVEN (S5 more tests), then SHAREABLE (S6 package), then FEDERATED (S7 assimilate). You cannot package what isn't findable, and you cannot prove-it-assimilates what isn't packaged. **Each step is entered as a kanban row** (`acg_ops_kanban_verb.py`, `project_id=self-running-aiciv`) BEFORE it starts, claimed when in-flight, completed when its gate closes — the build dogfoods its own GOAL-DRIVER TRACK organ.
+> **Ordering principle:** make the substrate FINDABLE first (S1 docs current + S2 README + S3 grounding-wiring), then make it CORRECT (S4 contradiction review), then make it PROVEN (S5 more tests), then SHAREABLE (S6 package), then FEDERATED (S7 assimilate). You cannot package what isn't findable, and you cannot prove-it-assimilates what isn't packaged. **Each step is entered as a kanban row** (`aiciv_ops_kanban_verb.py`, `project_id=self-running-aiciv`) BEFORE it starts, claimed when in-flight, completed when its gate closes — the build dogfoods its own GOAL-DRIVER TRACK organ.
 
 ### Dependency graph
 ```
@@ -176,9 +176,9 @@ Every step's 5 tests are real-path/observable/done-done/adversarial. The CLIENT-
 
 Per S1's full-dogfood deliverable: each of S1–S7 is a live kanban row under `project_id=self-running-aiciv`, driven via the SAME verbs the GOAL-DRIVER exposes:
 - **open** the goal "package-and-federate the self-running substrate" → 7 sub-goal rows.
-- `acg_ops_kanban_verb.py verb set_owner <row> --owner-vp <vp> --reason <why>` — assign each step's owner.
-- `acg_ops_kanban_verb.py verb claim <row> --actor <vp>` — when a step goes in-flight.
-- `acg_ops_kanban_verb.py verb complete <row> --actor <vp> --reason "gate CLOSED"` — when its gate closes.
+- `aiciv_ops_kanban_verb.py verb set_owner <row> --owner-vp <vp> --reason <why>` — assign each step's owner.
+- `aiciv_ops_kanban_verb.py verb claim <row> --actor <vp>` — when a step goes in-flight.
+- `aiciv_ops_kanban_verb.py verb complete <row> --actor <vp> --reason "gate CLOSED"` — when its gate closes.
 - Every verb emits a TGIM audit event (P1.3) → zero desync.
 - `civ-workboard.js` regen → WORKBOARD §0 shows the 7 rows as a pure VIEW over the `.db`.
 

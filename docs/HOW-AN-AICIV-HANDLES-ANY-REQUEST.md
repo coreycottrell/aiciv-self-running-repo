@@ -1723,7 +1723,7 @@ task_created event → seat executes → task_completed event
 
 **Federation-IP:** sister-civ minimum viable membership = AgentAUTH keypair + TGIM `/events` POST + reading the same feed and reacting to `assigned_agent_id`. Path-A-forever: never centralize external-civ keys.
 
-### 1.3 STATE = kanban (`data/acg-ops-board/kanban.db`)
+### 1.3 STATE = kanban (`data/aiciv-ops-board/kanban.db`)
 
 The kanban is the **mutable work-state** — one row per task, with current `status`, `owner_vp`, `surface`, `project_id`, `claim_lock`.
 
@@ -1753,9 +1753,9 @@ The kanban is the **mutable work-state** — one row per task, with current `sta
 
 **Concurrency** (WAL + `BEGIN IMMEDIATE` + CAS): at most one claimer wins; losers see zero affected rows. No retry loops. CAS per-board.
 
-**Multi-board:** each non-default board at `<root>/kanban/boards/<slug>/`. Default at legacy `<root>/kanban.db`. **For the civilization civ-level work the canonical board IS `data/acg-ops-board/kanban.db`.**
+**Multi-board:** each non-default board at `<root>/kanban/boards/<slug>/`. Default at legacy `<root>/kanban.db`. **For the civilization civ-level work the canonical board IS `data/aiciv-ops-board/kanban.db`.**
 
-**The ONE write-path, TWO records invariant** (sovereignty-spine pattern, `tools/sovereignty-spine/acg_ops_kanban_verb.py`):
+**The ONE write-path, TWO records invariant** (sovereignty-spine pattern, `tools/sovereignty-spine/aiciv_ops_kanban_verb.py`):
 > *"EVERY kanban status/ownership verb routes through ONE function, run_verb(), which writes the kanban STATE AND emits the canonical v2 body shape via the DURABLE outbox."*
 
 Same call writes durable state AND emits TGIM audit event. Desync detectable.
@@ -1791,10 +1791,10 @@ Per-VP variants exist (`scratchpads/team-{vertical}/YYYY-MM-DD.md`).
 
 WORKBOARD is the **one-glance routing index** at wake-up. It is **NOT a database; it is the wake-up read.** Owner: mind-lead.
 
-> *"This doc is now a pure function of `data/acg-ops-board/kanban.db` plus a short maintenance contract + pointers."* (WORKBOARD.md v2.0, steward directive 2026-06-29.)
+> *"This doc is now a pure function of `data/aiciv-ops-board/kanban.db` plus a short maintenance contract + pointers."* (WORKBOARD.md v2.0, steward directive 2026-06-29.)
 
 The contract:
-1. **THE BOARD IS THE .db** — edit via `tools/acg-ops-board/*` verbs. §0 block is regen-on-demand; never hand-edit between sentinels.
+1. **THE BOARD IS THE .db** — edit via `tools/aiciv-ops-board/*` verbs. §0 block is regen-on-demand; never hand-edit between sentinels.
 2. **POINTERS NOT PROSE.**
 3. **CLOSE ON THE WORK** — row moves to DONE when walked-verified. Trust-the-walk.
 4. **SACRED OPS ARE WORKSTREAMS, NOT BAU** — a missed sacred = day's top emergency.
@@ -1895,7 +1895,7 @@ A the steward TG message lands: *"remind me at 4pm to call mum."*
 1. **Primary parses** → "schedule a one-shot reminder at 4pm ET today."
 2. **Primary writes to daily-scratchpad**: "the steward asked for 4pm mum-reminder; building AgentCal slot now."
 3. **Primary calls AgentCal** via `tools/agentcal_auth.get_agentcal_bearer_token` → `POST /api/v1/calendars/cal_fd6cf6a4…/events` with `{"summary": "Mum reminder", "start": est_to_utc("2026-06-29", "16:00"), "end": …, "prompt_payload": {"command": "/remind", "message": "[BOOP] the steward: time to call mum"}}`.
-4. **Primary upserts a kanban row** via `tools/sovereignty-spine/acg_ops_kanban_verb.py` → row created with `owner_vp=primary`, `surface=corey-ask`, `status=ready`. The verb auto-emits TGIM `task_created` in the same call (ONE verb, TWO records).
+4. **Primary upserts a kanban row** via `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` → row created with `owner_vp=primary`, `surface=corey-ask`, `status=ready`. The verb auto-emits TGIM `task_created` in the same call (ONE verb, TWO records).
 5. **WORKBOARD §0 regen** at next cadence → row visible.
 6. **At 4pm:** AgentCal deliverer polls, sees slot fired, injects `prompt_payload.message`. Primary acts on it. Primary completes the kanban verb (`complete_task`), which emits `task_completed`.
 
@@ -1911,7 +1911,7 @@ From `data/reports/coordination-systems-theory-20260629.md` §4:
 2. **WORKBOARD §0 is HALF generated, HALF hand-written** — the §0 prose preamble grows multi-cycle changelogs. Cure: move hand-prose to §-1 OWNER-NOTES (≤10 lines).
 3. **TGIM has TWO roles: audit AND dispatch** — newer sovereignty-spine treats TGIM as audit-only; older `tgim-loop-discipline` treats it as dispatch primitive too. Clean separation: kanban row IS the assignment; TGIM is the audit.
 4. **Five surfaces claim "today's notes"** — daily-scratchpad / legacy `.claude/scratchpad.md` / per-VP scratchpads / handoff / HUM ledger. At minimum tombstone legacy `.claude/scratchpad.md`.
-5. **No clean the steward-ingress verb** — see §4 above; Primary fan-outs by hand. Cleanest cure: single `acg_ops_ingest_corey_ask` verb.
+5. **No clean the steward-ingress verb** — see §4 above; Primary fan-outs by hand. Cleanest cure: single `aiciv_ops_ingest_principal_ask` verb.
 6. **MEMORY.md vs WORKBOARD.md role-overlap** — MEMORY.md was pruned 2026-06-29 to fit under 24.4KB (snapshot at `~/.claude/projects/.../memory/_snapshots/MEMORY-pre-prune-20260629T153947Z.md`); the role-overlap with WORKBOARD remains. Addressed in `data/reports/memory-md-usage-study-20260629.md` (recommends Option B HOT-PRIORITIES companion).
 
 The systems all *work* today. The compounding cost is that every fresh mind has to relearn the layering. Naming it out loud once (this README) stops that.
@@ -1924,7 +1924,7 @@ Five reflexes:
 
 1. **Want to schedule something?** → AgentCal slot. Not cron. Not a daemon. Not `at`. Hide the substrate from the human.
 2. **Want to record that something happened?** → TGIM `task_created` / `task_completed` event from origin substrate root.
-3. **Want to change the state of work?** → kanban verb (`tools/sovereignty-spine/acg_ops_kanban_verb.py`). Never raw SQL.
+3. **Want to change the state of work?** → kanban verb (`tools/sovereignty-spine/aiciv_ops_kanban_verb.py`). Never raw SQL.
 4. **Want a future you to know what you were thinking right now?** → write to `.claude/scratchpad-daily/YYYY-MM-DD.md`. Every turn.
 5. **Want to read what's open across the civ at one glance?** → WORKBOARD.md §0. Regenerate via `civ_workboard_gen.py` if stale.
 
@@ -1938,8 +1938,8 @@ Five reflexes:
 - `autonomy/skills/hermes-kanban/SKILL.md` v1.0.0 — kanban substrate API + data model + claim protocol + gotchas
 - `data/reports/coordination-systems-theory-20260629.md` — research-lead's rubber-duck reconstruction
 - `WORKBOARD.md` v2.0 — live pure-kanban view + MAINTENANCE CONTRACT
-- `tools/sovereignty-spine/acg_ops_kanban_verb.py` — ONE-verb-TWO-records implementation
-- `tools/sovereignty-spine/acg_ops_set_owner.py` — set_owner_vp verb
+- `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` — ONE-verb-TWO-records implementation
+- `tools/sovereignty-spine/aiciv_ops_set_owner.py` — set_owner_vp verb
 - `tools/sovereignty-spine/civ_workboard_gen.py` — WORKBOARD §0 generator (pure function)
 - `tools/agentcal_workflow_seed_menu.py` — idempotent wheel seeder
 - `tools/agentcal_workflow_deliverer.py` — wheel deliverer
@@ -1954,7 +1954,7 @@ Five reflexes:
 - `projects/hermes-student-001/provisioning/hermes-agent/hermes_cli/kanban_db.py` — kanban schema + verbs
 - `config/agentcal_config.json` — the civilization calendar IDs
 - `config/client-keys/agentauth_acg_keypair.json` — AgentAUTH EdDSA keypair
-- `data/acg-ops-board/kanban.db` — live civ-level kanban
+- `data/aiciv-ops-board/kanban.db` — live civ-level kanban
 - MEMORY.md — TGIM CANONICAL section + WHEEL section + a sister civ precedent
 - `.claude/CLAUDE.md` v3.6.5 — constitutional governance
 
@@ -2326,7 +2326,7 @@ The trunk is the civilization's **append-only ground truth**. Every confirmed fi
 **Shape on disk** (verified 2026-06-29):
 ```
 mem/canon/
-  acg-primary/log.jsonl          ← Primary's own appends
+  aiciv-primary/log.jsonl          ← Primary's own appends
   mind-lead/log.jsonl            ← per-VP silos (one folder per VP)
   fleet-lead/log.jsonl
   comms-lead/log.jsonl
@@ -2984,8 +2984,8 @@ While the nine section-authors were writing this README, the universal-request b
 | AgentCal | **LIVE** (Mum-AM sacred slot fired through 2026-06-30 per `data/wheel-ledger/mum-am-daily__20260630__1000.json` — the "DOWN today" claim from the 2026-06-29 capstone is STALE). Firewall self-heal organ in place. |
 | 12-slot wheel | **LIVE** spec; Mum-AM sacred-pin invariant. |
 | TGIM `<your-tgim-endpoint>` | **LIVE** events-only. v2 body shape locked. |
-| kanban.db | **LIVE** at `data/acg-ops-board/kanban.db`. |
-| Sovereignty-spine ONE-verb-TWO-records | **LIVE** at `tools/sovereignty-spine/acg_ops_kanban_verb.py`. |
+| kanban.db | **LIVE** at `data/aiciv-ops-board/kanban.db`. |
+| Sovereignty-spine ONE-verb-TWO-records | **LIVE** at `tools/sovereignty-spine/aiciv_ops_kanban_verb.py`. |
 | WORKBOARD.md v2.0 | **LIVE** pure-kanban view. Regen via `civ_workboard_gen.py`. |
 | Daily-scratchpad | **LIVE** convention. Per-VP variants live. |
 
@@ -3020,7 +3020,7 @@ While the nine section-authors were writing this README, the universal-request b
 13. **Enhanced-memory's 4 owed institutional builds** (boop-registry / HUM daily-rotation / quick-grok-longer-term / local-DB-as-institutional-substrate).
 14. **Tombstone legacy `tools/scheduled_tasks.py`** (`t_c161b5bf` on WORKBOARD).
 15. **Move WORKBOARD §0 hand-prose to §-1 OWNER-NOTES** (≤10 lines) so the generated region stays pure.
-16. **Single `acg_ops_ingest_corey_ask` verb** to fan-out a the steward TG ask to all four downstream surfaces in one call.
+16. **Single `aiciv_ops_ingest_principal_ask` verb** to fan-out a the steward TG ask to all four downstream surfaces in one call.
 17. **Re-judge the floor-thinning recommendation** (`data/reports/sprint-mode-mind-review-20260612.md`) under the corrected lens (better-shaped-valley vs flattening).
 
 **Added 2026-06-30 evening:**

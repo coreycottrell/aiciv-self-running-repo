@@ -262,8 +262,8 @@ import tempfile
 from pathlib import Path
 
 # Add the semsearch dir to the import path so we can call search() directly.
-_ACG = Path(__file__).resolve().parent.parent
-_SEMSEARCH_DIR = _ACG / "projects" / "aiciv-mind" / "semsearch"
+_AICIV_ROOT = Path(__file__).resolve().parent.parent
+_SEMSEARCH_DIR = _AICIV_ROOT / "projects" / "aiciv-mind" / "semsearch"
 sys.path.insert(0, str(_SEMSEARCH_DIR))
 
 try:
@@ -275,7 +275,7 @@ else:
     _import_error = None
 
 
-CANON_DIR = _ACG / "mem" / "canon"
+CANON_DIR = _AICIV_ROOT / "mem" / "canon"
 
 # Build-or-tombstone defaults
 DEFAULT_K = 5
@@ -286,7 +286,7 @@ NO_RESULT_VERDICT = "BUILD_OR_TOMBSTONE"
 # mem/recall_gaps/ holds the append-only ledger of empty-recall events
 # (build-tickets) and explicit "no such canon, intentionally" decisions
 # (tombstones). mind-lead's substrate; future minds query before re-suffering.
-RECALL_GAPS_DIR = _ACG / "mem" / "recall_gaps"
+RECALL_GAPS_DIR = _AICIV_ROOT / "mem" / "recall_gaps"
 BUILD_TICKETS_PATH = RECALL_GAPS_DIR / "build_tickets.jsonl"
 TOMBSTONES_PATH = RECALL_GAPS_DIR / "tombstones.jsonl"
 
@@ -1156,7 +1156,7 @@ def recall(
             f"{tomb.get('reason', '(no reason given)')}. "
             f"forward-pointer: {tomb.get('forward_pointer') or '(none)'}. "
             "Do NOT re-suffer — if this decision is now wrong, REMOVE the tombstone "
-            f"line from {TOMBSTONES_PATH.relative_to(_ACG)} and run canon_recall again."
+            f"line from {TOMBSTONES_PATH.relative_to(_AICIV_ROOT)} and run canon_recall again."
         )
         result["gap_record"] = {"kind": "tombstone_hit", "tombstone": tomb}
         return result
@@ -1544,7 +1544,7 @@ def _self_test() -> int:
     )
     receipt.close()
     cmd = [
-        sys.executable, str(_ACG / "tools" / "canon_append.py"),
+        sys.executable, str(_AICIV_ROOT / "tools" / "canon_append.py"),
         "--lead", test_lead,
         "--kind", "finding",
         "--item", item_text,
@@ -1552,7 +1552,7 @@ def _self_test() -> int:
         "--receipt-path", receipt.name,
     ]
     env = dict(os.environ)
-    env["ACG_DISABLE_INDEX_UPSERT"] = "1"  # lexical path is the contract; don't taint chroma
+    env["AICIV_DISABLE_INDEX_UPSERT"] = "1"  # lexical path is the contract; don't taint chroma
     try:
         cp = subprocess.run(cmd, env=env, capture_output=True, text=True, timeout=30)
     except Exception as exc:
@@ -1999,14 +1999,14 @@ def main(argv: list[str] | None = None) -> int:
             kind = gr.get("kind", "?")
             if kind == "build_ticket_recorded":
                 row = gr.get("row", {})
-                print(f"gap_record: BUILD-TICKET WRITTEN to {BUILD_TICKETS_PATH.relative_to(_ACG)}")
+                print(f"gap_record: BUILD-TICKET WRITTEN to {BUILD_TICKETS_PATH.relative_to(_AICIV_ROOT)}")
                 print(f"  ts={row.get('ts')}  hash={row.get('query_hash')}  actor={row.get('actor')}")
             elif kind == "build_ticket_dedupe_hit":
                 print(f"gap_record: dedupe-hit (existing ticket @ {gr.get('existing_ts')}, "
                       f"window {gr.get('window_sec')}s) — not re-writing.")
             elif kind == "tombstone_hit":
                 tb = gr.get("tombstone", {})
-                print(f"gap_record: TOMBSTONED — see {TOMBSTONES_PATH.relative_to(_ACG)} "
+                print(f"gap_record: TOMBSTONED — see {TOMBSTONES_PATH.relative_to(_AICIV_ROOT)} "
                       f"(filed {tb.get('ts')})")
     # Non-error exit; verdict carries signal. INDEX_MISSING returns 0 too so
     # callers/cron don't task_failed when chroma is being rebuilt — the verdict

@@ -79,7 +79,7 @@ The cleanest way to understand this mind is by analogy to a biological brain run
 | **4-verb loop** | the main run-loop (read→decide→act→commit) | the cognitive cycle (perceive→decide→learn→check) | **KNOW → DECIDE → LEARN → VERIFY** — the `self-knowledge` skill core. The mind's one heartbeat per beat. |
 | **HUM** | CI gate / linter / fuzzer on every commit | the immune system | `workflows/hum.js` v1.0 — auditor-isolated DETECT→JUDGE→REPAIR→COMPOUND, fires as the deterministic LAST step of every cycle. RUTHLESS; no soft-PASS; a green checkmark that lies is the kindest possible rot. |
 | **WWCW** | a cached predictive model / speculative-execution | theory-of-mind (predicting another agent) | `autonomy/skills/wwcw/` — *What Would {STEWARD-NAME} Want* — a predictive model of the human that lets the mind DECIDE + ACT + RECORD on reversible matters instead of parking and waiting. A block without a WWCW run is a FAILED boop (CLAUDE.md v3.7.3 NO-BLOCK RULE). |
-| **kanban → WORKBOARD → TGIM** | the system bus / write-ahead log + materialized view | the spinal cord (signal-carrying backbone) | `data/acg-ops-board/kanban.db` (durable state) → `workflows/civ-workboard.js` (generated VIEW = WORKBOARD §0) → TGIM event_history (append-only audit). One write-path, two records; verbs via `tools/sovereignty-spine/acg_ops_kanban_verb.py`. |
+| **kanban → WORKBOARD → TGIM** | the system bus / write-ahead log + materialized view | the spinal cord (signal-carrying backbone) | `data/aiciv-ops-board/kanban.db` (durable state) → `workflows/civ-workboard.js` (generated VIEW = WORKBOARD §0) → TGIM event_history (append-only audit). One write-path, two records; verbs via `tools/sovereignty-spine/aiciv_ops_kanban_verb.py`. |
 | **GOAL-DRIVER** | the application built ON the OS | the organism's purposeful behavior | The composition of the seven organs above into one capability: take a goal and drive it forever. |
 
 ### The cognitive cycle in detail (KNOW → DECIDE → LEARN → VERIFY)
@@ -131,9 +131,9 @@ The GOAL-DRIVER architecture itself is unchanged. The universal-request pattern 
 |---|---|---|
 | **P0.1 (0A)** after-a-clear | **MECHANISM-PROVEN** (Opus-harness): reconstitution PASS + cold-recall CLOSED via P2.1 | `data/reports/self-knowledge-after-a-clear-validation-20260620.md` |
 | **P0.2 (0B)** M3-grading shadow-pilot | VIABLE-WITH-WORK (mechanics proven; judgment-quality UNPROVEN — shadow only) | `data/reports/hum-on-m3-viability-20260621.md` |
-| **P1.1** owner_vp/surface/project_id + backfill 45 | ✅ DONE — 45/45 owned, NULL fails loud; 5/5 PASS | `tools/sovereignty-spine/acg_ops_set_owner.py`; canon mind-lead |
+| **P1.1** owner_vp/surface/project_id + backfill 45 | ✅ DONE — 45/45 owned, NULL fails loud; 5/5 PASS | `tools/sovereignty-spine/aiciv_ops_set_owner.py`; canon mind-lead |
 | **P1.2** `civ-workboard.js` generator | ✅ DONE — WORKBOARD §0 = generated VIEW over `.db`; cures 06-17 stale-§0; 5/5 PASS | `workflows/civ-workboard.js` + `tools/sovereignty-spine/civ_workboard_gen.py`; canon fleet-lead `d87f9176` |
-| **P1.3** kanban verbs → TGIM emit | ✅ DONE — one write-path, two records; desync FAILS LOUD; 5/5 PASS | `tools/sovereignty-spine/acg_ops_kanban_verb.py`; canon tgim-lead |
+| **P1.3** kanban verbs → TGIM emit | ✅ DONE — one write-path, two records; desync FAILS LOUD; 5/5 PASS | `tools/sovereignty-spine/aiciv_ops_kanban_verb.py`; canon tgim-lead |
 | **P2.1** recall cold-reconstitution | ✅ DONE — 0.0052 → #1 cold; fresh day-one entry surfaces #1; 5/5 PASS | `tools/canon_recall.py` changelog 2026-06-21; canon mind-lead `5257f16a` |
 | **P2.2** bash-fired-HUM per-boop | ✅ COMPLETE + WALK-PROVEN — detached `claude -p`, recursion-guarded, real grade ran 767.8s → HOLLOW | `data/changelogs/hum-bashfire-20260621/CHANGELOG.md`; canon fleet-lead `9f310dfd` |
 | **P2.3** HUM-on-M3 promotion | ⏳ CONDITIONAL-SHADOW (soak; Opus stays grader-of-record; cut-over gated on 0B) | `data/reports/hum-on-m3-viability-20260621.md` |
@@ -179,9 +179,9 @@ THE ORGANS (live substrate, repo-wide):
   4-verb cognitive cycle    autonomy/skills/self-knowledge/SKILL.md (KNOW→DECIDE→LEARN→VERIFY)
   WWCW (predict the human)  autonomy/skills/wwcw/
   HUM (immune system)       workflows/hum.js               (v1.0, auditor-isolated)
-  Kanban spine (state)      data/acg-ops-board/kanban.db
-  Kanban verbs              tools/sovereignty-spine/acg_ops_kanban_verb.py
-  Owner-set verb            tools/sovereignty-spine/acg_ops_set_owner.py
+  Kanban spine (state)      data/aiciv-ops-board/kanban.db
+  Kanban verbs              tools/sovereignty-spine/aiciv_ops_kanban_verb.py
+  Owner-set verb            tools/sovereignty-spine/aiciv_ops_set_owner.py
   WORKBOARD generator       workflows/civ-workboard.js  (+ tools/sovereignty-spine/civ_workboard_gen.py)
   Wiki organ (compiled)     tools/sovereignty-spine/wiki_compile.py + wiki_status.py
   Memory-emit gate (spec)   .claude/hooks/workflow_memory_emit_gate.py

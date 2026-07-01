@@ -135,7 +135,7 @@ cd $AICIV_ROOT && python3 tools/canon_append.py \
   --receipt-path "<file:line / report path / scratchpad path that witnesses it>"
 ```
 
-(`--kind decision` for a {STEWARD-NAME}-call; `--kind doctrine-candidate` for a reusable principle. A cleared *Primary* uses `--lead acg-primary`; a cleared VP uses its own id. The `--receipt-path` is mandatory — the content-gate that proves the delta witnesses something real, not a felt insight.)
+(`--kind decision` for a {STEWARD-NAME}-call; `--kind doctrine-candidate` for a reusable principle. A cleared *Primary* uses `--lead aiciv-primary`; a cleared VP uses its own id. The `--receipt-path` is mandatory — the content-gate that proves the delta witnesses something real, not a felt insight.)
 
 **This is the line that closes the loop the after-a-clear run left open.** It lands the delta where the next clear's `canon_recall` will surface it — not in a daily scratchpad that dies. It satisfies Article IX item 8(c) (every incarnation emits ≥1 witnessed substrate-delta before ending) as an EXECUTED append, not a routed intent.
 

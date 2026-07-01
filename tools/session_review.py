@@ -1064,7 +1064,7 @@ FLOOR_SKILLS = {
     "wwcw",
     "integration",
     "primary-spine",
-    "acg-spine",
+    "aiciv-spine",
 }
 # Prompt markers that indicate a sprint / grounding pass is starting.
 SPRINT_PROMPT_RE = re.compile(r"(/sprint-mode|/?grounding-docs|sprint\s+mode|grounding\s+boop)", re.IGNORECASE)

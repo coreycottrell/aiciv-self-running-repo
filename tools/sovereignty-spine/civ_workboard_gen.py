@@ -3,7 +3,7 @@
 civ_workboard_gen.py — P1.2 of the self-running-AiCIV spine (sovereignty-spine #3).
 
 GENERATES WORKBOARD §0 (MASTER TODO) as a VIEW over the durable the civilization ops-board
-(data/acg-ops-board/kanban.db), grouped by surface → owner_vp → project_id.
+(data/aiciv-ops-board/kanban.db), grouped by surface → owner_vp → project_id.
 
 THE WHOLE POINT (the stale-§0 cure):
   Before this tool, WORKBOARD §0 was HAND-MAINTAINED. It went stale (the 06-17
@@ -57,7 +57,7 @@ from pathlib import Path
 
 import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the civilization path is the origin fallback
 ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
-BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
+BOARD_DB = ROOT / "data/aiciv-ops-board/kanban.db"
 WORKBOARD = ROOT / "WORKBOARD.md"
 
 # Sentinels that bound the GENERATED region. Everything between (inclusive of the
@@ -108,7 +108,7 @@ def _db_last_mutation(conn):
 def _fetch_rows(conn):
     cols = {r["name"] for r in conn.execute("PRAGMA table_info(tasks)")}
     if not {"owner_vp", "surface", "project_id"} <= cols:
-        sys.exit("FAIL-LOUD: ownership columns missing — run P1.1 (acg_ops_set_owner.py migrate) first")
+        sys.exit("FAIL-LOUD: ownership columns missing — run P1.1 (aiciv_ops_set_owner.py migrate) first")
     return conn.execute(
         "SELECT id, status, priority, owner_vp, surface, project_id, title "
         "FROM tasks ORDER BY surface, owner_vp, priority DESC, created_at"
@@ -146,7 +146,7 @@ def build_region(conn):
     out = []
     out.append(BEGIN)
     out.append("")
-    out.append(f"> **GENERATED VIEW** — this region is a pure function of `data/acg-ops-board/kanban.db` "
+    out.append(f"> **GENERATED VIEW** — this region is a pure function of `data/aiciv-ops-board/kanban.db` "
                f"(grouped by surface → owner_vp). It is NOT hand-maintained; edit the .db via the "
                f"`set_owner_vp`/status verbs and regenerate. A stale .db row drifts this board on sight; "
                f"a regen fixes it. Generator: `tools/sovereignty-spine/civ_workboard_gen.py`.")

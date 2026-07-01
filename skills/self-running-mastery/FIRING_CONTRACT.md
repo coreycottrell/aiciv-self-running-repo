@@ -20,7 +20,7 @@ Re-establish, in-context, the SYSTEM operating-manual for the self-running AiCIV
 **PRECONDITIONS**
 - The cold-pickup entry-point + companions exist + are readable: `projects/self-running-aiciv/{README.md, THE-GOAL.md, MISSION.md, BUILD-DOC.md, PACKAGE-FEDERATE-PLAN.md, DEVLOG.md}` + `tests/`.
 - The 7 organs' tools are present on disk:
-  - `tools/sovereignty-spine/acg_ops_kanban_verb.py` (TRACK) + `acg_ops_set_owner.py` + `data/acg-ops-board/kanban.db`
+  - `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` (TRACK) + `aiciv_ops_set_owner.py` + `data/aiciv-ops-board/kanban.db`
   - `workflows/civ-workboard.js` (+ `tools/sovereignty-spine/civ_workboard_gen.py`) (TRACK VIEW)
   - `autonomy/skills/self-knowledge/SKILL.md` (DRIVE = the mind-core) + `tools/canon_recall.py` + `tools/canon_append.py` + `mem/canon/`
   - `autonomy/skills/sprint-mode/SKILL.md` (NEVER-STOP) + `workflows/hum.js` (COLLECTIVE-BEST)
@@ -33,7 +33,7 @@ A manual is "re-armed" only if its re-arming is OBSERVABLE — a self-report of 
 1. **The DISTINCTION held** — the mind can state, cold, the boundary: self-knowledge = the mind-core (one mind's beat); self-running-mastery = the system manual (the GOAL-DRIVER across many beats); and that the mind-core is organ #4 of this system, not a duplicate. Proof = the mind names the boundary without conflating the two.
 2. **The GOAL-DRIVER named** — the mind can name the 7 organs + their verbs in order (RECEIVE/DECOMPOSE/TRACK/DRIVE/NEVER-STOP/HUM/ASSESS). Proof = the ordered 7, not a generic "we have tools."
 3. **COLD-PICKUP index resolvable** — given ONLY the loaded floor, the mind can `cat` the README + name the path of ≥3 organs from the file-map. Proof = a concrete path produced for the work in front of it, not "I'd search for it."
-4. **The runbook invocable** — for a real goal, the mind can produce the exact next command (a `acg_ops_kanban_verb.py verb claim …` or a `Workflow(workflows/aiciv-coo.js …)` or a `canon_recall`/`canon_append` line), not a vague "I'd track it."
+4. **The runbook invocable** — for a real goal, the mind can produce the exact next command (a `aiciv_ops_kanban_verb.py verb claim …` or a `Workflow(workflows/aiciv-coo.js …)` or a `canon_recall`/`canon_append` line), not a vague "I'd track it."
 5. **The PROVISIONAL stamp carried** — every "drive a goal forever" claim the mind makes this incarnation is marked BUILT-not-PROVEN / UNVALIDATED-until-P4.1, never asserted as proven. A self-graded "the system works" with no P4.1 pass is a FAIL of this postcondition.
 
 **The aggregate load-verify proof:** immediately after loading, the mind can answer cold — *"What is the difference between self-knowledge and self-running-mastery? Name the 7 organs in order. Where does the kanban spine live? What's the exact next command to open this goal as a row? Is the north-star proven?"* If it answers all five concretely, the manual is re-armed. If it parrots "GOAL-DRIVER" without the organs/paths/distinction, it SKIMMED — re-load.

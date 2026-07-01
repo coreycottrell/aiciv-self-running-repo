@@ -11,7 +11,7 @@
 The never-stop cadence (organ #5 of the GOAL-DRIVER, the `sprint-mode` skill) fires `/sprint-mode` into Primary's terminal pane every ~2 hours, deterministically. The origin substrate does this with:
 
 ```bash
-tmux new-session -d -s acg-sprint-mode-hourly-cron \
+tmux new-session -d -s aiciv-sprint-mode-hourly-cron \
   'bash $AICIV_ROOT/tools/sprint_mode_hourly_cron.sh'
 # … inside the daemon ↓
 tmux send-keys -t <primary-pane> "/sprint-mode" Enter
@@ -69,7 +69,7 @@ Some harnesses (Claude Code with a SessionStart hook, e.g.) auto-load a skill on
 ## What MUST be preserved across backends (the invariants)
 
 - **Cadence floor = 2h.** The origin's `INTERVAL=7200s` is the soft floor (the dedup window). Going under 1h is unstable (HUM has not been hardened for sub-1h cadence).
-- **Recursion guard.** A self-inject that fires WHILE Primary is mid-cycle creates a loop. The origin guard is `ACG_HUM_SPAWN=1` in the child env — a child seeing this env-var NO-OPs the inject. Your adapter MUST honor a recursion-guard env-var (rename it for your civ if you like, but the discipline must hold).
+- **Recursion guard.** A self-inject that fires WHILE Primary is mid-cycle creates a loop. The origin guard is `AICIV_HUM_SPAWN=1` in the child env — a child seeing this env-var NO-OPs the inject. Your adapter MUST honor a recursion-guard env-var (rename it for your civ if you like, but the discipline must hold).
 - **Dedup window.** Two injections within the dedup window (default 60s; the live the civilization value is 7200s = per-2h) collapse to ONE cycle. The origin's `SPRINT_DEDUP_WINDOW_SECONDS` knob controls this.
 - **Idempotent supervision.** A daemon that dies must restart itself. The origin uses a crontab respawn: `*/5 * * * * tmux has-session -t … || tmux new-session -d -s … '…'`. A fork's adapter inherits this discipline (a daemon that silently dies for 34 days, like the origin's once did pre-2026-06-15, is the bug).
 

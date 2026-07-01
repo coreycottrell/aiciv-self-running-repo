@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-acg_ops_board.py — the durable per-VP kanban cutover library (sovereignty-spine #1).
+aiciv_ops_board.py — the durable per-VP kanban cutover library (sovereignty-spine #1).
 
 Makes the Hermes kanban + a LOCAL SQLite store the SYSTEM-OF-RECORD for the
 per-VP work board, replacing the 4 diverging flat ledgers as the machine-durable
@@ -25,7 +25,7 @@ HARD SAFETY (this is a load-bearing infra cutover):
     complete_task/add_comment) — never raw UPDATE — staying inside the claim
     protocol + append-only event log.
 
-The board DB lives at data/acg-ops-board/kanban.db (committed-path, container-
+The board DB lives at data/aiciv-ops-board/kanban.db (committed-path, container-
 independent). The 4 flat ledgers remain on disk untouched as the fallback.
 """
 
@@ -41,14 +41,17 @@ import os as _os  # fork-resolution: honor $AICIV_ROOT (STAND-IT-UP §0); the ci
 ROOT = Path(_os.environ.get("AICIV_ROOT", "$AICIV_ROOT"))
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 # S7 GENERICIZATION CURE (2026-06-29): explicit AICIV_KANBAN_DB seam (Seam C). A fork may either
-# (a) override AICIV_ROOT and inherit the default `<ROOT>/data/acg-ops-board/kanban.db` layout, OR
+# (a) override AICIV_ROOT and inherit the default `<ROOT>/data/aiciv-ops-board/kanban.db` layout, OR
 # (b) override AICIV_KANBAN_DB directly with an absolute path to point at a custom board file.
 # A non-SQLite backend (Postgres, a remote API) implements the contract in adapters/board-adapter.md.
-BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/acg-ops-board/kanban.db")))
+BOARD_DB = Path(_os.environ.get("AICIV_KANBAN_DB", str(ROOT / "data/aiciv-ops-board/kanban.db")))
 WORKBOARD = Path(_os.environ.get("AICIV_WORKBOARD", str(ROOT / "WORKBOARD.md")))
 
 # The board slug for the civilization's own ops board (per the adoption proof).
-BOARD_SLUG = "acg-ops"
+BOARD_SLUG = "aiciv-ops"
+
+# The kanban_db tenant field — a fork sets AICIV_CIV_ID to its own civ id.
+CIV_ID = _os.environ.get("AICIV_CIV_ID", "aiciv")
 
 # Map a §0 subsection emoji-header to the owning VP assignee (best-effort;
 # per-item explicit owner overrides this).
@@ -174,7 +177,7 @@ def parse_workboard_section0(workboard_path: Path):
 
 
 def cutover(dry_run: bool = True, include_done: bool = False):
-    """Seed/converge the durable acg-ops board from WORKBOARD §0.
+    """Seed/converge the durable aiciv-ops board from WORKBOARD §0.
 
     Idempotent: stable idempotency_key per item => re-run never double-writes.
     NEVER touches the flat ledgers. Returns a structured report dict.
@@ -203,7 +206,7 @@ def cutover(dry_run: bool = True, include_done: bool = False):
     if dry_run:
         for it in to_seed:
             report["rows"].append({
-                "idempotency_key": f"acg-ops:{it['content_hash']}",
+                "idempotency_key": f"aiciv-ops:{it['content_hash']}",
                 "title": it["title"][:80],
                 "owner": it["owner"],
                 "section": it["section"],
@@ -219,7 +222,7 @@ def cutover(dry_run: bool = True, include_done: bool = False):
         report["pre_existing_rows"] = pre
 
         for it in to_seed:
-            idem = f"acg-ops:{it['content_hash']}"
+            idem = f"aiciv-ops:{it['content_hash']}"
             body = (
                 f"source_ledger=WORKBOARD.md\n"
                 f"source_section=§0 {it['section']}\n"
@@ -240,9 +243,9 @@ def cutover(dry_run: bool = True, include_done: bool = False):
                 title=it["title"],
                 body=body,
                 assignee=None,  # assignee canonicalization is profile-bound; use tenant+body owner
-                tenant="acg",
+                tenant=CIV_ID,
                 priority=prio,
-                created_by="acg-ops-cutover",
+                created_by="aiciv-ops-cutover",
                 idempotency_key=idem,
             )
             if existing_before is not None:

@@ -1058,7 +1058,7 @@ The canon trunk is the civilization's **single source of confirmed truth**. It l
 
 > `{"author": "mind-lead", "date": "2026-06-29", "kind": "cure-receipt", "item": "Recall organ upgraded from MiniLM to BGE-small; standing-eval score improved from 0.0518 to 0.4889 out of 1.0", "receipt": "data/reports/recall-cutover-20260629.md"}`
 
-That's what "an entry in canon" concretely is: one line, five fields, human-readable in any text editor. There's also an `acg-primary/log.jsonl` and a `principal/` folder with sub-folders for `corey/` and `deb/`.
+That's what "an entry in canon" concretely is: one line, five fields, human-readable in any text editor. There's also an `aiciv-primary/log.jsonl` and a `principal/` folder with sub-folders for `corey/` and `deb/`.
 
 The single most important sentence about canon: **`tools/canon_append.py` is the only way canon ever mutates.**
 

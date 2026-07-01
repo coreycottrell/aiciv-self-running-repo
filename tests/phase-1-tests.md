@@ -9,7 +9,7 @@
 **Owner:** mind-lead (schema) → fleet-lead (IMPL) · **Proof-gate:** 45/45 rows owned; a NULL-owner-past-triage row FAILS LOUD in `bg_mind_memory_health_sweep_0430_3d`.
 
 **T1.1.1 — All 45 real rows have a real owner_vp (read via the verb, not the column).**
-Query the board through its read verb (e.g. `acg_ops_board.py list`) after backfill. PASS = 45/45 rows return a non-NULL owner_vp that is a real VP id (one of the 17). FAIL (adversarial) = any row returns NULL, or an owner_vp string that isn't a registered VP (e.g. "TBD", "unassigned", a typo). A backfill that wrote a placeholder is not a backfill.
+Query the board through its read verb (e.g. `aiciv_ops_board.py list`) after backfill. PASS = 45/45 rows return a non-NULL owner_vp that is a real VP id (one of the 17). FAIL (adversarial) = any row returns NULL, or an owner_vp string that isn't a registered VP (e.g. "TBD", "unassigned", a typo). A backfill that wrote a placeholder is not a backfill.
 
 **T1.1.2 — set_owner_vp is the ONLY write path (raw UPDATE is blocked/detected).**
 Attempt to change ownership via raw `UPDATE tasks SET owner_vp=...` against the `.db`. PASS = the verb `set_owner_vp` works AND a raw UPDATE is either rejected by a guard or flagged by the health sweep as an out-of-band mutation. FAIL (adversarial) = raw SQL silently mutates ownership with no trace (the verb is decorative; the real write path is unguarded).
@@ -29,7 +29,7 @@ For rows belonging to a project (e.g. this self-running-aiciv project), project_
 **Owner:** mind-lead (WORKBOARD owner) + workflow-lead (post-hoc craft) · **Proof-gate:** generated WORKBOARD matches hand-§0's open loops + §0 cannot go stale.
 
 **T1.2.1 — The generator RUNS and produces WORKBOARD from the .db (real generation, not a copy).**
-Run `Workflow(civ-workboard.js)`. PASS = it reads `data/acg-ops-board/kanban.db` and writes a WORKBOARD with §0 grouped by owner_vp/surface. FAIL (adversarial) = it cat's the existing hand-WORKBOARD, or writes a stub. Prove generation: change a row in the `.db`, regenerate, see the change appear (T1.2.3).
+Run `Workflow(civ-workboard.js)`. PASS = it reads `data/aiciv-ops-board/kanban.db` and writes a WORKBOARD with §0 grouped by owner_vp/surface. FAIL (adversarial) = it cat's the existing hand-WORKBOARD, or writes a stub. Prove generation: change a row in the `.db`, regenerate, see the change appear (T1.2.3).
 
 **T1.2.2 — Generated §0 matches the hand-§0's open loops (parity before cutover).**
 Compare the generated §0's open loops against the last hand-maintained §0. PASS = every real open loop in hand-§0 appears in generated-§0 (no silent drops); discrepancies are explained (stale hand entries). FAIL (adversarial) = the generator omits real open loops, or invents loops not in the `.db`.

@@ -3,7 +3,7 @@ r"""
 run_p1_3_tests.py — the 5 P1.3 behavioral tests (tests/phase-1-tests.md §P1.3).
 
 REAL-PATH, OBSERVABLE, DONE-DONE, ADVERSARIAL. Hits the actual verb wrapper
-(acg_ops_kanban_verb.run_verb) against REAL board rows (test fixtures created +
+(aiciv_ops_kanban_verb.run_verb) against REAL board rows (test fixtures created +
 deleted by this harness — row count returns to its starting value), the REAL
 durable TGIM outbox, and the LIVE TGIM endpoint where reachable. The TGIM-down
 test (T1.3.3) forces the transport to fail deterministically (no network
@@ -20,6 +20,7 @@ Run:  python3 projects/self-running-aiciv/tests/run_p1_3_tests.py
 Exit: 0 iff all 5 PASS.
 """
 import json
+import os
 import sqlite3
 import sys
 import time
@@ -27,7 +28,7 @@ from pathlib import Path
 
 ROOT = Path("$AICIV_ROOT")
 SPINE = ROOT / "tools/sovereignty-spine"
-BOARD_DB = ROOT / "data/acg-ops-board/kanban.db"
+BOARD_DB = ROOT / "data/aiciv-ops-board/kanban.db"
 OUTBOX_DB = ROOT / "data/tgim-outbox/outbox.db"
 HERMES_LIB = ROOT / "projects/hermes-student-001/provisioning/hermes-agent"
 
@@ -35,7 +36,7 @@ sys.path.insert(0, str(SPINE))
 sys.path.insert(0, str(HERMES_LIB))
 sys.path.insert(0, str(ROOT / "tools"))
 
-import acg_ops_kanban_verb as verbmod  # noqa: E402
+import aiciv_ops_kanban_verb as verbmod  # noqa: E402
 from hermes_cli import kanban_db  # noqa: E402
 
 RESULTS = []
@@ -107,7 +108,7 @@ def _make_fixture(suffix):
         tid = kanban_db.create_task(
             c, title=f"P1.3 TEST FIXTURE {suffix}",
             body=f"source_section=§0 CIV\n---\nP1.3 test fixture {suffix} — DELETE after",
-            tenant="acg", priority=1, created_by="p1.3-test",
+            tenant=os.environ.get("AICIV_CIV_ID", "aiciv"), priority=1, created_by="p1.3-test",
             idempotency_key=f"p1.3-test:{suffix}:{int(time.time()*1000)}")
         return tid
     finally:

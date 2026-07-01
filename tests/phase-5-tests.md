@@ -68,7 +68,7 @@
 ## S5 — CLIENT-PAIN BEHAVIORAL BATTERY (5 CPs × 5 adversarial sub-tests = 25)
 **Owner:** mind-lead (+ qa lens) · **Gate:** the 25 client-pain sub-tests AUTHORED + RUN on the real path + honest verdicts; each maps to a named field-note complaint; each adversarial; "a 200 is not a login" — the organ must ACTUALLY fire.
 
-**RUN STAMP:** 2026-06-22 ~01:50Z, mind-lead incarnation, on the LIVE substrate (`data/acg-ops-board/kanban.db` · `tools/canon_recall.py` · `tools/sovereignty-spine/acg_ops_kanban_verb.py` · `workflows/hum.js` · `tools/session_review.py`). Throwaway drive-row: `t_s5cp_092781`. Recall ledger proof: `mem/recall_gaps/recall_hits.jsonl` (this run's query logged 01:44Z). Each sub-test below carries its RUN verdict inline.
+**RUN STAMP:** 2026-06-22 ~01:50Z, mind-lead incarnation, on the LIVE substrate (`data/aiciv-ops-board/kanban.db` · `tools/canon_recall.py` · `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` · `workflows/hum.js` · `tools/session_review.py`). Throwaway drive-row: `t_s5cp_092781`. Recall ledger proof: `mem/recall_gaps/recall_hits.jsonl` (this run's query logged 01:44Z). Each sub-test below carries its RUN verdict inline.
 
 ---
 

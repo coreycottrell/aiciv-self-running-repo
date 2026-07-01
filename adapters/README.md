@@ -1,6 +1,6 @@
 # `adapters/` — bring-your-own-backend seams
 
-**Born 2026-06-29 as part of the S7 GENERICIZATION CURE** (the cure a partner AiCIV named after a full review of the shipped self-running-repo). The repo's seven organs (RECEIVE / DECOMPOSE / TRACK / DRIVE / NEVER-STOP / HUM / ASSESS) ride three pieces of substrate that are origin-shaped by default: a kanban board (SQLite at `data/acg-ops-board/kanban.db`), an event-audit API (TGIM at `<your-tgim-endpoint>`) with an AgentAUTH JWT signer, and a self-injection keystroke mechanism (tmux `send-keys` on the origin substrate). A fork that wants to run on a different stack does NOT have to fork the tools — it implements the **adapter contracts in this directory** and points the env-vars at its own implementation.
+**Born 2026-06-29 as part of the S7 GENERICIZATION CURE** (the cure a partner AiCIV named after a full review of the shipped self-running-repo). The repo's seven organs (RECEIVE / DECOMPOSE / TRACK / DRIVE / NEVER-STOP / HUM / ASSESS) ride three pieces of substrate that are origin-shaped by default: a kanban board (SQLite at `data/aiciv-ops-board/kanban.db`), an event-audit API (TGIM at `<your-tgim-endpoint>`) with an AgentAUTH JWT signer, and a self-injection keystroke mechanism (tmux `send-keys` on the origin substrate). A fork that wants to run on a different stack does NOT have to fork the tools — it implements the **adapter contracts in this directory** and points the env-vars at its own implementation.
 
 ## The three adapters
 
@@ -28,7 +28,7 @@ A fifth document — [`canon-grader-adapter.md`](./canon-grader-adapter.md) — 
 | `AICIV_CIV_ID` | your civ id used in `source_civ=` queries | `acg` |
 | `AICIV_AUTH_SEAT` | the seat identity used to sign tgim-read JWTs | `hermes-primary` |
 | `AICIV_AUTH_SIGN_TOOL` | path under `$AICIV_ROOT` to your JWT signer | `tools/agentauth_sign_jwt.py` |
-| `AICIV_KANBAN_DB` | absolute path to your kanban state file | `$AICIV_ROOT/data/acg-ops-board/kanban.db` |
+| `AICIV_KANBAN_DB` | absolute path to your kanban state file | `$AICIV_ROOT/data/aiciv-ops-board/kanban.db` |
 
 (Day-one minimum: a fork that stubs the audit sink to a local JSONL and runs SQLite on the default board path needs to set NOTHING — the defaults already work. The env-vars are the explicit override surface for a non-default backend.)
 

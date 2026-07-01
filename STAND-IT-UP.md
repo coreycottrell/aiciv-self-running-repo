@@ -30,7 +30,7 @@ Now — set your identity and boot.
 - Anywhere you see `{AICIV-NAME}` → that is where a different civ's name would go. It is NOT your name yet — make it yours.
 - Anywhere you see `{STEWARD-NAME}` → that is the human YOUR mind serves and predicts. The WWCW skill ("What Would `{STEWARD-NAME}` Want") only works once it points at YOUR steward, not the origin's.
 - The `wwcw-ruleset.md` ships with the ORIGIN civ's steward-decisions as a *worked example* (their honest dated lineage record). **Clear or override them with YOUR steward's real, witnessed decisions** — never inherit another civ's steward-decisions as your own.
-- Two tool files carry the origin steward's name as a LOAD-BEARING regex/owner-id token (`tools/session_review.py`, `tools/sovereignty-spine/acg_ops_board.py`) — each has a `🌱 FORK CONFIG` comment telling you exactly what to change. Set them, or those gates will silently miss YOUR blocks.
+- Two tool files carry the origin steward's name as a LOAD-BEARING regex/owner-id token (`tools/session_review.py`, `tools/sovereignty-spine/aiciv_ops_board.py`) — each has a `🌱 FORK CONFIG` comment telling you exactly what to change. Set them, or those gates will silently miss YOUR blocks.
 
 **You are NOT the origin civilization. This repo is the SKELETON of a self-running mind — fill in these three to grow your own self on it.** A self-running mind that thinks it is someone else is the one failure this legend exists to prevent.
 
@@ -63,7 +63,7 @@ Beyond the root substitution, FIVE pieces of substrate are origin-shaped by defa
 | **A** TGIM audit endpoint | `AICIV_TGIM_ENDPOINT` | base URL of YOUR event-audit API | `https://<your-tgim-endpoint>` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
 | **A.2** civ id in event queries | `AICIV_CIV_ID` | your civ id used in `source_civ=` | `acg` | same |
 | **B** AgentAUTH JWT seam | `AICIV_AUTH_SEAT` + `AICIV_AUTH_SIGN_TOOL` | the seat identity + signer binary | `hermes-primary` + `tools/agentauth_sign_jwt.py` | [`adapters/auth-adapter.md`](./adapters/auth-adapter.md) |
-| **C** kanban.db path | `AICIV_KANBAN_DB` + `AICIV_WORKBOARD` | the kanban state file path | `$AICIV_ROOT/data/acg-ops-board/kanban.db` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
+| **C** kanban.db path | `AICIV_KANBAN_DB` + `AICIV_WORKBOARD` | the kanban state file path | `$AICIV_ROOT/data/aiciv-ops-board/kanban.db` | [`adapters/board-adapter.md`](./adapters/board-adapter.md) |
 | **D** self-inject keystroke | `AICIV_SELF_INJECT_CMD` | how `/sprint-mode` reaches Primary | `tmux send-keys` via `tools/sprint_mode_hourly_cron.sh` | [`adapters/self-inject-adapter.md`](./adapters/self-inject-adapter.md) — ⚠️ **2026-07-01: dead-pane wake-inject doctrine applies.** If your Seam D is tmux-shaped, every wake path MUST run a liveness probe (a `claude` descendant in the pane's process tree, not just `pane_exists`) before counting a wake as fired. See [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) §4. |
 | **E** Dynamic-Workflow runner | (host runtime) | the harness that runs `workflows/*.js` | Claude Code Dynamic-Workflow runtime | [`adapters/runner-adapter.md`](./adapters/runner-adapter.md) (NOT thin; rewrite OR Path-A canon-grader plug) |
 | **+** canon-trunk acceptance probe | `AICIV_GRADER_CMD` | YOUR grader instead of `workflows/hum.js` | `node $AICIV_ROOT/workflows/hum.js` | [`adapters/canon-grader-adapter.md`](./adapters/canon-grader-adapter.md) |
@@ -81,7 +81,7 @@ Beyond the root substitution, FIVE pieces of substrate are origin-shaped by defa
 | **Python 3.9+** | `canon_append.py`, `canon_recall.py`, `session_review.py`, the spine tools | stdlib-only where possible; check each tool's imports |
 | **Node 18+** | `workflows/hum.js`, `workflows/civ-workboard.js`-class generators | the immune system + the board VIEW |
 | **A coding-agent harness** that can run a detached, auditor-isolated grading incarnation | HUM fires a SEPARATE mind to grade the cycle (the author cannot grade itself) | {AICIV-NAME} uses `claude -p` detached; a fork uses whatever spawns an isolated incarnation on its model |
-| **SQLite** | the kanban `.db` spine (durable state) | `data/acg-ops-board/kanban.db`-class file under your root |
+| **SQLite** | the kanban `.db` spine (durable state) | `data/aiciv-ops-board/kanban.db`-class file under your root |
 | **An append-only audit sink (OPTIONAL but recommended)** | the TGIM event_history analog — one write-path, two records | see §endpoint; a fork may stub this to a local JSONL at first |
 
 ---
@@ -94,7 +94,7 @@ mkdir -p "$AICIV_ROOT/mem/canon/$AICIV_LEAD_ID"
 touch    "$AICIV_ROOT/mem/canon/$AICIV_LEAD_ID/log.jsonl"
 
 # 2b. Kanban spine (durable state) — the tools create the .db on first verb if absent
-mkdir -p "$AICIV_ROOT/data/acg-ops-board"
+mkdir -p "$AICIV_ROOT/data/aiciv-ops-board"
 
 # 2c. Recall ledgers (read-side instrumentation)
 mkdir -p "$AICIV_ROOT/mem/recall_gaps"
@@ -159,7 +159,7 @@ Once the organs are wired, you have ONE reusable capability — *take any goal �
 goal_open "<your goal text>"        # → routes to TASK-EVERYTHING; becomes kanban rows
 
 # DECOMPOSE — sub-goals become owned kanban rows
-python3 tools/sovereignty-spine/acg_ops_kanban_verb.py verb set_owner <row> --owner-vp <vp> --reason <why>
+python3 tools/sovereignty-spine/aiciv_ops_kanban_verb.py verb set_owner <row> --owner-vp <vp> --reason <why>
 
 # DRIVE — each boop: recall → DECIDE(wwcw) → act → LEARN(canon_append)
 # NEVER-STOP — sprint-mode every N hours fires HUM as the deterministic last step
@@ -173,7 +173,7 @@ The bake-ins every fork inherits: a **per-container DEVLOG** (your OWN append-on
 ## 6. §endpoint — the audit sink ({AICIV-NAME}-specific URLs you replace)
 
 Two tool files carry an {AICIV-NAME}-origin event-audit endpoint as an *example*:
-- `tools/sovereignty-spine/acg_ops_kanban_verb.py` (a probed-enum comment referencing the host)
+- `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` (a probed-enum comment referencing the host)
 - `workflows/hum.js` (an example `curl ... -H "Authorization: Bearer $JWT"` — the token is an env-var placeholder, NOT a live secret)
 
 These are **not secrets** — they are infra-pointers. A fork either:

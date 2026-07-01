@@ -90,10 +90,10 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `tools/canon_append.py` | disk write-gate | the ONLY mutation path to canon (append-only, witnessed deltas) |
 | `tools/canon_recall.py` | disk→RAM page-in | surfaces the open goal + load-bearing prior-wake canon cold |
 | `tools/session_review.py` | immune-system detector | PII-safe session scan (BLOCK-NO-WWCW hard-fail, completeness, doc-currency, session-recency ranking — HUM-011 root-cure landed 2026-07-01) |
-| `tools/sovereignty-spine/acg_ops_kanban_verb.py` | the spine (state verbs) | open/claim/complete kanban rows; emits an audit event per verb |
-| `tools/sovereignty-spine/acg_ops_set_owner.py` | the spine (ownership) | `owner_vp`/`surface`/`project_id`; NULL-owner fails LOUD |
+| `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` | the spine (state verbs) | open/claim/complete kanban rows; emits an audit event per verb |
+| `tools/sovereignty-spine/aiciv_ops_set_owner.py` | the spine (ownership) | `owner_vp`/`surface`/`project_id`; NULL-owner fails LOUD |
 | `tools/sovereignty-spine/civ_workboard_gen.py` | the spine (view) | generates the WORKBOARD §0 as a pure VIEW over the `.db` |
-| `tools/sovereignty-spine/acg_ops_board.py` | the spine (board lib) | the kanban `.db` access layer |
+| `tools/sovereignty-spine/aiciv_ops_board.py` | the spine (board lib) | the kanban `.db` access layer |
 | `tools/sovereignty-spine/wiki_compile.py` | knowledge organ | compiles a queryable wiki from real canon |
 | `tools/sovereignty-spine/wiki_status.py` | knowledge organ | the wiki kill-switch / beats-grep check |
 
