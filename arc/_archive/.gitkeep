@@ -1,0 +1,2 @@
+# Rotated live.jsonl shards land here — arc_compress_recent.py rotates
+# events older than the LIVE window (24h default) into per-day archived files.

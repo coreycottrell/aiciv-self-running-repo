@@ -6,20 +6,22 @@ This repo carries the **SYSTEM**, never secrets. It is the packaged form of the 
 
 > **THE MAIN RULE governs everything here:** *The human should not have to know anything about how the AI operates* — burden-removal **WITH transparency**, never opacity. The human gives a spark once and gets a grounded outcome forever, while able to audit every byte at will but never required to maintain it.
 
-**Version:** rebuild-20260701 (steward directive 2026-07-01 *"can we update this repo... and maybe fully rebuild it we have changed ALOT. and include the readme and curriculum etc."*)
-**Prior release:** ship-2026-06-22 (GitHub HEAD `0715005`, S7 GENERICIZATION CURE landed on-disk 2026-06-29, unpushed until this rebuild).
+**Version:** rebuild-20260702 (steward directive 2026-07-02 *"standardize THE ARC organ + per-turn SCRATCHPAD-APPEND discipline into the repo so every fork inherits medium-term context — ship both, scratchpad = hygiene, ARC = centerpiece"*).
+**Prior release:** rebuild-20260701 (Mneme peer-review recs (a/b/c) + heartbeat re-center; git `723f1b4`).
+**Older release:** ship-2026-06-22 (GitHub HEAD `0715005`, S7 GENERICIZATION CURE landed on-disk 2026-06-29).
 
 ---
 
 ## READ THIS FIRST — what changed since ship
 
-The substrate did not sit still. Between the 2026-06-22 ship and this 2026-07-01 rebuild, five things reshaped how a fork should understand the substrate:
+The substrate did not sit still. Between the 2026-06-22 ship and the 2026-07-01 rebuild, five things reshaped how a fork should understand the substrate. Then on 2026-07-02 one more organ landed and got standardized into this repo — bringing the delta list to six:
 
 1. **The universal-request pattern** — a 10-step CIVILIZATION SPINE landed ABOVE the GOAL-DRIVER; the GOAL-DRIVER now holds goals across boops that the spine installs from human requests.
 2. **The metabolism reframe** — the universal-request system is GROWN by digesting real principal requests, not COMPLETED by designing organs; the per-principal silo is the GROUND the other organs stand on.
 3. **First live end-to-end PASS (2026-06-30)** — K/N = **1/N**; the universal-request pipeline autonomously delivered a real principal request (morning-science-digest → TG 74801) without the human becoming the backstop.
 4. **Dead-pane wake-inject doctrine** — a load-bearing failure mode of tmux-shaped self-inject: pane exists but the `claude` process is dead → phantom-success loop. Liveness gate required.
 5. **Per-workflow scratchpad §23 + delegate-down §4.2** — twin invariants that make the workflow substrate honest.
+6. **THE ARC (medium-term context organ) + per-turn scratchpad-append hygiene (2026-07-02)** — the memory-tier stack now has three named skills: `scratchpad-append` (short, per-turn prose hygiene) · **`the-arc` (medium, days-to-weeks structured events, CENTERPIECE)** · `learn-cycle-contract` + `canon_append` (long, permanent verified deltas). Every fork inherits medium-term recall in ONE ~2-4KB read (`arc/ARC-NOW.md`).
 
 **Read `docs/EVOLUTION-SINCE-SHIP.md` before you fork.** It is the anti-fossil doc — every entry links to a walked canonical source; nothing laundered.
 
@@ -63,7 +65,13 @@ The substrate did not sit still. Between the 2026-06-22 ship and this 2026-07-01
 | `phase-0-tests.md` … `phase-5-tests.md` | 5 real-path/observable/adversarial behavioral tests per step. `phase-5-tests.md` carries the **CLIENT-PAIN battery** (CP1–CP5): AI-forgets / needs-re-feeding / lies-green / can't-hold-a-goal / the-machinery-leaks. |
 | `run_p1_3_tests.py`, `run_p3_2_tests.py` | runnable test harnesses (kanban→TGIM emit; wiki-organ) — origin-civ evidence; a fork re-points the paths. |
 
-### `skills/` — 12 skills (the cognitive organs as loadable doctrine)
+### `skills/` — 14 skills (the cognitive organs as loadable doctrine)
+
+**Memory-tier stack (2, new 2026-07-02) — how a fork rebuilds context across every timescale:**
+| Skill | Timescale | Role |
+|---|---|---|
+| **`scratchpad-append/`** | **short (per-turn)** | **hygiene layer — append prose state to `.claude/scratchpad-daily/YYYY-MM-DD.md` every turn so a fork returning from auto-compact picks up mid-thought. NOT centerpiece — the discipline that cures the "next-turn-mind-drops-in-flight-work" failure mode. Cheap, honest, additive.** |
+| **`the-arc/`** | **medium (days-to-weeks)** | **CENTERPIECE — the antechamber of canon. Structured 6-event stream (SHIFT/OPEN/CLOSE/DECIDE/VERIFY/SURPRISE) fed by workflow firewall returns + kanban transitions. Salience-ordered. Renders to `arc/ARC-NOW.md` (~2-4KB, ONE wake read). Companion tools: `arc_emit.py` / `arc_render.py` / `arc_compress_recent.py` / `arc_compress_epoch.py`. Composes with `memory_delta.canon_appends[]` — `CLOSE + VERIFY` events are canon-append candidates through `learn-cycle-contract`.** |
 
 **Core organs (6) — the self-running loop:**
 | Skill | Organ | Role |
@@ -97,6 +105,10 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `tools/canon_append.py` | disk write-gate | the ONLY mutation path to canon (append-only, witnessed deltas); gated by `learn-cycle-contract` — different-mind verifier witness required for load-bearing kinds |
 | **`tools/canon_retract.py`** | **cheap-retraction op** | **[Mneme rec c, 2026-07-01]** one-command retraction with atomic staged retract+replace + tombstone shape; keeps append-only invariant while making public correction cheap. See `docs/CHEAP-RETRACTION.md`. |
 | `tools/canon_recall.py` | disk→RAM page-in | surfaces the open goal + load-bearing prior-wake canon cold |
+| **`tools/arc_emit.py`** | **ARC write-gate** | **[2026-07-02]** append structured 6-event rows to `arc/live.jsonl`; validates type + thread + evidence-for-VERIFY/CLOSE + string caps; stamps salience_base + halflife_hours per type. `--from-firewall-return` mode for hook feeds; direct emit for narrator. Companion to `the-arc` skill. |
+| **`tools/arc_render.py`** | **ARC read-surface** | **[2026-07-02]** render `arc/ARC-NOW.md` (~2-4KB, one wake read) or `--diff-since <ts>` (~1KB, fork-return read). Salience = base × exp(-ln2 · Δh / halflife); HELD-FOR block uses env `ARC_STEWARD_ID`. Read-only; never mutates events. |
+| **`tools/arc_compress_recent.py`** | **nightly compressor** | **[2026-07-02]** LIVE (24h) → RECENT (7d): produces `arc/recent.md` (threads-by-momentum, salience-ordered); rotates old events to `arc/_archive/`; regenerates `arc/ARC-NOW.md`. Idempotent. |
+| **`tools/arc_compress_epoch.py`** | **weekly compressor** | **[2026-07-02]** RECENT (7d) → EPOCH (30d): produces `arc/epoch.md` (arc-summary + closed-thread roll-up + persisted surprises); regenerates `arc/ARC-NOW.md`. Idempotent. |
 | `tools/session_review.py` | immune-system detector | PII-safe session scan (BLOCK-NO-WWCW hard-fail, completeness, doc-currency, session-recency ranking — HUM-011 root-cure landed 2026-07-01) |
 | `tools/sovereignty-spine/aiciv_ops_kanban_verb.py` | the spine (state verbs) | open/claim/complete kanban rows; emits an audit event per verb |
 | `tools/sovereignty-spine/aiciv_ops_set_owner.py` | the spine (ownership) | `owner_vp`/`surface`/`project_id`; NULL-owner fails LOUD |
@@ -120,6 +132,13 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `adapters/runner-adapter.md` | Seam E (Dynamic-Workflow runner) — non-thin; what a non-Claude-Code harness must provide |
 | `adapters/canon-grader-adapter.md` | the generic canon-trunk acceptance-probe slot — a partner plugs Drift/bulletproof-hum; the load-bearing genericization |
 
+### `arc/` — THE ARC organ seed *(new 2026-07-02)*
+| Path | Role |
+|---|---|
+| `arc/README.md` | quick-reference for the ARC organ (cold-pickup read, structure, feeds, compressors, fork config env vars) |
+| `arc/_archive/.gitkeep` | placeholder so the rotated-shards directory ships in the seed |
+| `arc/{live.jsonl, recent.md, epoch.md, ARC-NOW.md}` | *not shipped as seed content* — created on first emit/render on the fork (files materialize on first use; no origin state travels here) |
+
 ### top-level
 | File | Role |
 |---|---|
@@ -128,7 +147,7 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `FRICTION-CAPTURE.md` | S7 friction-intake (loop ARMED; adopter rows = NONE yet) |
 | `.gitignore` | ignore rules (`.env`, `*.key`, `*.bak.*`, etc.) |
 
-**COUNTS (2026-07-01, post-rebuild):** 55 files — 9 docs (was 6; +`EVOLUTION-SINCE-SHIP.md` + `HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` + `curriculum.md`) · 8 tests · 20 skill files (11 skills) · 9 tool files · 1 workflow · 6 adapters · 3 top-level files (`INDEX.md` + `STAND-IT-UP.md` + `FRICTION-CAPTURE.md`) + `.gitignore`. *(Delta from 2026-06-29 count of 53 = +2 doc files copied in from origin substrate per steward directive 2026-07-01, + this INDEX rewire.)*
+**COUNTS (2026-07-02, post-ARC-standardization):** 63 files — 9 docs · 8 tests · 24 skill files (13 skills; +`the-arc/SKILL.md` + `scratchpad-append/SKILL.md`) · 13 tool files (+`arc_emit.py` + `arc_render.py` + `arc_compress_recent.py` + `arc_compress_epoch.py`) · 1 workflow · 6 adapters · 3 top-level files + `.gitignore` + 2 new files under `arc/` (`README.md` + `_archive/.gitkeep`). *(Delta from 2026-07-01 count of 55 = +8 files: 4 ARC tools + 2 SKILL docs + 2 `arc/` seed files. INDEX.md rewired to add the memory-tier stack row + arc-organ tools rows + this manifest entry.)*
 
 ---
 
