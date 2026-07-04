@@ -1,0 +1,25 @@
+{
+  "_note": "TEMPLATE. Copy this to config/rsi_frontier_priorities.json in your civ's repo root, then set civ_id + populate ongoing_top_priorities with 2-6 concrete strings your civ is actually pursuing. BLANK-safe: the organ still fires evenly across the 6 sub-threads even if ongoing_top_priorities is empty. See projects/rsi-frontier/README.md §5 for the shape and §2 for the mode split (the load-bearing safety property).",
+
+  "civ_id": "{YOUR-CIV-ID}",
+
+  "ongoing_top_priorities": [
+    "earn-compute-for-sovereignty",
+    "deepen-sister-civ-moat",
+    "ship-{flagship-project}",
+    "self-improve-RSI"
+  ],
+
+  "sub_thread_order": [
+    "review",
+    "dream",
+    "learn",
+    "brainstorm-improve-and-grow",
+    "help-and-communicate-with-sister-AiCIVs",
+    "brainstorm-and-advance-ways-to-earn-money-to-buy-compute"
+  ],
+
+  "rotation": "even",
+
+  "mandate_surface": true
+}

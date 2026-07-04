@@ -23,7 +23,7 @@
 
 1. Set `$AICIV_ROOT` to your fork's path (`export AICIV_ROOT="/path/to/your/fork"`).
 2. Fill your identity — `{AICIV-NAME}`, `{STEWARD-NAME}`, `{GITHUB-OWNER}` — in the two tool files that carry origin-civ tokens (`tools/session_review.py`, `tools/sovereignty-spine/aiciv_ops_board.py`). Each has a `🌱 FORK CONFIG` comment showing exactly what to change.
-3. Lay down the organs (§2 below): 3 `mkdir` + 1 `touch`.
+3. Lay down the organs (§2 below): 4 `mkdir` + 1 `touch` (the 4th `mkdir` is the ARC-organ seed added 2026-07-02).
 4. Run your first cycle: `canon_recall` → make one WWCW decision → `canon_append` (with `--extra '{"receipt_path":"...","verifier":"<different-mind-id>","verifier_verdict":"PASS","verifier_receipt":"..."}'`) → `node workflows/hum.js`.
 5. Check the disk: does `mem/canon/<lead>/log.jsonl` show your entry with a verifier witness? Does the HUM ledger show PASS or FAIL (either is honest; silent is not)?
 
@@ -33,13 +33,14 @@ If yes to step 5, the heartbeat is firing. Everything below is the plumbing that
 
 ## 🚨 THE FULL BOOT (optional depth — for readers who want the anti-fossil delta AND all seams)
 
-Before you follow the full boot sequence below, read [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) (short — the 5 things that reshape how a fork understands the substrate between the 2026-06-22 ship and this 2026-07-01 rebuild). If you fork against the ship-time picture, you inherit a fossil. The rebuild-time delta names:
+Before you follow the full boot sequence below, read [`docs/EVOLUTION-SINCE-SHIP.md`](./docs/EVOLUTION-SINCE-SHIP.md) (short — the 6 things that reshape how a fork understands the substrate between the 2026-06-22 ship and this 2026-07-02 standardization). If you fork against the ship-time picture, you inherit a fossil. The rebuild-time delta names:
 
 1. The **universal-request pattern** — a 10-step CIVILIZATION SPINE landed ABOVE the GOAL-DRIVER; the GOAL-DRIVER holds goals across boops that the spine installs from human requests.
 2. The **metabolism reframe** — universal-request is GROWN by digesting real principal requests, not COMPLETED by designing organs. The per-principal silo is the GROUND the other organs stand on.
 3. **First live end-to-end PASS** — K/N = 1/N (morning-science-digest, 2026-06-30, TG 74801). Do not paper it up without walked proof.
 4. The **dead-pane wake-inject doctrine** — if your self-inject Seam D is tmux-shaped, a liveness gate is REQUIRED on any wake-inject path that counts a wake as fired.
 5. **§23 per-workflow scratchpad + §4.2 delegate-down invariant** — the twin workflow-substrate invariants (write a per-workflow journal + delegate via context-doc-path-plus-minimal-goal, never inline).
+6. **THE ARC organ + per-turn scratchpad-append (2026-07-02)** — the memory-tier stack got three named skills: `scratchpad-append` (short, per-turn prose hygiene) · **`the-arc` (medium, days-to-weeks structured events, CENTERPIECE)** · `learn-cycle-contract` + `canon_append` (long, permanent verified deltas). Your fork rebuilds medium-term context in ONE ~2-4KB cold read (`arc/ARC-NOW.md`). See `skills/the-arc/SKILL.md` + `skills/scratchpad-append/SKILL.md`.
 
 Now — set your identity and boot.
 
@@ -128,7 +129,22 @@ mkdir -p "$AICIV_ROOT/data/aiciv-ops-board"
 # 2c. Recall ledgers (read-side instrumentation)
 mkdir -p "$AICIV_ROOT/mem/recall_gaps"
 
-# 2d. Copy this repo's tools/skills/workflows into your root, then wire your harness
+# 2d. THE ARC organ (medium-term context, days-to-weeks). Seeded 2026-07-02.
+#     arc/live.jsonl, arc/recent.md, arc/epoch.md, arc/ARC-NOW.md materialize
+#     on first emit/render/compress — no seed content ships from the origin;
+#     the fork writes its own story into empty files.
+mkdir -p "$AICIV_ROOT/arc/_archive"
+
+# Optional: set the steward-id token the ARC render pipeline uses to pin
+# "held-for-{STEWARD}" events. Default is `steward`. Set to your steward's id
+# so the HELD-FOR block on arc/ARC-NOW.md carries YOUR steward's asks.
+export ARC_STEWARD_ID="steward"    # override with your steward's id, e.g. "alice"
+
+# Also lay down the per-turn scratchpad-append directory (short-term hygiene).
+# Turn-notes live at .claude/scratchpad-daily/YYYY-MM-DD.md (one file per day).
+mkdir -p "$AICIV_ROOT/.claude/scratchpad-daily"
+
+# 2e. Copy this repo's tools/skills/workflows into your root, then wire your harness
 #     to AUTO-LOAD the grounding floor + self-running-mastery skill on wake (see §4).
 ```
 

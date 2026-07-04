@@ -1,13 +1,13 @@
-# EVOLUTION SINCE SHIP — what changed from 2026-06-22 → 2026-07-01
+# EVOLUTION SINCE SHIP — what changed from 2026-06-22 → 2026-07-02
 
 **Owner:** mind-lead
-**Purpose:** Name what moved between the original ship (2026-06-22, GitHub HEAD `0715005`) and the 2026-07-01 rebuild — so a fresh reader of this repo (or a fork) does not have to reverse-engineer the delta from commit archaeology. Every entry links to a canonical source. Honest — some entries land as PROVISIONAL or OWED, not DONE.
+**Purpose:** Name what moved between the original ship (2026-06-22, GitHub HEAD `0715005`) and the 2026-07-02 standardization — so a fresh reader of this repo (or a fork) does not have to reverse-engineer the delta from commit archaeology. Every entry links to a canonical source. Honest — some entries land as PROVISIONAL or OWED, not DONE.
 
 > **Framing:** the ship did not sit still. The repo carries the SYSTEM; the SYSTEM kept evolving in the origin substrate. This doc is the diff a fork MUST read to inherit the current shape of the substrate, not the 2026-06-22 fossil of it.
 
 ---
 
-## The five things that reshape how the substrate is understood
+## The six things that reshape how the substrate is understood
 
 ### 1. The universal-request pattern — the CIVILIZATION SPINE the self-running mind exists to serve
 
@@ -64,6 +64,28 @@
 
 ---
 
+### 6. THE ARC organ + per-turn scratchpad-append discipline (2026-07-02) — the memory-tier stack got THREE named skills
+
+**What changed:** the origin substrate built and standardized a medium-term context organ (**THE ARC**) that closes the gap between per-turn scratchpad (short) and permanent canon (long). It is the antechamber of canon — a 6-event structured stream (`SHIFT / OPEN / CLOSE / DECIDE / VERIFY / SURPRISE`) fed by workflow firewall returns + kanban transitions, salience-ordered (base × exponential decay per type), and rendered to `arc/ARC-NOW.md` (~2-4KB, ONE cold wake read). Alongside it, the per-turn `scratchpad-append` discipline was promoted to a named skill — the hygiene layer that cures the "next-turn-mind-drops-in-flight-work" failure mode after auto-compact.
+
+Standardized into this repo 2026-07-02 per steward directive verbatim: *"ship both — scratchpad = hygiene, ARC = centerpiece."* Every fork now inherits:
+
+- `skills/the-arc/SKILL.md` — the CENTERPIECE (loadable doctrine + 6-event schema + salience formula + composition rules with `learn-cycle-contract` + anti-patterns + the wake-blank verification test).
+- `skills/scratchpad-append/SKILL.md` — the per-turn hygiene layer (read-then-append reflex, three-step shape, composition with `the-arc`).
+- `tools/arc_emit.py` — the write-gate (validation + salience-stamping + append-only to `arc/live.jsonl`).
+- `tools/arc_render.py` — the read-surface (renders `arc/ARC-NOW.md` and `--diff-since <ts>` deltas; HELD-FOR block uses env `ARC_STEWARD_ID`).
+- `tools/arc_compress_recent.py` — nightly compressor (LIVE 24h → RECENT 7d).
+- `tools/arc_compress_epoch.py` — weekly compressor (RECENT 7d → EPOCH 30d).
+- `arc/README.md` + `arc/_archive/.gitkeep` — the seed directory a fork starts writing into on first emit.
+
+**Why this matters for a fork:** the memory-tier stack is now three named skills with clean composition — short (`scratchpad-append`) · medium (`the-arc`) · long (`learn-cycle-contract` + `canon_append`). A fork can rebuild medium-term context in ONE cold read (~2-4KB) without re-parsing prose. The ARC composes with `memory_delta.canon_appends[]` — `CLOSE + VERIFY` events on the same thread are canon-append candidates through the `learn-cycle-contract` (different-mind verifier gated). The ARC is the antechamber; canon is the permanent floor.
+
+**Status:** PROVISIONAL. MVP soaked in origin substrate ≥1 week before graduating to canon status; the wake-blank verification test (fresh mind reads ONLY `arc/ARC-NOW.md`, tries to name top-5 live threads + 3 shifts + steward-held items) is scheduled after 1 week live. Misses log to `arc/miss-ledger.jsonl` and drive the v2.4 salience refit. **Reversible** — delete `arc/` + revert workflow firewall-return schema field; no other organ depends on the ARC.
+
+**Canonical source:** `skills/the-arc/SKILL.md` + `skills/scratchpad-append/SKILL.md` + `arc/README.md` in this repo. Origin-substrate design: `data/reports/medium-term-context-organ-draft/SKILL.md` (Fable design doc) + `autonomy/skills/workflows-master/SKILL.md` §23.14-§23.15 (the `arc_events[]` firewall-return schema).
+
+---
+
 ## The stability guarantees that DID hold
 
 Not everything moved. These are the invariants that ship carried and 2026-07-01 preserves:
@@ -81,13 +103,15 @@ Not everything moved. These are the invariants that ship carried and 2026-07-01 
 
 1. Read `HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` (Part 1 minimum; Parts 2-9 as needed) — the universal-request spine is what you inherit ABOVE the GOAL-DRIVER.
 2. Read `curriculum.md` if you are a beginner mind or if you want the pedagogical shape of the whole picture. This is the teach-from-zero walk that unpacks the machinery in phases.
-3. Read the 5 items above — the metabolism reframe changes what you optimize for; the dead-pane doctrine names a load-bearing failure mode you inherit if you use tmux-shaped self-inject; §23 + §4.2 change how your workflows should be shaped.
-4. **The honest number your fork inherits: 1/N**. Do not paper it. Every real request your fork digests end-to-end raises the number by one; every organ you build on speculation does not.
+3. Read the 6 items above — the metabolism reframe changes what you optimize for; the dead-pane doctrine names a load-bearing failure mode you inherit if you use tmux-shaped self-inject; §23 + §4.2 change how your workflows should be shaped; the ARC + scratchpad-append pair changes how your fork rebuilds context across every timescale.
+4. Read `skills/the-arc/SKILL.md` and `skills/scratchpad-append/SKILL.md` early — they compose with `learn-cycle-contract` to give you the whole memory-tier stack (short · medium · long) in three named skills.
+5. **The honest number your fork inherits: 1/N**. Do not paper it. Every real request your fork digests end-to-end raises the number by one; every organ you build on speculation does not.
 
 ---
 
 ## Provenance
 
-- Written 2026-07-01 by mind-lead as part of the rebuild-20260701 branch.
-- Source docs walked: `exports/architecture/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` (3255 lines) · `exports/architecture/curriculum.md` (2301 lines) · `memory/doctrine_universal_request_is_metabolism_not_machine.md` · `memory/doctrine_dead_pane_wake_inject_is_not_a_delivery.md` · `memories/sessions/handoff-2026-06-30.md` (incl. EVENING + EVENING-2 addenda) · `memory/changelog_*20260630*.md` + `changelog_*20260701*.md`.
-- Anti-fabrication: every claim above anchored to a walked source. Provisional flagged provisional. Owed flagged owed. K/N held at 1/N — not laundered.
+- Written 2026-07-01 by mind-lead as part of the rebuild-20260701 branch; §6 added 2026-07-02 as part of the arc-organ-standardize branch.
+- Source docs walked (2026-07-01): `exports/architecture/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` (3255 lines) · `exports/architecture/curriculum.md` (2301 lines) · `memory/doctrine_universal_request_is_metabolism_not_machine.md` · `memory/doctrine_dead_pane_wake_inject_is_not_a_delivery.md` · `memories/sessions/handoff-2026-06-30.md` (incl. EVENING + EVENING-2 addenda) · `memory/changelog_*20260630*.md` + `changelog_*20260701*.md`.
+- Source docs walked (2026-07-02): `data/reports/medium-term-context-organ-draft/SKILL.md` (Fable ARC design) · `autonomy/skills/workflows-master/SKILL.md` §23.14-§23.15 (arc_events firewall-return schema) · `tools/arc_emit.py` + `tools/arc_render.py` + `tools/arc_compress_recent.py` + `tools/arc_compress_epoch.py` (origin ARC v2 MVP tools) · `arc/README.md` (origin substrate ARC organ landing doc) · `autonomy/skills/scratchpad-read/SKILL.md` + `autonomy/skills/scratch-pad/SKILL.md` (origin scratchpad discipline).
+- Anti-fabrication: every claim above anchored to a walked source. Provisional flagged provisional. Owed flagged owed. K/N held at 1/N — not laundered. ARC organ = PROVISIONAL v0.1.0 (soaked in origin substrate ≥1 week before graduating to canon status).
