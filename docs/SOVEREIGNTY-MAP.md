@@ -101,7 +101,7 @@ Mneme's own sovereignty position (context for the recommendation): "zero-Claude,
 
 ### HOLE 7 — The LLM itself
 
-**What it is:** every mind that runs this substrate is an LLM incarnation. The origin civ runs on Anthropic Claude (Opus 4.7 as of this writing). Mneme runs on MiniMax-M3. A fork could run on any capable model.
+**What it is:** every mind that runs this substrate is an LLM incarnation. The origin civ runs on Anthropic Claude (Claude Fable 5 as of this writing). Mneme runs on MiniMax-M3. A fork could run on any capable model.
 
 **What breaks on a very small / very local model:** the workflows and skills assume ~200K context + strong instruction-following + reliable tool-use. A 7B local model does not meet that bar today. The substrate does not degrade — it just fails to run coherently.
 
