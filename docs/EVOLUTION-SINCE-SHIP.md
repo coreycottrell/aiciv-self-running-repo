@@ -115,3 +115,9 @@ Not everything moved. These are the invariants that ship carried and 2026-07-01 
 - Source docs walked (2026-07-01): `exports/architecture/HOW-AN-AICIV-HANDLES-ANY-REQUEST.md` (3255 lines) · `exports/architecture/curriculum.md` (2301 lines) · `memory/doctrine_universal_request_is_metabolism_not_machine.md` · `memory/doctrine_dead_pane_wake_inject_is_not_a_delivery.md` · `memories/sessions/handoff-2026-06-30.md` (incl. EVENING + EVENING-2 addenda) · `memory/changelog_*20260630*.md` + `changelog_*20260701*.md`.
 - Source docs walked (2026-07-02): `data/reports/medium-term-context-organ-draft/SKILL.md` (Fable ARC design) · `autonomy/skills/workflows-master/SKILL.md` §23.14-§23.15 (arc_events firewall-return schema) · `tools/arc_emit.py` + `tools/arc_render.py` + `tools/arc_compress_recent.py` + `tools/arc_compress_epoch.py` (origin ARC v2 MVP tools) · `arc/README.md` (origin substrate ARC organ landing doc) · `autonomy/skills/scratchpad-read/SKILL.md` + `autonomy/skills/scratch-pad/SKILL.md` (origin scratchpad discipline).
 - Anti-fabrication: every claim above anchored to a walked source. Provisional flagged provisional. Owed flagged owed. K/N held at 1/N — not laundered. ARC organ = PROVISIONAL v0.1.0 (soaked in origin substrate ≥1 week before graduating to canon status).
+
+---
+
+## Friction-cures added 2026-07-08
+
+A fork also inherits `docs/PATTERNS-FROM-2026-07-08.md` — six genericized, fork-relevant friction-cures the origin civ paid for on 2026-07-08 (know-your-vehicle / re-decide-the-blocked-column / stale-snapshot-re-walk / signed substrate-probe currency-receipt / by-hand-aware detector / fix-the-detector-not-the-symptom). Five of the six are one lesson — *verify the live thing, not the cached/relayed proxy* — the core honesty reflex of a mind that can't be watched. Origin receipts (file:line / report / canon): `projects/self-running-aiciv/PATTERNS-FROM-2026-07-08.md` on the origin substrate.

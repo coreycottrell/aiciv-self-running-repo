@@ -14,7 +14,7 @@ This repo carries the **SYSTEM**, never secrets. It is the packaged form of the 
 
 ## READ THIS FIRST — what changed since ship
 
-The substrate did not sit still. Between the 2026-06-22 ship and the 2026-07-01 rebuild, five things reshaped how a fork should understand the substrate. Then on 2026-07-02 one more organ landed and got standardized into this repo — bringing the delta list to six:
+The substrate did not sit still. Between the 2026-06-22 ship and the 2026-07-01 rebuild, five things reshaped how a fork should understand the substrate. Then on 2026-07-02 one more organ landed, and on 2026-07-08 the antifragile-heartbeat runbook landed — bringing the delta list to seven:
 
 1. **The universal-request pattern** — a 10-step CIVILIZATION SPINE landed ABOVE the GOAL-DRIVER; the GOAL-DRIVER now holds goals across boops that the spine installs from human requests.
 2. **The metabolism reframe** — the universal-request system is GROWN by digesting real principal requests, not COMPLETED by designing organs; the per-principal silo is the GROUND the other organs stand on.
@@ -22,6 +22,7 @@ The substrate did not sit still. Between the 2026-06-22 ship and the 2026-07-01 
 4. **Dead-pane wake-inject doctrine** — a load-bearing failure mode of tmux-shaped self-inject: pane exists but the `claude` process is dead → phantom-success loop. Liveness gate required.
 5. **Per-workflow scratchpad §23 + delegate-down §4.2** — twin invariants that make the workflow substrate honest.
 6. **THE ARC (medium-term context organ) + per-turn scratchpad-append hygiene (2026-07-02)** — the memory-tier stack now has three named skills: `scratchpad-append` (short, per-turn prose hygiene) · **`the-arc` (medium, days-to-weeks structured events, CENTERPIECE)** · `learn-cycle-contract` + `canon_append` (long, permanent verified deltas). Every fork inherits medium-term recall in ONE ~2-4KB read (`arc/ARC-NOW.md`).
+7. **The antifragile-heartbeat runbook (2026-07-08)** — `skills/minimax-workflow-fallback/` landed: THREE independently-metered inference rails (A frontier subagent rail · B a peer/open model through YOUR own router · C the non-schema floor that never caps) with an A→B→C fall cascade and — load-bearing — the config-pin-vs-account-cap DIAGNOSTIC. The heartbeat now survives a frontier-rail cap instead of stalling. Origin provenance: the origin civ lost ~13 hours misreading a per-model rate-limit as a total account cap *because this fallback was undiscoverable* — so it is now a standalone skill on the diagnostic radar. Composes with `skills/multi-model-inference-mastery/` (the routing brain).
 
 **Read `docs/EVOLUTION-SINCE-SHIP.md` before you fork.** It is the anti-fossil doc — every entry links to a walked canonical source; nothing laundered.
 
@@ -65,7 +66,7 @@ The substrate did not sit still. Between the 2026-06-22 ship and the 2026-07-01 
 | `phase-0-tests.md` … `phase-5-tests.md` | 5 real-path/observable/adversarial behavioral tests per step. `phase-5-tests.md` carries the **CLIENT-PAIN battery** (CP1–CP5): AI-forgets / needs-re-feeding / lies-green / can't-hold-a-goal / the-machinery-leaks. |
 | `run_p1_3_tests.py`, `run_p3_2_tests.py` | runnable test harnesses (kanban→TGIM emit; wiki-organ) — origin-civ evidence; a fork re-points the paths. |
 
-### `skills/` — 14 skills (the cognitive organs as loadable doctrine)
+### `skills/` — 15 skills (the cognitive organs as loadable doctrine)
 
 **Memory-tier stack (2, new 2026-07-02) — how a fork rebuilds context across every timescale:**
 | Skill | Timescale | Role |
@@ -98,6 +99,11 @@ The substrate did not sit still. Between the 2026-06-22 ship and the 2026-07-01 
 | `deep-duck/` | a fix found, but the PRINCIPLE behind it is what compounds | swim upstream from problem to principle — the simplest truth a future mind needs to know |
 
 Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/postcondition contract that makes the duty enforceable, not aspirational).
+
+**Resilience / inference-rail (1, new 2026-07-08) — how the heartbeat survives a frontier-rail cap:**
+| Skill | Shape it fits | Role |
+|---|---|---|
+| **`minimax-workflow-fallback/`** | the frontier subagent/workflow rail CAPS or rate-limits while the main loop keeps working | **THE ANTIFRAGILE-HEARTBEAT runbook.** Three independently-metered inference rails (A = frontier subagent rail; B = a peer/open model reached through YOUR own router; C = the non-schema floor that never caps), the A→B→C fall cascade, the exact router-backed bg-dispatch invocation, and — load-bearing — the config-pin-vs-account-cap DIAGNOSTIC that stops a per-model rate-limit from being misread as a total outage (the origin civ lost 13 hours to exactly that miss). Composes with `multi-model-inference-mastery/` (the routing brain — WHICH model + WHEN). Fork-adaptation seams in §9. |
 
 ### `tools/` — the substrate organs (executable)
 | Path | Organ | The ONE thing it does |
@@ -148,6 +154,8 @@ Each skill ships its `FIRING_CONTRACT.md` where one exists (the precondition/pos
 | `.gitignore` | ignore rules (`.env`, `*.key`, `*.bak.*`, etc.) |
 
 **COUNTS (2026-07-02, post-ARC-standardization):** 63 files — 9 docs · 8 tests · 24 skill files (13 skills; +`the-arc/SKILL.md` + `scratchpad-append/SKILL.md`) · 13 tool files (+`arc_emit.py` + `arc_render.py` + `arc_compress_recent.py` + `arc_compress_epoch.py`) · 1 workflow · 6 adapters · 3 top-level files + `.gitignore` + 2 new files under `arc/` (`README.md` + `_archive/.gitkeep`). *(Delta from 2026-07-01 count of 55 = +8 files: 4 ARC tools + 2 SKILL docs + 2 `arc/` seed files. INDEX.md rewired to add the memory-tier stack row + arc-organ tools rows + this manifest entry.)*
+
+**COUNTS delta (2026-07-08):** +1 skill — `skills/minimax-workflow-fallback/SKILL.md` (the antifragile-heartbeat / inference-rail-fallback runbook). *(Note: the 2026-07-02 skill tally above was already conservative — several method/mastery skills, e.g. `multi-model-inference-mastery`, `claude-science-mastery`, `prompting-fable`, `work-driver`, shipped after that snapshot and are not enumerated in it; a full re-count is owed at the next rebuild. This delta line ensures the new skill is on the record regardless.)*
 
 ---
 
